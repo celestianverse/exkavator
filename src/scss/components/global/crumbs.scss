@@ -1,0 +1,55 @@
+.crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4px;
+
+    &__item {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        padding-right: 4px;
+        color: var(--text-secondary);
+        @include text-size('sm');        
+
+        &::after {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;            
+            background: radial-gradient(circle,var(--neutral-200) 0 1px,transparent 1px);
+        }
+
+        &:last-child {
+            padding-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &--approve {
+            &::before {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-image: var(--icon-approve-card);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &--bread {
+        margin-bottom: 16px;
+        a {
+            color: var(--text-secondary);
+
+            &:hover {
+                color: var(--link-hover);
+            }
+        }
+    }
+
+
+}

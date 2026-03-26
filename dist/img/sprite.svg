@@ -1,0 +1,8 @@
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <symbol viewBox="0 0 10 6" id="arrow">
+    <path d="M5 6L0 1.26699L1.33846 0L5 3.46602L8.66154 0L10 1.26699L5 6Z" fill="currentColor"></path>
+  </symbol>
+  <symbol viewBox="0 0 16 16" id="parameters">
+    <path d="M2.5 14V9H1V7.5H5.52083V9H4V14H2.5ZM2.5 6V2H4V6H2.5ZM5.75 6V4.5H7.25V2H8.75V4.5H10.25V6H5.75ZM7.25 14V7.5H8.75V14H7.25ZM12 14V11.5H10.4792V10H15V11.5H13.5V14H12ZM12 8.5V2H13.5V8.5H12Z" fill="currentColor"></path>
+  </symbol>
+</svg>

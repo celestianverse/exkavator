@@ -1,0 +1,358 @@
+.detail-item {
+    margin-top: 24px;
+
+    .detail-item-crumbs {
+        margin-bottom: 16px;
+
+        &__views {
+            &::after {
+                display: none;
+
+                @media (min-width: $breakpoint-sm) {
+                    display: block;
+                }
+            }
+
+            span {                
+                font-size: 0;
+                display: flex;
+                align-items: center;
+
+                img {
+                    @media (min-width: $breakpoint-sm) {
+                        display: none;
+                    }
+                }
+
+                @media (min-width: $breakpoint-sm) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &__print {
+            display: none;
+
+            @media (min-width: $breakpoint-sm) {
+                display: block;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        
+
+        @media (min-width: $breakpoint-sm) {
+            flex-direction: row;
+            gap: 24px;
+        }
+    }
+
+    &__buttons {
+        display: none;
+
+        @media (min-width: $breakpoint-sm) {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex: 1;
+        }
+
+        .price-block {
+            padding: 12px 0;
+            background-color: var(--green-100);
+            border-radius: 40px;
+            gap: 0;
+
+            p {
+                padding: 0;
+                @include text-size('secondary');
+            }
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    &__blocks {
+        // display: flex;
+        // flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+
+        @media (min-width: $breakpoint-sm) {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: start;
+        }
+
+        & > :first-child {
+            @media (min-width: $breakpoint-sm) {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+
+    .detail-item-text {
+        line-height: 24px;
+
+        &.is-collapsible {
+            position: relative;
+            padding-bottom: 24px;
+        }
+
+        &.is-collapsed {
+            max-height: 295px;
+            overflow: hidden;
+        }
+
+        & > a:last-child {
+            display: none;
+        }
+
+        &.is-collapsible > a:last-child {
+            display: inline;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__gallery {
+        width: 100%;
+        
+        @media (min-width: $breakpoint-sm) {
+            max-width: 485px;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            max-width: 419px;
+            flex-shrink: 1;
+        }
+
+        @media (min-width: $breakpoint-lg) {
+            max-width: 635px;
+        }
+    }
+
+    .detail-item-slider {
+        overflow: hidden;
+
+        @media (min-width: $breakpoint-sm) {           
+            margin: 0 0 16px 0;
+        }        
+
+        &__wrapper {
+            height: 205px;  
+
+            @media (min-width: $breakpoint-sm) {                             
+
+                height: 325px;
+            }
+
+            @media (min-width: $breakpoint-md) {
+                height: 280px;
+            }
+
+            @media (min-width: $breakpoint-lg) {
+                height: 390px;
+            }
+        }
+
+        &__thumb {
+            display: none;
+            height: 80px;
+
+            @media (min-width: $breakpoint-sm) {
+                display: block;
+            }
+
+            .swiper-slide {
+                border-radius: 8px;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .swiper-slide-thumb-active {
+                border: 2px solid var(--neutral-700);
+            }
+
+            img {
+                @include cover-img;
+            }
+        }        
+
+        &__slide {
+            border-radius: 16px;
+            overflow: hidden;
+            img {
+                @include cover-img;
+            }
+        }
+
+        &__prev, &__next { @include slider-nav($breakpoint-sm); }
+        &__next { @include slider-nav-next($breakpoint-sm); }
+        &__prev { @include slider-nav-prev($breakpoint-sm); }
+    }
+
+    .detail-item-action-block {
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        &__controls {
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    .detail-item-description-block {
+        padding: 16px;
+        background-color: var(--neutral-25);
+        border-radius: 16px;
+
+        &__title {
+            margin-bottom: 16px;
+            @include text-size('md');
+            @include text-weight('semibold');
+        }
+    }   
+
+    .detail-item-specifications {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+
+        @media (min-width: $breakpoint-xs) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: $breakpoint-sm) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (min-width: 1440px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        &__item {}
+        &__item-text, &__item-title {
+            display: block;
+        }
+        &__item-title {
+            @include text-size('sm');
+            color: var(--text-secondary);
+        }
+        &__item-text {
+            &--secondary {
+                color: var(--neutral-300);
+            }
+        }
+    }
+
+    .detail-item-company {
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @media (min-width: $breakpoint-sm) {
+                flex-direction: row;
+            }
+        }
+
+        &__img {
+            padding: 13px;
+            border: 1px solid var(--neutral-100);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (min-width: $breakpoint-sm) {
+                width: 112px;
+                height: 112px;
+            }
+            
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .crumbs {
+                margin-top: -4px;
+                margin-bottom: 8px;
+            }
+        }
+        
+        
+    }
+
+    .detail-item-company-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+}
+// Прилипающий футер детальнйо страницы. Находиться вне разметки блока detail-item
+.detail-item-mobile-footer {
+    padding: 16px;
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    z-index: 5;
+    background-color: var(--neutral-0);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    box-shadow: 0px -2px 16px 0px #27333F1F;
+
+    @media (min-width: $breakpoint-sm) {
+        display: none;
+    }
+
+    &__row {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+
+        .button {
+            flex: 1;
+        }
+
+        &:last-child {
+            .button:last-child {
+                max-width: 48px;
+            }
+        }
+    }
+
+    &__more {
+        position: relative;
+        width: 48px;
+
+        .button {
+            width: 100%;
+        }
+
+        &.is-open .dropdown-backdrop {
+            display: block;
+        }
+
+        .dropdown-backdrop {
+            bottom: 100%;
+            left: auto;
+            right: 0;
+            width: max-content;
+            transform: translateY(-2px);
+        }
+    }
+}
