@@ -46,7 +46,16 @@ const specialOffersSlider = new Swiper('.special-offers__slider', {
         prevEl: '.special-offers__prev',
     },
     breakpoints: {
-        768: { slidesPerView: 3 },
+        480: {
+            slidesPerView: 1.15,
+            spaceBetween: 12,
+        },
+        700: {
+            slidesPerView: 1.8,
+        },
+        768: {
+            slidesPerView: 3,
+        },
     }
 });
 
@@ -60,12 +69,18 @@ const filterChipsSlider = new Swiper('.slider-chips__slider', {
 });
 
 const companiesSlider = new Swiper('.companies__slider', {
-    slidesPerView: 4,
-    spaceBetween: 9,
+    slidesPerView: 2.8,
+    spaceBetween: 8,
     breakpoints: {
-        480: { spaceBetween: 12 },
-        560: { slidesPerView: 5 },
-        700: { slidesPerView: 6 },
+        400: { slidesPerView: 3.2 },
+        440: { slidesPerView: 3.6 },
+        480: { slidesPerView: 3.8 },
+        540: { slidesPerView: 4.3 },
+        600: { slidesPerView: 4.7 },
+        660: { slidesPerView: 5.3 },
+        768: { slidesPerView: 6 },
+        1024: { slidesPerView: 5 },
+        1280: { slidesPerView: 7 },
         1440: { slidesPerView: 8 },
     }
 });

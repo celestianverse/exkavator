@@ -34,11 +34,7 @@ ul:not([class]) {
 a {
   text-decoration: none;
   color: var(--text-primary);
-  transition: color var(--transition-hover);
-
-  // &:hover {
-  //   color: var(--link-hover);
-  // }
+  @include transition;
 }
 
 img {
@@ -54,6 +50,7 @@ button {
   cursor: pointer;
   font-family: var(--font-family);
   @include text-weight('base');
+  @include transition;
 }
 
 input,
@@ -61,6 +58,7 @@ textarea
 {
   font-family: var(--font-family);
   @include text-weight('base');
+  @include transition;
 }
 
 input::-webkit-outer-spin-button,

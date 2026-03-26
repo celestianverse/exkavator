@@ -154,7 +154,7 @@
     &__title {
         display: block;
         @include text-weight('semibold');
-        transition: color var(--transition-hover);
+        @include transition;
     }
 
     &__description {

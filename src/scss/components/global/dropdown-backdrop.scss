@@ -15,6 +15,7 @@
         padding: 6px 12px;
         @include text-size('sm');
         cursor: pointer;
+        @include transition;
 
         &:hover {
             background-color: var(--neutral-60);

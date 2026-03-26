@@ -1,6 +1,5 @@
 // button
 .button {
-    display: block;
     width: fit-content;
     border: 0;
     border-radius: 8px;
@@ -11,7 +10,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;  
+    gap: 8px;
+    @include transition;
 
     &:disabled {
         background-color: var(--bg-disable);
@@ -30,7 +30,7 @@
         color: var(--text-white);
 
         &:hover, &:focus {
-            box-shadow: 0px 2px 8px 0px #00429780;
+            box-shadow: 0 2px 8px 0 #00429780;
         }
         &:active  {
             background-color: var(--primary-600);
@@ -45,7 +45,7 @@
 
         &:hover, &:focus {
             background-color: #E5F1FF;
-            box-shadow: 0px 2px 8px 0px #CCE2FF80;
+            box-shadow: 0 2px 8px 0 #CCE2FF80;
         }
         &:active  {
             background-color: var(--primary-100);
@@ -59,7 +59,7 @@
         color: var(--text-base);
 
         &:hover, &:focus {
-            box-shadow: 0px 2px 8px 0px #E0E5EB80;
+            box-shadow: 0 2px 8px 0 #E0E5EB80;
         }
         &:active  {
             background-color: var(--neutral-100);
@@ -74,7 +74,7 @@
         outline: 1px solid  var(--neutral-100);
 
         &:hover, &:focus {
-            box-shadow: 0px 2px 8px 0px #E0E5EB80;
+            box-shadow: 0 2px 8px 0 #E0E5EB80;
             outline: 1px solid  var(--neutral-100);
             color: var(--text-base);
         }
@@ -91,7 +91,7 @@
         color: var(--text-white);
 
         &:hover, &:focus {
-            box-shadow: 0px 2px 8px 0px #E0E5EB80;
+            box-shadow: 0 2px 8px 0 #E0E5EB80;
         }
         &:active  {
             background-color: var(--green-500);
@@ -105,7 +105,7 @@
         color: var(--green-500);
 
         &:hover, &:focus {
-            box-shadow: 0px 2px 8px 0px #CCFECF80;
+            box-shadow: 0 2px 8px 0 #CCFECF80;
         }
         &:active  {
             background-color: var(--green-100);

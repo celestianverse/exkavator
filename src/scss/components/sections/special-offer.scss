@@ -14,10 +14,16 @@
     }
 
     &__slider {
-        max-width: 100%;
-
         @media (min-width: 1024px) {
             max-width: 958px;
+        }
+
+        @media (max-width: $breakpoint-sm - 1) {
+            margin-right: -24px;
+        }
+
+        @media (max-width: $breakpoint-xs - 1) {
+            margin-right: -16px;
         }
     }
 

@@ -58,7 +58,7 @@
         margin-left: auto;
         flex-shrink: 0;
         transform: rotate(-90deg);
-        transition: all var(--transition-hover);
+        @include transition;
 
         @media (min-width: $breakpoint-md) {
             background-color: var(--text-white);
@@ -86,6 +86,10 @@
             color: var(--text-white);
             @include text-size('base');
             @include text-weight('semibold');
+        }
+
+        &:hover {
+            color: var(--link-hover);
         }
     }
 
