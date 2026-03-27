@@ -151,7 +151,7 @@
         left: 8px;
         top: 50%;
         transform: translateY(-50%);
-        padding-right: 8px;
+        padding-right: 28px;
         width: 95%;
         color: var(--neutral-700);
         margin-top: 6px;
@@ -183,7 +183,11 @@
         // label при заполненном input
         &:not(:placeholder-shown) + .field-text__label {
             background-color: var(--primary-50);  
-            // outline: 1px solid var(--field-ouline);          
+
+            & + .field-text__clear {
+                pointer-events: auto;
+                opacity: 1;
+            }
         }
 
         &:disabled + .field-text__label {
@@ -194,6 +198,16 @@
             color: var(--field-disabled-text);
         }
        
+    }
+
+    &__clear {
+        pointer-events: none;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        margin-top: -8px;
+        color: var(--text-base);
     }
 
     &.disabled {

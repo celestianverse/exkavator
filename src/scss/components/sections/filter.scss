@@ -12,6 +12,8 @@
         @media (min-width: 1280px) {
             grid-template-columns: repeat(3, 1fr);
         }
+
+
     }
 
     &__checkboxes {
@@ -53,7 +55,6 @@
                 }
             }
         }
-        
     }
 
     &__buttons {
@@ -61,6 +62,15 @@
         align-items: center;
         justify-content: flex-end;
         gap: 16px;
+
+        @media (max-width: $breakpoint-xs - 1) {
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .button {
+            display: none;
+        }
     }
 
     &__no-filters {
@@ -69,8 +79,8 @@
         line-height: 24px;
     }
 
-    &__more-params {
-        margin-right: auto;
+    &__more {
+        display: none;
     }
 
     &__range {
@@ -143,6 +153,50 @@
             transform: translate(-50%, -50%) rotate(-90deg);
         }
     }
-    
 
+    &__clear {
+        @media (max-width: $breakpoint-sm - 1) {
+            font-size: 0;
+            text-indent: -99999px;
+        }
+    }
+    &__save {
+        @media (max-width: $breakpoint-sm - 1) {
+            font-size: 0;
+            text-indent: -99999px;
+        }
+    }
+
+    &--nomore {
+        .filter__inputs {
+            & > * {
+                &:nth-child(n+6) {
+                    @media (max-width: $breakpoint-xs - 1) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .filter__checkboxes {
+            @media (max-width: $breakpoint-xs - 1) {
+                display: none;
+            }
+        }
+        .filter__more {
+            @media (max-width: $breakpoint-xs - 1) {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    &--filled {
+        .filter__buttons {
+            .button {
+                display: flex;
+            }
+            .filter__no-filters {
+                display: none;
+            }
+        }
+    }
 }

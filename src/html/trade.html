@@ -12,7 +12,7 @@
         <div class="container main-header__wrapper">
             <button class="mobile-burger" type="button"><span></span></button>
             <a href="/" class="main-header__logo">
-                <img src="img/logo-white.png" alt="Логотип Экскаватор.ру">
+                <img src="img/logo-white-x2.png" alt="Логотип Экскаватор.ру">
             </a>
             <div class="main-header__relative">
                 <div class="main-menu">
@@ -113,19 +113,19 @@
                     </svg>
                 </button>
                 <div class="user-controls__group">
-                    <button class="user-controls__button js-header-search" aria-label="Поиск по сайту" type="button">
+                    <button class="user-controls__button js-header-search" aria-label="Поиск по сайту" type="button" data-tooltip-text="Поиск по сайту">
                         <svg class="icon icon--24">
                             <use xlink:href="img/sprites/sprite-16.svg#search"></use>
                         </svg>
                         Поиск по сайту
                     </button>
-                    <button class="user-controls__button js-open-popup" data-popup-id="popup-callback" aria-label="Обратный звонок" type="button">
+                    <button class="user-controls__button js-open-popup" data-popup-id="popup-callback" aria-label="Обратный звонок" type="button" data-tooltip-text="Сообщения">
                         <svg class="icon icon--24">
                             <use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use>
                         </svg>
                         Сообщения
                     </button>
-                    <button class="user-controls__button" aria-label="Избранное" type="button">
+                    <button class="user-controls__button" aria-label="Избранное" type="button" data-tooltip-text="Избранное">
                         <svg class="icon icon--24">
                             <use xlink:href="img/sprites/sprite-16.svg#favorite"></use>
                         </svg>
@@ -167,7 +167,7 @@
             <main class="content">
                 <h1>Продажа спецтехники б/у и новой</h1>
                 <section class="filter-block section">                    
-                    <div class="filter">
+                    <div class="filter filter--nomore">
                         <p class="small-title">Поиск по 24 304 объявлениям</p>
                         <div class="filter__inputs">
                             <div class="field-dropdown">
@@ -196,6 +196,11 @@
                                 <label class="field-text__label" for="place">
                                     <span class="field-text__caption">Регион, город, населенный пункт</span>
                                 </label>
+                                <button class="field-text__clear" aria-label="Очистить" type="button">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                    </svg>
+                                </button>
                             </div>
 
                             <div class="field-dropdown">
@@ -211,12 +216,22 @@
                                     <label class="field-text__label" for="minPrice">
                                         <span class="field-text__caption">Цена от, ₽</span>
                                     </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                                 <div class="field-text">
                                     <input class="field-text__input" type="number" placeholder="Цена от, ₽" name="maxPrice" id="maxPrice" autocomplete="off"/>
                                     <label class="field-text__label" for="maxPrice">
                                         <span class="field-text__caption">до, ₽</span>
                                     </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
 
@@ -226,12 +241,22 @@
                                     <label class="field-text__label" for="yearFrom">
                                         <span class="field-text__caption">Год выпуска от</span>
                                     </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                                 <div class=" field-text">
                                     <input class="field-text__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
                                     <label class="field-text__label" for="yearTo">
                                         <span class="field-text__caption">до</span>
                                     </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div> 
                             
@@ -240,6 +265,11 @@
                                 <label class="field-text__label" for="motoHours">
                                     <span class="field-text__caption">Моточасы наработки (до)</span>
                                 </label>
+                                <button class="field-text__clear" aria-label="Очистить" type="button">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <div class="filter__checkboxes">
@@ -252,10 +282,23 @@
                                 <label class="field-checkbox__label" for="ch-photo">Только с фото</label>
                             </div>
                         </div>
+                        <div class="filter__more">
+                            <button class="button button--small button--primary-alt button--no-body" type="button">Больше параметров</button>
+                        </div>
                         <div class="filter__buttons">
-                            <!-- <button class="button button--primary-alt button--no-body button--medium">Сбросить</button> -->
-                            <!-- <button class="button button--primary-alt button--no-body button--medium">Сохранить поиск</button> -->
-                            <!-- <button class="button button--primary button--large">Показать 1234 объявления</button> -->
+                            <button class="button button--primary-alt button--no-body button--medium filter__clear">
+                                <svg class="icon">
+                                    <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>
+                                </svg>
+                                Сбросить
+                            </button>
+                            <button class="button button--primary-alt button--no-body button--medium filter__save">
+                                <svg class="icon">
+                                    <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
+                                </svg>
+                                Сохранить поиск
+                            </button>
+                             <button class="button button--primary button--large">Показать 1234 объявления</button>
                             <p class="filter__no-filters">Укажите параметры поиска</p>
                         </div>
                     </div>
@@ -605,7 +648,70 @@
                                     <li class="crumbs__item">Москва</li>
                                 </ul>
                             </span>
-                        </a>                      
+                        </a>
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю телескопический погрузчик Dieci APOLLO 25.6</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю ассенизаторскую машину ЗИЛ КО-510 б/у</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю трактор МТЗ 82.1 б/у</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю трактор МТЗ 320.4М</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю самосвал Shacman SX33186W366C 8x4 б/у 2024 г.в.</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю телескопический погрузчик Dieci APOLLO 25.6</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>
+                        <a class="rounded-link-card rounded-link-card--gray" href="#">
+                            <span class="rounded-link-card__title">Куплю ассенизаторскую машину ЗИЛ КО-510 б/у</span>
+                            <span class="rounded-link-card__description">
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">13.01.26</li>
+                                    <li class="crumbs__item">Москва</li>
+                                </ul>
+                            </span>
+                        </a>
                     </nav>
                     <div class="button-group">
                         <a class="button button--small button--regular-alt" href="#">Все заявки</a>

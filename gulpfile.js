@@ -9,6 +9,19 @@ const newer        = require('gulp-newer');
 const browserSync  = require('browser-sync').create();
 const del          = require('del');
 
+process.on('unhandledRejection', (err) => {
+  console.error('UnhandledRejection:', err);
+  if (err?.errors?.length) {
+    console.error('AggregateError errors:', err.errors);
+  }
+  process.exitCode = 1;
+});
+
+process.on('uncaughtException', (err) => {
+  console.error('UncaughtException:', err);
+  process.exit(1);
+});
+
 // Пути
 const paths = {
   html: {
@@ -57,8 +70,7 @@ function clean() {
 function html() {
   return src(paths.html.src)
     .pipe(newer(paths.html.dest))
-    .pipe(dest(paths.html.dest))
-    .pipe(browserSync.stream());
+    .pipe(dest(paths.html.dest));
 }
 
 // CSS - автопрефиксы, минификация
@@ -67,8 +79,7 @@ function styles() {
     .pipe(sass({ outputStyle: 'expanded' }).on('error', handleError))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(cleanCSS({ level: 1 }))
-    .pipe(dest(paths.styles.dest))
-    .pipe(browserSync.stream());
+    .pipe(dest(paths.styles.dest));
 }
 
 // JS - конкатенация, минификация
@@ -77,8 +88,7 @@ function scripts() {
     .pipe(concat('main.min.js'))
     .pipe(terser({ mangle: false }))
     .on('error', handleError)
-    .pipe(dest(paths.scripts.dest))
-    .pipe(browserSync.stream());
+    .pipe(dest(paths.scripts.dest));
 }
 
 // JS страниц — минификация без конкатенации
@@ -86,8 +96,7 @@ function pageScripts() {
   return src(paths.pageScripts.src)
     .pipe(terser({ mangle: false }))
     .on('error', handleError)
-    .pipe(dest(paths.pageScripts.dest))
-    .pipe(browserSync.stream());
+    .pipe(dest(paths.pageScripts.dest));
 }
 
 // Сжатие картинок
@@ -105,27 +114,14 @@ function images() {
 function fonts() {
   return src(paths.fonts.src)
     .pipe(newer(paths.fonts.dest))
-    .pipe(dest(paths.fonts.dest))
-    .pipe(browserSync.stream());
+    .pipe(dest(paths.fonts.dest));
 }
 
 // Копирование vendors (без минификации)
 function vendors() {
   return src(paths.vendors.src)
     .pipe(newer(paths.vendors.dest))
-    .pipe(dest(paths.vendors.dest))
-    .pipe(browserSync.stream());
-}
-
-// Dev-сервер
-function serve(done) {
-  browserSync.init({
-    server: { baseDir: 'dist/' },
-    port: 3000,
-    notify: false,
-    open: true
-  });
-  done();
+    .pipe(dest(paths.vendors.dest));
 }
 
 // Слежение за файлами
@@ -144,7 +140,8 @@ function watchFiles(done) {
 const buildAll = parallel(html, styles, scripts, pageScripts, images, fonts, vendors);
 
 // dev
-exports.default = series(clean, buildAll, parallel(serve, watchFiles));
+exports.default = series(clean, buildAll, watchFiles);
+exports.watch = series(clean, buildAll, watchFiles);
 
 // build
 exports.build = series(clean, buildAll);

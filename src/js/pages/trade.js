@@ -59,3 +59,90 @@ const dropdownConfigs = [
 
 initPageDropdowns(dropdownConfigs);
 initDropdowns('.item-card__show-buttons-wrap');
+
+const filterMoreButton = document.querySelector('.filter__more button');
+
+if (filterMoreButton) {
+    filterMoreButton.addEventListener('click', () => {
+        const filter = filterMoreButton.closest('.filter');
+        if (!filter) return;
+
+        filter.classList.remove('filter--nomore');
+    });
+}
+
+const filter = document.querySelector('.filter');
+
+if (filter) {
+    const filterInputsSelector = '.field-text__input, .field-dropdown__input';
+
+    const updateFilterFilledState = () => {
+        const hasValue = Array.from(filter.querySelectorAll(filterInputsSelector))
+            .some((input) => input.value.trim() !== '');
+
+        filter.classList.toggle('filter--filled', hasValue);
+    };
+
+    filter.addEventListener('input', updateFilterFilledState);
+    filter.addEventListener('change', updateFilterFilledState);
+
+    filter.addEventListener('click', (event) => {
+        if (!event.target.closest('.dropdown-backdrop__option')) return;
+        requestAnimationFrame(updateFilterFilledState);
+    });
+
+    updateFilterFilledState();
+}
+
+const clearButton = document.querySelector('.filter__clear');
+
+if (clearButton) {
+    clearButton.addEventListener('click', () => {
+        const filter = clearButton.closest('.filter');
+        if (!filter) return;
+
+        // 1. Очищаем обычные input'ы
+        filter.querySelectorAll('.field-text__input').forEach(input => {
+            input.value = '';
+        });
+
+        // 2. Очищаем dropdown'ы
+        filter.querySelectorAll('.field-dropdown').forEach(container => {
+            const input = container.querySelector('.field-dropdown__input');
+            if (!input) return;
+
+            // сброс значения
+            input.value = '';
+            input.dataset.value = '';
+
+            // убираем выбранную опцию
+            container.querySelector('.dropdown-backdrop__option.selected')
+              ?.classList.remove('selected');
+
+            // убираем состояние selected у контейнера
+            container.classList.remove('selected');
+
+            // сбрасываем поиск внутри dropdown
+            resetDropdownSearch(container);
+        });
+
+        // 3. Чекбоксы
+        filter.querySelectorAll('.field-checkbox__input').forEach(cb => {
+            cb.checked = false;
+        });
+
+        // 4. Специальная логика для model (зависимость от brand)
+        const modelContainer = filter.querySelector('#model')?.closest('.field-dropdown');
+        const modelInput = filter.querySelector('#model');
+
+        if (modelContainer && modelInput) {
+            modelContainer.classList.add('disabled');
+            modelInput.disabled = true;
+        }
+
+        // 5. Триггерим обновление состояния filter--filled
+        filter.dispatchEvent(new Event('input', { bubbles: true }));
+        filter.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+}
+

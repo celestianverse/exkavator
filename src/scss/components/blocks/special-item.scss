@@ -6,6 +6,11 @@
     background-color: var(--neutral-25);
     overflow: hidden;
 
+    //&:hover {
+    //    box-shadow: 0 2px 8px 0 #CCE2FF80;
+    //    @include transition;
+    //}
+
     &:has(.special-item__title:hover) .special-item__img img {
         transform: scale(1.1);
     }
@@ -28,8 +33,8 @@
         margin-bottom: 4px;
         @include text-weight('semibold');
         color: var(--text-base);
-        transition: color var(--transition-hover);  
-        
+        @include transition;
+
         &:hover {
             color: var(--link-hover);
         }
@@ -42,7 +47,7 @@
 
         img {
             @include cover-img;
-            transition: transform var(--transition-hover);
+            @include transition;
         }
 
         &:hover {
@@ -53,7 +58,7 @@
 
         &:hover + .special-item__description {
             .special-item__title {
-                color: red;
+                color: var(--link-hover);
             }
         }
     }

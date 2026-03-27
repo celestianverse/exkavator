@@ -75,6 +75,11 @@ function renderDropdownOptions(container, config) {
                     '<label for="' + searchId + '" class="field-text__label">' +
                         '<span class="field-text__caption">Поиск</span>' +
                     '</label>' +
+                    '<button class="field-text__clear" aria-label="Очистить" type="button">' +
+                      '<svg class="icon icon--16">' +
+                          '<use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>' +
+                      '</svg>' +
+                    '</button>' +
                 '</div>' +
             '</div>'
         );
@@ -97,6 +102,19 @@ function renderDropdownOptions(container, config) {
     });
 
     backdrop.appendChild(ul);
+
+    document.querySelectorAll('.field-text').forEach((field) => {
+        const input = field.querySelector('.field-text__input');
+        const clearButton = field.querySelector('.field-text__clear');
+
+        if (!input || !clearButton) return;
+
+        clearButton.addEventListener('click', () => {
+            input.value = '';
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+            input.focus();
+        });
+    });
 }
 
 // базовая логика дропдаунов: открытие/закрытие, клик по опции
@@ -164,6 +182,8 @@ function initPageDropdowns(dropdownConfigs) {
             input.dataset.value = option.dataset.value || '';
             container.classList.add('selected');
             resetDropdownSearch(container);
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+            input.dispatchEvent(new Event('change', { bubbles: true }));
         }
     });
 

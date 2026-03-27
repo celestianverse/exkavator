@@ -12,7 +12,7 @@
         <div class="container main-header__wrapper">
             <button class="mobile-burger" type="button"><span></span></button>
             <a href="/" class="main-header__logo">
-                <img src="img/logo-white.png" alt="Логотип Экскаватор.ру">
+                <img src="img/logo-white-x2.png" alt="Логотип Экскаватор.ру">
             </a>
             <div class="main-header__relative">
                 <div class="main-menu">
@@ -113,19 +113,19 @@
                     </svg>
                 </button>
                 <div class="user-controls__group">
-                    <button class="user-controls__button js-header-search" aria-label="Поиск по сайту" type="button">
+                    <button class="user-controls__button js-header-search" aria-label="Поиск по сайту" type="button" data-tooltip-text="Поиск по сайту">
                         <svg class="icon icon--24">
                             <use xlink:href="img/sprites/sprite-16.svg#search"></use>
                         </svg>
                         Поиск по сайту
                     </button>
-                    <button class="user-controls__button js-open-popup" data-popup-id="popup-callback" aria-label="Обратный звонок" type="button">
+                    <button class="user-controls__button js-open-popup" data-popup-id="popup-callback" aria-label="Обратный звонок" type="button" data-tooltip-text="Сообщения">
                         <svg class="icon icon--24">
                             <use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use>
                         </svg>
                         Сообщения
                     </button>
-                    <button class="user-controls__button" aria-label="Избранное" type="button">
+                    <button class="user-controls__button" aria-label="Избранное" type="button" data-tooltip-text="Избранное">
                         <svg class="icon icon--24">
                             <use xlink:href="img/sprites/sprite-16.svg#favorite"></use>
                         </svg>
@@ -183,6 +183,11 @@
                                 <label class="field-text__label" for="article">
                                     <span class="field-text__caption">Номер (артикул) или название запчасти</span>
                                 </label>
+                                                        <button class="field-text__clear" aria-label="????????" type="button">
+                                <svg class="icon icon--16">
+                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                </svg>
+                            </button>
                             </div>
 
                             <div class="field-text">
@@ -190,6 +195,11 @@
                                 <label class="field-text__label" for="place">
                                     <span class="field-text__caption">Регион, город, населенный пункт</span>
                                 </label>
+                                                        <button class="field-text__clear" aria-label="????????" type="button">
+                                <svg class="icon icon--16">
+                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                </svg>
+                            </button>
                             </div>
 
                             <div class="field-dropdown selected">

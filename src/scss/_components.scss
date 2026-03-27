@@ -146,9 +146,7 @@
     cursor: pointer;
 
     &:hover {
-        .rounded-link-card__title {
-            color: var(--link-hover);
-        }
+        box-shadow: 0 2px 8px 0 #CCE2FF80;
     }
 
     &__title {

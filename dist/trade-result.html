@@ -14,7 +14,7 @@
         <div class="container main-header__wrapper">
             <button class="mobile-burger" type="button"><span></span></button>
             <a href="/" class="main-header__logo">
-                <img src="img/logo-white.png" alt="Логотип Экскаватор.ру">
+                <img src="img/logo-white-x2.png" alt="Логотип Экскаватор.ру">
             </a>
             <div class="main-header__relative">
                 <div class="main-menu">
@@ -115,19 +115,19 @@
                     </svg>
                 </button>
                 <div class="user-controls__group">
-                    <button class="user-controls__button js-header-search" aria-label="Поиск по сайту" type="button">
+                    <button class="user-controls__button js-header-search" aria-label="Поиск по сайту" type="button" data-tooltip-text="Поиск по сайту">
                         <svg class="icon icon--24">
                             <use xlink:href="img/sprites/sprite-16.svg#search"></use>
                         </svg>
                         Поиск по сайту
                     </button>
-                    <button class="user-controls__button js-open-popup" data-popup-id="popup-callback" aria-label="Обратный звонок" type="button">
+                    <button class="user-controls__button js-open-popup" data-popup-id="popup-callback" aria-label="Обратный звонок" type="button" data-tooltip-text="Сообщения">
                         <svg class="icon icon--24">
                             <use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use>
                         </svg>
                         Сообщения
                     </button>
-                    <button class="user-controls__button" aria-label="Избранное" type="button">
+                    <button class="user-controls__button" aria-label="Избранное" type="button" data-tooltip-text="Избранное">
                         <svg class="icon icon--24">
                             <use xlink:href="img/sprites/sprite-16.svg#favorite"></use>
                         </svg>
@@ -186,11 +186,11 @@
                 </div>
                 <h1>Новые гусеничные экскаваторы в Краснодаре</h1>
                 <section class="filter-block section">
-                    <div class="filter">
+                    <div class="filter filter--nomore">
                         <p class="small-title">Поиск по 24 304 объявлениям</p>
                         <div class="filter__inputs">
-                            <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
+                            <div class="field-dropdown selected">
+                                <input class="field-dropdown__input" type="text" value="Экскаваторы гусеничные" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
                                 <label class="field-dropdown__label" for="type">
                                     <span class="field-dropdown__caption">Тип техники</span>
                                 </label>
@@ -211,14 +211,19 @@
                             </div>
 
                             <div class="field-text">
-                                <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
+                                <input class="field-text__input" type="text" value="Краснодар, Краснодарский край, Россия" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
                                 <label class="field-text__label" for="place">
                                     <span class="field-text__caption">Регион, город, населенный пункт</span>
                                 </label>
+                                <button class="field-text__clear" aria-label="Очистить" type="button">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                    </svg>
+                                </button>
                             </div>
 
-                            <div class="field-dropdown">
-                                <input class="field-dropdown__input" type="text" placeholder="Состояние техники" name="wear" id="wear" autocomplete="off"/>
+                            <div class="field-dropdown selected">
+                                <input class="field-dropdown__input" type="text" value="Новая" placeholder="Состояние техники" name="wear" id="wear" autocomplete="off"/>
                                 <label class="field-dropdown__label" for="wear">
                                     <span class="field-dropdown__caption">Состояние техники</span>
                                 </label>
@@ -230,12 +235,22 @@
                                     <label class="field-text__label" for="minPrice">
                                         <span class="field-text__caption">Цена от, ₽</span>
                                     </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                                 <div class="field-text">
                                     <input class="field-text__input" type="number" placeholder="Цена от, ₽" name="maxPrice" id="maxPrice" autocomplete="off"/>
                                     <label class="field-text__label" for="maxPrice">
                                         <span class="field-text__caption">до, ₽</span>
                                     </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
 
@@ -245,12 +260,22 @@
                                     <label class="field-text__label" for="yearFrom">
                                         <span class="field-text__caption">Год выпуска от</span>
                                     </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                                 <div class=" field-text">
                                     <input class="field-text__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
                                     <label class="field-text__label" for="yearTo">
                                         <span class="field-text__caption">до</span>
                                     </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div> 
                             
@@ -259,6 +284,11 @@
                                 <label class="field-text__label" for="motoHours">
                                     <span class="field-text__caption">Моточасы наработки (до)</span>
                                 </label>
+                                <button class="field-text__clear" aria-label="Очистить" type="button">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <div class="filter__checkboxes">
@@ -271,10 +301,23 @@
                                 <label class="field-checkbox__label" for="ch-photo">Только с фото</label>
                             </div>
                         </div>
+                        <div class="filter__more">
+                            <button class="button button--small button--primary-alt button--no-body" type="button">Больше параметров</button>
+                        </div>
                         <div class="filter__buttons">
-                            <!-- <button class="button button--primary-alt button--no-body button--medium">Сбросить</button> -->
-                            <!-- <button class="button button--primary-alt button--no-body button--medium">Сохранить поиск</button> -->
-                            <!-- <button class="button button--primary button--large">Показать 1234 объявления</button> -->
+                             <button class="button button--primary-alt button--no-body button--medium filter__clear">
+                                 <svg class="icon">
+                                     <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>
+                                 </svg>
+                                 Сбросить
+                             </button>
+                             <button class="button button--primary-alt button--no-body button--medium filter__save">
+                                 <svg class="icon">
+                                     <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
+                                 </svg>
+                                 Сохранить поиск
+                             </button>
+                             <button class="button button--primary button--large">Показать 1234 объявления</button>
                             <p class="filter__no-filters">Укажите параметры поиска</p>
                         </div>
                     </div>
@@ -908,6 +951,11 @@
                         <label class="field-text__label" for="callback-phone">
                             <span class="field-text__caption">Ваш телефон *</span>
                         </label>
+                                        <button class="field-text__clear" aria-label="????????" type="button">
+                        <svg class="icon icon--16">
+                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                        </svg>
+                    </button>
                     </div>
                     <div class="field-checkbox">
                         <input type="checkbox" class="field-checkbox__input" id="ch-subscribe">
