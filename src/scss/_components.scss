@@ -9,6 +9,12 @@
 @import 'components/global';
 @import 'components/blocks';
 
+.text {
+    &--secondary {
+        color: var(--text-secondary);
+    }
+}
+
 .layout {
     padding: 16px 0;   
 
@@ -90,6 +96,12 @@
                 gap: 14px;
                 @include text-size('sm');
                 color: var(--text-base);
+
+                &:hover {
+                    p {
+                        text-decoration: underline;
+                    }
+                }
             }
 
             &__title {
@@ -147,6 +159,10 @@
 
     &:hover {
         box-shadow: 0 2px 8px 0 #CCE2FF80;
+
+        //.rounded-link-card__title {
+        //    color: var(--link-hover);
+        //}
     }
 
     &__title {

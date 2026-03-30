@@ -186,8 +186,13 @@
                 </div>
                 <h1>Новые гусеничные экскаваторы в Краснодаре</h1>
                 <section class="filter-block section">
-                    <div class="filter filter--nomore">
+                    <div class="filter filter--hidden-extra">
                         <p class="small-title">Поиск по 24 304 объявлениям</p>
+                        <div class="filter__header">
+                            <button type="button" class="filter__header-link text--secondary" data-filter-clear>Сбросить</button>
+                            <p class="fw-semibold">Параметры</p>
+                            <button type="button" class="filter__header-link text--secondary" data-filter-close>Сохранить</button>
+                        </div>
                         <div class="filter__inputs">
                             <div class="field-dropdown selected">
                                 <input class="field-dropdown__input" type="text" value="Экскаваторы гусеничные" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
@@ -300,25 +305,176 @@
                                 <input type="checkbox" class="field-checkbox__input" id="ch-photo">
                                 <label class="field-checkbox__label" for="ch-photo">Только с фото</label>
                             </div>
+                            <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-nds">
+                                <label class="field-checkbox__label" for="ch-nds">Продажа с НДС</label>
+                            </div>
+                            <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-dealer">
+                                <label class="field-checkbox__label" for="ch-dealer">Официальный дилер</label>
+                            </div>
+                            <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-deliver">
+                                <label class="field-checkbox__label" for="ch-deliver">С возможностью доставки</label>
+                            </div>
+                        </div>
+                        <div class="filter__inputs filter__inputs--extra">
+                            <div class="filter__range">
+                                <div class="field-dropdown">
+                                    <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="weight-from" id="weight-from" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="type">
+                                        <span class="field-dropdown__caption">Масса от, т</span>
+                                    </label>
+                                </div>
+                                <div class="field-dropdown">
+                                    <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="weight-to" id="weight-to" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="type">
+                                        <span class="field-dropdown__caption">до, т</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filter__range">
+                                <div class="field-dropdown">
+                                    <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="volume-from" id="volume-from" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="type">
+                                        <span class="field-dropdown__caption">Объем ковша от, т</span>
+                                    </label>
+                                </div>
+                                <div class="field-dropdown">
+                                    <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="volume-to" id="volume-to" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="type">
+                                        <span class="field-dropdown__caption">до, т</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="field-dropdown">
+                                <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="attachments" id="attachments" autocomplete="off"/>
+                                <label class="field-dropdown__label" for="type">
+                                    <span class="field-dropdown__caption">Навесное оборудование</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter__checkboxes filter__checkboxes--extra">
+                            <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-long-arrow">
+                                <label class="field-checkbox__label" for="ch-long-arrow">С длинной стрелой</label>
+                            </div>
+                            <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-overall-dimensions">
+                                <label class="field-checkbox__label" for="ch-overall-dimensions">Габаритные</label>
+                            </div>
+                            <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-full-turn">
+                                <label class="field-checkbox__label" for="ch-full-turn">Полноповоротные</label>
+                            </div>
+                            <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-single-bucket">
+                                <label class="field-checkbox__label" for="ch-single-bucket">Одноковшовые</label>
+                            </div>
                         </div>
                         <div class="filter__more">
-                            <button class="button button--small button--primary-alt button--no-body" type="button">Больше параметров</button>
+                            <button class="button button--small button--primary-alt button--no-body filter__more-button" type="button">Больше параметров</button>
                         </div>
                         <div class="filter__buttons">
-                             <button class="button button--primary-alt button--no-body button--medium filter__clear">
+                            <button class="button button--primary-alt button--no-body button--medium filter__extra-button">
+                                 <svg class="icon">
+                                     <use xlink:href="img/sprites/sprite-16.svg#parameters"></use>
+                                 </svg>
+                                 <span>
+                                    Дополнительные параметры
+                                 </span>
+                            </button>
+                            <button class="button button--primary-alt button--no-body button--medium filter__clear-button" data-filter-clear>
                                  <svg class="icon">
                                      <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>
                                  </svg>
                                  Сбросить
-                             </button>
-                             <button class="button button--primary-alt button--no-body button--medium filter__save">
+                            </button>
+                            <button class="button button--primary-alt button--no-body button--medium filter__save-button">
                                  <svg class="icon">
                                      <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
                                  </svg>
                                  Сохранить поиск
-                             </button>
-                             <button class="button button--primary button--large">Показать 1234 объявления</button>
+                            </button>
+                            <button class="button button--primary button--large button--find" disabled>Найдено 1234 объявления</button>
+                            <div class="filter__dropdown-button">
+                                <button class="button button--large button--regular">
+                                    <svg class="icon icon--24">
+                                        <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
+                                    </svg>
+                                </button>
+                                <div class="dropdown-backdrop">
+                                    <ul class="dropdown-backdrop__list">
+                                        <li class="dropdown-backdrop__option-button" data-filter-clear>Сбросить</li>
+                                        <li class="dropdown-backdrop__option-button" data-filter-close>Сохранить поиск</li>
+                                    </ul>
+                                </div>
+                            </div>
                             <p class="filter__no-filters">Укажите параметры поиска</p>
+                        </div>
+                        <div class="chips-slider">
+                            <div class="chips-slider__slider swiper">
+                                <ul class="chips-slider__list swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Hitachi</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Komatsu</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Hyundai</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Caterpillar</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Doosan / Develon</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Volvo</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">JCB</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Sany</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Lonking</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Case</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Zauberg</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">XCMG</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">UMG</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Lovol</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Hitachi</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Komatsu</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Hyundai</a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="chip chip--small chip--regular">Caterpillar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="chips-slider__nav">
+                                <button class="chips-slider__prev" type="button"></button>
+                                <button class="chips-slider__next" type="button"></button>
+                            </div>
                         </div>
                     </div>
                 </section>

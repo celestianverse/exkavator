@@ -18,20 +18,73 @@
     }
 
     &.top {
-        @media (min-width: $breakpoint-sm) {
-            .item-card__img-block {
-                width: 100%;
-                height: 240px;
+        .item-card__row {
+            @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+                flex-wrap: wrap;
+            }
+        }
 
-                @media (min-width: $breakpoint-sm) {
-                    width: 330px;
+        .item-card__img-block {
+            @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+                order: 1;
+                width: 400px;
+                height: 268px;
+            }
+            @media (min-width: 1161px) {
+                width: 330px;
+                height: 240px;
+            }
+        }
+
+        .item-card__info-block {
+            @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+                order: 3;
+                width: 100%;
+            }
+        }
+
+        .item-card__action-block {
+            @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+                order: 2;
+                flex-grow: 1;
+                gap: 16px;
+            }
+
+            .item-card__buttons {
+                @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+                    gap: 8px;
                 }
             }
-            .item-card__time {
+
+            .item-card__user-actions {
+                @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+                    gap: 12px;
+                }
+            }
+
+            .item-card__price {
+                p {
+                    @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+                        line-height: 32px;
+                    }
+                }
+            }
+
+            .button {
+                @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+                    min-height: 40px;
+                }
+            }
+        }
+
+        .item-card__time {
+            @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+                width: auto;
+            }
+            @media (min-width: 1161px) {
                 width: 330px;
             }
         }
-        
     }
 
     &.premium {
@@ -264,7 +317,9 @@
     }
 
     &__description {
+        height: 32px;
         @include text-size('sm');
+        @include text-ellipsis-rows(2);
     }
 
 

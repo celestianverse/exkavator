@@ -1,6 +1,5 @@
 .main-menu {
     position: relative;
-    
 
     @media (max-width: #{ $breakpoint-md - 1px }) {
         position: fixed;
@@ -20,25 +19,22 @@
         width: 100%;
     }
     
-
     &.is-open {
         transform: translateX(0);
     }
     
-
     &__list {
         display: flex;
 
         @media (max-width: #{ $breakpoint-md - 1px }) {
-            padding-top: 48px;
             flex-direction: column;
+            padding-bottom: 56px;
         }        
 
         @media (min-width: $breakpoint-md) {
             gap: 16px;
         }
     }
-
 
     &__item {
         border-bottom: 1px solid var(--neutral-100);

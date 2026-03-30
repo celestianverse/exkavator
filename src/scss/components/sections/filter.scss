@@ -9,11 +9,17 @@
         grid-template-columns: 1fr;
         gap: var(--spacing-8);
 
-        @media (min-width: 1280px) {
+        @media (min-width: $breakpoint-xs) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: $breakpoint-sm) {
             grid-template-columns: repeat(3, 1fr);
         }
 
-
+        &--extra {
+            padding-top: 8px;
+        }
     }
 
     &__checkboxes {
@@ -65,11 +71,17 @@
 
         @media (max-width: $breakpoint-xs - 1) {
             justify-content: center;
-            gap: 4px;
+            gap: 8px;
         }
 
         .button {
             display: none;
+
+            &--find {
+                @media (max-width: $breakpoint-sm - 1) {
+                    flex-grow: 1;
+                }
+            }
         }
     }
 
@@ -77,10 +89,6 @@
         padding: 12px 16px;
         color: var(--text-disabled);
         line-height: 24px;
-    }
-
-    &__more {
-        display: none;
     }
 
     &__range {
@@ -106,89 +114,105 @@
         overflow: hidden;
     }
 
-    .slider-chips {
-        margin: 0;
+    .chips-slider {
+        display: none;
+        margin-top: 8px;
+    }
 
-        &__nav {
-            position: absolute;
+    &__clear-button {
+        @media (max-width: $breakpoint-lg - 1) {
+            gap: 0;
+            min-width: 40px;
+            font-size: 0;
+            text-indent: -99999px;
+        }
+        @media (max-width: $breakpoint-sm - 1) {
+            display: none !important;
+        }
+    }
+
+    &__save-button {
+        @media (max-width: $breakpoint-lg - 1) {
+            gap: 0;
+            min-width: 40px;
+            font-size: 0;
+            text-indent: -99999px;
+        }
+        @media (max-width: $breakpoint-sm - 1) {
+            display: none !important;
+        }
+    }
+
+    &__extra-button {
+        margin-right: auto;
+
+        @media (max-width: $breakpoint-sm - 1) {
+            font-size: 0;
+            text-indent: -99999px;
+        }
+        @media (max-width: $breakpoint-sm - 1) {
+            display: none !important;
+        }
+    }
+
+    &__dropdown-button {
+        position: relative;
+        width: 48px;
+
+        @media (min-width: $breakpoint-sm) {
+            display: none !important;
+        }
+
+        .button {
+            width: 100%;
+        }
+
+        &.is-open .dropdown-backdrop {
+            display: block;
+        }
+
+        .dropdown-backdrop {
+            bottom: 100%;
+            left: auto;
             right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            gap: 4px;
-        }
-
-        &__prev, &__next {
-            width: 24px;
-            height: 24px;
-            border: none;
-            border-radius: 50%;
-            background-color: var(--neutral-60);
-            cursor: pointer;
-            position: relative;
-
-            &::after {
-                content: '';
-                display: block;
-                width: 16px;
-                height: 16px;
-                @include mask-icon(var(--icon-chevron-down));
-                background-color: var(--text-base);
-                position: absolute;
-                top: 50%;
-                left: 50%;
-            }
-
-            &.swiper-button-disabled {
-                opacity: 0.3;
-                cursor: default;
-            }
-        }
-
-        &__prev::after {
-            transform: translate(-50%, -50%) rotate(90deg);
-        }
-
-        &__next::after {
-            transform: translate(-50%, -50%) rotate(-90deg);
+            width: max-content;
+            transform: translateY(-2px);
         }
     }
 
-    &__clear {
-        @media (max-width: $breakpoint-sm - 1) {
-            font-size: 0;
-            text-indent: -99999px;
-        }
-    }
-    &__save {
-        @media (max-width: $breakpoint-sm - 1) {
-            font-size: 0;
-            text-indent: -99999px;
+    &__more {
+        display: flex;
+        justify-content: center;
+
+        @media (min-width: $breakpoint-sm) {
+            display: none !important;
         }
     }
 
-    &--nomore {
-        .filter__inputs {
-            & > * {
-                &:nth-child(n+6) {
-                    @media (max-width: $breakpoint-xs - 1) {
-                        display: none;
-                    }
-                }
-            }
+    &__header {
+        display: none;
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 44px;
+        padding: 0 16px;
+        background: #fff;
+        border-bottom: 1px solid var(--neutral-100);
+    }
+
+    &--hidden-extra {
+        .filter__inputs--extra {
+            display: none;
         }
-        .filter__checkboxes {
-            @media (max-width: $breakpoint-xs - 1) {
-                display: none;
-            }
-        }
-        .filter__more {
-            @media (max-width: $breakpoint-xs - 1) {
-                display: flex;
-                justify-content: center;
-            }
+        .filter__checkboxes--extra {
+            display: none;
         }
     }
+
     &--filled {
         .filter__buttons {
             .button {
@@ -197,6 +221,61 @@
             .filter__no-filters {
                 display: none;
             }
+        }
+        .chips-slider {
+            display: block;
+        }
+    }
+
+    &:not(.filter--filled) {
+        .filter__dropdown-button {
+            @media (max-width: $breakpoint-sm - 1) {
+                display: none !important;
+            }
+        }
+    }
+
+    &--opened {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        padding: 60px 16px 96px;
+        background: #fff;
+
+        .small-title {
+            display: none !important;
+        }
+
+        .filter__header {
+            display: flex;
+        }
+
+        .filter__more, .chips-slider {
+            display: none !important;
+        }
+
+        .filter__buttons {
+            position: fixed;
+            z-index: 101;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 12px 8px;
+            background: #fff;
+            box-shadow: 0 -2px 16px rgba(39, 51, 63, 0.12);
+        }
+
+        .filter__inputs--extra {
+            display: grid !important;
+        }
+
+        .filter__checkboxes--extra {
+            display: flex !important;
         }
     }
 }

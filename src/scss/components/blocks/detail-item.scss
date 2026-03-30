@@ -96,31 +96,6 @@
         }
     }
 
-    .detail-item-text {
-        line-height: 24px;
-
-        &.is-collapsible {
-            position: relative;
-            padding-bottom: 24px;
-        }
-
-        &.is-collapsed {
-            max-height: 295px;
-            overflow: hidden;
-        }
-
-        & > a:last-child {
-            display: none;
-        }
-
-        &.is-collapsible > a:last-child {
-            display: inline;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-    }
-
     &__gallery {
         width: 100%;
         
@@ -211,14 +186,44 @@
     }
 
     .detail-item-description-block {
+        align-self: stretch;
         padding: 16px;
         background-color: var(--neutral-25);
         border-radius: 16px;
 
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
         &__title {
-            margin-bottom: 16px;
+            margin-bottom: 8px;
             @include text-size('md');
             @include text-weight('semibold');
+        }
+
+        .detail-item-text {
+            line-height: 24px;
+
+            &.is-collapsible {
+                position: relative;
+            }
+
+            &.is-collapsed {
+                max-height: 192px;
+                overflow: hidden;
+            }
+
+            & + a {
+                display: none;
+            }
+
+            &.is-collapsible + a {
+                display: inline-block;
+                margin-top: 8px;
+                font-size: 12px;
+            }
         }
     }   
 
@@ -267,6 +272,8 @@
         }
 
         &__img {
+            width: 308px;
+            height: 172px;
             padding: 13px;
             border: 1px solid var(--neutral-100);
             border-radius: 12px;
@@ -274,11 +281,10 @@
             align-items: center;
             justify-content: center;
 
-            @media (min-width: $breakpoint-sm) {
-                width: 112px;
-                height: 112px;
+            img {
+                max-width: 100%;
+                max-height: 100%;
             }
-            
         }
 
         &__info {
@@ -292,7 +298,13 @@
             }
         }
         
-        
+        &__list {
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 
     .detail-item-company-list {

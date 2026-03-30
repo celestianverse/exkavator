@@ -35,14 +35,15 @@
         left: 8px;
         top: 50%;
         transform: translateY(-50%);
-        padding-right: 8px;
+        padding-right: 28px;
         width: 95%;
         color: var(--neutral-700);
         margin-top: 6px;
         background-color: transparent;
         border: 0;
         outline: 0;
-        user-select: none;  
+        user-select: none;
+        text-overflow: ellipsis;
         @include text-size('base');      
 
         pointer-events: none;

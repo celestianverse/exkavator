@@ -166,9 +166,14 @@
         <div class="layout">
             <main class="content">
                 <h1>Продажа спецтехники б/у и новой</h1>
-                <section class="filter-block section">                    
-                    <div class="filter filter--nomore">
+                <section class="filter-block section">
+                    <div class="filter">
                         <p class="small-title">Поиск по 24 304 объявлениям</p>
+                        <div class="filter__header">
+                            <button type="button" class="filter__header-link text--secondary" data-filter-clear>Сбросить</button>
+                            <p class="fw-semibold">Параметры</p>
+                            <button type="button" class="filter__header-link text--secondary" data-filter-close>Сохранить</button>
+                        </div>
                         <div class="filter__inputs">
                             <div class="field-dropdown">
                                 <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
@@ -258,8 +263,8 @@
                                         </svg>
                                     </button>
                                 </div>
-                            </div> 
-                            
+                            </div>
+
                             <div class="field-text">
                                 <input class="field-text__input" type="text" placeholder="Моточасы наработки" name="motoHours" id="motoHours" autocomplete="off"/>
                                 <label class="field-text__label" for="motoHours">
@@ -281,27 +286,55 @@
                                 <input type="checkbox" class="field-checkbox__input" id="ch-photo">
                                 <label class="field-checkbox__label" for="ch-photo">Только с фото</label>
                             </div>
+                            <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-nds">
+                                <label class="field-checkbox__label" for="ch-photo">Продажа с НДС</label>
+                            </div>
+                            <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-dealer">
+                                <label class="field-checkbox__label" for="ch-photo">Официальный дилер</label>
+                            </div>
+                            <div class="field-checkbox">
+                                <input type="checkbox" class="field-checkbox__input" id="ch-deliver">
+                                <label class="field-checkbox__label" for="ch-photo">С возможностью доставки</label>
+                            </div>
                         </div>
                         <div class="filter__more">
-                            <button class="button button--small button--primary-alt button--no-body" type="button">Больше параметров</button>
+                            <button class="button button--small button--primary-alt button--no-body filter__more-button" type="button">Больше параметров</button>
                         </div>
                         <div class="filter__buttons">
-                            <button class="button button--primary-alt button--no-body button--medium filter__clear">
+                            <button class="button button--primary-alt button--no-body button--medium filter__clear-button" data-filter-clear>
                                 <svg class="icon">
                                     <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>
                                 </svg>
                                 Сбросить
                             </button>
-                            <button class="button button--primary-alt button--no-body button--medium filter__save">
+                            <button class="button button--primary-alt button--no-body button--medium filter__save-button">
                                 <svg class="icon">
                                     <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
                                 </svg>
                                 Сохранить поиск
                             </button>
-                             <button class="button button--primary button--large">Показать 1234 объявления</button>
+                            <button class="button button--primary button--large button--find">Показать 1234 объявления</button>
+                            <div class="filter__dropdown-button">
+                                <button class="button button--large button--regular">
+                                    <svg class="icon icon--24">
+                                        <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
+                                    </svg>
+                                </button>
+                                <div class="dropdown-backdrop">
+                                    <ul class="dropdown-backdrop__list">
+                                        <li class="dropdown-backdrop__option-button" data-filter-clear>Сбросить</li>
+                                        <li class="dropdown-backdrop__option-button" data-filter-close>Сохранить поиск</li>
+                                    </ul>
+                                </div>
+                            </div>
                             <p class="filter__no-filters">Укажите параметры поиска</p>
                         </div>
                     </div>
+                </section>
+
+                <section class="section">
                     <div class="categories">
                         <p class="small-title">Популярные типы техники</p>
                         <ul class="categories__list">
@@ -309,7 +342,7 @@
                                 <a class="rounded-link-card rounded-link-card--blue" href="#">
                                     <span class="rounded-link-card__title">Автокраны</span>
                                     <span class="rounded-link-card__description">2426 объявлений</span>
-                                </a>                                
+                                </a>
                             </li>
                             <li>
                                 <a class="rounded-link-card rounded-link-card--blue" href="#">

@@ -59,12 +59,12 @@ const specialOffersSlider = new Swiper('.special-offers__slider', {
     }
 });
 
-const filterChipsSlider = new Swiper('.slider-chips__slider', {
+const chipsSlider = new Swiper('.chips-slider__slider', {
     slidesPerView: 'auto',
     spaceBetween: 6,
     navigation: {
-        nextEl: '.slider-chips__next',
-        prevEl: '.slider-chips__prev',
+        nextEl: '.chips-slider__next',
+        prevEl: '.chips-slider__prev',
     },
 });
 
@@ -115,6 +115,7 @@ const clickOutsideTargets = [
     { selector: '.field-dropdown', stateClass: 'is-open' },
     { selector: '.sorting', stateClass: 'is-open' },
     { selector: '.detail-item-mobile-footer__more', stateClass: 'is-open' },
+    { selector: '.filter__dropdown-button', stateClass: 'is-open' },
     { selector: '.item-card__show-buttons-wrap', stateClass: 'is-open' },
     { selector: '.price-block--dropdown', stateClass: 'is-open' },
     { selector: '.main-header-search', stateClass: 'is-show', ignore: '.js-header-search' },

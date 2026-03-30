@@ -40,10 +40,10 @@ initDropdowns('.item-card__show-buttons-wrap');
 initDropdowns('.price-block--dropdown');
 
 document.querySelectorAll('.detail-item-text').forEach((block) => {
-    const toggle = block.querySelector(':scope > a:last-child');
+    const toggle = block.nextElementSibling;
     if (!toggle) return;
 
-    const maxHeight = 295;
+    const maxHeight = 192;
 
     if (block.scrollHeight > maxHeight) {
         block.classList.add('is-collapsible', 'is-collapsed');
