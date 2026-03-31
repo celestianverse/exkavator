@@ -115,7 +115,22 @@ const dropdownConfigs = [
             { name: 'Бур', value: 'auger' },
         ]
     },
-
+    {
+        id: 'company-specialization',
+        hasSearch: false,
+        options: [
+            { name: 'Поставщики спецтехники', value: 'company-all' },
+            { name: 'Поставщики запчастей и комплектующих', value: 'company-equipment-suppliers' },
+            { name: 'Арендные компании', value: 'company-rental' },
+            { name: 'Земляные работы', value: 'company-earthworks' },
+            { name: 'Курсы экскаваторщиков, крановщиков', value: 'company-excavator-courses' },
+            { name: 'Лизинг спецтехники', value: 'company-leasing' },
+            { name: 'Перевозка спецтехники (строительной', value: 'company-transportation' },
+            { name: 'Снос зданий (демонтаж)', value: 'company-demolition' },
+            { name: 'Ремонт спецтехники', value: 'company-repair' },
+            { name: 'Справочник официальных дилеров', value: 'company-directory' },
+        ]
+    },
 ];
 
 initPageDropdowns(dropdownConfigs);

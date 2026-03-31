@@ -47,7 +47,7 @@ const specialOffersSlider = new Swiper('.special-offers__slider', {
     },
     breakpoints: {
         480: {
-            slidesPerView: 1.15,
+            slidesPerView: 1.6,
             spaceBetween: 12,
         },
         700: {
