@@ -43,7 +43,7 @@
             transform: rotate(180deg);
         }
 
-        @media(min-width: 1024px) {
+        @media (min-width: $breakpoint-md) {
             display: flex;
             gap: 24px;
         }
@@ -98,21 +98,21 @@
 
     &__round-btn {
         display: none;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        color: var(--text-link);
+        background-color: var(--primary-50);
+        justify-content: center;
+        align-items: center;
 
         @media(min-width: 480px) {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            flex-shrink: 0;
-            color: var(--text-link);
-            background-color: var(--primary-50);
             display: flex;
-            justify-content: center;
-            align-items: center;
+        }
 
-            &:hover {
-                background-color: var(--primary-100);
-            }
+        &:hover {
+            background-color: var(--primary-100);
         }
     }
 
@@ -123,5 +123,24 @@
 
     &__nav.is-open .dropdown-backdrop {
         display: block;
+    }
+
+    &--sm {
+        .contact-sticky-block__wrapper {
+            height: 64px;
+        }
+        .contact-sticky-block__round-btn {
+            display: flex;
+        }
+        .contact-sticky-block__nav {
+            @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+                gap: 16px;
+            }
+        }
+        .contact-sticky-block__link {
+            @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+                font-size: 13px;
+            }
+        }
     }
 }

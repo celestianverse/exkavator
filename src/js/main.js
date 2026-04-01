@@ -162,6 +162,16 @@ document.querySelectorAll('[data-tooltip-text]').forEach(el => {
     });
 });
 
+const contactNav = document.querySelector('.contact-sticky-block__nav');
+if (contactNav) {
+    contactNav.addEventListener('click', (e) => {
+        if (window.innerWidth >= 1024) return;
+        if (e.target.closest('.dropdown-backdrop')) return;
+        e.preventDefault();
+        contactNav.classList.toggle('is-open');
+    });
+}
+
 // Маска телефона (iMask)
 // document.querySelectorAll('input[type="tel"]').forEach(function (input) {
 //     IMask(input, {

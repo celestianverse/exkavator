@@ -23,16 +23,6 @@ const dropdownConfigs = [
 
 initPageDropdowns(dropdownConfigs);
 
-const contactNav = document.querySelector('.contact-sticky-block__nav');
-if (contactNav) {
-    contactNav.addEventListener('click', (e) => {
-        if (window.innerWidth >= 1024) return;
-        if (e.target.closest('.dropdown-backdrop')) return;
-        e.preventDefault();
-        contactNav.classList.toggle('is-open');
-    });
-}
-
 new Swiper('.action-slider', {
     slidesPerView: 1.12,
     spaceBetween: 16,

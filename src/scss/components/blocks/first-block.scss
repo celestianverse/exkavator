@@ -17,19 +17,30 @@
 
 
     &__img {
-        padding: 16px;
-        width: 50%;
+        width: 308px;
         margin-bottom: 24px;
+        padding: 16px;
         border-radius: 16px;
-        border: 1px solid var(--neutral-100);        
+        border: 1px solid var(--neutral-100);
 
-        @media(min-width: 768px) {
+        @media (max-width: $breakpoint-lg - 1) {
+            width: 232px;
+        }
+
+        @media (max-width: $breakpoint-md - 1) {
+            width: 168px;
+        }
+
+        @media (max-width: $breakpoint-xs - 1) {
+            width: 150px;
+        }
+
+        @media (min-width: $breakpoint-sm) {
             margin-bottom: 0;
-            width: 24%;
             flex-shrink: 0;
         }
 
-        @media(min-width: 1024px) {
+        @media (min-width: $breakpoint-md) {
             padding: 24px;
         }
     }
@@ -38,5 +49,14 @@
         @media(min-width: 1024px) {
             @include text-size('md');
         }
+    }
+
+    &__title {
+        &.first-block__title {
+            margin-bottom: 16px;
+        }
+    }
+
+    &--company {
     }
 }

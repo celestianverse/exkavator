@@ -10,8 +10,43 @@
 @import 'components/blocks';
 
 .text {
+    &--base {
+        color: var(--text-base);
+    }
     &--secondary {
         color: var(--text-secondary);
+    }
+}
+
+.text-block {
+    p {
+        margin-bottom: 24px;
+    }
+    ul, ol {
+        margin-bottom: 24px;
+        li {
+            align-items: flex-start;
+            margin-bottom: 8px;
+
+            &::before {
+                position: relative;
+                top: 8px;
+                flex-shrink: 0;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & > * {
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
