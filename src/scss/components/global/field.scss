@@ -379,6 +379,12 @@
       color: var(--field-disabled-text);
     }
   }
+
+  a {
+    &:hover {
+      color: var(--red-400);
+    }
+  }
 }
 
 .field-radio-group {

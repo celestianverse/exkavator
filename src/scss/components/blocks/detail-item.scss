@@ -305,7 +305,7 @@
         &__list {
             a {
                 &:hover {
-                    text-decoration: underline;
+                    color: var(--red-400);
                 }
             }
         }

@@ -169,7 +169,7 @@
 
     &:hover {
       & + .item-card__info-block > .item-card__title {
-        color: var(--link-hover)
+        color: var(--primary-600)
       }
     }
 
@@ -290,7 +290,7 @@
       text-decoration: underline;
 
       &:hover {
-        text-decoration: none;
+        color: var(--red-400);
       }
     }
   }
@@ -306,7 +306,7 @@
     }
 
     &:hover {
-      color: var(--link-hover);
+      color: var(--primary-600);
     }
   }
 

@@ -90,7 +90,7 @@ $font-weights: (
 );
 
 // Миксины — для использования внутри компонентов
-@mixin transition($property: all, $duration: 0.3s, $function: ease-in-out, $delay: 0s) {
+@mixin transition($property: all, $duration: 0.15s, $function: ease-in-out, $delay: 0s) {
   transition: $property $duration $function $delay;
 }
 
