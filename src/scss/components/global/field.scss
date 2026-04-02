@@ -1,403 +1,416 @@
 .field-dropdown {
-    position: relative;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    .field-dropdown__label {
+      background-color: var(--neutral-100);
+    }
+  }
+
+  &__label {
+    display: block;
     width: 100%;
-    cursor: pointer;
+    height: 48px;
+    padding: 12px 8px;
+    background-color: var(--neutral-50);
+    border-radius: 8px;
+    @include transition;
+    outline-color: var(--field-ouline);
+    pointer-events: none;
+  }
 
-    &__label {
-        display: block;
-        width: 100%;
-        height: 48px;
-        padding: 12px 8px;
-        background-color: var(--neutral-50);   
-        border-radius: 8px;
-        @include transition;
-        outline-color: var(--field-ouline);
-        pointer-events: none;
+  &__caption {
+    position: absolute;
+    left: 8px;
+    right: 24px;
+    top: 50%;
+    color: var(--neutral-500);
+    transform: translateY(-50%);
+    pointer-events: none;
+    user-select: none;
+    @include transition;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__input {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 28px;
+    width: 95%;
+    color: var(--neutral-700);
+    margin-top: 6px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    user-select: none;
+    text-overflow: ellipsis;
+    @include text-size('base');
+
+    pointer-events: none;
+
+    &::placeholder {
+      color: transparent;
     }
 
-    &__caption {
-        position: absolute;
-        left: 8px;
-        right: 24px;
-        top: 50%;
-        color: var(--neutral-500);
-        transform: translateY(-50%);
-        pointer-events: none;
-        user-select: none;
-        @include transition;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+    &:disabled + .field-dropdown__label {
+      background-color: var(--field-disabled-bg);
     }
 
-    &__input {
-        position: absolute;
-        left: 8px;
-        top: 50%;
-        transform: translateY(-50%);
-        padding-right: 28px;
-        width: 95%;
-        color: var(--neutral-700);
-        margin-top: 6px;
-        background-color: transparent;
-        border: 0;
-        outline: 0;
-        user-select: none;
-        text-overflow: ellipsis;
-        @include text-size('base');      
-
-        pointer-events: none;
-
-        &::placeholder {
-            color: transparent;
-        }
-
-        &:disabled + .field-dropdown__label {
-            background-color: var(--field-disabled-bg);
-        }
-
-        &:disabled + .field-dropdown__label .field-dropdown__caption {
-            color: var(--field-disabled-text);
-        }
-        &:disabled + .field-dropdown__label {
-            pointer-events: none;
-        }
-
-        &:focus-visible + .field-dropdown__label {
-            outline: 1px solid var(--field-ouline);
-        }
-
+    &:disabled + .field-dropdown__label .field-dropdown__caption {
+      color: var(--field-disabled-text);
+    }
+    &:disabled + .field-dropdown__label {
+      pointer-events: none;
     }
 
+    &:focus-visible + .field-dropdown__label {
+      outline: 1px solid var(--field-ouline);
+    }
+
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+    @include mask-icon(var(--icon-chevron-down));
+    background-color: var(--text-base);
+    z-index: 2;
+  }
+
+  &.is-open {
+    .field-dropdown__label {
+      outline: 1px solid var(--field-ouline);
+      background-color: var(--neutral-100);
+    }
+    .dropdown-backdrop {
+      display: block;
+    }
     &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 8px;
-        width: 16px;
-        height: 16px;
-        transform: translateY(-50%);
-        @include mask-icon(var(--icon-chevron-down));
-        background-color: var(--text-base);
-        z-index: 2;
+      transform: translateY(-50%) rotate(180deg);
     }
+  }
 
-    &.is-open {
-        .field-dropdown__label {
-            outline: 1px solid var(--field-ouline);
-        }
-        .dropdown-backdrop {
-            display: block;
-        }
-        &::after {
-            transform: translateY(-50%) rotate(180deg);
-        }
+  &.selected {
+    .field-dropdown__caption {
+      top: 12px;
+      font-size: 11px;
+      line-height: 14px;
+      color: var(--neutral-400);
     }
-
-    &.selected {
-        .field-dropdown__caption {
-            top: 12px;
-            font-size: 11px;
-            line-height: 14px;
-            color: var(--neutral-400);
-        }
-        .field-dropdown__label {
-            background-color: var(--primary-50);
-        }
-
-        
-
-    }
-
-    &.disabled {
-        pointer-events: none;
+    .field-dropdown__label {
+      background-color: var(--primary-50);
     }
 
 
-   
+
+  }
+
+  &.disabled {
+    pointer-events: none;
+  }
+
+
+
 }
 
 .field-text {
-    position: relative;
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    .field-text__label {
+      background-color: var(--neutral-100);
+    }
+  }
+
+  &__label {
+    display: block;
     width: 100%;
+    height: 48px;
+    padding: 12px 8px;
+    background-color: var(--neutral-50);
+    border-radius: 8px;
+    outline-color: var(--field-ouline);
+    @include transition;
+  }
 
-    &__label {
-        display: block;
-        width: 100%;
-        height: 48px;
-        padding: 12px 8px;
-        background-color: var(--neutral-50);   
-        border-radius: 8px;
-        outline-color: var(--field-ouline);
-        @include transition;
+  &__caption {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 50%;
+    color: var(--neutral-500);
+    transform: translateY(-50%);
+    pointer-events: none;
+    user-select: none;
+    @include transition;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__input {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 28px;
+    width: 95%;
+    color: var(--neutral-700);
+    margin-top: 6px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include text-size('base');
+
+
+    &::placeholder {
+      color: transparent;
+      opacity: 0;
     }
 
-    &__caption {
-        position: absolute;
-        left: 8px;
-        right: 8px;
-        top: 50%;
-        color: var(--neutral-500);
-        transform: translateY(-50%);
-        pointer-events: none;
-        user-select: none;
-        @include transition;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+    &:focus + .field-text__label {
+      outline: 1px solid var(--field-ouline);
     }
 
-    &__input {
-        position: absolute;
-        left: 8px;
-        top: 50%;
-        transform: translateY(-50%);
-        padding-right: 28px;
-        width: 95%;
-        color: var(--neutral-700);
-        margin-top: 6px;
-        background-color: transparent;
-        border: 0;
-        outline: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        @include text-size('base');
+    // смещение caption при фокусе и заполненном input
+    &:focus + .field-text__label .field-text__caption,
+    &:not(:placeholder-shown) + .field-text__label .field-text__caption {
+      top: 12px;
+      font-size: 11px;
+      line-height: 14px;
+      color: var(--neutral-400);
+    }
+    // label при заполненном input
+    &:not(:placeholder-shown) + .field-text__label {
+      background-color: var(--primary-50);
 
-
-        &::placeholder {
-            color: transparent;
-            opacity: 0;
-        }
-
-        &:focus + .field-text__label {
-            outline: 1px solid var(--field-ouline);
-        }
-
-        // смещение caption при фокусе и заполненном input
-        &:focus + .field-text__label .field-text__caption,
-        &:not(:placeholder-shown) + .field-text__label .field-text__caption {
-            top: 12px;
-            font-size: 11px;
-            line-height: 14px;
-            color: var(--neutral-400);
-        }
-        // label при заполненном input
-        &:not(:placeholder-shown) + .field-text__label {
-            background-color: var(--primary-50);  
-
-            & + .field-text__clear {
-                pointer-events: auto;
-                opacity: 1;
-            }
-        }
-
-        &:disabled + .field-text__label {
-            background-color: var(--field-disabled-bg);
-        }
-
-        &:disabled + .field-text__label .field-text__caption {
-            color: var(--field-disabled-text);
-        }
-       
+      & + .field-text__clear {
+        pointer-events: auto;
+        opacity: 1;
+      }
     }
 
-    &__clear {
-        pointer-events: none;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        right: 8px;
-        margin-top: -8px;
-        color: var(--text-base);
+    &:disabled + .field-text__label {
+      background-color: var(--field-disabled-bg);
     }
 
-    &.disabled {
-        pointer-events: none;
+    &:disabled + .field-text__label .field-text__caption {
+      color: var(--field-disabled-text);
     }
 
-    &--small {
-        .field-text__label {
-            height: 40px;
-            @include text-size('sm');
-        }
-        
+  }
+
+  &__clear {
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -8px;
+    color: var(--text-base);
+  }
+
+  &.disabled {
+    pointer-events: none;
+  }
+
+  &--small {
+    .field-text__label {
+      height: 40px;
+      @include text-size('sm');
     }
-    
+
+  }
+
 }
 
 .field-textarea {
-    position: relative;
+  position: relative;
+  width: 100%;
+
+  &__label {
+    display: block;
     width: 100%;
+    height: 96px;
+    padding: 12px 8px;
+    background-color: var(--neutral-50);
+    border-radius: 8px;
+    @include transition;
+    outline-color: var(--field-ouline);
+  }
 
-    &__label {
-        display: block;
-        width: 100%;
-        height: 96px;
-        padding: 12px 8px;
-        background-color: var(--neutral-50);
-        border-radius: 8px;
-        @include transition;
-        outline-color: var(--field-ouline);
+  &__caption {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 12px;
+    color: var(--neutral-500);
+    pointer-events: none;
+    user-select: none;
+    @include transition;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__input {
+    position: absolute;
+    left: 8px;
+    top: 24px;
+    padding-right: 8px;
+    width: 95%;
+    height: calc(96px - 24px - 8px);
+    color: var(--neutral-700);
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    resize: none;
+    @include text-size('base');
+
+
+    &::placeholder {
+      color: transparent;
+      opacity: 0;
     }
 
-    &__caption {
-        position: absolute;
-        left: 8px;
-        right: 8px;
-        top: 12px;
-        color: var(--neutral-500);
-        pointer-events: none;
-        user-select: none;
-        @include transition;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+    // смещение caption при фокусе и заполненном input
+    &:focus + .field-textarea__label .field-textarea__caption,
+    &:not(:placeholder-shown) + .field-textarea__label .field-textarea__caption {
+      top: 6px;
+      font-size: 11px;
+      line-height: 14px;
+      color: var(--neutral-400);
+    }
+    // label при заполненном input
+    &:not(:placeholder-shown) + .field-textarea__label {
+      background-color: var(--primary-50);
     }
 
-    &__input {
-        position: absolute;
-        left: 8px;
-        top: 24px;
-        padding-right: 8px;
-        width: 95%;
-        height: calc(96px - 24px - 8px);
-        color: var(--neutral-700);
-        background-color: transparent;
-        border: 0;
-        outline: 0;
-        resize: none;
-        @include text-size('base');
-
-
-        &::placeholder {
-            color: transparent;
-            opacity: 0;
-        }
-
-        // смещение caption при фокусе и заполненном input
-        &:focus + .field-textarea__label .field-textarea__caption,
-        &:not(:placeholder-shown) + .field-textarea__label .field-textarea__caption {
-            top: 6px;
-            font-size: 11px;
-            line-height: 14px;
-            color: var(--neutral-400);
-        }
-        // label при заполненном input
-        &:not(:placeholder-shown) + .field-textarea__label {
-            background-color: var(--primary-50);
-        }
-
-        &:disabled + .field-textarea__label {
-            background-color: var(--field-disabled-bg);
-        }
-
-        &:disabled + .field-textarea__label .field-textarea__caption {
-            color: var(--field-disabled-text);
-        }
-
+    &:disabled + .field-textarea__label {
+      background-color: var(--field-disabled-bg);
     }
 
-    &.disabled {
-        pointer-events: none;
+    &:disabled + .field-textarea__label .field-textarea__caption {
+      color: var(--field-disabled-text);
     }
+
+  }
+
+  &.disabled {
+    pointer-events: none;
+  }
 
 }
 
 .field-checkbox {
+  position: relative;
+
+  &:has(.field-checkbox__input:not(:disabled)):hover {
+    .field-checkbox__label::before {
+      background-color: var(--neutral-100);
+    }
+
+    .field-checkbox__input:checked + .field-checkbox__label::before {
+      background-color: var(--primary-200);
+    }
+  }
+
+  &__label {
     position: relative;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    cursor: pointer;
 
-    &:has(.field-checkbox__input:not(:disabled)):hover {
-        .field-checkbox__label::before {
-            background-color: var(--neutral-100);
-        }
+    &::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      background-color: var(--neutral-60);
+      flex-shrink: 0;
+      @include transition;
+    }
+  }
 
-        .field-checkbox__input:checked + .field-checkbox__label::before {
-            background-color: var(--primary-200);
-        }
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:focus-visible + .field-checkbox__label::before {
+      outline: 1px solid var(--field-ouline);
+      outline-offset: 2px;
     }
 
-    &__label {
-        position: relative;
-        display: flex;
-        gap: 8px;
-        align-items: flex-start;
-        cursor: pointer;
-        
-        &::before {
-            content: '';
-            display: block;
-            width: 20px;
-            height: 20px;
-            border-radius: 6px;
-            background-color: var(--neutral-60);
-            flex-shrink: 0;
-            @include transition;
-        }
+    &:checked + .field-checkbox__label::before {
+      background-color: var(--primary-100);
     }
 
-    &__input {
-        position: absolute;
-        width: 0;
-        height: 0;
-        opacity: 0;
-
-        &:focus-visible + .field-checkbox__label::before {
-            outline: 1px solid var(--field-ouline);
-            outline-offset: 2px;
-        }
-
-        &:checked + .field-checkbox__label::before {
-            background-color: var(--primary-100);
-        }
-
-        &:checked + .field-checkbox__label::after {
-            content: '';
-            position: absolute;
-            top: 5px;
-            left: 4px;
-            width: 20px;
-            height: 20px;
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxMyAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuMzI1IDEwLjE5MTJMMCA1Ljg2NjI1TDEuODY2MjUgNEw0LjMyNSA2LjQ1ODc1TDEwLjc4MzcgMEwxMi42NSAxLjg2NjI1TDQuMzI1IDEwLjE5MTJaIiBmaWxsPSIjMDA1OENDIi8+Cjwvc3ZnPgo=");
-            background-repeat: no-repeat;
-        }
-
-        &:disabled + .field-checkbox__label {
-            pointer-events: none;
-            color: var(--field-disabled-text);
-        }
+    &:checked + .field-checkbox__label::after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 4px;
+      width: 20px;
+      height: 20px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxMyAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuMzI1IDEwLjE5MTJMMCA1Ljg2NjI1TDEuODY2MjUgNEw0LjMyNSA2LjQ1ODc1TDEwLjc4MzcgMEwxMi42NSAxLjg2NjI1TDQuMzI1IDEwLjE5MTJaIiBmaWxsPSIjMDA1OENDIi8+Cjwvc3ZnPgo=");
+      background-repeat: no-repeat;
     }
+
+    &:disabled + .field-checkbox__label {
+      pointer-events: none;
+      color: var(--field-disabled-text);
+    }
+  }
 }
 
 .field-radio-group {
-    display: flex;
-    padding: 8px;
-    background-color: var(--neutral-60);
+  display: flex;
+  padding: 8px;
+  background-color: var(--neutral-60);
+  border-radius: 8px;
+  gap: 5px;
+
+  &__label {
+    padding: 8px 5px;
     border-radius: 8px;
-    gap: 5px;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
 
-    &__label {
-        padding: 8px 5px;
-        border-radius: 8px;
-        flex: 1;
-        text-align: center;
-        cursor: pointer;
-
-        &:has(.field-radio-group__input:checked) {
-            background-color: var(--neutral-0);
-        }
-
-        &:hover {
-            background-color: var(--neutral-100);
-        }
+    &:has(.field-radio-group__input:checked) {
+      background-color: var(--neutral-0);
     }
 
-    &__caption {
-        @include text-size('sm');
+    &:hover {
+      background-color: var(--neutral-100);
     }
+  }
 
-    
+  &__caption {
+    @include text-size('sm');
+  }
 
-    &__input {
-        display: none;
-    }
+
+
+  &__input {
+    display: none;
+  }
 }

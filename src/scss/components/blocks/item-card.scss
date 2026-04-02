@@ -14,6 +14,7 @@
   @include transition;
 
   &:hover {
+    background-color: var(--neutral-25);
     box-shadow: 0 2px 8px 0 #CCE2FF80;
   }
 

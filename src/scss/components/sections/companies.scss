@@ -1,62 +1,66 @@
 .companies {
 
-    &__slider {
-        padding-bottom: 10px;
+  &__slider {
+    padding-bottom: 10px;
 
-        @media (max-width: $breakpoint-sm - 1) {
-            margin-right: -24px;
-        }
-
-        @media (max-width: $breakpoint-xs - 1) {
-            margin-right: -16px;
-        }
+    @media (max-width: $breakpoint-sm - 1) {
+      margin-right: -24px;
     }
 
-    &__list {
-        margin-bottom: 16px;
-        max-width: 340px;
+    @media (max-width: $breakpoint-xs - 1) {
+      margin-right: -16px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 16px;
+    max-width: 340px;
+  }
+
+  &__item  {
+    position: relative;
+    width: auto;
+  }
+
+  &__link {
+    padding: 10px;
+    width: 112px;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--neutral-100);
+    border-radius: 12px;
+
+    &:hover {
+      box-shadow: 0 2px 16px #27333F1F;
     }
 
-    &__item  {
-        position: relative;
-        width: auto;
+    img {
+      object-fit: contain;
     }
 
-    &__link {   
-        padding: 10px;
-        width: 112px;
-        height: 112px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        background: #fff;
-        border: 1px solid var(--neutral-100);
-        border-radius: 12px;
+    &.ultra {
 
-        img {
-            object-fit: contain;
-        }
-
-        &.ultra {
-
-            &::after {
-                position: absolute;
-                bottom: -10px;
-                padding: 3px 5px;
-                content: 'ULTRA';
-                color: var(--neutral-0);
-                background-color: var(--yellow-400);
-                border-radius: 6px;
-                @include text-size('sm');
-                text-transform: uppercase;
-            }
-        }
+      &::after {
+        position: absolute;
+        bottom: -10px;
+        padding: 3px 5px;
+        content: 'ULTRA';
+        color: var(--neutral-0);
+        background-color: var(--yellow-400);
+        border-radius: 6px;
+        @include text-size('sm');
+        text-transform: uppercase;
+      }
     }
+  }
 }
 
 .company-directory {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
