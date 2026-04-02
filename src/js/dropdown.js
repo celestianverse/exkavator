@@ -220,7 +220,7 @@ function initPageDropdowns(dropdownConfigs) {
     // сортировка
     initDropdowns('.sorting', {
         onSelect(option, container) {
-            const btn = container.querySelector('.button--dropdown');
+            const btn = container.querySelector('.button--dropdown .button__text');
             if (btn) btn.textContent = option.textContent.trim();
         }
     });

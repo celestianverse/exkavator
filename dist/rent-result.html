@@ -97,7 +97,7 @@
                     <input type="text" class="main-header-search__input">
                     <div class="main-header-search__controls">
                         <button class="main-header-search__reset" type="button">
-                            <svg class="icon ">
+                            <svg class="icon">
                                 <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
                             </svg>
                         </button>
@@ -293,8 +293,15 @@
                 <section class="results section">
                     <div class="results__title">
                         <p class="small-title">Найдено 1234 объявления</p>
-                        <div class="sorting">
-                            <button class="button button--small button--regular-alt button--dropdown">Сначала актуальные</button>
+                        <div class="sorting sorting--mobile-inverse">
+                            <button class="button button--small button--regular-alt button--dropdown">
+                                <span class="button__text">
+                                    Сначала актуальные
+                                </span>
+                                <svg class="icon">
+                                    <use xlink:href="img/sprites/sprite-16.svg#sort"></use>
+                                </svg>
+                            </button>
                             <div class="dropdown-backdrop">
                                 <ul class="dropdown-backdrop__list">
                                     <li class="dropdown-backdrop__option">Сначала актуальные</li>

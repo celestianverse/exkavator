@@ -1,11 +1,41 @@
 .sorting {
-    position: relative;
+  position: relative;
 
-    &.is-open .dropdown-backdrop {
-        display: block;
+  &.is-open .dropdown-backdrop {
+    display: block;
+  }
+
+  &.is-open .button--dropdown::after {
+    transform: rotate(180deg);
+  }
+
+  .button {
+    @media (max-width: $breakpoint-sm - 1) {
+      font-size: 0;
+      text-indent: -99999px;
+      gap: 0;
+      width: 32px;
     }
 
-    &.is-open .button--dropdown::after {
-        transform: rotate(180deg);
+    &::after {
+      @media (max-width: $breakpoint-sm - 1) {
+        display: none !important;
+      }
     }
+
+    .icon {
+      @media (min-width: $breakpoint-sm) {
+        display: none !important;
+      }
+    }
+  }
+
+  &--mobile-inverse {
+    .dropdown-backdrop {
+      @media (max-width: $breakpoint-sm - 1) {
+        right: 0;
+        width: 160px;
+      }
+    }
+  }
 }
