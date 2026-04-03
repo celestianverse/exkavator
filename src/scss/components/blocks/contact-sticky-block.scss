@@ -32,7 +32,7 @@
             height: 16px;
             @include mask-icon(var(--icon-chevron-down));
             background-color: var(--text-link);
-            transition: transform 0.2s;
+            transition: transform 0.15s;
 
             @media(min-width: 1024px) {
                 display: none;

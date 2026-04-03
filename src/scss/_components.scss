@@ -19,18 +19,21 @@
 }
 
 .text-block {
-  p {
+  p, img {
     margin-bottom: 24px;
   }
   ul, ol {
     margin-bottom: 24px;
     li {
-      align-items: flex-start;
+      position: relative;
+      display: list-item;
       margin-bottom: 8px;
+      padding-left: 20px;
 
       &::before {
-        position: relative;
+        position: absolute;
         top: 8px;
+        left: 8px;
         flex-shrink: 0;
         width: 3px;
         height: 3px;
@@ -40,6 +43,11 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+  a {
+    &:hover {
+      color: var(--red-400);
     }
   }
 
@@ -377,6 +385,28 @@
   .button {
     margin-top: 8px;
     grid-column: 1 / -1;
+  }
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @media (max-width: $breakpoint-lg - 1 ) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-xs - 1 ) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.photo {
+  &__image {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 8px;
   }
 }
 
