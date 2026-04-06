@@ -29,7 +29,7 @@
     background-color: var(--primary-500);
     color: var(--text-white);
 
-    &:hover, &:focus {
+    &:hover {
       box-shadow: 0 2px 8px 0 #00429780;
     }
     &:active  {
@@ -43,7 +43,7 @@
     background-color: var(--primary-50);
     color: var(--text-link);
 
-    &:hover, &:focus {
+    &:hover {
       background-color: var(--primary-100);
     }
     &:active  {
@@ -57,7 +57,7 @@
     background-color: var(--neutral-60);
     color: var(--text-base);
 
-    &:hover, &:focus {
+    &:hover {
       box-shadow: 0 2px 8px 0 #E0E5EB80;
     }
     &:active  {
@@ -72,7 +72,7 @@
     color: var(--text-base);
     outline: 1px solid  var(--neutral-100);
 
-    &:hover, &:focus {
+    &:hover {
       box-shadow: 0 2px 8px 0 #E0E5EB80;
       outline: 1px solid  var(--neutral-100);
       color: var(--text-base);
@@ -90,7 +90,7 @@
     background-color: var(--green-500);
     color: var(--text-white);
 
-    &:hover, &:focus {
+    &:hover {
       box-shadow: 0 2px 8px 0 #E0E5EB80;
     }
     &:active  {
@@ -104,7 +104,7 @@
     background-color: var(--green-50);
     color: var(--green-500);
 
-    &:hover, &:focus {
+    &:hover {
       box-shadow: 0 2px 8px 0 #CCFECF80;
     }
     &:active  {
