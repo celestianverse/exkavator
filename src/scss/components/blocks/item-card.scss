@@ -178,7 +178,25 @@
     }
   }
 
+
+
+  .item-card-preview__more {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+  }
+
   .item-card-preview {
+
     &__images {
       height: 100%;
 
@@ -265,6 +283,13 @@
     &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images img:nth-child(5) {
       opacity: 1;
     }
+    &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images img:nth-child(5) {
+      opacity: 1;
+    }
+    &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images .item-card-preview__more {
+      opacity: 1;
+      visibility: visible;
+    }
 
     &__hover-list:has(li:hover) ~ .item-card-preview__images img:first-child {
       opacity: 0;
@@ -287,7 +312,6 @@
 
     a {
       color: inherit;
-      text-decoration: underline;
 
       &:hover {
         color: var(--red-400);
@@ -545,13 +569,21 @@
     .item-card__company-title {
       display: flex;
       gap: 8px;
+
+      a {
+        color: var(--text-base);
+
+        &:hover {
+          color: var(--text-primary);
+        }
+      }
     }
 
     .item-card__company-link {
       font-weight: 600;
 
       &:hover {
-        text-decoration: underline;
+        color: var(--red-400);
       }
     }
   }

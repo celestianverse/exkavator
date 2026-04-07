@@ -9,6 +9,43 @@
 @import 'components/global';
 @import 'components/blocks';
 
+.scroll {
+  overflow: auto;
+}
+
+.scroll, .overflow-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neutral-25) transparent;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--neutral-25);
+    border-radius: 8px;
+    border: 2px solid transparent;
+  }
+}
+
+@media (forced-colors: active) {
+  .scroll, .overflow-scroll {
+    scrollbar-color: ButtonText Canvas;
+  }
+
+  .scroll, .overflow-scroll {
+    &::-webkit-scrollbar-thumb {
+      background-color: CanvasText;
+      border-color: Canvas;
+    }
+  }
+}
+
 .text {
   &--base {
     color: var(--text-base);
@@ -402,11 +439,27 @@
   }
 }
 .photo {
+  cursor: pointer;
+  @include transition;
+
+  &:hover {
+    color: var(--red-400);
+
+    .photo__image {
+      transform: scale(1.1);
+    }
+  }
+
+  &__cover {
+    overflow: hidden;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
   &__image {
     display: block;
     width: 100%;
-    margin-bottom: 8px;
     border-radius: 8px;
+    @include transition;
   }
 }
 
@@ -551,6 +604,15 @@
     border-radius: 50%;
     @include transition;
   }
+}
+
+.swiper-scrollbar {
+  height: 8px !important;
+  background: var(--neutral-100);
+}
+.swiper-scrollbar-drag {
+  height: 8px;
+  background: var(--neutral-200);
 }
 
 @import 'components/sections/filter';

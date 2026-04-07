@@ -122,7 +122,7 @@
 
         @media (min-width: $breakpoint-sm) {           
             margin: 0 0 16px 0;
-        }        
+        }
 
         &__wrapper {
             height: 205px;  
@@ -143,20 +143,28 @@
 
         &__thumb {
             display: none;
-            height: 80px;
+            height: 108px;
+            padding-bottom: 28px;
 
             @media (min-width: $breakpoint-sm) {
                 display: block;
             }
 
             .swiper-slide {
-                border-radius: 8px;
                 overflow: hidden;
+                width: 120px;
+                border: 2px solid transparent;
+                border-radius: 8px;
                 cursor: pointer;
+                @include transition;
+
+                &:hover {
+                    background-color: var(--text-primary);
+                }
             }
 
             .swiper-slide-thumb-active {
-                border: 2px solid var(--neutral-700);
+                border: 2px solid var(--text-primary);
             }
 
             img {

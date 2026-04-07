@@ -112,6 +112,14 @@ $font-weights: (
   text-overflow: ellipsis;
 }
 
+@mixin block-columns($columns) {
+  column-count: $columns;
+
+  & > * {
+    break-inside: avoid-column;
+  }
+}
+
 // Утилити-классы размеров
 @each $name, $values in $font-sizes {
   .text-#{$name} {

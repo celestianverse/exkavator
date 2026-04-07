@@ -24,17 +24,21 @@
   &--regular-alt {
     background-color: var(--neutral-60);
   }
+  &--green {
+    background-color: var(--green-500);
+    color: var(--neutral-50);
+  }
   &--yellow {
-    background-color: var(--yellow-400);
+    background-color: var(--yellow-500);
     color: var(--yellow-50);
   }
   &--yellow-alt {
     background-color: var(--yellow-50);
     color: var(--yellow-500);
   }
-  &--green {
-    background-color: var(--green-500);
-    color: var(--neutral-50);
+  &--red {
+    background-color: var(--red-500);
+    color: var(--red-50);
   }
   &--gray {
     background-color: rgba(145, 145, 145, 1);

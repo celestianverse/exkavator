@@ -417,118 +417,7 @@
         </nav>
     </div>
 
-    <div class="popup" id="popup-question">
-        <div class="popup__dialog">
-            <div class="popup__title">
-                <span>Задать вопрос</span>
-                <button class="popup__close" type="button">
-                    <svg class="icon icon--24">
-                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="popup__content">
-                <div class="popup__form">
-                    <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="popup-question-phone" id="popup-question-phone" autocomplete="off" required>
-                        <label class="field-text__label" for="popup-question-phone">
-                            <span class="field-text__caption">Ваш телефон *</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="popup-question-email" id="popup-question-email" autocomplete="off" required>
-                        <label class="field-text__label" for="popup-question-email">
-                            <span class="field-text__caption">Ваш email (не обязательно)</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-textarea">
-                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="popup-question-message" id="popup-question-message"></textarea>
-                        <label class="field-textarea__label" for="popup-question-message">
-                            <span class="field-textarea__caption">Текст сообщения</span>
-                        </label>
-                    </div>
-
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="ch-popup-question-subscribe">
-                        <label class="field-checkbox__label" for="ch-popup-question-subscribe">
-                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="ch-popup-question-subscribe-presonal-data">
-                        <label class="field-checkbox__label" for="ch-popup-question-subscribe-presonal-data">
-                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                </div>
-
-            </div>
-            <div class="popup__footer">
-                <div class="button-group">
-                    <button class="button button--large button--primary button--full-width send-callback-form" disabled>Отправить</button>
-                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popup" id="popup-callback">
-        <div class="popup__dialog">
-            <div class="popup__title">
-                <span>Заказать обратный звонок</span>
-                <button class="popup__close" type="button">
-                    <svg class="icon icon--24">
-                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
-                    </svg>
-                </button>
-            </div>
-            <p class="popup__description">Оставьте номер вашего телефона, и продавец перезвонит вам.</p>
-            <div class="popup__content">
-                <div class="popup__form">
-                    <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="callback-phone" id="callback-phone" autocomplete="off" required>
-                        <label class="field-text__label" for="callback-phone">
-                            <span class="field-text__caption">Ваш телефон *</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="ch-subscribe">
-                        <label class="field-checkbox__label" for="ch-subscribe">
-                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="ch-presonal-data">
-                        <label class="field-checkbox__label" for="ch-presonal-data">
-                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                </div>
-
-            </div>
-            <div class="popup__footer">
-                <div class="button-group">
-                    <button class="button button--large button--primary button--full-width send-callback-form" disabled>Перезвоните мне</button>
-                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popup" id="popup-service">
+    <form class="popup form-validation" id="popup-service">
         <div class="popup__dialog">
             <div class="popup__title">
                 <span>Отправить заявку</span>
@@ -541,8 +430,8 @@
             <div class="popup__content">
                 <div class="popup__form">
                     <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Как к вам обращаться? *" name="service-form-name" id="service-form-name" autocomplete="off" required>
-                        <label class="field-text__label" for="service-form-name">
+                        <input class="field-text__input" type="text" placeholder="Как к вам обращаться? *" name="service-name" id="service-name" autocomplete="off" required>
+                        <label class="field-text__label" for="service-name">
                             <span class="field-text__caption">Как к вам обращаться? *</span>
                         </label>
                         <button class="field-text__clear" aria-label="Очистить" type="button">
@@ -552,8 +441,8 @@
                         </button>
                     </div>
                     <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="service-form-phone" id="service-form-phone" autocomplete="off" required>
-                        <label class="field-text__label" for="service-form-phone">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="service-phone" id="service-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="service-phone">
                             <span class="field-text__caption">Ваш телефон *</span>
                         </label>
                         <button class="field-text__clear" aria-label="Очистить" type="button">
@@ -563,9 +452,9 @@
                         </button>
                     </div>
                     <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Ваш email (не обязательно)" name="service-form-email" id="service-form-email" autocomplete="off" required>
-                        <label class="field-text__label" for="service-form-email">
-                            <span class="field-text__caption">Ваш email (не обязательно)</span>
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="service-email" id="service-email" autocomplete="off">
+                        <label class="field-text__label" for="service-email">
+                            <span class="field-text__caption">Ваш email</span>
                         </label>
                         <button class="field-text__clear" aria-label="Очистить" type="button">
                             <svg class="icon icon--16">
@@ -574,21 +463,21 @@
                         </button>
                     </div>
                     <div class="field-textarea">
-                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="service-form-message" id="service-form-message"></textarea>
-                        <label class="field-textarea__label" for="service-form-message">
+                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="service-message" id="service-message"></textarea>
+                        <label class="field-textarea__label" for="service-message">
                             <span class="field-textarea__caption">Текст сообщения</span>
                         </label>
                     </div>
 
                     <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="ch-seller-message-subscribe">
-                        <label class="field-checkbox__label" for="ch-seller-message-subscribe">
+                        <input type="checkbox" class="field-checkbox__input" id="service-subscribe">
+                        <label class="field-checkbox__label" for="service-subscribe">
                             <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
                         </label>
                     </div>
                     <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="ch-seller-message-subscribe-presonal-data">
-                        <label class="field-checkbox__label" for="ch-seller-message-subscribe-presonal-data">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="service-presonal-data">
+                        <label class="field-checkbox__label" for="service-presonal-data">
                             <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
                         </label>
                     </div>
@@ -597,12 +486,12 @@
             </div>
             <div class="popup__footer">
                 <div class="button-group">
-                    <button class="button button--large button--primary button--full-width send-callback-form" disabled>Отправить</button>
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
                     <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>

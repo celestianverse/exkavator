@@ -15,19 +15,14 @@
         font-weight: 600;        
 
         &:hover {
-            color: var(--text-primary);            
-
-            > span {
-                border-bottom: 1px solid;
-            }
-            
+            color: var(--red-400);
         }
 
         &--accent {
             color: var(--yellow-500);
 
             &:hover {
-                color: var(--yellow-500);
+                color: var(--red-400);
             }
         }
     }

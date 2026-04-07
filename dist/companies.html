@@ -165,6 +165,12 @@
     <div class="container">
         <div class="layout">
             <main class="content">
+                <div class="crumbs crumbs--bread">
+                    <li class="crumbs__item">
+                        <a href="#">Каталог компаний</a>
+                    </li>
+                </div>
+
                 <h1>Каталог компаний и услуг</h1>
                 <section class="filter-block section">
                     <div class="filter">
@@ -321,7 +327,7 @@
                                     <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
                                     <div class="special-item__action">
                                         <span class="special-item__price">15 541 703 <i>₽</i></span>
-                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                     </div>
                                 </div>
                             </li>
@@ -334,7 +340,7 @@
                                     <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
                                     <div class="special-item__action">
                                         <span class="special-item__price">15 541 703 <i>₽</i></span>
-                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                     </div>
                                 </div>
                             </li>
@@ -347,7 +353,7 @@
                                     <p class="special-item__cities">Москва и еще 22 города</p>
                                     <div class="special-item__action">
                                         <span class="special-item__price">11 240 703 <i>₽</i></span>
-                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                     </div>
                                 </div>
                             </li>
@@ -360,7 +366,7 @@
                                     <p class="special-item__cities">Москва и еще 22 города</p>
                                     <div class="special-item__action">
                                         <span class="special-item__price">11 240 703 <i>₽</i></span>
-                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                     </div>
                                 </div>
                             </li>
@@ -371,14 +377,14 @@
                 <section class="companies section">
                     <ul class="company-directory">
                         <li class="item-card item-card--company">
-                            <div class="item-card__company-logo">
+                            <a href="#" class="item-card__company-logo">
                                 <img src="img/pages/expo/client-logo-1.jpg" alt="НАК Машинери">
-                            </div>
+                            </a>
                             <div class="item-card__company-body">
                                 <div class="item-card__company-intro">
                                     <div class="item-card__company-title">
-                                        <h3 class="text-lg fw-bold">НАК Машинери</h3>
-                                        <span class="chip chip--medium chip--yellow">Альфа</span>
+                                        <a href="#" class="text-lg fw-bold">НАК Машинери</a>
+                                        <span class="chip chip--medium chip--red">ULTRA +</span>
                                     </div>
                                     <a href="https://liugongrussia.ru/" target="_blank" class="item-card__company-link">liugongrussia.ru</a>
                                 </div>
@@ -386,14 +392,14 @@
                             </div>
                         </li>
                         <li class="item-card item-card--company">
-                            <div class="item-card__company-logo">
+                            <a href="#" class="item-card__company-logo">
                                 <img src="img/pages/expo/client-logo-2.jpg" alt="НАК Машинери">
-                            </div>
+                            </a>
                             <div class="item-card__company-body">
                                 <div class="item-card__company-intro">
                                     <div class="item-card__company-title">
-                                        <h3 class="text-lg fw-bold">ГК КОРРУС-Тех</h3>
-                                        <span class="chip chip--medium chip--yellow">Альфа</span>
+                                        <a href="#" class="text-lg fw-bold">ГК КОРРУС-Тех</a>
+                                        <span class="chip chip--medium chip--red">ULTRA +</span>
                                     </div>
                                     <a href="https://liugongrussia.ru/" target="_blank" class="item-card__company-link">liugongrussia.ru</a>
                                 </div>
@@ -401,14 +407,14 @@
                             </div>
                         </li>
                         <li class="item-card item-card--company">
-                            <div class="item-card__company-logo">
+                            <a href="#" class="item-card__company-logo">
                                 <img src="img/pages/expo/client-logo-3.jpg" alt="НАК Машинери">
-                            </div>
+                            </a>
                             <div class="item-card__company-body">
                                 <div class="item-card__company-intro">
                                     <div class="item-card__company-title">
-                                        <h3 class="text-lg fw-bold">ООО «Люгонг Машинери Рус»</h3>
-                                        <span class="chip chip--medium chip--yellow">Альфа</span>
+                                        <a href="#" class="text-lg fw-bold">ООО «Люгонг Машинери Рус»</a>
+                                        <span class="chip chip--medium chip--yellow">ULTRA</span>
                                     </div>
                                     <a href="https://liugongrussia.ru/" target="_blank" class="item-card__company-link">liugongrussia.ru</a>
                                 </div>
@@ -416,14 +422,14 @@
                             </div>
                         </li>
                         <li class="item-card item-card--company">
-                            <div class="item-card__company-logo">
+                            <a href="#" class="item-card__company-logo">
                                 <img src="img/pages/expo/client-logo-4.jpg" alt="НАК Машинери">
-                            </div>
+                            </a>
                             <div class="item-card__company-body">
                                 <div class="item-card__company-intro">
                                     <div class="item-card__company-title">
-                                        <h3 class="text-lg fw-bold">ГК ЭПОТОС</h3>
-                                        <span class="chip chip--medium chip--gray">Альфа</span>
+                                        <a href="#" class="text-lg fw-bold">ГК ЭПОТОС</a>
+                                        <span class="chip chip--medium chip--yellow">ULTRA</span>
                                     </div>
                                     <a href="https://liugongrussia.ru/" target="_blank" class="item-card__company-link">liugongrussia.ru</a>
                                 </div>
@@ -431,14 +437,14 @@
                             </div>
                         </li>
                         <li class="item-card item-card--company">
-                            <div class="item-card__company-logo">
+                            <a href="#" class="item-card__company-logo">
                                 <img src="img/pages/expo/client-logo-5.jpg" alt="НАК Машинери">
-                            </div>
+                            </a>
                             <div class="item-card__company-body">
                                 <div class="item-card__company-intro">
                                     <div class="item-card__company-title">
-                                        <h3 class="text-lg fw-bold">Powerplus Group</h3>
-                                        <span class="chip chip--medium chip--gray">Альфа</span>
+                                        <a href="#" class="text-lg fw-bold">Powerplus Group</a>
+                                        <span class="chip chip--medium chip--green">BUSINESS +</span>
                                     </div>
                                     <a href="https://liugongrussia.ru/" target="_blank" class="item-card__company-link">liugongrussia.ru</a>
                                 </div>
@@ -446,14 +452,14 @@
                             </div>
                         </li>
                         <li class="item-card item-card--company">
-                            <div class="item-card__company-logo">
+                            <a href="#" class="item-card__company-logo">
                                 <img src="img/pages/expo/client-logo-6.jpg" alt="НАК Машинери">
-                            </div>
+                            </a>
                             <div class="item-card__company-body">
                                 <div class="item-card__company-intro">
                                     <div class="item-card__company-title">
-                                        <h3 class="text-lg fw-bold">Ларрсен Групп</h3>
-                                        <span class="chip chip--medium chip--gray">Альфа</span>
+                                        <a href="#" class="text-lg fw-bold">Ларрсен Групп</a>
+                                        <span class="chip chip--medium chip--primary">BUSINESS</span>
                                     </div>
                                     <a href="https://liugongrussia.ru/" target="_blank" class="item-card__company-link">liugongrussia.ru</a>
                                 </div>
@@ -461,14 +467,13 @@
                             </div>
                         </li>
                         <li class="item-card item-card--company">
-                            <div class="item-card__company-logo">
+                            <a href="#" class="item-card__company-logo">
                                 <img src="img/pages/expo/client-logo-7.jpg" alt="НАК Машинери">
-                            </div>
+                            </a>
                             <div class="item-card__company-body">
                                 <div class="item-card__company-intro">
                                     <div class="item-card__company-title">
-                                        <h3 class="text-lg fw-bold">Спецтехника</h3>
-                                        <span class="chip chip--medium chip--green">Альфа</span>
+                                        <a href="#" class="text-lg fw-bold">Спецтехника</a>
                                     </div>
                                     <a href="https://liugongrussia.ru/" target="_blank" class="item-card__company-link">liugongrussia.ru</a>
                                 </div>
@@ -476,14 +481,13 @@
                             </div>
                         </li>
                         <li class="item-card item-card--company">
-                            <div class="item-card__company-logo">
+                            <a href="#" class="item-card__company-logo">
                                 <img src="img/pages/expo/client-logo-8.jpg" alt="НАК Машинери">
-                            </div>
+                            </a>
                             <div class="item-card__company-body">
                                 <div class="item-card__company-intro">
                                     <div class="item-card__company-title">
-                                        <h3 class="text-lg fw-bold">SUNWARD</h3>
-                                        <span class="chip chip--medium chip--green">Альфа</span>
+                                        <a href="#" class="text-lg fw-bold">SUNWARD</a>
                                     </div>
                                     <a href="https://liugongrussia.ru/" target="_blank" class="item-card__company-link">liugongrussia.ru</a>
                                 </div>
@@ -694,7 +698,34 @@
         </nav>
     </div>
 
-    <div class="popup" id="popup-service">
+    <form class="popup form-validation" id="popup-call">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Альтех</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Работаем без выходных</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-dropdown selected">
+                        <input class="field-dropdown__input" type="text" placeholder="Город" name="city" id="city" autocomplete="off" readonly="" value="Москва" data-value="moscow">
+                        <label class="field-dropdown__label" for="city">
+                            <span class="field-dropdown__caption">Город</span>
+                        </label>
+                    </div>
+                    <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
+                    <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
+                    <button class="button button--large button--regular-alt button--full-width">Заказать обратный звонок</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-service">
         <div class="popup__dialog">
             <div class="popup__title">
                 <span>Отправить заявку</span>
@@ -707,8 +738,8 @@
             <div class="popup__content">
                 <div class="popup__form">
                     <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Как к вам обращаться? *" name="service-form-name" id="service-form-name" autocomplete="off" required>
-                        <label class="field-text__label" for="service-form-name">
+                        <input class="field-text__input" type="text" placeholder="Как к вам обращаться? *" name="service-name" id="service-name" autocomplete="off" required>
+                        <label class="field-text__label" for="service-name">
                             <span class="field-text__caption">Как к вам обращаться? *</span>
                         </label>
                         <button class="field-text__clear" aria-label="Очистить" type="button">
@@ -718,8 +749,8 @@
                         </button>
                     </div>
                     <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="service-form-phone" id="service-form-phone" autocomplete="off" required>
-                        <label class="field-text__label" for="service-form-phone">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="service-phone" id="service-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="service-phone">
                             <span class="field-text__caption">Ваш телефон *</span>
                         </label>
                         <button class="field-text__clear" aria-label="Очистить" type="button">
@@ -729,9 +760,9 @@
                         </button>
                     </div>
                     <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Ваш email (не обязательно)" name="service-form-email" id="service-form-email" autocomplete="off" required>
-                        <label class="field-text__label" for="service-form-email">
-                            <span class="field-text__caption">Ваш email (не обязательно)</span>
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="service-email" id="service-email" autocomplete="off">
+                        <label class="field-text__label" for="service-email">
+                            <span class="field-text__caption">Ваш email</span>
                         </label>
                         <button class="field-text__clear" aria-label="Очистить" type="button">
                             <svg class="icon icon--16">
@@ -740,21 +771,21 @@
                         </button>
                     </div>
                     <div class="field-textarea">
-                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="service-form-message" id="service-form-message"></textarea>
-                        <label class="field-textarea__label" for="service-form-message">
+                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="service-message" id="service-message"></textarea>
+                        <label class="field-textarea__label" for="service-message">
                             <span class="field-textarea__caption">Текст сообщения</span>
                         </label>
                     </div>
 
                     <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="ch-seller-message-subscribe">
-                        <label class="field-checkbox__label" for="ch-seller-message-subscribe">
+                        <input type="checkbox" class="field-checkbox__input" id="service-subscribe">
+                        <label class="field-checkbox__label" for="service-subscribe">
                             <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
                         </label>
                     </div>
                     <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="ch-seller-message-subscribe-presonal-data">
-                        <label class="field-checkbox__label" for="ch-seller-message-subscribe-presonal-data">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="service-presonal-data">
+                        <label class="field-checkbox__label" for="service-presonal-data">
                             <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
                         </label>
                     </div>
@@ -763,12 +794,12 @@
             </div>
             <div class="popup__footer">
                 <div class="button-group">
-                    <button class="button button--large button--primary button--full-width send-callback-form" disabled>Отправить</button>
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
                     <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>

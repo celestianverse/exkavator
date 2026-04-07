@@ -215,6 +215,13 @@
                                 </label>
                             </div>
 
+                            <div class="field-dropdown">
+                                <input class="field-dropdown__input" type="text" placeholder="Доступность" name="wear" id="availability" autocomplete="off"/>
+                                <label class="field-dropdown__label" for="wear">
+                                    <span class="field-dropdown__caption">Доступность</span>
+                                </label>
+                            </div>
+
                             <div class="filter__range">
                                 <div class="field-text">
                                     <input class="field-text__input" type="number" placeholder="Цена от, ₽" name="minPrice" id="minPrice" autocomplete="off"/>
@@ -269,6 +276,18 @@
                                 <input class="field-text__input" type="text" placeholder="Моточасы наработки" name="motoHours" id="motoHours" autocomplete="off"/>
                                 <label class="field-text__label" for="motoHours">
                                     <span class="field-text__caption">Моточасы наработки (до)</span>
+                                </label>
+                                <button class="field-text__clear" aria-label="Очистить" type="button">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="field-text">
+                                <input class="field-text__input" type="text" placeholder="Слова в объявлении" name="keywords" id="keywords" autocomplete="off"/>
+                                <label class="field-text__label" for="motoHours">
+                                    <span class="field-text__caption">Слова в объявлении</span>
                                 </label>
                                 <button class="field-text__clear" aria-label="Очистить" type="button">
                                     <svg class="icon icon--16">
@@ -535,7 +554,7 @@
                                     <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
                                     <div class="special-item__action">
                                         <span class="special-item__price">15 541 703 <i>₽</i></span>
-                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                     </div>
                                 </div>
                             </li>
@@ -548,7 +567,7 @@
                                     <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
                                     <div class="special-item__action">
                                         <span class="special-item__price">15 541 703 <i>₽</i></span>
-                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                     </div>
                                 </div>
                             </li>
@@ -561,7 +580,7 @@
                                     <p class="special-item__cities">Москва и еще 22 города</p>
                                     <div class="special-item__action">
                                         <span class="special-item__price">11 240 703 <i>₽</i></span>
-                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                     </div>
                                 </div>
                             </li>
@@ -574,7 +593,7 @@
                                     <p class="special-item__cities">Москва и еще 22 города</p>
                                     <div class="special-item__action">
                                         <span class="special-item__price">11 240 703 <i>₽</i></span>
-                                        <button class="button button--small button--primary-alt">Позвонить</button>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                     </div>
                                 </div>
                             </li>
@@ -1020,8 +1039,35 @@
             </button>
         </footer>
     </div>
-   
-    
+
+    <div class="popup" id="popup-call">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Альтех</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Работаем без выходных</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-dropdown selected">
+                        <input class="field-dropdown__input" type="text" placeholder="Город" name="popup-call-city" id="popup-call-city" autocomplete="off" readonly="" value="Москва" data-value="moscow">
+                        <label class="field-dropdown__label" for="popup-call-city">
+                            <span class="field-dropdown__caption">Город</span>
+                        </label>
+                    </div>
+                    <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
+                    <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
+                    <button class="button button--large button--regular-alt button--full-width">Заказать обратный звонок</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/trade.js"></script>

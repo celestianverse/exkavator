@@ -69,9 +69,7 @@
         }
         
         &:not(.active):hover {
-            span {
-                border-bottom: 1px solid;
-            }
+            color: var(--red-400);
         }
     }
 

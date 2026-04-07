@@ -12,9 +12,14 @@ function initSliders() {
     if (thumbMediaQuery.matches) {
         detailItemSliderThumb = new Swiper('.detail-item-slider__thumb', {
             spaceBetween: 8,
-            slidesPerView: 5,
+            // slidesPerView: 5,
+            slidesPerView: 'auto',
             freeMode: true,
             watchSlidesProgress: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
         });
     }
 

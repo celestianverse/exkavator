@@ -52,7 +52,7 @@ document.querySelectorAll('.popup').forEach(function (popup) {
 
 //     const phoneInput = popup.querySelector('#callback-phone');
 //     const personalDataCheckbox = popup.querySelector('#ch-presonal-data');
-//     const submitBtn = popup.querySelector('.send-callback-form');
+//     const submitBtn = popup.querySelector('.form-send');
 
 //     function updateSubmitState() {
 //         const phoneFilled = phoneInput.value.indexOf('_') === -1;

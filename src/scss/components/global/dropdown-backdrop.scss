@@ -1,3 +1,29 @@
+.dropdown-hover {
+    position: relative;
+
+    &:hover {
+        .dropdown-backdrop {
+            display: block;
+        }
+    }
+
+    .dropdown-backdrop {
+        top: 100%;
+        left: 0;
+        margin-top: 8px;
+    }
+
+    &--inline-flex {
+        display: inline-flex;
+    }
+
+    &--cities {
+        @media (max-width: $breakpoint-xs - 1) {
+            display: flex;
+        }
+    }
+}
+
 .dropdown-backdrop {
     position: absolute;
     padding: 8px 0;
@@ -10,6 +36,28 @@
     box-shadow: 0px 2px 8px 0px rgba(204, 226, 255, 0.5);
     transform: translateY(2px);
     cursor: auto;
+
+    &__list {
+        overflow-y: auto;
+        max-height: 220px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--neutral-300) transparent;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--neutral-300);
+            border-radius: 8px;
+            border: 2px solid transparent;
+        }
+    }
 
     &__option {
         padding: 6px 12px;
@@ -54,5 +102,28 @@
 
     &__search {
         padding: 8px;
+    }
+
+    &--cities {
+        z-index: 4;
+        width: auto;
+
+        ul {
+            padding: 8px 20px 8px 8px;
+            list-style-type: none;
+            @include block-columns(3);
+
+            @media (max-width: $breakpoint-sm - 1) {
+                @include block-columns(2);
+            }
+
+            @media (max-width: $breakpoint-xs - 1) {
+                @include block-columns(1);
+            }
+
+            li {
+                list-style-type: none;
+            }
+        }
     }
 }
