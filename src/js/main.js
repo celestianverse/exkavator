@@ -449,3 +449,14 @@ forms.forEach(form => {
 
     validateForm();
 });
+
+
+const lightGalleryList = document.querySelector('#lightgallery');
+
+if (lightGalleryList) {
+    lightGallery(lightGalleryList, {
+        plugins: [lgZoom, lgThumbnail],
+        speed: 500,
+        download: false,
+    });
+}

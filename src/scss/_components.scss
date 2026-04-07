@@ -440,6 +440,7 @@
 }
 .photo {
   cursor: pointer;
+  color: var(--text-base);
   @include transition;
 
   &:hover {
@@ -458,6 +459,8 @@
   &__image {
     display: block;
     width: 100%;
+    height: 180px;
+    object-fit: cover;
     border-radius: 8px;
     @include transition;
   }
