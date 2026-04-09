@@ -25,6 +25,14 @@
                 color: var(--red-400);
             }
         }
+
+        &--active {
+            color: var(--text-base);
+
+            &:hover {
+                color: var(--text-base);
+            }
+        }
     }
 
     &__btns {

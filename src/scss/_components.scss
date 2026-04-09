@@ -237,7 +237,9 @@
 
 .rounded-link-card {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  min-height: 52px;
   border-radius: 8px;
   cursor: pointer;
 

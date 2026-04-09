@@ -49,6 +49,12 @@
         @media(min-width: 1024px) {
             @include text-size('md');
         }
+
+        a {
+            &:hover {
+                color: var(--red-400);
+            }
+        }
     }
 
     &__title {
@@ -57,6 +63,13 @@
         }
     }
 
-    &--company {
+    &--brand {
+        .first-block__text {
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
