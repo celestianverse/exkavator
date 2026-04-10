@@ -13,6 +13,27 @@
     margin-bottom: 24px;
   }
 
+  &__navigation {
+    margin-left: 20px;
+    list-style-type: decimal;
+    font-size: 16px;
+    color: var(--text-primary);
+
+    li {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      &:hover {
+        color: var(--red-400);
+      }
+    }
+  }
+
   .section__title {
     margin-bottom: 32px;
   }

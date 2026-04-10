@@ -44,6 +44,10 @@
     background-color: rgba(145, 145, 145, 1);
     color: var(--neutral-50);
   }
+  &--base {
+    background-color: var(--neutral-700);
+    color: #fff;
+  }
 }
 
 a, button {

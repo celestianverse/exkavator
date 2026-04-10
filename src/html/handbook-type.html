@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник спецтехники и оборудования — Экскаватор Ру</title>
+    <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container main-header__wrapper">
+            <button class="mobile-burger" type="button"><span></span></button>
+            <a href="/" class="main-header__logo">
+                <img src="img/logo-white-x2.png" alt="Логотип Экскаватор.ру">
+            </a>
+            <div class="main-header__relative">
+                <div class="main-menu">
+                    <ul class="main-menu__list">
+                        <li class="main-menu__item main-menu__item--has-children">
+                            <a href="#" class="main-menu__link">Журналы</a>
+                            <ul class="main-menu__submenu">
+                                <li class="main-menu__back-item">
+                                    <button class="main-menu__back" type="button">Журналы</button>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Строительная техника и оборудование</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Карьерная и горная техника</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Строительство и ремонт дорог</a>
+                                </li>
+                                <li class="main-menu__item main-menu__item--has-children">
+                                    <a href="#" class="main-menu__link">Складская техника</a>
+                                    <ul class="main-menu__submenu">
+                                        <li class="main-menu__back-item">
+                                            <button class="main-menu__back" type="button">Складская техника</button>
+                                        </li>
+                                        <li class="main-menu__item">
+                                            <a href="#" class="main-menu__link">Техника 1</a>
+                                        </li>
+                                        <li class="main-menu__item">
+                                            <a href="#" class="main-menu__link">Техника 2</a>
+                                        </li>
+                                        <li class="main-menu__item">
+                                            <a href="#" class="main-menu__link">Техника 3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Подъемная техника</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Коммерческий транспорт</a>
+                                </li>
+                                <li class="main-menu__item">
+                                    <a href="#" class="main-menu__link">Мини-техника</a>
+                                </li>
+                                <li class="main-menu__btn-item">
+                                    <a href="#" class="button button--primary button--large button--full-width">Разместить
+                                        репутационную статью</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="main-menu__item main-menu__item--has-children">
+                            <a href="/trade.html" class="main-menu__link">Продажа</a>
+                        </li>
+                        <li class="main-menu__item main-menu__item--has-children">
+                            <a href="/rent.html" class="main-menu__link">Аренда</a>
+                        </li>
+                        <li class="main-menu__item main-menu__item--has-children">
+                            <a href="/parts.html" class="main-menu__link">Запчасти</a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="requests.html" class="main-menu__link">Заявки</a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="#" class="main-menu__link">Реклама</a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="#" class="main-menu__link">Конференция</a>
+                        </li>
+                        <li class="main-menu__btn-item">
+                            <a href="#" class="button button--primary button--large button--full-width">Разместить
+                                рекламу</a>
+                            <a href="#" class="button button--primary-alt button--large button--full-width">Подписаться на
+                                Телеграм</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-header-search">
+                    <svg class="icon main-header-search__icon">
+                        <use xlink:href="img/sprites/sprite-16.svg#search"></use>
+                    </svg>
+                    <input type="text" class="main-header-search__input">
+                    <div class="main-header-search__controls">
+                        <button class="main-header-search__reset" type="button">
+                            <svg class="icon">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                        <button class="main-header-search__submit" type="button">Найти</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="main-header__controls user-controls">
+                <button class="user-controls__button user-controls__mobile-button" aria-label="Меню пользователя" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/header-sprite.svg#header-user"></use>
+                    </svg>
+                </button>
+                <div class="user-controls__group">
+                    <button class="user-controls__button js-header-search" aria-label="Поиск по сайту" type="button" data-tooltip-text="Поиск по сайту">
+                        <svg class="icon icon--24">
+                            <use xlink:href="img/sprites/sprite-16.svg#search"></use>
+                        </svg>
+                        Поиск по сайту
+                    </button>
+                    <button class="user-controls__button js-open-popup" data-popup-id="popup-callback" aria-label="Обратный звонок" type="button" data-tooltip-text="Сообщения">
+                        <svg class="icon icon--24">
+                            <use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use>
+                        </svg>
+                        Сообщения
+                    </button>
+                    <button class="user-controls__button" aria-label="Избранное" type="button" data-tooltip-text="Избранное">
+                        <svg class="icon icon--24">
+                            <use xlink:href="img/sprites/sprite-16.svg#favorite"></use>
+                        </svg>
+                        Избранное
+                    </button>
+                    <button class="button button--small button--regular-alt" type="button">Войти</button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="secondary-header">
+        <div class="container secondary-header__wrapper">
+            <ul class="secondary-menu">
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link" href="#"><span>Дилеры</span></a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link secondary-menu__link--active" href="#"><span>Справочник</span></a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link" href="#"><span>Форум</span></a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link" href="#"><span>Каталог компаний</span></a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a class="secondary-menu__link secondary-menu__link--accent" href="#"><span>Скидки на спецтехнику!</span></a>
+                </li>
+            </ul>
+            <div class="secondary-menu__btns">
+                <a href="#" class="button button--small button--regular-alt">Добавить заявку</a>
+                <a href="#" class="button button--small button--regular-alt">Добавить объявление</a>
+            </div>
+        </div>
+    </div>
+    <div class="teasers">
+        <div class="container">
+            <ul class="news-list-default news-list-default--teasers">
+                <li class="news-list-default__item">
+                    <a href="#" class="news-list-default__link">
+                        <div class="news-list-default__img">
+                            <img src="img/temp/news-big.png" alt="">
+                        </div>
+                        <div class="news-list-default__info">
+                            <p class="news-list-default__title">Обзор автогрейдеров из Китая. В фокусе — XCMG и LiuGong</p>
+                            <ul class="crumbs">
+                                <li class="crumbs__item">23.02.2026</li>
+                                <li class="crumbs__item">207 <img src="img/svg/view-icon.svg" alt="Иконка количества просмотров"></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="news-list-default__item">
+                    <a href="#" class="news-list-default__link">
+                        <div class="news-list-default__img">
+                            <img src="img/temp/news-2.jpg" alt="">
+                        </div>
+                        <div class="news-list-default__info">
+                            <p class="news-list-default__title">0%  комиссии, 100% возможностей: почему поставщики выбирают маркетплейс Grenar</p>
+                            <ul class="crumbs">
+                                <li class="crumbs__item">23.02.2026</li>
+                                <li class="crumbs__item">207 <img src="img/svg/view-icon.svg" alt="Иконка количества просмотров"></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li class="news-list-default__item">
+                    <a href="#" class="news-list-default__link">
+                        <div class="news-list-default__img">
+                            <img src="img/temp/news-3.jpg" alt="">
+                        </div>
+                        <div class="news-list-default__info">
+                            <p class="news-list-default__title">Тяжелый — из Китая. Универсальный — из РФ. Обзор бульдозеров для разных задач</p>
+                            <ul class="crumbs">
+                                <li class="crumbs__item">23.02.2026</li>
+                                <li class="crumbs__item">207 <img src="img/svg/view-icon.svg" alt="Иконка количества просмотров"></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="layout">
+            <main class="content">
+                <section class="section">
+                    <div class="crumbs crumbs--bread">
+                        <li class="crumbs__item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="crumbs__item">
+                            <span>Справочник техники</span>
+                        </li>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h1>Бульдозеры: технические параметры, виды, марки и производители</h1>
+                    <ol class="section__navigation">
+                        <li>
+                            <a href="#1">Область применения</a>
+                        </li>
+                        <li>
+                            <a href="#2">Виды</a>
+                        </li>
+                        <li>
+                            <a href="#1">Технические параметры</a>
+                        </li>
+                        <li>
+                            <a href="#2">Современные бульдозеры</a>
+                        </li>
+                        <li>
+                            <a href="#1">Производители</a>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="section">
+                    <div class="categories">
+                        <p class="small-title">Популярные марки бульдозеров</p>
+                        <ul class="categories__list">
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Beezone</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Builder</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Bull</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">HZM</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">LGCE (SDLG)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">LGMG</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Liebherr</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Lugong</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">John Deere</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                    <span class="rounded-link-card__title">Komatsu</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section__text text-block text-md">
+                        <p>В Санкт-Петербурге завершилась 30-я выставка «АГРОРУСЬ-2021», в которой компания «НАК Машинери» приняла участие. Мероприятие проходило с 1 по 4 сентября в КВЦ EXPOFORUM в павильоне G.</p>
+                        <p>Выставка традиционно объединила представителей сельскохозяйственной сферы, производителей и поставщиков оборудования и техники для решения аграрных задач. На площадке участники и гости представляли свою продукцию, знакомились с достижениями и новинками других компаний, общались с действующими партнерами и клиентами, устанавливали новые деловые контакты, обсуждали значимые вопросы и болевые точки сферы и рынка.</p>
+                        <p>В течение четырех дней на стенде шло оживленное общение между менеджерами «НАК Машинери» и гостями. Наибольший интерес клиенты проявляли к мини-погрузчикам, особенно к Earthforce S16 и S18. Также много вопросов задавали про вилочные погрузчики и электротележки. </p>
+                    </div>
+                </section>
+
+                <section id="1" class="section">
+                    <h2 class="section__title">Область применения</h2>
+                    <div class="text-photo">
+                        <div class="text-photo__cover">
+                            <img src="img/photos/photo-17.jpg" alt="" class="text-photo__image">
+                            <span class="chip chip--medium chip--base text-photo__chip">Источник фото: Экскаватор.Ру</span>
+                        </div>
+                        <p class="text-sm text--secondary">Области применения бульдозеров разнятся в зависимости от тягового класса техники</p>
+                    </div>
+                    <div class="section__text text-block text-md">
+                        <p>В Санкт-Петербурге завершилась 30-я выставка «АГРОРУСЬ-2021», в которой компания «НАК Машинери» приняла участие. Мероприятие проходило с 1 по 4 сентября в КВЦ EXPOFORUM в павильоне G.</p>
+                        <p>Выставка традиционно объединила представителей сельскохозяйственной сферы, производителей и поставщиков оборудования и техники для решения аграрных задач. На площадке участники и гости представляли свою продукцию, знакомились с достижениями и новинками других компаний, общались с действующими партнерами и клиентами, устанавливали новые деловые контакты, обсуждали значимые вопросы и болевые точки сферы и рынка.</p>
+                        <p>В течение четырех дней на стенде шло оживленное общение между менеджерами «НАК Машинери» и гостями. Наибольший интерес клиенты проявляли к мини-погрузчикам, особенно к Earthforce S16 и S18. Также много вопросов задавали про вилочные погрузчики и электротележки. </p>
+                    </div>
+                </section>
+
+                <section id="2" class="section">
+                    <h2 class="section__title">Технические параметры</h2>
+                    <div class="text-photo">
+                        <div class="text-photo__cover">
+                            <img src="img/photos/photo-17.jpg" alt="" class="text-photo__image">
+                            <span class="chip chip--medium chip--base text-photo__chip">Источник фото: Экскаватор.Ру</span>
+                        </div>
+                        <p class="text-sm text--secondary">Области применения бульдозеров разнятся в зависимости от тягового класса техники</p>
+                    </div>
+                    <div class="section__text text-block text-md">
+                        <p>В Санкт-Петербурге завершилась 30-я выставка «АГРОРУСЬ-2021», в которой компания «НАК Машинери» приняла участие. Мероприятие проходило с 1 по 4 сентября в КВЦ EXPOFORUM в павильоне G.</p>
+                        <p>Выставка традиционно объединила представителей сельскохозяйственной сферы, производителей и поставщиков оборудования и техники для решения аграрных задач. На площадке участники и гости представляли свою продукцию, знакомились с достижениями и новинками других компаний, общались с действующими партнерами и клиентами, устанавливали новые деловые контакты, обсуждали значимые вопросы и болевые точки сферы и рынка.</p>
+                        <p>В течение четырех дней на стенде шло оживленное общение между менеджерами «НАК Машинери» и гостями. Наибольший интерес клиенты проявляли к мини-погрузчикам, особенно к Earthforce S16 и S18. Также много вопросов задавали про вилочные погрузчики и электротележки. </p>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <p class="text-sm text--secondary">Вся информация взята из открытых источников</p>
+                </section>
+
+                <section class="section">
+                    <div class="cta-help-block">
+                        <div class="cta-help-block__wrapper-text">
+                            <p class="cta-help-block__title">Помощь в поиске от Экскаватор Ру</p>
+                            <p class="cta-help-block__text">Найдите любую технику — бесплатно и быстро: разместите заявку на технику, и продавцы сами свяжутся с вами!</p>
+                        </div>
+                        <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-lizing">
+                            Разместить заявку
+                        </button>
+                    </div>
+                </section>
+
+                <section class="special-offers section">
+                    <div class="special-offers__title">
+                        <h2>Спецпредложения</h2>
+                        <div class="special-offers__nav">
+                            <button class="special-offers__prev" type="button"></button>
+                            <button class="special-offers__next" type="button"></button>
+                        </div>
+                    </div>
+
+                    <div class="special-offers__slider swiper">
+                        <ul class="special-offers__list swiper-wrapper">
+                            <li class="special-item swiper-slide">
+                                <a href="#" class="special-item__img">
+                                    <img src="img/temp/item-1-raw.jpg" alt="Гусеничный экскаватор Lonking CDM6336">
+                                </a>
+                                <div class="special-item__description">
+                                    <a href="#" class="special-item__title">Гусеничный экскаватор Lonking CDM6336</a>
+                                    <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
+                                    <div class="special-item__action">
+                                        <span class="special-item__price">15 541 703 <i>₽</i></span>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="special-item swiper-slide">
+                                <a href="#" class="special-item__img">
+                                    <img src="img/temp/item-2-raw.jpg" alt="Гусеничный экскаватор Sany SY225NLC">
+                                </a>
+                                <div class="special-item__description">
+                                    <a href="#" class="special-item__title">Гусеничный экскаватор Sany SY225NLC</a>
+                                    <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
+                                    <div class="special-item__action">
+                                        <span class="special-item__price">15 541 703 <i>₽</i></span>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="special-item swiper-slide">
+                                <a href="#" class="special-item__img">
+                                    <img src="img/temp/item-3-raw.jpg" alt="Гусеничный экскаватор 923FN">
+                                </a>
+                                <div class="special-item__description">
+                                    <a href="#" class="special-item__title">Гусеничный экскаватор 923FN</a>
+                                    <p class="special-item__cities">Москва и еще 22 города</p>
+                                    <div class="special-item__action">
+                                        <span class="special-item__price">11 240 703 <i>₽</i></span>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="special-item swiper-slide">
+                                <a href="#" class="special-item__img">
+                                    <img src="img/temp/item-3-raw.jpg" alt="Гусеничный экскаватор 923FN">
+                                </a>
+                                <div class="special-item__description">
+                                    <a href="#" class="special-item__title">Гусеничный экскаватор 923FN</a>
+                                    <p class="special-item__cities">Москва и еще 22 города</p>
+                                    <div class="special-item__action">
+                                        <span class="special-item__price">11 240 703 <i>₽</i></span>
+                                        <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="linking section rounded-gray-block">
+                    <div class="linking__block ">
+                        <p class="small-title">Торговые предложения: продажа</p>
+                        <ul class="crumbs">
+                            <li class="crumbs__item">
+                                <a href="#">Бульдозеры</a>
+                            </li>
+                            <li class="crumbs__item">
+                                <a href="#">С поворотным отвалом</a>
+                            </li>
+                            <li class="crumbs__item">
+                                <a href="#">С неповоротным отвалом</a>
+                            </li>
+                            <li class="crumbs__item">
+                                <a href="#">С рыхлителем</a>
+                            </li>
+                            <li class="crumbs__item">
+                                <a href="#">Гусеничные бульдозеры</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="linking__block ">
+                        <p class="small-title">Торговые предложения: аренда</p>
+                        <ul class="crumbs">
+                            <li class="crumbs__item">
+                                <a href="#">Бульдозеры</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+            <aside class="sidebar">
+                <a href="#" class="adv-banner">
+                    <img src="img/temp/adv-banner.jpg" alt="Рекламный баннер">
+                </a>
+                <div class="sidebar-block rounded-gray-block">
+                    <p class="sidebar-block__title">Актуальное</p>
+                    <ul class="sidebar-block-list">
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <p>FIORI бетоносмеситель с самозагрузкой - новые преимущества</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.06.2023</li>
+                                        <li class="crumbs__item">SAMTECH</li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-block-list__right-img">
+                                    <img src="img/temp/news-1.jpg" alt="FIORI бетоносмеситель с самозагрузкой - новые преимущества">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <p>Fiori & SAMTECH отмечают 15 лет на рынке России!</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.06.2023</li>
+                                        <li class="crumbs__item">SAMTECH</li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-block-list__right-img">
+                                    <img src="img/temp/news-1.jpg" alt="Fiori & SAMTECH отмечают 15 лет на рынке России!">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <p>Доставлена очередная партия запчастей Fiori</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.06.2023</li>
+                                        <li class="crumbs__item">SAMTECH</li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-block-list__right-img">
+                                    <img src="img/temp/news-1.jpg" alt="Доставлена очередная партия запчастей Fiori">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <p>KOMPLET KROKODILE измельчитель ТБО в продаже - 180 тонн/час</p>
+                                    <ul class="crumbs">
+                                        <li class="crumbs__item">13.06.2023</li>
+                                        <li class="crumbs__item">SAMTECH</li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-block-list__right-img">
+                                    <img src="img/temp/news-1.jpg" alt="KOMPLET KROKODILE измельчитель ТБО в продаже - 180 тонн/час">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="button button--small button--regular-alt" href="#">Все новости</a>
+                </div>
+                <div class="sidebar-block rounded-gray-block">
+                    <p class="sidebar-block__title">Выбор редакции</p>
+                    <ul class="sidebar-block-list">
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <div class="sidebar-block-list__big-img">
+                                        <img src="img/temp/news-sidebar-1.jpg" alt="Как мы прожили 2025-й? Топ самых читаемых материалов Экскаватор Ру">
+                                    </div>
+                                    <p>Как мы прожили 2025-й? Топ самых читаемых материалов Экскаватор Ру</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="sidebar-block-list__item">
+                            <a href="#" class="sidebar-block-list__link">
+                                <div class="sidebar-block-list__text">
+                                    <div class="sidebar-block-list__big-img">
+                                        <img src="img/temp/news-sidebar-2.jpg" alt="Доступен для госзакупок. Новая разработка UMG — 40-тонный перегружатель">
+                                    </div>
+                                    <p>Доступен для госзакупок. Новая разработка UMG — 40-тонный перегружатель</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <ul class="crumbs">
+                <li class="crumbs__item">© Экскаватор Ру 2003—<span class="main-footer__current-year">2026</span></li>
+                <li class="crumbs__item">
+                    <a href="#">Пользовательское соглашение</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#">Политика конфиденциальности</a>
+                </li>
+                <li class="crumbs__item">
+                    <a href="#">Реклама на Экскаватор Ру</a>
+                </li>
+            </ul>
+            <span class="main-footer__text">Реклама и информация на Экскаватор.Ру предназначены исключительно для российских потребителей.</span>
+        </div>
+    </footer>
+    <div class="mobile-footer">
+        <nav class="mobile-footer__menu">
+            <a class="mobile-footer__link" href="#">
+                <img src="img/svg/front_loader.svg" alt="Продажа">
+                <span>Продажа</span>
+            </a>
+            <a class="mobile-footer__link" href="#">
+                <img src="img/svg/percent_discount.svg" alt="Скидки">
+                <span>Скидки</span>
+            </a>
+            <button class="mobile-footer__link footerMobileMenu" href="#">
+                <div class="mobile-footer__menu-btn">
+                    <img src="img/svg/mobile-menu-btn.svg" alt="Иконка мобильного меню">
+                </div>
+                <span>Меню</span>
+            </button>
+            <a class="mobile-footer__link" href="#">
+                <img src="img/svg/newsmode.svg" alt="Новости">
+                <span>Новости</span>
+            </a>
+            <a class="mobile-footer__link" href="#">
+                <img src="img/svg/adaptive_audio_mic.svg" alt="Конференция">
+                <span>Конференция</span>
+            </a>
+        </nav>
+    </div>
+
+    <form class="popup form-validation" id="popup-call">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Альтех</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Работаем без выходных</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-dropdown selected">
+                        <input class="field-dropdown__input" type="text" placeholder="Город" name="city" id="city" autocomplete="off" readonly="" value="Москва" data-value="moscow">
+                        <label class="field-dropdown__label" for="city">
+                            <span class="field-dropdown__caption">Город</span>
+                        </label>
+                    </div>
+                    <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
+                    <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
+                    <button class="button button--large button--regular-alt button--full-width">Заказать обратный звонок</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-lizing">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Оставьте заявку, и менеджеры свяжутся с вами для уточнения деталей</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="text" placeholder="Ваше имя *" name="lizing-name" id="lizing-name" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-name">
+                            <span class="field-text__caption">Ваше имя *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Email *" name="lizing-email" id="lizing-email" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-email">
+                            <span class="field-text__caption">Email *</span>
+                        </label>
+                        <span class="field-text__error"></span>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Номер телефона *" name="lizing-phone" id="lizing-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-phone">
+                            <span class="field-text__caption">Номер телефона *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="text" placeholder="ИНН *" name="lizing-inn" id="lizing-inn" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-inn">
+                            <span class="field-text__caption">ИНН *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="lizing-subscribe">
+                        <label class="field-checkbox__label" for="lizing-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="lizing-presonal-data">
+                        <label class="field-checkbox__label" for="lizing-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
