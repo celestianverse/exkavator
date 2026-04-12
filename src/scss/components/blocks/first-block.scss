@@ -57,6 +57,18 @@
         }
     }
 
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        a {
+            &:hover {
+                color: var(--red-400);
+            }
+        }
+    }
+
     &__title {
         &.first-block__title {
             margin-bottom: 16px;
