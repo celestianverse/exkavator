@@ -469,3 +469,31 @@ if (lightGalleryList) {
     });
 }
 
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-favorite]');
+    if (!btn) return;
+
+    const isFavorite = btn.dataset.favorite === 'true';
+    const iconUse = btn.querySelector('use');
+    const svg = btn.querySelector('.icon');
+
+    if (!iconUse || !svg) return;
+
+    if (isFavorite) {
+        // Убираем из избранного
+        btn.dataset.favorite = 'false';
+        btn.dataset.tooltipText = 'Добавить в избранное';
+
+        iconUse.setAttribute('xlink:href', 'img/sprites/sprite-20.svg#favorite');
+        svg.classList.remove('icon--red');
+    } else {
+        // Добавляем в избранное
+        btn.dataset.favorite = 'true';
+        btn.dataset.tooltipText = 'Удалить из избранного';
+
+        iconUse.setAttribute('xlink:href', 'img/sprites/sprite-20.svg#favoriteFilled');
+        svg.classList.add('icon--red');
+    }
+
+    btn.dispatchEvent(new Event('mouseenter'));
+});

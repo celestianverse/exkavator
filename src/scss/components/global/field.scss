@@ -349,6 +349,7 @@
     display: flex;
     gap: 8px;
     align-items: flex-start;
+    line-height: 16px;
     font-size: 12px;
     cursor: pointer;
 
@@ -361,6 +362,10 @@
       background-color: var(--neutral-60);
       flex-shrink: 0;
       @include transition;
+    }
+
+    & > span {
+      padding-top: 2px;
     }
   }
 
