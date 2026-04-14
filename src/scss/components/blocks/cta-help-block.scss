@@ -6,7 +6,7 @@
     flex-direction: column;
     gap: 20px;
 
-    @media(min-width: $breakpoint-sm) {
+    @include tablet-min {
         flex-direction: row;
         align-items: center;
     }
@@ -15,7 +15,7 @@
         width: 100%;
         flex-shrink: 0;
 
-        @media(min-width: $breakpoint-sm) {
+        @include tablet-min {
             margin-left: auto;
             width: fit-content;
         }
@@ -31,7 +31,7 @@
     &__wrapper-text {
         width: 100%;
 
-        @media(min-width: $breakpoint-sm) {
+        @include tablet-min {
             width: 75%;
         }
     }

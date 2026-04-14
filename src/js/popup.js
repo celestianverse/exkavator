@@ -39,7 +39,8 @@ document.querySelectorAll('.popup').forEach(function (popup) {
 
     const cancelBtn = popup.querySelector('.js-close-popup');
     if (cancelBtn) {
-        cancelBtn.addEventListener('click', function () {
+        cancelBtn.addEventListener('click', function (e) {
+            e.preventDefault();
             closePopup(popup);
         });
     }

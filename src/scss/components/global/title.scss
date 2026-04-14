@@ -1,0 +1,22 @@
+.title {
+    &--xl {
+        line-height: 48px;
+        font-size: 44px;
+        font-weight: 800;
+    }
+    &--l {
+        line-height: 40px;
+        font-size: 36px;
+        font-weight: 800;
+    }
+    &--m {
+        line-height: 30px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &--s {
+        line-height: 24px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}

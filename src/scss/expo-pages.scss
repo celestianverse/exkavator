@@ -1,15 +1,15 @@
 .expo-page {
     padding-top: 24px;
 
-    @media (min-width: 480px) {
+    @include handset-min {
         padding-top: 32px;
     }
 
-    @media (min-width: 1024px) {
+    @include laptop-min {
         padding-top: 48px;
     }
 
-    @media (min-width: 1440px) {
+    @include widescreen-min {
         padding-top: 80px;
     }
 
@@ -17,17 +17,17 @@
         @include text-size('secondary');
         @include text-weight('bold');
 
-        @media (min-width: 480px) {
+        @include handset-min {
             font-size: 32px;
             line-height: 40px;
             @include text-weight('extrabold');
         }
 
-        @media (min-width: 768px) {
+        @include tablet-min {
             font-size: 36px;
         }
 
-        @media (min-width: 1024px) {
+        @include laptop-min {
             font-size: 48px;
             line-height: 64px;
             font-weight: 900;
@@ -39,13 +39,13 @@
         font-size: 18px;
         line-height: 24px;
 
-        @media (min-width: 480px) {
+        @include handset-min {
             margin-bottom: 32px;
             font-size: 24px;
             line-height: 30px;
         }
 
-        @media (min-width: 768px) {
+        @include tablet-min {
             @include text-weight('extrabold');
             font-size: 36px;
             line-height: 40px;
@@ -64,21 +64,21 @@
         .our-numbers-list {
             margin-bottom: 16px;
 
-            @media (min-width: 768px) {
+            @include tablet-min {
                 margin-bottom: 0;
             }
         }
 
         &__title {
             margin-bottom: 16px;
-            @media (min-width: 768px) {
+            @include tablet-min {
                 margin-bottom: 48px;
                 max-width: 73%;
             }
             h1 {
                 margin-bottom: 16px;
 
-                @media (min-width: 768px) {
+                @include tablet-min {
                     margin-bottom: 40px;
                 }
             }
@@ -87,13 +87,13 @@
         &__sub-title {
             color: var(--neutral-500);
 
-            @media (min-width: 480px) {
+            @include handset-min {
                 font-size: 20px;
                 line-height: 28px;
                 font-weight: 400;
             }
 
-            @media (min-width: 1024px) {
+            @include laptop-min {
                 font-size: 28px;
                 line-height: 40px;
             }
@@ -104,17 +104,17 @@
             flex-direction: column;
             gap: 8px;
 
-            @media (min-width: 480px) {
+            @include handset-min {
                 gap: 16px;
             }
 
-            @media (min-width: 768px) {
+            @include tablet-min {
                 position: absolute;
                 right: 0;
                 top: 0;
                 width: 230px;
             }
-            @media (min-width: 1440px) {
+            @include widescreen-min {
                 width: 308px;
             }
         }
@@ -125,20 +125,20 @@
         flex-direction: column;
         gap: 16px;
 
-        @media (min-width: 768px) {
+        @include tablet-min {
             flex-direction: row;
             align-items: flex-start;
         }
 
         &__aside {
-            @media (min-width: 768px) {
+            @include tablet-min {
                 width: 230px;
                 flex-shrink: 0;
             }
-            @media (min-width: 1024px) {
+            @include laptop-min {
                 width: 315px;
             }
-            @media (min-width: 1440px) {
+            @include widescreen-min {
                 width: 308px;
             }
         }
@@ -149,7 +149,7 @@
 
         .companies-list__item:nth-child(9) {
             display: none;
-            @media (min-width: 1024px) {
+            @include laptop-min {
                 display: flex;
             }
         }
@@ -167,12 +167,12 @@
             grid-template-columns: 1fr;
             gap: 8px;
 
-            @media (min-width: 480px) {
+            @include handset-min {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 16px;
             }
 
-            @media (min-width: 768px) {
+            @include tablet-min {
                 grid-template-columns: 1fr;
             }
         }
@@ -185,10 +185,10 @@
             flex-direction: column;
             gap: 16px;
 
-            // @media (min-width: 1024px) {
+            // @include laptop-min {
             //     max-width: 728px;
             // }
-            // @media (min-width: 1440px) {
+            // @include widescreen-min {
             //     max-width: 948px;
             // }
         }

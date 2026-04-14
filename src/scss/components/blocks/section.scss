@@ -4,7 +4,7 @@
   &--48-64 {
     margin-bottom: 48px;
 
-    @media (min-width: 1440px) {
+    @include widescreen-min {
       margin-bottom: 64px;
     }
   }

@@ -134,3 +134,75 @@ $font-weights: (
     font-weight: $weight;
   }
 }
+
+// Адаптив
+@mixin widescreen-min {
+    @media (min-width: $device-widescreen-min) {
+        @content;
+    }
+}
+@mixin desktop-max {
+    @media (max-width: $device-desktop-max) {
+        @content;
+    }
+}
+@mixin desktop-min {
+    @media (min-width: $device-desktop-min) {
+        @content;
+    }
+}
+@mixin desktop-only {
+    @media (min-width: $device-desktop-min) and (max-width: $device-desktop-max) {
+        @content;
+    }
+}
+@mixin laptop-max {
+    @media (max-width: $device-laptop-max) {
+        @content;
+    }
+}
+@mixin laptop-min {
+    @media (min-width: $device-laptop-min) {
+        @content;
+    }
+}
+@mixin laptop-only {
+    @media (min-width: $device-laptop-min) and (max-width: $device-laptop-max) {
+        @content;
+    }
+}
+@mixin tablet-max {
+    @media (max-width: $device-tablet-max) {
+        @content;
+    }
+}
+@mixin tablet-min {
+    @media (min-width: $device-tablet-min) {
+        @content;
+    }
+}
+@mixin tablet-only {
+    @media (min-width: $device-tablet-min) and (max-width: $device-tablet-max) {
+        @content;
+    }
+}
+@mixin handset-max {
+    @media (max-width: $device-handset-max) {
+        @content;
+    }
+}
+@mixin handset-min {
+    @media (min-width: $device-handset-min) {
+        @content;
+    }
+}
+@mixin handset-only {
+    @media (min-width: $device-handset-min) and (max-width: $device-handset-max) {
+        @content;
+    }
+}
+@mixin mobile-only {
+    @media (max-width: $device-mobile-max) {
+        @content;
+    }
+}

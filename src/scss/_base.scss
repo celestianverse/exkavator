@@ -18,21 +18,17 @@ body {
     margin: 0 auto;
     max-width: var(--container-desktop);
 
-    @media (min-width: $breakpoint-xs) {
+    @include handset-min {
         padding: 0 24px;
     }
 
-    @media (min-width: 1440px) {
+    @include widescreen-min {
         padding: 0;
         
     }
 }
 
 // Typography
-.super-title {
-    @include text-size('primaryLarge');
-    @include text-weight('extrabold');
-}
 
 .small-title {
     @include text-size('sm');
@@ -43,7 +39,7 @@ h1 {
     @include text-size('secondary');
     @include text-weight('bold');
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
         @include text-size('primary');
         @include text-weight('extrabold');
     }

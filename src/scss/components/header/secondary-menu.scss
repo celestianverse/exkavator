@@ -1,7 +1,7 @@
 .secondary-menu {
     display: none;
 
-    @media (min-width: $breakpoint-md) {
+    @include laptop-min {
         display: flex;
         gap: var(--spacing-24);
     }

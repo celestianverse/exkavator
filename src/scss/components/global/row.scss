@@ -1,0 +1,40 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &--32 {
+        gap: 32px;
+    }
+    &--16 {
+        gap: 16px;
+    }
+    &--12 {
+        gap: 12px;
+    }
+    &--8 {
+        gap: 8px;
+    }
+    &--4 {
+        gap: 4px;
+    }
+
+    &--nowrap {
+        flex-wrap: nowrap;
+    }
+    &--align-start {
+        align-items: flex-start;
+    }
+    &--align-end {
+        align-items: flex-end;
+    }
+    &--justify-space-between {
+        justify-content: space-between;
+    }
+    &--justify-center {
+        justify-content: center;
+    }
+    &--justify-end {
+        justify-content: flex-end;
+    }
+}

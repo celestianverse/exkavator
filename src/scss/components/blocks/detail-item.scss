@@ -8,7 +8,7 @@
             &::after {
                 display: none;
 
-                @media (min-width: $breakpoint-sm) {
+                @include tablet-min {
                     display: block;
                 }
             }
@@ -19,12 +19,12 @@
                 align-items: center;
 
                 img {
-                    @media (min-width: $breakpoint-sm) {
+                    @include tablet-min {
                         display: none;
                     }
                 }
 
-                @media (min-width: $breakpoint-sm) {
+                @include tablet-min {
                     font-size: 14px;
                 }
             }
@@ -33,7 +33,7 @@
         &__print {
             display: none;
 
-            @media (min-width: $breakpoint-sm) {
+            @include tablet-min {
                 display: block;
             }
         }
@@ -44,7 +44,7 @@
         flex-direction: column-reverse;
         
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             flex-direction: row;
             gap: 24px;
         }
@@ -53,7 +53,7 @@
     &__buttons {
         display: none;
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -84,13 +84,13 @@
         grid-template-columns: 1fr;
         gap: 16px;
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             grid-template-columns: repeat(2, 1fr);
             align-items: start;
         }
 
         & > :first-child {
-            @media (min-width: $breakpoint-sm) {
+            @include tablet-min {
                 grid-column: 1 / -1;
             }
         }
@@ -103,16 +103,16 @@
     &__gallery {
         width: 100%;
         
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             max-width: 485px;
         }
 
-        @media (min-width: $breakpoint-md) {
+        @include laptop-min {
             max-width: 419px;
             flex-shrink: 1;
         }
 
-        @media (min-width: $breakpoint-lg) {
+        @include desktop-min {
             max-width: 635px;
         }
     }
@@ -120,23 +120,23 @@
     .detail-item-slider {
         overflow: hidden;
 
-        @media (min-width: $breakpoint-sm) {           
+        @include tablet-min {
             margin: 0 0 16px 0;
         }
 
         &__wrapper {
             height: 205px;  
 
-            @media (min-width: $breakpoint-sm) {                             
+            @include tablet-min {
 
                 height: 325px;
             }
 
-            @media (min-width: $breakpoint-md) {
+            @include laptop-min {
                 height: 280px;
             }
 
-            @media (min-width: $breakpoint-lg) {
+            @include desktop-min {
                 height: 390px;
             }
         }
@@ -146,7 +146,7 @@
             height: 108px;
             padding-bottom: 28px;
 
-            @media (min-width: $breakpoint-sm) {
+            @include tablet-min {
                 display: block;
             }
 
@@ -180,9 +180,9 @@
             }
         }
 
-        &__prev, &__next { @include slider-nav($breakpoint-sm); }
-        &__next { @include slider-nav-next($breakpoint-sm); }
-        &__prev { @include slider-nav-prev($breakpoint-sm); }
+        &__prev, &__next { @include slider-nav($device-tablet-min); }
+        &__next { @include slider-nav-next($device-tablet-min); }
+        &__prev { @include slider-nav-prev($device-tablet-min); }
     }
 
     .detail-item-action-block {
@@ -244,19 +244,18 @@
         grid-template-columns: 1fr;
         gap: 16px;
 
-        @media (min-width: $breakpoint-xs) {
+        @include handset-min {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             grid-template-columns: repeat(3, 1fr);
         }
 
-        @media (min-width: 1440px) {
+        @include widescreen-min {
             grid-template-columns: repeat(4, 1fr);
         }
 
-        &__item {}
         &__item-text, &__item-title {
             display: block;
         }
@@ -278,7 +277,7 @@
             flex-direction: column;
             gap: 16px;
 
-            @media (min-width: $breakpoint-sm) {
+            @include tablet-min {
                 flex-direction: row;
             }
         }
@@ -339,7 +338,7 @@
     gap: 8px;
     box-shadow: 0px -2px 16px 0px #27333F1F;
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
         display: none;
     }
 

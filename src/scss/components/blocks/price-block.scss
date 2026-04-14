@@ -43,7 +43,7 @@
     }
 
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
         padding: 0;
         background-color: transparent;
         border-radius: 0;
@@ -57,7 +57,7 @@
         background-color: var(--green-100);
         color: var(--green-500);
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             padding: 4px 10px;
         }
 

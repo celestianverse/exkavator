@@ -1,7 +1,7 @@
 .first-block {
     margin-bottom: 48px;
 
-    @media(min-width: 768px) {
+    @include tablet-min {
         display: flex;
         gap: 24px;
         align-items: flex-start;
@@ -23,30 +23,30 @@
         border-radius: 16px;
         border: 1px solid var(--neutral-100);
 
-        @media (max-width: $breakpoint-lg - 1) {
+        @include laptop-max {
             width: 232px;
         }
 
-        @media (max-width: $breakpoint-md - 1) {
+        @include tablet-max {
             width: 168px;
         }
 
-        @media (max-width: $breakpoint-xs - 1) {
+        @include mobile-only {
             width: 150px;
         }
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             margin-bottom: 0;
             flex-shrink: 0;
         }
 
-        @media (min-width: $breakpoint-md) {
+        @include laptop-min {
             padding: 24px;
         }
     }
 
     &__text {
-        @media(min-width: 1024px) {
+        @include laptop-min {
             @include text-size('md');
         }
 

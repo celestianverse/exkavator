@@ -3,7 +3,7 @@
     &__main {
         margin-bottom: 24px;
 
-        @media (min-width: 480px) {
+        @include handset-min {
             margin-bottom: 32px;
         }
     }
@@ -14,16 +14,16 @@
         gap: 24px;
         align-items: start;
 
-        @media (min-width: 480px) {
+        @include handset-min {
             gap: 32px;
         }
 
-        @media (min-width: 1024px) {
+        @include laptop-min {
             grid-template-columns: repeat(2, 1fr);
             gap: 16px;
         }
 
-        @media (min-width: 1440px) {
+        @include widescreen-min {
             gap: 24px;
         }
     }
@@ -33,18 +33,18 @@
             margin-bottom: 16px;
             @include text-size('md');
 
-            @media (min-width: 480px) {
+            @include handset-min {
                 margin-bottom: 24px;
                 @include text-size('lg');
             }
 
-            @media (min-width: 768px) {
+            @include tablet-min {
                 @include text-size('secondary');
             }
         }
 
         &.rounded-gray-block {
-            @media (max-width: 480px) {
+            @include mobile-only {
                 padding: 0;
                 border: 0;
             }
@@ -58,7 +58,7 @@
     flex-direction: column;
     gap: 16px;
 
-    @media (min-width: 768px) {
+    @include tablet-min {
         flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -70,7 +70,7 @@
         }
     }
 
-    @media (min-width: 1024px) {
+    @include laptop-min {
         overflow-x: visible;
         scroll-snap-type: none;
         flex-wrap: wrap;
@@ -86,7 +86,7 @@
             border: 0;
         }
 
-        @media (min-width: 768px) {
+        @include tablet-min {
             max-width: 370px;
             flex-shrink: 0;
             scroll-snap-align: start;
@@ -99,7 +99,7 @@
             flex-direction: column;
         }
 
-        @media (min-width: 1024px) {
+        @include laptop-min {
             padding-left: 0;
             flex: 1;
             scroll-snap-align: unset;
@@ -113,11 +113,11 @@
         margin-bottom: 16px;
         border-radius: 8px;
 
-        @media (max-width: $breakpoint-sm - 1) {
+        @include handset-max {
             height: 200px;
         }
 
-        @media (max-width: $breakpoint-xs - 1) {
+        @include mobile-only {
             height: 180px;
         }
 
@@ -131,7 +131,7 @@
         color: var(--text-base);
         @include text-weight('semibold');        
 
-        @media (min-width: 1440px) {
+        @include widescreen-min {
             @include text-size('md');
         }
     }
@@ -145,7 +145,7 @@
     padding-top: 24px;
     border-bottom: 1px solid var(--neutral-100);
 
-    @media (max-width: $breakpoint-sm - 1) {
+    @include handset-max {
         margin-bottom: 16px;
     }
 }
@@ -155,7 +155,7 @@
     flex-direction: column;
     gap: 12px;
 
-    @media (min-width: 480px) {
+    @include handset-min {
         margin-bottom: 16px;
         gap: 16px;
     }
@@ -165,7 +165,7 @@
         padding-bottom: 36px;
         border-bottom: 1px solid var(--neutral-100);
 
-        @media (min-width: 480px) {
+        @include handset-min {
             padding-bottom: 16px;
         }
 
@@ -199,11 +199,11 @@
         overflow: hidden;
         flex-shrink: 0;
 
-        @media (min-width: 480px) {
+        @include handset-min {
             height: 92px;
         }
 
-        @media (min-width: 768px) {
+        @include tablet-min {
             max-width: 200px;
             height: 110px;
         }
@@ -220,12 +220,12 @@
         color: var(--text-base);
         @include transition;
 
-        @media (min-width: 480px) {
+        @include handset-min {
             margin-bottom: 8px;
             @include text-size('base');
         }
 
-        @media (min-width: 1440px) {
+        @include widescreen-min {
             margin-bottom: 16px;
             @include text-size('md');
         }
@@ -237,7 +237,7 @@
         bottom: -28px;
         width: 100%;
 
-        @media (min-width: 480px) {
+        @include handset-min {
             position: relative;
             left: unset;
             bottom: unset;
@@ -251,7 +251,7 @@
         @media (max-width: 1100px) {
             grid-template-columns: repeat(2, 1fr);
         }
-        @media (max-width: $breakpoint-sm - 1) {
+        @include handset-max {
             grid-template-columns: repeat(1, 1fr);
             gap: 24px;
             margin-bottom: 24px;
@@ -261,12 +261,12 @@
             padding-bottom: 0;
             border-bottom: none;
 
-            @media (max-width: $breakpoint-sm - 1) {
+            @include handset-max {
                 //padding-bottom: 12px;
             }
 
             &:last-child {
-                @media (min-width: $breakpoint-sm) and (max-width: 1100px) {
+                @media (min-width: $device-tablet-min) and (max-width: 1100px) {
                     display: none;
                 }
             }

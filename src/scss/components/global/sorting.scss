@@ -10,7 +10,7 @@
   }
 
   .button {
-    @media (max-width: $breakpoint-sm - 1) {
+    @include handset-max {
       font-size: 0;
       text-indent: -99999px;
       gap: 0;
@@ -18,13 +18,13 @@
     }
 
     &::after {
-      @media (max-width: $breakpoint-sm - 1) {
+      @include handset-max {
         display: none !important;
       }
     }
 
     .icon {
-      @media (min-width: $breakpoint-sm) {
+      @include tablet-min {
         display: none !important;
       }
     }
@@ -32,7 +32,7 @@
 
   &--mobile-inverse {
     .dropdown-backdrop {
-      @media (max-width: $breakpoint-sm - 1) {
+      @include handset-max {
         right: 0;
         width: 160px;
       }

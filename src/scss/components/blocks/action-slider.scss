@@ -5,9 +5,9 @@
         height: auto;
     }
 
-    &__prev, &__next { @include slider-nav($breakpoint-xs); }
-    &__next { @include slider-nav-next($breakpoint-xs); }
-    &__prev { @include slider-nav-prev($breakpoint-xs); }
+    &__prev, &__next { @include slider-nav($device-handset-min); }
+    &__next { @include slider-nav-next($device-handset-min); }
+    &__prev { @include slider-nav-prev($device-handset-min); }
 
     &__img {
         height: 100%;
@@ -43,7 +43,7 @@
         @include text-size('md');
         @include text-weight('bold');
 
-        @media (min-width: 480px) {
+        @include handset-min {
             @include text-size('lg');
         }
     }
@@ -52,7 +52,7 @@
         color: var(--text-white);
         @include text-size('sm');
 
-        @media (min-width: 480px) {
+        @include handset-min {
             @include text-size('base');
         }
     }

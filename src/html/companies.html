@@ -719,9 +719,55 @@
                     </div>
                     <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
                     <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
-                    <button class="button button--large button--regular-alt button--full-width">Заказать обратный звонок</button>
+                    <button class="button button--large button--regular-alt button--full-width js-open-popup" data-popup-id="popup-callback">Заказать обратный звонок</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-callback">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Заказать обратный звонок</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Оставьте номер вашего телефона, и продавец перезвонит вам.</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="callback-phone" id="callback-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="callback-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="callback-subscribe">
+                        <label class="field-checkbox__label" for="callback-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="callback-presonal-data">
+                        <label class="field-checkbox__label" for="callback-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
                 </div>
 
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Перезвоните мне</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
             </div>
         </div>
     </form>
@@ -802,6 +848,7 @@
     </form>
 
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/trade.js"></script>
 </body>

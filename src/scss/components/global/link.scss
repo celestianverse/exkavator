@@ -1,0 +1,51 @@
+.link {
+    &--xl {
+        line-height: 24px;
+        font-size: 18px;
+    }
+    &--l {
+        line-height: 24px;
+        font-size: 16px;
+    }
+    &--m {
+        line-height: 20px;
+        font-size: 14px;
+    }
+    &--s {
+        line-height: 16px;
+        font-size: 12px;
+    }
+    &--xs {
+        line-height: 14px;
+        font-size: 11px;
+    }
+
+    &--700 {
+        font-weight: 700;
+    }
+    &--600 {
+        font-weight: 600;
+    }
+
+    &--base {
+        color: var(--text-base);
+
+        &:hover {
+            color: var(--link-hover);
+        }
+    }
+    &--secondary {
+        color: var(--text-secondary);
+
+        &:hover {
+            color: var(--link-hover);
+        }
+    }
+    &--primary {
+        color: var(--text-primary);
+
+        &:hover {
+            color: var(--link-hover);
+        }
+    }
+}

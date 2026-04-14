@@ -18,7 +18,7 @@
     }
 
     &--cities {
-        @media (max-width: $breakpoint-xs - 1) {
+        @include mobile-only {
             display: flex;
         }
     }
@@ -113,11 +113,11 @@
             list-style-type: none;
             @include block-columns(3);
 
-            @media (max-width: $breakpoint-sm - 1) {
+            @include handset-max {
                 @include block-columns(2);
             }
 
-            @media (max-width: $breakpoint-xs - 1) {
+            @include mobile-only {
                 @include block-columns(1);
             }
 

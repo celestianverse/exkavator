@@ -2,16 +2,15 @@
     position: sticky;
     top: 56px;
     z-index: 9;
-
-    @media (min-width: $breakpoint-md) {
-        top: 0;
-        z-index: 10;
-    }
     background-color: var(--neutral-0);
     margin-bottom: 48px;
     border-top: 1px solid var(--neutral-100);
     border-bottom: 1px solid var(--neutral-100);
 
+    @include laptop-min {
+        top: 0;
+        z-index: 10;
+    }
 
     &__wrapper {
         display: flex;
@@ -34,7 +33,7 @@
             background-color: var(--text-link);
             transition: transform 0.15s;
 
-            @media(min-width: 1024px) {
+            @include laptop-min {
                 display: none;
             }
         }
@@ -43,7 +42,7 @@
             transform: rotate(180deg);
         }
 
-        @media (min-width: $breakpoint-md) {
+        @include laptop-min {
             display: flex;
             gap: 24px;
         }
@@ -59,12 +58,12 @@
         &.active {
             display: block;
 
-            @media(min-width: 1024px) {
+            @include laptop-min {
                 color: var(--text-secondary);
             }
         }
 
-        @media(min-width: 1024px) {
+        @include laptop-min {
             display: block;
         }
         
@@ -84,11 +83,11 @@
             margin-left: 8px;
             min-width: 150px;
 
-            @media(min-width: 1024px) {
+            @include laptop-min {
                 min-width: 230px;
             }
 
-            @media(min-width: 1440px) {
+            @include widescreen-min {
                 width: 308px;
             }
         }
@@ -105,7 +104,7 @@
         justify-content: center;
         align-items: center;
 
-        @media(min-width: 480px) {
+        @include handset-min {
             display: flex;
         }
 
@@ -131,12 +130,12 @@
             display: flex;
         }
         .contact-sticky-block__nav {
-            @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+            @include laptop-only {
                 gap: 16px;
             }
         }
         .contact-sticky-block__link {
-            @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1) {
+            @include laptop-only {
                 font-size: 13px;
             }
         }

@@ -379,13 +379,21 @@ if (contactNav) {
 }
 
 // Маска телефона (iMask)
-// document.querySelectorAll('input[type="tel"]').forEach(function (input) {
-//     IMask(input, {
-//         mask: '+{7} (000) 000-00-00',
-//         lazy: false,
-//         placeholderChar: '_'
-//     });
-// });
+document.addEventListener('focusin', (e) => {
+    const input = e.target.closest('input[type="tel"]');
+    if (!input) return;
+
+    // чтобы не инициализировать повторно
+    if (input.dataset.maskInit) return;
+
+    IMask(input, {
+        mask: '+{7} (000) 000-00-00',
+        lazy: false,
+        placeholderChar: '_'
+    });
+
+    input.dataset.maskInit = 'true';
+});
 
 const forms = document.querySelectorAll('.form-validation');
 
@@ -455,8 +463,9 @@ const lightGalleryList = document.querySelector('#lightgallery');
 
 if (lightGalleryList) {
     lightGallery(lightGalleryList, {
-        plugins: [lgZoom, lgThumbnail],
+        plugins: [lgZoom, lgThumbnail, lgVideo],
         speed: 500,
         download: false,
     });
 }
+

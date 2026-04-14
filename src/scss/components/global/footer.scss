@@ -5,12 +5,12 @@
     &:has(+ .mobile-footer) {
         padding: 16px 0 105px 0;
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             padding: 16px 0;
         }
     }
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
         padding: 16px 0;
     }
 
@@ -76,7 +76,7 @@
     }
 
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
         display: none;
     }
 }

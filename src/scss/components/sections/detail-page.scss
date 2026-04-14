@@ -18,7 +18,7 @@
             @include text-size('secondary');
         }
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             display: none;
         }
     }

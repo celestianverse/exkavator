@@ -9,10 +9,10 @@
         column-gap: 8px;
         grid-template-columns: repeat(2, 1fr);
 
-        @media (min-width: 768px) {
+        @include tablet-min {
             grid-template-columns: repeat(3, 1fr);
         }
-        @media (min-width: 1280px) {
+        @include desktop-min {
             grid-template-columns: repeat(4, 1fr);
         }
 

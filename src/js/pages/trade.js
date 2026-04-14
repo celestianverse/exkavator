@@ -156,3 +156,88 @@ document.addEventListener('pointerdown', (e) => {
     filter.classList.remove('filter--opened');
     body.classList.remove('scroll-lock');
 });
+
+const typeInput = document.querySelector('#type');
+
+if (typeInput && filter) {
+    const handleTypeChange = () => {
+        const brandContainer = filter.querySelector('#brand')?.closest('.field-dropdown');
+        const brandInput = filter.querySelector('#brand');
+
+        const modelContainer = filter.querySelector('#model')?.closest('.field-dropdown');
+        const modelInput = filter.querySelector('#model');
+
+        // --- Очищаем brand ---
+        if (brandContainer && brandInput) {
+            brandInput.value = '';
+            brandInput.dataset.value = '';
+
+            brandContainer.querySelector('.dropdown-backdrop__option.selected')
+              ?.classList.remove('selected');
+
+            brandContainer.classList.remove('selected');
+
+            resetDropdownSearch(brandContainer);
+        }
+
+        // --- Очищаем и дизейблим model ---
+        if (modelContainer && modelInput) {
+            modelInput.value = '';
+            modelInput.dataset.value = '';
+
+            modelContainer.querySelector('.dropdown-backdrop__option.selected')
+              ?.classList.remove('selected');
+
+            modelContainer.classList.remove('selected');
+
+            modelContainer.classList.add('disabled');
+            modelInput.disabled = true;
+
+            resetDropdownSearch(modelContainer);
+        }
+
+        // обновляем состояние filter--filled
+        filter.dispatchEvent(new Event('input', { bubbles: true }));
+        filter.dispatchEvent(new Event('change', { bubbles: true }));
+    };
+
+    // 1. При обычном вводе
+    typeInput.addEventListener('change', handleTypeChange);
+
+    // 2. При выборе из dropdown
+    filter.addEventListener('click', (event) => {
+        if (!event.target.closest('#type')) return;
+        if (!event.target.closest('.dropdown-backdrop__option')) return;
+
+        requestAnimationFrame(handleTypeChange);
+    });
+}
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-favorite]');
+  if (!btn) return;
+
+  const isFavorite = btn.dataset.favorite === 'true';
+  const iconUse = btn.querySelector('use');
+  const svg = btn.querySelector('.icon');
+
+  if (!iconUse || !svg) return;
+
+  if (isFavorite) {
+    // Убираем из избранного
+    btn.dataset.favorite = 'false';
+    btn.dataset.tooltipText = 'Добавить в избранное';
+
+    iconUse.setAttribute('xlink:href', 'img/sprites/sprite-20.svg#favorite');
+    svg.classList.remove('icon--red');
+  } else {
+    // Добавляем в избранное
+    btn.dataset.favorite = 'true';
+    btn.dataset.tooltipText = 'Удалить из избранного';
+
+    iconUse.setAttribute('xlink:href', 'img/sprites/sprite-20.svg#favoriteFilled');
+    svg.classList.add('icon--red');
+  }
+
+    btn.dispatchEvent(new Event('mouseenter'));
+});

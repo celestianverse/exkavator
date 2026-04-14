@@ -259,7 +259,7 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <div class=" field-text">
+                                <div class="field-text">
                                     <input class="field-text__input" type="number" placeholder="до" name="yearTo" id="yearTo" autocomplete="off"/>
                                     <label class="field-text__label" for="yearTo">
                                         <span class="field-text__caption">до</span>
@@ -273,7 +273,7 @@
                             </div>
 
                             <div class="field-text">
-                                <input class="field-text__input" type="text" placeholder="Моточасы наработки" name="motoHours" id="motoHours" autocomplete="off"/>
+                                <input class="field-text__input" type="number" placeholder="Моточасы наработки" name="motoHours" id="motoHours" autocomplete="off"/>
                                 <label class="field-text__label" for="motoHours">
                                     <span class="field-text__caption">Моточасы наработки (до)</span>
                                 </label>
@@ -307,15 +307,15 @@
                             </div>
                             <div class="field-checkbox">
                                 <input type="checkbox" class="field-checkbox__input" id="ch-nds">
-                                <label class="field-checkbox__label" for="ch-photo">Продажа с НДС</label>
+                                <label class="field-checkbox__label" for="ch-nds">Продажа с НДС</label>
                             </div>
                             <div class="field-checkbox">
                                 <input type="checkbox" class="field-checkbox__input" id="ch-dealer">
-                                <label class="field-checkbox__label" for="ch-photo">Официальный дилер</label>
+                                <label class="field-checkbox__label" for="ch-dealer">Официальный дилер</label>
                             </div>
                             <div class="field-checkbox">
                                 <input type="checkbox" class="field-checkbox__input" id="ch-deliver">
-                                <label class="field-checkbox__label" for="ch-photo">С возможностью доставки</label>
+                                <label class="field-checkbox__label" for="ch-deliver">С возможностью доставки</label>
                             </div>
                         </div>
                         <div class="filter__more">
@@ -328,7 +328,7 @@
                                 </svg>
                                 Сбросить
                             </button>
-                            <button class="button button--primary-alt button--no-body button--medium filter__save-button">
+                            <button class="button button--primary-alt button--no-body button--medium filter__save-button js-open-popup" data-popup-id="popup-save-search">
                                 <svg class="icon">
                                     <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
                                 </svg>
@@ -1040,7 +1040,7 @@
         </footer>
     </div>
 
-    <div class="popup" id="popup-call">
+    <form class="popup form-validation" id="popup-call">
         <div class="popup__dialog">
             <div class="popup__title">
                 <span>Альтех</span>
@@ -1054,21 +1054,117 @@
             <div class="popup__content">
                 <div class="popup__form">
                     <div class="field-dropdown selected">
-                        <input class="field-dropdown__input" type="text" placeholder="Город" name="popup-call-city" id="popup-call-city" autocomplete="off" readonly="" value="Москва" data-value="moscow">
-                        <label class="field-dropdown__label" for="popup-call-city">
+                        <input class="field-dropdown__input" type="text" placeholder="Город" name="city" id="city" autocomplete="off" readonly="" value="Москва" data-value="moscow">
+                        <label class="field-dropdown__label" for="city">
                             <span class="field-dropdown__caption">Город</span>
                         </label>
                     </div>
                     <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
                     <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
-                    <button class="button button--large button--regular-alt button--full-width">Заказать обратный звонок</button>
+                    <button class="button button--large button--regular-alt button--full-width js-open-popup" data-popup-id="popup-callback">Заказать обратный звонок</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-callback">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Заказать обратный звонок</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Оставьте номер вашего телефона, и продавец перезвонит вам.</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="callback-phone" id="callback-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="callback-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="callback-subscribe">
+                        <label class="field-checkbox__label" for="callback-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="callback-presonal-data">
+                        <label class="field-checkbox__label" for="callback-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
                 </div>
 
             </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Перезвоните мне</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
         </div>
-    </div>
+    </form>
+    <form class="popup form-validation" id="popup-save-search">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Сохранение поиска</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Хотите ежедневно получать на email подборку новых объявлений из этой выборки?</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="save-search-email" id="save-search-email" autocomplete="off" required>
+                        <label class="field-text__label" for="save-search-email">
+                            <span class="field-text__caption">Ваш email *</span>
+                        </label>
+                        <span class="field-text__error"></span>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="save-search-subscribe">
+                        <label class="field-checkbox__label" for="save-search-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="save-search-presonal-data">
+                        <label class="field-checkbox__label" for="save-search-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
 
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/trade.js"></script>
 </body>

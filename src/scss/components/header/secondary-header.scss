@@ -2,7 +2,7 @@
     display: none;
     background-color: var(--neutral-50);
 
-    @media (min-width: $breakpoint-md) {
+    @include laptop-min {
         display: block;
     }
 

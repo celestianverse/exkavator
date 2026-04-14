@@ -22,7 +22,7 @@
             background-color: var(--text-base);
         }
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             font-size: inherit;
 
             &::before {

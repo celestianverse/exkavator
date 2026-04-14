@@ -518,12 +518,12 @@
                                             </div>
                                         </div>
                                         <div class="item-card__user-actions">
-                                            <button class="button button--small button--regular">
+                                            <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                                 </svg>
                                             </button>
-                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report">
+                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
                                                 </svg>
@@ -596,12 +596,12 @@
                                             </div>
                                         </div>
                                         <div class="item-card__user-actions">
-                                            <button class="button button--small button--regular">
+                                            <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                                 </svg>
                                             </button>
-                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report">
+                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
                                                 </svg>
@@ -637,6 +637,7 @@
                                             <div class="item-card-preview__more">
                                                 <span>Ещё фото</span>
                                             </div>
+                                            <img src="img/temp/video-icon.png" alt="" class="item-card-preview__video-icon">
                                         </div>
                                     </a>
                                     <div class="item-card__info-block">
@@ -678,12 +679,12 @@
                                             </div>
                                         </div>
                                         <div class="item-card__user-actions">
-                                            <button class="button button--small button--regular">
+                                            <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                                 </svg>
                                             </button>
-                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report">
+                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
                                                 </svg>
@@ -872,7 +873,7 @@
                 </div>
             </aside>
         </div>
-    </div>    
+    </div>
 
     <footer class="main-footer">
         <div class="container">
@@ -937,7 +938,7 @@
                     </div>
                     <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
                     <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
-                    <button class="button button--large button--regular-alt button--full-width">Заказать обратный звонок</button>
+                    <button class="button button--large button--regular-alt button--full-width js-open-popup" data-popup-id="popup-callback">Заказать обратный звонок</button>
                 </div>
 
             </div>
@@ -1216,6 +1217,7 @@
     </form>
     
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/detail.js"></script>
 </body>

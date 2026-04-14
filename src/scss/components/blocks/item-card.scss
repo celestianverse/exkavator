@@ -20,13 +20,13 @@
 
   &.top {
     .item-card__row {
-      @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+      @media (min-width: $device-tablet-min) and (max-width: 1160px) {
         flex-wrap: wrap;
       }
     }
 
     .item-card__img-block {
-      @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+      @media (min-width: $device-tablet-min) and (max-width: 1160px) {
         order: 1;
         width: 400px;
         height: 268px;
@@ -38,48 +38,48 @@
     }
 
     .item-card__info-block {
-      @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+      @media (min-width: $device-tablet-min) and (max-width: 1160px) {
         order: 3;
         width: 100%;
       }
     }
 
     .item-card__action-block {
-      @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+      @media (min-width: $device-tablet-min) and (max-width: 1160px) {
         order: 2;
         flex-grow: 1;
         gap: 16px;
       }
 
       .item-card__buttons {
-        @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+        @media (min-width: $device-tablet-min) and (max-width: 1160px) {
           gap: 8px;
         }
       }
 
       .item-card__user-actions {
-        @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+        @media (min-width: $device-tablet-min) and (max-width: 1160px) {
           gap: 12px;
         }
       }
 
       .item-card__price {
         p {
-          @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+          @media (min-width: $device-tablet-min) and (max-width: 1160px) {
             line-height: 32px;
           }
         }
       }
 
       .button {
-        @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+        @media (min-width: $device-tablet-min) and (max-width: 1160px) {
           min-height: 40px;
         }
       }
     }
 
     .item-card__time {
-      @media (min-width: $breakpoint-sm) and (max-width: 1160px) {
+      @media (min-width: $device-tablet-min) and (max-width: 1160px) {
         width: auto;
       }
       @media (min-width: 1161px) {
@@ -127,7 +127,7 @@
     flex-direction: column;
     gap: 16px;
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
       flex-direction: row;
     }
 
@@ -135,7 +135,7 @@
       flex-direction: column-reverse;
       gap: 8px;
 
-      @media (min-width: $breakpoint-sm) {
+      @include tablet-min {
         flex-direction: row;
         gap: 16px;
       }
@@ -156,7 +156,7 @@
   &__img-block {
     height: 185px;
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
       width: 240px;
       height: 160px;
     }
@@ -196,11 +196,11 @@
   }
 
   .item-card-preview {
-
     &__images {
+      position: relative;
       height: 100%;
 
-      @media (max-width: #{$breakpoint-sm - 1}) {
+      @include handset-max {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -221,7 +221,7 @@
         }
       }
 
-      @media (min-width: $breakpoint-sm) {
+      @include tablet-min {
         img {
           position: absolute;
           inset: 0;
@@ -238,7 +238,7 @@
     &__hover-list {
       display: none;
 
-      @media (min-width: $breakpoint-sm) {
+      @include tablet-min {
         display: flex;
         position: absolute;
         inset: 0;
@@ -298,6 +298,26 @@
     &__hover-list:has(li:nth-child(1):hover) ~ .item-card-preview__images img:first-child {
       opacity: 1;
     }
+
+    &__hover-list:has(li:nth-child(2):hover) ~ .item-card-preview__images img:nth-child(2),
+    &__hover-list:has(li:nth-child(3):hover) ~ .item-card-preview__images img:nth-child(3),
+    &__hover-list:has(li:nth-child(4):hover) ~ .item-card-preview__images img:nth-child(4),
+    &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images img:nth-child(5) {
+      & ~ .item-card-preview__video-icon {
+        opacity: 0 !important;
+      }
+    }
+
+    &__video-icon {
+      opacity: 1 !important;
+      position: absolute;
+      top: 50% !important;
+      left: 50% !important;
+      width: 50px !important;
+      height: 50px !important;
+      margin-top: -25px;
+      margin-left: -25px;
+    }
   }
 
   //центральный блок
@@ -325,7 +345,7 @@
     @include text-size('md');
     @include text-weight('bold');
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
       @include text-size('lg');
     }
 
@@ -356,7 +376,7 @@
     gap: 12px;
     flex-shrink: 0;
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
       margin-left: auto;
     }
   }
@@ -370,7 +390,7 @@
     gap: 8px;
 
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
       flex-direction: column;
       gap: 4px;
     }
@@ -380,7 +400,7 @@
 
       &:first-child {
         display: none;
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
           display: block;
         }
       }
@@ -392,7 +412,7 @@
       flex-shrink: 0;
       width: 40px;
 
-      @media (min-width: $breakpoint-sm) {
+      @include tablet-min {
         display: none;
       }
 
@@ -418,7 +438,7 @@
       line-height: 24px;
       padding: 8px 12px;
 
-      @media (min-width: $breakpoint-sm) {
+      @include tablet-min {
         padding: 8px;
         font-size: 12px;
         line-height: 16px;
@@ -440,7 +460,7 @@
   &__user-actions {
     display: none;
 
-    @media (min-width: $breakpoint-sm) {
+    @include tablet-min {
       display: flex;
       gap: 4px;
     }
@@ -504,12 +524,12 @@
     width: 100%;
     padding: 24px;
 
-    @media (max-width: $breakpoint-sm - 1) {
+    @include handset-max {
       gap: 16px;
       padding: 16px;
     }
 
-    @media (max-width: $breakpoint-xs - 1) {
+    @include mobile-only {
       flex-direction: column;
     }
 
@@ -524,7 +544,7 @@
       background: #fff;
       border-radius: 16px;
 
-      @media (max-width: $breakpoint-sm - 1) {
+      @include handset-max {
         width: 160px;
         padding: 16px;
       }
@@ -533,7 +553,7 @@
         width: 140px;
       }
 
-      @media (max-width: $breakpoint-xs - 1) {
+      @include mobile-only {
         width: 100%;
         height: 88px;
       }
@@ -556,7 +576,7 @@
       justify-content: space-between;
       gap: 16px;
 
-      @media (max-width: $breakpoint-sm - 1) {
+      @include handset-max {
         flex-direction: column;
         justify-content: flex-start;
       }

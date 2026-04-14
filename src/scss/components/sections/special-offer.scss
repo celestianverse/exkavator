@@ -3,7 +3,7 @@
     &__list {
         max-width: 340px;
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             max-width: none;  //  разрывает вёрстку на 768
         }
     }
@@ -14,15 +14,15 @@
     }
 
     &__slider {
-        @media (min-width: 1024px) {
+        @include laptop-min {
             max-width: 958px;
         }
 
-        @media (max-width: $breakpoint-sm - 1) {
+        @include handset-max {
             margin-right: -24px;
         }
 
-        @media (max-width: $breakpoint-xs - 1) {
+        @include mobile-only {
             margin-right: -16px;
         }
     }

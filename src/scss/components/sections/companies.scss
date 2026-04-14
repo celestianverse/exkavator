@@ -3,11 +3,11 @@
   &__slider {
     padding-bottom: 10px;
 
-    @media (max-width: $breakpoint-sm - 1) {
+    @include handset-max {
       margin-right: -24px;
     }
 
-    @media (max-width: $breakpoint-xs - 1) {
+    @include mobile-only {
       margin-right: -16px;
     }
   }

@@ -292,7 +292,7 @@
                             </div> 
                             
                             <div class="field-text">
-                                <input class="field-text__input" type="text" placeholder="Моточасы наработки" name="motoHours" id="motoHours" autocomplete="off"/>
+                                <input class="field-text__input" type="number" placeholder="Моточасы наработки" name="motoHours" id="motoHours" autocomplete="off"/>
                                 <label class="field-text__label" for="motoHours">
                                     <span class="field-text__caption">Моточасы наработки (до)</span>
                                 </label>
@@ -409,7 +409,7 @@
                                  </svg>
                                  Сбросить
                             </button>
-                            <button class="button button--primary-alt button--no-body button--medium filter__save-button">
+                            <button class="button button--primary-alt button--no-body button--medium filter__save-button js-open-popup" data-popup-id="popup-save-search">
                                  <svg class="icon">
                                      <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
                                  </svg>
@@ -565,12 +565,12 @@
                                         </div>
                                     </div>
                                     <div class="item-card__user-actions">
-                                        <button class="button button--small button--regular">
+                                        <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное">
                                             <svg class="icon">
                                                 <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                             </svg>
                                         </button>
-                                        <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report">
+                                        <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление">
                                             <svg class="icon">
                                                 <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
                                             </svg>
@@ -629,12 +629,12 @@
                                         </div>
                                     </div>
                                     <div class="item-card__user-actions">
-                                        <button class="button button--small button--regular">
+                                        <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное">
                                             <svg class="icon">
                                                 <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                             </svg>
                                         </button>
-                                        <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report">
+                                        <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление">
                                             <svg class="icon">
                                                 <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
                                             </svg>
@@ -766,12 +766,12 @@
                                         </div>
                                     </div>
                                     <div class="item-card__user-actions">
-                                        <button class="button button--small button--regular">
+                                        <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное">
                                             <svg class="icon">
                                                 <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                             </svg>
                                         </button>
-                                        <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report">
+                                        <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление">
                                             <svg class="icon">
                                                 <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
                                             </svg>
@@ -1126,9 +1126,8 @@
                     </div>
                     <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
                     <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
-                    <button class="button button--large button--regular-alt button--full-width">Заказать обратный звонок</button>
+                    <button class="button button--large button--regular-alt button--full-width js-open-popup" data-popup-id="popup-callback">Заказать обратный звонок</button>
                 </div>
-
             </div>
         </div>
     </form>
@@ -1403,9 +1402,58 @@
             </div>
         </div>
     </form>
+    <form class="popup form-validation" id="popup-save-search">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Сохранение поиска</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Хотите ежедневно получать на email подборку новых объявлений из этой выборки?</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="save-search-email" id="save-search-email" autocomplete="off" required>
+                        <label class="field-text__label" for="save-search-email">
+                            <span class="field-text__caption">Ваш email *</span>
+                        </label>
+                        <span class="field-text__error"></span>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="save-search-subscribe">
+                        <label class="field-checkbox__label" for="save-search-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="save-search-presonal-data">
+                        <label class="field-checkbox__label" for="save-search-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
 
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="vendors/imask/imask.js"></script> -->
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/trade.js"></script>
 </body>

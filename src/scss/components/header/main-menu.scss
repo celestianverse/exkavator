@@ -1,7 +1,7 @@
 .main-menu {
     position: relative;
 
-    @media (max-width: #{ $breakpoint-md - 1px }) {
+    @include tablet-max {
         position: fixed;
         top: 56px;
         left: 0;
@@ -15,7 +15,7 @@
         transition: transform 0.3s ease;
     }
 
-    @media (min-width: $breakpoint-md) {
+    @include laptop-min {
         width: 100%;
     }
     
@@ -26,12 +26,12 @@
     &__list {
         display: flex;
 
-        @media (max-width: #{ $breakpoint-md - 1px }) {
+        @include tablet-max {
             flex-direction: column;
             padding-bottom: 56px;
         }        
 
-        @media (min-width: $breakpoint-md) {
+        @include laptop-min {
             gap: 16px;
         }
     }
@@ -39,7 +39,7 @@
     &__item {
         border-bottom: 1px solid var(--neutral-100);
 
-        @media (min-width: $breakpoint-md) {
+        @include laptop-min {
             border-bottom: 0;
             height: 40px;
         }
@@ -56,7 +56,7 @@
         transform: rotate(-90deg);
         @include transition;
 
-        @media (min-width: $breakpoint-md) {
+        @include laptop-min {
             background-color: var(--text-white);
             transform: rotate(0);
         }
@@ -75,7 +75,7 @@
         @include text-size('md');
         color: var(--text-base);
 
-        @media (min-width: $breakpoint-md) {
+        @include laptop-min {
             padding: 0;
             height: 100%;
             gap: 2px;
@@ -108,7 +108,7 @@
             transform: translateX(0);
         }
 
-        @media (min-width: $breakpoint-md) {
+        @include laptop-min {
             display: none;
         }
     }
@@ -116,7 +116,7 @@
     &__back-item {
         border-bottom: 1px solid var(--neutral-100);
 
-        @media (min-width: $breakpoint-md) {
+        @include laptop-min {
             display: none;
         }
     }
@@ -149,7 +149,7 @@
         gap: 16px;
         padding: 16px;
         
-        @media (min-width: $breakpoint-md) {
+        @include laptop-min {
             display: none;
         }
     }

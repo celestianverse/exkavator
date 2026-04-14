@@ -235,11 +235,16 @@
                                 </ul>
                             </div>
                         </nav>
-
                         <div class="contact-sticky-block__buttons">
-                            <button class="contact-sticky-block__round-btn"><svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#website"></use></svg></button>
-                            <button class="contact-sticky-block__round-btn"><svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#phoneCallback"></use></svg></button>
-                            <button class="contact-sticky-block__round-btn"><svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use></svg></button>
+                            <a href="#" target="_blank" class="contact-sticky-block__round-btn">
+                                <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#website"></use></svg>
+                            </a>
+                            <button class="contact-sticky-block__round-btn js-open-popup" data-popup-id="popup-callback">
+                                <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#phoneCallback"></use></svg>
+                            </button>
+                            <button class="contact-sticky-block__round-btn js-open-popup" data-popup-id="popup-question">
+                                <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use></svg>
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -263,7 +268,7 @@
                                 <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-question">Задать вопрос</button>
                                 <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-callback">Обратный звонок</button>
                                 <button class="button button--large button--primary-alt">Все контакты компании</button>
-                                <button class="button button--large button--primary-alt">Показать адрес компании</button>
+                                <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-contacts">Показать адрес компании</button>
                             </div>
 
                             <div class="detail-item-action-block__controls">
@@ -729,8 +734,39 @@
             </div>
         </div>
     </form>
+    <form class="popup form-validation" id="popup-contacts">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Контактные данные компании</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="column column--16">
+                <div class="column column--4">
+                    <p class="text text--m text--secondary">Продавец</p>
+                    <p class="text text--m">ООО "ТЕХНИКА"</p>
+                </div>
+                <div class="column column--4">
+                    <p class="text text--m text--secondary">Телефон</p>
+                    <p class="text text--m">+7 (995) 333-16-95</p>
+                </div>
+                <div class="column column--4">
+                    <p class="text text--m text--secondary">Менеджер</p>
+                    <p class="text text--m">Игорь Ильюкевич</p>
+                </div>
+                <div class="column column--4">
+                    <p class="text text--m text--secondary">Фактический адрес</p>
+                    <p class="text text--m">Россия, Благовещенск АО, Нагорная 21</p>
+                </div>
+            </div>
+        </div>
+    </form>
 
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 </html>

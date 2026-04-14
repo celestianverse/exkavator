@@ -3,11 +3,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
 
-    @media (min-width: 480px) {
+    @include handset-min {
         gap: 16px;
     }
 
-    @media (min-width: 768px) {
+    @include tablet-min {
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -16,11 +16,11 @@
         border-radius: 8px;
         background-color: var(--neutral-25);
 
-        @media (min-width: 480px) {
+        @include handset-min {
             border-radius: 16px;
         }
 
-        @media (min-width: 1024px) {
+        @include laptop-min {
             padding: 24px;
         }
     }
@@ -29,17 +29,17 @@
         font-size: 24px;
         line-height: 24px;
 
-        @media (min-width: 480px) {
+        @include handset-min {
             font-size: 32px;
             line-height: 48px;
         }
 
-        @media (min-width: 1024px) {
+        @include laptop-min {
             font-size: 44px;
             line-height: 64px;
         }
 
-        @media (min-width: 1440px) {
+        @include widescreen-min {
             font-size: 48px;
         }
     }
@@ -48,17 +48,17 @@
         @include text-size('xs');
         color: var(--text-secondary);
 
-        @media (min-width: 480px) {
+        @include handset-min {
             font-size: 12px;
             line-height: 16px;
         }
 
-        @media (min-width: 1024px) {
+        @include laptop-min {
             font-size: 14px;
             line-height: 20px;
         }
 
-        @media (min-width: 1440px) {
+        @include widescreen-min {
             font-size: 16px;
         }
     }

@@ -235,11 +235,16 @@
                                 </ul>
                             </div>
                         </nav>
-
                         <div class="contact-sticky-block__buttons">
-                            <button class="contact-sticky-block__round-btn"><svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#website"></use></svg></button>
-                            <button class="contact-sticky-block__round-btn"><svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#phoneCallback"></use></svg></button>
-                            <button class="contact-sticky-block__round-btn"><svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use></svg></button>
+                            <a href="#" target="_blank" class="contact-sticky-block__round-btn">
+                                <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#website"></use></svg>
+                            </a>
+                            <button class="contact-sticky-block__round-btn js-open-popup" data-popup-id="popup-callback">
+                                <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#phoneCallback"></use></svg>
+                            </button>
+                            <button class="contact-sticky-block__round-btn js-open-popup" data-popup-id="popup-question">
+                                <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use></svg>
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -581,8 +586,120 @@
             </div>
         </div>
     </form>
+    <form class="popup form-validation" id="popup-question">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Задать вопрос</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="question-phone" id="question-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="question-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш телефон *" name="question-email" id="question-email" autocomplete="off">
+                        <label class="field-text__label" for="question-email">
+                            <span class="field-text__caption">Ваш email</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-textarea">
+                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="question-message" id="question-message"></textarea>
+                        <label class="field-textarea__label" for="question-message">
+                            <span class="field-textarea__caption">Текст сообщения</span>
+                        </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="question-subscribe">
+                        <label class="field-checkbox__label" for="question-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="question-presonal-data">
+                        <label class="field-checkbox__label" for="question-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-callback">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Заказать обратный звонок</span>
+                <button class="popup__close" type="button">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Оставьте номер вашего телефона, и продавец перезвонит вам.</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="callback-phone" id="callback-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="callback-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="callback-subscribe">
+                        <label class="field-checkbox__label" for="callback-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="callback-presonal-data">
+                        <label class="field-checkbox__label" for="callback-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Перезвоните мне</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
 
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 </html>

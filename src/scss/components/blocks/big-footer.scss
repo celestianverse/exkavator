@@ -1,0 +1,51 @@
+.big-footer {
+    padding: 24px 0;
+    background: var(--neutral-50);
+
+    @include desktop-min {
+        margin-top: 24px;
+    }
+    @include handset-max {
+        padding-bottom: 112px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, max(1fr));
+        gap: 32px;
+
+        @include laptop-only {
+            gap: 24px;
+        }
+
+        @include tablet-only {
+            grid-template-columns: repeat(2, max(1fr));
+        }
+        @include handset-max {
+            grid-template-columns: repeat(1, max(1fr));
+        }
+    }
+
+    .column {
+        &:nth-child(1) {
+            @include tablet-only {
+                order: 1;
+            }
+        }
+        &:nth-child(2) {
+            @include tablet-only {
+                order: 3;
+            }
+        }
+        &:nth-child(3) {
+            @include tablet-only {
+                order: 4;
+            }
+        }
+        &:nth-child(4) {
+            @include tablet-only {
+                order: 2;
+            }
+        }
+    }
+}

@@ -9,11 +9,11 @@
         grid-template-columns: 1fr;
         gap: var(--spacing-8);
 
-        @media (min-width: $breakpoint-xs) {
+        @include handset-min {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -28,10 +28,10 @@
         align-items: center;
         flex-wrap: wrap;
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             gap: 16px;
         }
-        @media (max-width: #{ $breakpoint-sm - 1px }) {
+        @include handset-max {
             .field-checkbox {
                 &__label {                    
                     display: block;
@@ -69,7 +69,7 @@
         justify-content: flex-end;
         gap: 16px;
 
-        @media (max-width: $breakpoint-xs - 1) {
+        @include mobile-only {
             justify-content: center;
             gap: 8px;
         }
@@ -78,7 +78,7 @@
             display: none;
 
             &--find {
-                @media (max-width: $breakpoint-sm - 1) {
+                @include handset-max {
                     flex-grow: 1;
                 }
             }
@@ -120,25 +120,25 @@
     }
 
     &__clear-button {
-        @media (max-width: $breakpoint-lg - 1) {
+        @include laptop-max {
             gap: 0;
             min-width: 40px;
             font-size: 0;
             text-indent: -99999px;
         }
-        @media (max-width: $breakpoint-sm - 1) {
+        @include handset-max {
             display: none !important;
         }
     }
 
     &__save-button {
-        @media (max-width: $breakpoint-lg - 1) {
+        @include laptop-max {
             gap: 0;
             min-width: 40px;
             font-size: 0;
             text-indent: -99999px;
         }
-        @media (max-width: $breakpoint-sm - 1) {
+        @include handset-max {
             display: none !important;
         }
     }
@@ -146,11 +146,11 @@
     &__extra-button {
         margin-right: auto;
 
-        @media (max-width: $breakpoint-sm - 1) {
+        @include handset-max {
             font-size: 0;
             text-indent: -99999px;
         }
-        @media (max-width: $breakpoint-sm - 1) {
+        @include handset-max {
             display: none !important;
         }
     }
@@ -159,7 +159,7 @@
         position: relative;
         width: 48px;
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             display: none !important;
         }
 
@@ -184,7 +184,7 @@
         display: flex;
         justify-content: center;
 
-        @media (min-width: $breakpoint-sm) {
+        @include tablet-min {
             display: none !important;
         }
     }
@@ -229,7 +229,7 @@
 
     &:not(.filter--filled) {
         .filter__dropdown-button {
-            @media (max-width: $breakpoint-sm - 1) {
+            @include handset-max {
                 display: none !important;
             }
         }

@@ -1,9 +1,14 @@
 // breakpoints (SCSS variables)
-$breakpoint-xxs: 340px;
-$breakpoint-xs: 480px;
-$breakpoint-sm: 768px;
-$breakpoint-md: 1024px;
-$breakpoint-lg: 1280px;
+$device-mobile-max: 479px;
+$device-handset-min: 480px;
+$device-handset-max: 767px;
+$device-tablet-min: 768px;
+$device-tablet-max: 1023px;
+$device-laptop-min: 1024px;
+$device-laptop-max: 1279px;
+$device-desktop-min: 1280px;
+$device-desktop-max: 1439px;
+$device-widescreen-min: 1440px;
 
 :root {
   --font-family: 'Montserrat', sans-serif;
@@ -85,7 +90,7 @@ $breakpoint-lg: 1280px;
   --text-secondary: var(--neutral-400);
   --text-link: var(--primary-500);
   --text-disabled: var(--neutral-300);
-  --link-hover: var(--yellow-400);
+  --link-hover: var(--red-400);
 
   // Background
   --bg-disable: var(--neutral-25);
