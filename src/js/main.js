@@ -206,11 +206,17 @@ initPageDropdowns(dropdownConfigs);
 
 // Header
 const userControlsMobileButton  = document.querySelector('.user-controls__mobile-button');
+const userControlsAccountButton  = document.querySelector('.user-controls__account-button > .user-controls__button');
 const showHeaderSearchButton  = document.querySelector('.js-header-search');
 const headerSearch = document.querySelector('.main-header-search');
 
 if(userControlsMobileButton) {
     userControlsMobileButton.addEventListener('click', function () {
+        this.classList.toggle('is-open');
+    });
+}
+if(userControlsAccountButton) {
+    userControlsAccountButton.addEventListener('click', function () {
         this.classList.toggle('is-open');
     });
 }

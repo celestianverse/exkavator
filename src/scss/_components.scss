@@ -273,10 +273,19 @@
         width: 24px;
         height: 24px;
     }
+    &--32 {
+        width: 32px;
+        height: 32px;
+    }
 
     &--red {
         color: var(--red-400);
     }
+}
+
+.divider {
+    height: 1px;
+    background: var(--neutral-100);
 }
 
 .text-section {

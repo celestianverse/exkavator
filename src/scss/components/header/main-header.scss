@@ -1,7 +1,7 @@
 .main-header {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20;
     padding: 12px 0;
     background-color: var(--primary-600);
 
@@ -122,8 +122,19 @@
             gap: 16px;
             background-color: transparent;
         }
-        
-    }    
+    }
+
+    &__account {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        & > .user-controls__button:not(.js-header-search) {
+            @include laptop-max {
+                display: none !important;
+            }
+        }
+    }
 
     &__button {
         color: var(--neutral-0);
@@ -197,11 +208,57 @@
                     width: 150px;
                 }
             }
-            
+
         }
 
         @include desktop-min {
             display: none;
+        }
+    }
+
+    &__account-button {
+        position: relative;
+
+        &:hover {
+            .user-controls__account-menu {
+                @include tablet-min {
+                    display: flex;
+                }
+            }
+        }
+
+        & > .is-open {
+            & + .user-controls__account-menu {
+                @include handset-max {
+                    display: flex;
+                }
+            }
+        }
+    }
+    &__account-menu {
+        display: none;
+        z-index: 20;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        width: 300px;
+        background-color: var(--neutral-0);
+        border: 1px solid var(--neutral-100);
+        box-shadow: rgba(39, 51, 63, 0.12) 0 2px 16px;
+        border-radius: 8px;
+    }
+    &__account-part {
+        padding: 16px;
+    }
+    &__account-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-base);
+
+        &:hover {
+            color: var(--link-hover);
         }
     }
 }
