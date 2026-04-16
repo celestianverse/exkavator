@@ -23,13 +23,13 @@
   }
 
   &__link {
+    position: relative;
     padding: 10px;
     width: 112px;
     height: 112px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     background: #fff;
     border: 1px solid var(--neutral-100);
     border-radius: 12px;
@@ -42,19 +42,12 @@
       object-fit: contain;
     }
 
-    &.ultra {
-
-      &::after {
-        position: absolute;
-        bottom: -10px;
-        padding: 3px 5px;
-        content: 'ULTRA';
-        color: var(--neutral-0);
-        background-color: var(--yellow-400);
-        border-radius: 6px;
-        @include text-size('sm');
-        text-transform: uppercase;
-      }
+    .chip {
+      position: absolute;
+      bottom: -11px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
     }
   }
 }

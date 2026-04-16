@@ -1749,7 +1749,7 @@
         <div class="container">
             <section class="first-block">
                 <div class="first-block__img">
-                    <img src="img/temp/stand-logo.jpg" alt="">
+                    <img loading="lazy" src="img/temp/stand-logo.jpg" alt="">
                 </div>
                 <div class="first-block__wrapper">
                     <h1>Стенд НАК Машинери</h1>
@@ -1798,9 +1798,15 @@
                     </nav>
 
                     <div class="contact-sticky-block__buttons">
-                        <button class="contact-sticky-block__round-btn"><svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#website"></use></svg></button>
-                        <button class="contact-sticky-block__round-btn"><svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#phoneCallback"></use></svg></button>
-                        <button class="contact-sticky-block__round-btn"><svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use></svg></button>
+                        <a href="#" target="_blank" class="contact-sticky-block__round-btn" data-tooltip-text="Открыть сайт" aria-label="Открыть сайт компании">
+                            <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#website"></use></svg>
+                        </a>
+                        <button class="contact-sticky-block__round-btn js-open-popup" data-popup-id="popup-callback" data-tooltip-text="Заказать обратный звонок" aria-label="Заказать обратный звонок">
+                            <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#phoneCallback"></use></svg>
+                        </button>
+                        <button class="contact-sticky-block__round-btn js-open-popup" data-popup-id="popup-question" data-tooltip-text="Задать вопрос" aria-label="Задать вопрос">
+                            <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use></svg>
+                        </button>
                         <button class="button button--medium button--primary">
                             <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#call"></use></svg>
                             8 (800) *** ** **
@@ -1827,9 +1833,9 @@
                                             <li></li>
                                         </ul>
                                         <div class="item-card-preview__images">
-                                            <img src="img/temp/result-1.jpg" alt="">
-                                            <img src="img/temp/item-2-raw.jpg" alt="">
-                                            <img src="img/temp/item-3-raw.jpg" alt="">
+                                            <img loading="lazy" src="img/temp/result-1.jpg" alt="">
+                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="">
+                                            <img loading="lazy" src="img/temp/item-3-raw.jpg" alt="">
                                         </div>
                                     </a>
                                     <div class="item-card__info-block">
@@ -1871,12 +1877,12 @@
                                             </div>
                                         </div>
                                         <div class="item-card__user-actions">
-                                            <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное">
+                                            <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                                 </svg>
                                             </button>
-                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление">
+                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление" aria-label="Пожаловаться на объявление">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
                                                 </svg>
@@ -1902,9 +1908,9 @@
                                             <li></li>
                                         </ul>
                                         <div class="item-card-preview__images">
-                                            <img src="img/temp/result-1.jpg" alt="">
-                                            <img src="img/temp/item-2-raw.jpg" alt="">
-                                            <img src="img/temp/item-3-raw.jpg" alt="">
+                                            <img loading="lazy" src="img/temp/result-1.jpg" alt="">
+                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="">
+                                            <img loading="lazy" src="img/temp/item-3-raw.jpg" alt="">
                                         </div>
                                     </a>
                                     <div class="item-card__info-block">
@@ -1946,12 +1952,12 @@
                                             </div>
                                         </div>
                                         <div class="item-card__user-actions">
-                                            <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное">
+                                            <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                                 </svg>
                                             </button>
-                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление">
+                                            <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление" aria-label="Пожаловаться на объявление">
                                                 <svg class="icon">
                                                     <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
                                                 </svg>
@@ -1985,7 +1991,7 @@
                                 <li class="action-slider__slide swiper-slide">
                                     <a href="#" class="action-slider__link">
                                         <div class="action-slider__img">
-                                            <img src="img/temp/action-1.jpg" alt="">
+                                            <img loading="lazy" src="img/temp/action-1.jpg" alt="">
                                         </div>
                                         <div class="action-slider__description">
                                             <p class="action-slider__title">Спасибо на полмиллиона от Bobcat</p>
@@ -1996,7 +2002,7 @@
                                 <li class="action-slider__slide swiper-slide">
                                     <a href="#" class="action-slider__link">
                                         <div class="action-slider__img">
-                                            <img src="img/temp/action-2.jpg" alt="">
+                                            <img loading="lazy" src="img/temp/action-2.jpg" alt="">
                                         </div>
                                         <div class="action-slider__description">
                                             <p class="action-slider__title">BOBCAT FINANCE — ФИНАНСОВОЕ РЕШЕНИЕ  ОТ ПРОИЗВОДИТЕЛЯ</p>
@@ -2020,14 +2026,14 @@
                                 <li class="news-list-default__item">
                                     <a href="#" class="news-list-default__link">
                                         <div class="news-list-default__img">
-                                            <img src="img/temp/news-big.png" alt="">
+                                            <img loading="lazy" src="img/temp/news-big.png" alt="">
                                         </div>
                                         <div class="news-list-default__info">
                                             <p class="news-list-default__title">Новости CTT EXPO 1</p>
                                             <ul class="news-list-default__crumbs crumbs">
                                                 <li class="crumbs__item">23.02.2026</li>
                                                 <li class="crumbs__item">НАК машинери</li>
-                                                <li class="crumbs__item">207 <img src="img/svg/view-icon.svg" alt="Иконка количества просмотров"></li>
+                                                <li class="crumbs__item">207 <img loading="lazy" src="img/svg/view-icon.svg" alt="Иконка количества просмотров"></li>
                                             </ul>
                                         </div>
                                     </a>
@@ -2035,14 +2041,14 @@
                                 <li class="news-list-default__item">
                                     <a href="#" class="news-list-default__link">
                                         <div class="news-list-default__img">
-                                            <img src="img/temp/news-big.png" alt="">
+                                            <img loading="lazy" src="img/temp/news-big.png" alt="">
                                         </div>
                                         <div class="news-list-default__info">
                                             <p class="news-list-default__title">Новости CTT EXPO 2</p>
                                             <ul class="news-list-default__crumbs crumbs">
                                                 <li class="crumbs__item">23.02.2026</li>
                                                 <li class="crumbs__item">НАК машинери</li>
-                                                <li class="crumbs__item">207 <img src="img/svg/view-icon.svg" alt="Иконка количества просмотров"></li>
+                                                <li class="crumbs__item">207 <img loading="lazy" src="img/svg/view-icon.svg" alt="Иконка количества просмотров"></li>
                                             </ul>
                                         </div>
                                     </a>
@@ -2050,14 +2056,14 @@
                                 <li class="news-list-default__item">
                                     <a href="#" class="news-list-default__link">
                                         <div class="news-list-default__img">
-                                            <img src="img/temp/news-big.png" alt="">
+                                            <img loading="lazy" src="img/temp/news-big.png" alt="">
                                         </div>
                                         <div class="news-list-default__info">
                                             <p class="news-list-default__title">Новости CTT EXPO 3</p>
                                             <ul class="news-list-default__crumbs crumbs">
                                                 <li class="crumbs__item">23.02.2026</li>
                                                 <li class="crumbs__item">НАК машинери</li>
-                                                <li class="crumbs__item">207 <img src="img/svg/view-icon.svg" alt="Иконка количества просмотров"></li>
+                                                <li class="crumbs__item">207 <img loading="lazy" src="img/svg/view-icon.svg" alt="Иконка количества просмотров"></li>
                                             </ul>
                                         </div>
                                     </a>
@@ -2100,7 +2106,7 @@
         <div class="popup__dialog">
             <div class="popup__title">
                 <span>Альтех</span>
-                <button class="popup__close" type="button">
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
                     <svg class="icon icon--24">
                         <use xlink:href="img/sprites/sprite-24.svg#close"></use>
                     </svg>
@@ -2126,7 +2132,7 @@
         <div class="popup__dialog">
             <div class="popup__title">
                 <span>Заказать обратный звонок</span>
-                <button class="popup__close" type="button">
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
                     <svg class="icon icon--24">
                         <use xlink:href="img/sprites/sprite-24.svg#close"></use>
                     </svg>
@@ -2173,7 +2179,7 @@
         <div class="popup__dialog">
             <div class="popup__title">
                 <span>Отправить сообщение продавцу</span>
-                <button class="popup__close" type="button">
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
                     <svg class="icon icon--24">
                         <use xlink:href="img/sprites/sprite-24.svg#close"></use>
                     </svg>
@@ -2237,7 +2243,7 @@
         <div class="popup__dialog">
             <div class="popup__title">
                 <span>Оставьте заявку, и менеджеры свяжутся с вами для уточнения деталей</span>
-                <button class="popup__close" type="button">
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
                     <svg class="icon icon--24">
                         <use xlink:href="img/sprites/sprite-24.svg#close"></use>
                     </svg>
@@ -2317,7 +2323,7 @@
         <div class="popup__dialog">
             <div class="popup__title">
                 <span>Пожаловаться на объявление</span>
-                <button class="popup__close" type="button">
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
                     <svg class="icon icon--24">
                         <use xlink:href="img/sprites/sprite-24.svg#close"></use>
                     </svg>
@@ -2379,6 +2385,70 @@
                     <div class="field-checkbox">
                         <input type="checkbox" class="field-checkbox__input required-checkbox" id="report-presonal-data">
                         <label class="field-checkbox__label" for="report-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-question">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Задать вопрос</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="question-phone" id="question-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="question-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш телефон *" name="question-email" id="question-email" autocomplete="off">
+                        <label class="field-text__label" for="question-email">
+                            <span class="field-text__caption">Ваш email</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-textarea">
+                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="question-message" id="question-message"></textarea>
+                        <label class="field-textarea__label" for="question-message">
+                            <span class="field-textarea__caption">Текст сообщения</span>
+                        </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="question-subscribe">
+                        <label class="field-checkbox__label" for="question-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="question-presonal-data">
+                        <label class="field-checkbox__label" for="question-presonal-data">
                             <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
                         </label>
                     </div>
