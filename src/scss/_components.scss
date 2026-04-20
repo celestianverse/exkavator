@@ -70,10 +70,14 @@
     max-width: 100%;
 
     h1 {
-        margin-bottom: 40px;
+        &:not(.title) {
+            margin-bottom: 40px;
+        }
     }
     h2 {
-        margin-bottom: 16px;
+        &:not(.title) {
+            margin-bottom: 16px;
+        }
     }
 
     @include tablet-min {
@@ -260,29 +264,6 @@
     }
 }
 
-.icon {
-    display: block;
-    width: 16px;
-    height: 16px;
-
-    &--20 {
-        width: 20px;
-        height: 20px;
-    }
-    &--24 {
-        width: 24px;
-        height: 24px;
-    }
-    &--32 {
-        width: 32px;
-        height: 32px;
-    }
-
-    &--red {
-        color: var(--red-400);
-    }
-}
-
 .divider {
     height: 1px;
     background: var(--neutral-100);
@@ -336,7 +317,7 @@
 
 .companies-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, max(1fr));
     gap: 8px;
 
     @include handset-min {
@@ -344,7 +325,7 @@
     }
 
     @include laptop-min {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, max(1fr));
     }
 
     &__item {
@@ -396,15 +377,15 @@
 
 .photos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, max(1fr));
     gap: 16px;
 
     @include laptop-max {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, max(1fr));
     }
 
     @include mobile-only {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, max(1fr));
     }
 }
 .photo {
@@ -695,6 +676,21 @@
     border-style: solid;
     @include transition;
 }
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &.content {
+        padding-top: 56px;
+    }
+}
+
+.swiper {
+    width: 100%;
+}
+
 
 @import 'components/sections/filter';
 @import 'components/sections/categories';

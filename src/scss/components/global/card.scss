@@ -1,0 +1,231 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--neutral-25);
+    border-radius: 16px;
+    color: var(--text-base);
+
+    &__cover {
+        overflow: hidden;
+        position: relative;
+        border-radius: 16px 16px 0 0;
+    }
+    &__image {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        @include transition;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__text {
+        height: 96px;
+        @include text-ellipsis-rows(4);
+    }
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #fff;
+        @include backdrop(rgb(35 45 56 / 0.57), 8px);
+    }
+
+    &--row {
+        flex-direction: row;
+
+        .card__cover {
+            flex-shrink: 0;
+            width: 205px;
+            border-radius: 16px 0 0 16px;
+
+            @include tablet-only {
+                width: 180px;
+            }
+            @include mobile-only {
+                width: 140px;
+            }
+        }
+        .card__image {
+            height: 100%;
+        }
+        .card__title {
+            height: 80px;
+            @include text-ellipsis-rows(4);
+        }
+    }
+
+    &--xl {
+        .card__image {
+            height: 536px;
+
+            @include tablet-max {
+                height: 354px;
+            }
+            @include handset-max {
+                height: 280px;
+            }
+            @include mobile-only {
+                height: 200px;
+            }
+        }
+        .card__body {
+            padding: 16px 24px;
+
+            @include mobile-only {
+                padding: 16px;
+            }
+        }
+        .card__title {
+            max-height: 96px;
+            @include text-ellipsis-rows(3);
+
+            @include tablet-max {
+                max-height: 90px;
+            }
+        }
+        .card__play {
+            margin-top: -50px;
+            margin-left: -50px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &--l {
+        .card__image {
+            height: 354px;
+
+            @include handset-max {
+                height: 280px;
+            }
+            @include mobile-only {
+                height: 200px;
+            }
+        }
+        .card__body {
+            padding: 16px 24px;
+
+            @include mobile-only {
+                padding: 16px;
+            }
+        }
+        .card__title {
+            max-height: 96px;
+            @include text-ellipsis-rows(3);
+
+            @include tablet-max {
+                max-height: 90px;
+            }
+        }
+        .card__play {
+            margin-top: -50px;
+            margin-left: -50px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &--half {
+        .card__image {
+            height: 354px;
+
+            @include laptop-max {
+                height: 320px;
+            }
+            @include tablet-only {
+                height: 240px;
+            }
+            @include handset-max {
+                height: 180px;
+            }
+            @include mobile-only {
+                height: 200px;
+            }
+        }
+        .card__title {
+            max-height: 72px;
+            @include text-ellipsis-rows(3);
+        }
+        .card__play {
+            margin-top: -30px;
+            margin-left: -30px;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    &--m {
+        .card__image {
+            height: 232px;
+
+            @include laptop-max {
+                height: 212px;
+            }
+            @include tablet-only {
+                height: 240px;
+            }
+            @include handset-max {
+                height: 180px;
+            }
+        }
+        .card__title {
+            max-height: 72px;
+            @include text-ellipsis-rows(3);
+        }
+        .card__play {
+            margin-top: -30px;
+            margin-left: -30px;
+            width: 60px;
+            height: 60px;
+        }
+    }
+    &--s {
+        .card__image {
+            height: 170px;
+
+            @include tablet-max {
+                height: 200px;
+            }
+            @include handset-max {
+                height: 180px;
+            }
+            @include mobile-only {
+                height: 200px;
+            }
+        }
+        .card__title {
+            max-height: 72px;
+            @include text-ellipsis-rows(3);
+        }
+        .card__play {
+            margin-top: -30px;
+            margin-left: -30px;
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+a {
+    &.card {
+        &:hover {
+            color: var(--text-primary);
+
+            .card__image {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

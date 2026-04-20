@@ -48,6 +48,10 @@
     background-color: var(--neutral-700);
     color: #fff;
   }
+  &--white {
+    background-color: #fff;
+    color: var(--text-base);
+  }
 }
 
 a, button {

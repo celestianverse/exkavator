@@ -1,18 +1,5 @@
 @font-face {
   font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.eot");
-  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/Montserrat-Regular.woff2") format("woff2"),
-  url("../fonts/Montserrat-Regular.woff") format("woff"),
-  url("../fonts/Montserrat-Regular.ttf") format("truetype"),
-  url("../fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Montserrat;
   src: url("../fonts/Montserrat-Medium.eot");
   src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"),
   url("../fonts/Montserrat-Medium.woff2") format("woff2"),
@@ -59,6 +46,19 @@
   url("../fonts/Montserrat-ExtraBold.ttf") format("truetype"),
   url("../fonts/Montserrat-ExtraBold.svg#Montserrat-ExtraBold") format("svg");
   font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Black.eot");
+  src: url("../fonts/Montserrat-Black.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Montserrat-Black.woff2") format("woff2"),
+  url("../fonts/Montserrat-Black.woff") format("woff"),
+  url("../fonts/Montserrat-Black.ttf") format("truetype"),
+  url("../fonts/Montserrat-Black.svg#Montserrat-Black") format("svg");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }

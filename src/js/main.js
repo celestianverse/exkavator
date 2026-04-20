@@ -270,6 +270,29 @@ const specialOffersSlider = new Swiper('.special-offers__slider', {
         },
     }
 });
+const interviewsSlider = new Swiper('.interviews-slider', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    navigation: {
+        prevEl: '.interviews-slider__prev',
+        nextEl: '.interviews-slider__next',
+    },
+    breakpoints: {
+        480: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        1024: {
+            slidesPerView: 4,
+        },
+        1280: {
+            slidesPerView: 4,
+            spaceBetween: 24,
+        },
+    }
+});
 
 const chipsSlider = new Swiper('.chips-slider__slider', {
     slidesPerView: 'auto',

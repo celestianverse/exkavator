@@ -1,6 +1,6 @@
 .our-numbers-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, max(1fr));
     gap: 8px;
 
     @include handset-min {
@@ -8,7 +8,7 @@
     }
 
     @include tablet-min {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, max(1fr));
     }
 
     &__item {

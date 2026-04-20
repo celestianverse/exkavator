@@ -120,6 +120,15 @@ $font-weights: (
   }
 }
 
+@mixin backdrop($color, $blur: 8px) {
+    background: $color;
+
+    @supports (backdrop-filter: none) {
+        background: $color;
+        backdrop-filter: blur($blur);
+    }
+}
+
 // Утилити-классы размеров
 @each $name, $values in $font-sizes {
   .text-#{$name} {

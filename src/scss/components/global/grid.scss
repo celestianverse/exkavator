@@ -1,0 +1,25 @@
+.grid {
+    display: grid;
+
+    &--24 {
+        gap: 24px;
+
+        @include laptop-max {
+            gap: 16px;
+        }
+    }
+
+    &--columns-4 {
+        grid-template-columns: repeat(4, max(1fr));
+
+        @include tablet-max {
+            grid-template-columns: repeat(2, max(1fr));
+        }
+        @include mobile-only {
+            grid-template-columns: repeat(1, max(1fr));
+        }
+    }
+    &--columns-3 {
+        grid-template-columns: repeat(3, max(1fr));
+    }
+}

@@ -81,11 +81,11 @@
         // display: flex;
         // flex-direction: column;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: max(1fr);
         gap: 16px;
 
         @include tablet-min {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, max(1fr));
             align-items: start;
         }
 
@@ -241,19 +241,19 @@
 
     .detail-item-specifications {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: max(1fr);
         gap: 16px;
 
         @include handset-min {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, max(1fr));
         }
 
         @include tablet-min {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, max(1fr));
         }
 
         @include widescreen-min {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, max(1fr));
         }
 
         &__item-text, &__item-title {

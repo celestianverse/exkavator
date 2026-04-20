@@ -50,6 +50,7 @@ $device-widescreen-min: 1440px;
   --yellow-600: #937006;
   --yellow-500: #C49508;
   --yellow-400: #F8CF55;
+  --yellow-300: #FFE600;
   --yellow-100: #FDF1CE;
   --yellow-50: #FEF8E7;
 
@@ -88,6 +89,7 @@ $device-widescreen-min: 1440px;
   --text-white: var(--neutral-0);
   --text-primary: var(--primary-500);
   --text-secondary: var(--neutral-400);
+  --text-accent: var(--yellow-300);
   --text-link: var(--primary-500);
   --text-disabled: var(--neutral-300);
   --link-hover: var(--red-400);

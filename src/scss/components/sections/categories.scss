@@ -7,13 +7,13 @@
         display: grid;
         row-gap: 9px;
         column-gap: 8px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, max(1fr));
 
         @include tablet-min {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, max(1fr));
         }
         @include desktop-min {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, max(1fr));
         }
 
         li {

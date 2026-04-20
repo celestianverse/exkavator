@@ -1,22 +1,74 @@
 .title {
+    br {
+        @include mobile-only {
+            display: none;
+        }
+    }
+
+    &--xxl {
+        line-height: 1.33;
+        font-size: 48px;
+        font-weight: 900;
+
+        @include laptop-max {
+            font-size: 44px;
+        }
+        @include tablet-max {
+            font-size: 36px;
+        }
+        @include mobile-only {
+            font-size: 32px;
+        }
+    }
     &--xl {
-        line-height: 48px;
+        line-height: 1.1;
         font-size: 44px;
         font-weight: 800;
+
+        @include tablet-max {
+            font-size: 36px;
+        }
+        @include mobile-only {
+            font-size: 32px;
+        }
     }
     &--l {
-        line-height: 40px;
+        line-height: 1.11;
         font-size: 36px;
         font-weight: 800;
+
+        @include tablet-max {
+            font-size: 24px;
+        }
     }
     &--m {
         line-height: 30px;
         font-size: 24px;
         font-weight: 700;
+
+        @include tablet-max {
+            font-size: 20px;
+        }
     }
     &--s {
         line-height: 24px;
         font-size: 18px;
         font-weight: 700;
+    }
+
+    &--900 {
+        font-weight: 900;
+    }
+    &--800 {
+        font-weight: 800;
+    }
+    &--700 {
+        font-weight: 700;
+    }
+    &--600 {
+        font-weight: 600;
+    }
+    &--500 {
+        font-weight: 500;
     }
 }

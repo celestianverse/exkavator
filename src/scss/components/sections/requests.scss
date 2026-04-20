@@ -1,17 +1,71 @@
 .requests {
-    
     &__list {
         margin-bottom: 16px;
         display: grid;
         gap: 8px;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, max(1fr));
 
         @include handset-min {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, max(1fr));
+        }
+        @include tablet-min {
+            grid-template-columns: repeat(3, max(1fr));
         }
 
-        @include tablet-min {
-            grid-template-columns: repeat(3, 1fr);
+        &--gap-16 {
+            gap: 16px;
+        }
+    }
+}
+
+.requests-banner {
+    display: grid;
+    grid-template-columns: repeat(3, max(1fr));
+    gap: 24px;
+    padding: 24px;
+    background: url(../img/temp/requests-banner-background.jpg) 50% 50% no-repeat;
+    border-radius: 16px;
+    color: #fff;
+
+    @include handset-max {
+        grid-template-columns: repeat(1, max(1fr));
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    &__title {
+        line-height: 1.2;
+        font-size: 28px;
+        font-weight: 700;
+
+        @include laptop-max {
+            font-size: 26px;
+        }
+        @include tablet-max {
+            font-size: 24px;
+        }
+        @include handset-max {
+            font-size: 20px;
+        }
+    }
+    &__number {
+        text-shadow: 0 0 15px rgba(39, 137, 15, 0.6);
+        line-height: 1.2;
+        font-size: 55px;
+        font-weight: 800;
+        color: var(--text-accent);
+
+        @include laptop-max {
+            font-size: 50px;
+        }
+        @include tablet-max {
+            font-size: 45px;
+        }
+        @include handset-max {
+            font-size: 35px;
         }
     }
 }
