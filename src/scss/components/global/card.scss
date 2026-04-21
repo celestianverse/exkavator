@@ -35,6 +35,13 @@
         @include text-ellipsis-rows(4);
     }
     &__play {
+        &:hover {
+            .card__image {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__play-icon {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -71,8 +78,10 @@
     }
 
     &--xl {
-        .card__image {
+        .card__image, .card__video {
+            width: 100%;
             height: 536px;
+            object-fit: cover;
 
             @include tablet-max {
                 height: 354px;
@@ -99,7 +108,7 @@
                 max-height: 90px;
             }
         }
-        .card__play {
+        .card__play-icon {
             margin-top: -50px;
             margin-left: -50px;
             width: 100px;
@@ -107,8 +116,10 @@
         }
     }
     &--l {
-        .card__image {
+        .card__image, .card__video {
+            width: 100%;
             height: 354px;
+            object-fit: cover;
 
             @include handset-max {
                 height: 280px;
@@ -132,7 +143,7 @@
                 max-height: 90px;
             }
         }
-        .card__play {
+        .card__play-icon {
             margin-top: -50px;
             margin-left: -50px;
             width: 100px;
@@ -140,8 +151,10 @@
         }
     }
     &--half {
-        .card__image {
+        .card__image, .card__video {
+            width: 100%;
             height: 354px;
+            object-fit: cover;
 
             @include laptop-max {
                 height: 320px;
@@ -160,7 +173,7 @@
             max-height: 72px;
             @include text-ellipsis-rows(3);
         }
-        .card__play {
+        .card__play-icon {
             margin-top: -30px;
             margin-left: -30px;
             width: 60px;
@@ -168,8 +181,10 @@
         }
     }
     &--m {
-        .card__image {
+        .card__image, .card__video {
+            width: 100%;
             height: 232px;
+            object-fit: cover;
 
             @include laptop-max {
                 height: 212px;
@@ -185,7 +200,7 @@
             max-height: 72px;
             @include text-ellipsis-rows(3);
         }
-        .card__play {
+        .card__play-icon {
             margin-top: -30px;
             margin-left: -30px;
             width: 60px;
@@ -193,8 +208,10 @@
         }
     }
     &--s {
-        .card__image {
+        .card__image, .card__video {
+            width: 100%;
             height: 170px;
+            object-fit: cover;
 
             @include tablet-max {
                 height: 200px;
@@ -210,7 +227,7 @@
             max-height: 72px;
             @include text-ellipsis-rows(3);
         }
-        .card__play {
+        .card__play-icon {
             margin-top: -30px;
             margin-left: -30px;
             width: 60px;
@@ -226,6 +243,13 @@ a {
             .card__image {
                 transform: scale(1.1);
             }
+        }
+    }
+    &.card__title {
+        color: var(--text-base);
+
+        &:hover {
+            color: var(--text-primary);
         }
     }
 }

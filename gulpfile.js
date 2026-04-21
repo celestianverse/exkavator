@@ -45,6 +45,10 @@ const paths = {
     src:  'src/img/**/*.{png,jpg,jpeg,svg}',
     dest: 'dist/img/'
   },
+  videos: {
+    src:  'src/videos/**/*.mp4',
+    dest: 'dist/videos/'
+  },
   fonts: {
     src:  'src/fonts/**/*.{woff,woff2}',
     dest: 'dist/fonts/'
@@ -110,6 +114,13 @@ function images() {
     .pipe(dest(paths.images.dest));
 }
 
+// Копирование видео
+function videos() {
+  return src(paths.videos.src)
+    .pipe(newer(paths.videos.dest))
+    .pipe(dest(paths.videos.dest));
+}
+
 // Копирование шрифтов
 function fonts() {
   return src(paths.fonts.src)
@@ -131,13 +142,14 @@ function watchFiles(done) {
   watch(paths.scripts.src, scripts);
   watch(paths.pageScripts.src, pageScripts);
   watch(paths.images.src, images);
+  watch(paths.videos.src, videos);
   watch(paths.fonts.src, fonts);
   watch(paths.vendors.src, vendors);
   done();
 }
 
 // Сборка
-const buildAll = parallel(html, styles, scripts, pageScripts, images, fonts, vendors);
+const buildAll = parallel(html, styles, scripts, pageScripts, images, videos, fonts, vendors);
 
 // dev
 exports.default = series(clean, buildAll, watchFiles);

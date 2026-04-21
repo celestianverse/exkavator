@@ -2117,52 +2117,49 @@
         <section class="section container">
             <div class="column column--32">
                 <h2 class="title title--l">Видео</h2>
-                <div class="main-videos">
+                <div id="main-videos" class="main-videos">
                     <div class="main-videos__grid">
-                        <a href="#" class="main-videos__card card card--xl">
+                        <div class="main-videos__card card card--xl">
                             <div class="card__cover">
-                                <img src="img/news/news-7.jpg" alt="Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе" class="card__image">
-                                <div class="card__play">
-                                    <svg class="icon icon--60">
-                                        <use xlink:href="img/sprites/sprite-16.svg#play"></use>
-                                    </svg>
-                                </div>
+                                <video class="card__video" controls muted autoplay loop>
+                                    <source src="videos/video-1.mp4" type="video/mp4">
+                                </video>
                             </div>
                             <div class="card__body">
-                                <h3 class="card__title title title--m">Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе</h3>
+                                <a href="#" class="card__title title title--m">Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе</a>
                                 <p class="text text--s text--secondary">23.02.2026</p>
                                 <span class="chip chip--small chip--white"># Подкасты Экскаватор Ру</span>
                             </div>
-                        </a>
+                        </div>
                         <div class="main-videos__column">
-                            <a href="#" class="card card--s">
-                                <div class="card__cover">
+                            <div class="card card--s">
+                                <button type="button" class="card__cover card__play">
                                     <img src="img/news/news-8.jpg" alt="Запчасти на маркетплейсе: заказать и не прогадать. Спецпроект Grenar" class="card__image">
-                                    <div class="card__play">
+                                    <div class="card__play-icon">
                                         <svg class="icon icon--32">
                                             <use xlink:href="img/sprites/sprite-16.svg#play"></use>
                                         </svg>
                                     </div>
-                                </div>
+                                </button>
                                 <div class="card__body">
-                                    <h3 class="card__title text text--l text--600">Запчасти на маркетплейсе: заказать и не прогадать. Спецпроект Grenar</h3>
+                                    <a href="#" class="card__title text text--l text--600">Запчасти на маркетплейсе: заказать и не прогадать. Спецпроект Grenar</a>
                                     <p class="text text--s text--secondary">23.02.2026</p>
                                 </div>
-                            </a>
-                            <a href="#" class="card card--s">
-                                <div class="card__cover">
+                            </div>
+                            <div class="card card--s">
+                                <button type="button" class="card__cover card__play">
                                     <img src="img/news/news-9.jpg" alt="Увеличенные высота выгрузки и производительность: компания «Спецтехника» представила мини-погрузчики LONKING" class="card__image">
-                                    <div class="card__play">
+                                    <div class="card__play-icon">
                                         <svg class="icon icon--32">
                                             <use xlink:href="img/sprites/sprite-16.svg#play"></use>
                                         </svg>
                                     </div>
-                                </div>
+                                </button>
                                 <div class="card__body">
-                                    <h3 class="card__title text text--l text--600">Увеличенные высота выгрузки и производительность: компания «Спецтехника» представила мини-погрузчики LONKING</h3>
+                                    <a href="#" class="card__title text text--l text--600">Увеличенные высота выгрузки и производительность: компания «Спецтехника» представила мини-погрузчики LONKING</a>
                                     <p class="text text--s text--secondary">23.02.2026</p>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
                     <a class="button button--large button--regular-alt button--full-width" href="#">Все видео</a>
@@ -2536,7 +2533,6 @@
         </section>
     </div>
 
-
     <footer class="big-footer">
         <div class="container">
             <div class="big-footer__grid">
@@ -2853,5 +2849,6 @@
     <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/trade.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>
