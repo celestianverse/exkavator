@@ -32,9 +32,6 @@
         &:hover {
             box-shadow: 0 2px 8px 0 #00429780;
         }
-        &:active  {
-            background-color: var(--primary-600);
-        }
         &.button--dropdown::after {
             background-color: var(--neutral-0);
         }
@@ -44,9 +41,6 @@
         color: var(--text-link);
 
         &:hover {
-            background-color: var(--primary-100);
-        }
-        &:active  {
             background-color: var(--primary-100);
         }
         &.button--dropdown::after {
@@ -59,9 +53,6 @@
 
         &:hover {
             box-shadow: 0 2px 8px 0 #E0E5EB80;
-        }
-        &:active  {
-            background-color: var(--neutral-100);
         }
         &.button--dropdown::after {
             background-color: var(--text-base);
@@ -78,10 +69,6 @@
             color: var(--text-base);
             background: var(--neutral-25);
         }
-        &:active {
-            background-color: var(--neutral-100);
-            outline: 0;
-        }
         &.button--dropdown::after {
             background-color: var(--text-base);
         }
@@ -93,9 +80,6 @@
         &:hover {
             box-shadow: 0 2px 8px 0 #E0E5EB80;
         }
-        &:active  {
-            background-color: var(--green-500);
-        }
         &.button--dropdown::after {
             background-color: var(--text-white);
         }
@@ -106,9 +90,6 @@
 
         &:hover {
             box-shadow: 0 2px 8px 0 #CCFECF80;
-        }
-        &:active  {
-            background-color: var(--green-100);
         }
         &.button--dropdown::after {
             background-color: var(--green-500);

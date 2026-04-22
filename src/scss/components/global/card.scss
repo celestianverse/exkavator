@@ -53,7 +53,7 @@
         @include backdrop(rgb(35 45 56 / 0.57), 8px);
     }
 
-    &--row {
+    &--cell {
         flex-direction: row;
 
         .card__cover {
@@ -69,11 +69,53 @@
             }
         }
         .card__image {
-            height: 100%;
+            height: 116px;
         }
         .card__title {
-            height: 80px;
+            max-height: 80px;
             @include text-ellipsis-rows(4);
+        }
+    }
+    &--row {
+        flex-direction: row;
+
+        @include mobile-only {
+            flex-direction: column;
+        }
+
+        .card__cover {
+            flex-shrink: 0;
+            width: 320px;
+            border-radius: 16px 0 0 16px;
+
+            @include laptop-only {
+                width: 280px;
+            }
+            @include handset-only {
+                width: 220px;
+            }
+            @include mobile-only {
+                width: 100%;
+                border-radius: 16px 16px 0 0;
+            }
+        }
+        .card__image {
+            height: 180px;
+
+            @include handset-only {
+                height: 168px;
+            }
+            @include mobile-only {
+                height: 200px;
+            }
+        }
+        .card__title {
+            max-height: 48px;
+            @include text-ellipsis-rows(2);
+        }
+        .card__text {
+            max-height: 40px;
+            @include text-ellipsis-rows(2);
         }
     }
 
