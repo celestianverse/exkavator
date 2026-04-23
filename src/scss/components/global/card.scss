@@ -285,6 +285,9 @@ a {
             .card__image {
                 transform: scale(1.1);
             }
+            .card__text {
+                color: var(--text-base);
+            }
         }
     }
     &.card__title {

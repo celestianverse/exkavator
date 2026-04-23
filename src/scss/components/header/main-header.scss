@@ -28,6 +28,9 @@
         @include laptop-min {
             height: auto;
         }
+        @include handset-max {
+            position: static;
+        }
     }
 
     &__logo  {
@@ -104,6 +107,14 @@
 
             @include laptop-min {
                 width: 107%;
+            }
+            @include handset-max {
+                top: 8px;
+                left: 16px;
+                right: 16px;
+                bottom: 8px;
+                width: auto;
+                height: auto;
             }
         }
     }

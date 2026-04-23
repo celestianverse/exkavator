@@ -1,5 +1,9 @@
+html {
+    height: 100%;
+}
 body {
     min-width: 340px;
+    height: 100%;
     font-family: var(--font-family);
     color: var(--text-base);
     @include text-size('base');
@@ -10,8 +14,6 @@ body {
     }
     
 }
-
-
 
 .container {
     padding: 0 16px;

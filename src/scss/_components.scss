@@ -66,6 +66,34 @@
     overflow: hidden;
 }
 
+.page {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100%;
+}
+.body {
+    flex-grow: 1;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+
+    &--l {
+        padding: 32px;
+    }
+
+    &--items-center {
+        align-items: center;
+    }
+
+    &--text-center {
+        text-align: center;
+    }
+}
+
 .content {
     max-width: 100%;
 

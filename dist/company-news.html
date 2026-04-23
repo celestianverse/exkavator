@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Аренда - Поисковая выдача</title>
+  <title>Компания НАК Машинери — Экскаватор Ру</title>
   <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -1730,7 +1730,7 @@
                             <a class="secondary-menu__link" href="#"><span>Форум</span></a>
                         </li>
                         <li class="secondary-menu__item">
-                            <a class="secondary-menu__link" href="#"><span>Каталог компаний</span></a>
+                            <a class="secondary-menu__link secondary-menu__link--active" href="#"><span>Каталог компаний</span></a>
                         </li>
                         <li class="secondary-menu__item">
                             <a class="secondary-menu__link secondary-menu__link--accent" href="#"><span>Скидки на спецтехнику!</span></a>
@@ -1748,635 +1748,202 @@
             <div class="container">
                 <div class="layout">
                     <div class="content">
-                        <ul class="crumbs crumbs--bread">
-                            <li class="crumbs__item">
-                                <a href="#">Аренда</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Экскаваторы в Краснодаре</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Гусеничные экскаваторы</a>
-                            </li>
-                        </ul>
-                        <h1>Аренда гусеничных экскаваторов в Краснодаре</h1>
-                        <section class="filter-block section">
-                            <div class="filter">
-                                <p class="small-title">Поиск по 7924 объявлениям</p>
-                                <div class="filter__inputs">
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
-                                        <label class="field-dropdown__label" for="type">
-                                            <span class="field-dropdown__caption">Тип техники</span>
-                                        </label>
-                                    </div>
+                        <section class="section">
+                            <ul class="crumbs crumbs--bread">
+                                <li class="crumbs__item">
+                                    <a href="#">Каталог компаний</a>
+                                </li>
+                                <li class="crumbs__item">
+                                    <span>О компании</span>
+                                </li>
+                            </ul>
+                        </section>
 
-                                    <div class="field-text">
-                                        <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
-                                        <label class="field-text__label" for="place">
-                                            <span class="field-text__caption">Регион, город, населенный пункт</span>
-                                        </label>
-                                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                                            <svg class="icon icon--16">
-                                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Марка" name="brand" id="brand" autocomplete="off"/>
-                                        <label class="field-dropdown__label" for="brand">
-                                            <span class="field-dropdown__caption">Марка</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-dropdown disabled">
-                                        <input class="field-dropdown__input" type="text" placeholder="Модель" name="model" id="model" autocomplete="off" disabled/>
-                                        <label class="field-dropdown__label" for="model">
-                                            <span class="field-dropdown__caption">Модель</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Арендодатель" name="landlord" id="landlord" autocomplete="off"/>
-                                        <label class="field-dropdown__label" for="landlord">
-                                            <span class="field-dropdown__caption">Арендодатель</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="filter__range">
-                                        <div class="field-text">
-                                            <input class="field-text__input" type="number" placeholder="Цена за час от ₽" name="hourPriceFrom" id="hourPriceFrom" autocomplete="off"/>
-                                            <label class="field-text__label" for="hourPriceFrom">
-                                                <span class="field-text__caption">Цена за час от, ₽</span>
-                                            </label>
-                                            <button class="field-text__clear" aria-label="Очистить" type="button">
-                                                <svg class="icon icon--16">
-                                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        <div class="field-text">
-                                            <input class="field-text__input" type="number" placeholder="до ₽" name="hourPriceTo" id="hourPriceTo" autocomplete="off"/>
-                                            <label class="field-text__label" for="hourPriceTo">
-                                                <span class="field-text__caption">до, ₽</span>
-                                            </label>
-                                            <button class="field-text__clear" aria-label="Очистить" type="button">
-                                                <svg class="icon icon--16">
-                                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="filter__range">
-                                        <div class="field-text">
-                                            <input class="field-text__input" type="number" placeholder="Цена за смену от ₽" name="shiftPriceFrom" id="shiftPriceFrom" autocomplete="off"/>
-                                            <label class="field-text__label" for="shiftPriceFrom">
-                                                <span class="field-text__caption">Цена за смену от, ₽</span>
-                                            </label>
-                                            <button class="field-text__clear" aria-label="Очистить" type="button">
-                                                <svg class="icon icon--16">
-                                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        <div class="field-text">
-                                            <input class="field-text__input" type="number" placeholder="до ₽" name="shiftPriceTo" id="shiftPriceTo" autocomplete="off"/>
-                                            <label class="field-text__label" for="shiftPriceTo">
-                                                <span class="field-text__caption">до, ₽</span>
-                                            </label>
-                                            <button class="field-text__clear" aria-label="Очистить" type="button">
-                                                <svg class="icon icon--16">
-                                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="filter__checkboxes">
-                                    <div class="field-checkbox">
-                                        <input type="checkbox" class="field-checkbox__input" id="ch-cold">
-                                        <label class="field-checkbox__label" for="ch-cold">Холодная аренда</label>
-                                    </div>
-                                    <div class="field-checkbox">
-                                        <input type="checkbox" class="field-checkbox__input" id="ch-price">
-                                        <label class="field-checkbox__label" for="ch-price">Только с ценой</label>
-                                    </div>
-                                </div>
-                                <div class="filter__buttons">
-                                    <!-- <button class="button button--primary-alt button--no-body button--medium">Сбросить</button> -->
-                                    <!-- <button class="button button--primary-alt button--no-body button--medium">Сохранить поиск</button> -->
-                                    <!-- <button class="button button--primary button--large">Показать 1234 объявления</button> -->
-                                    <p class="filter__no-filters">Укажите параметры поиска</p>
-                                </div>
+                        <section class="first-block first-block--company section">
+                            <div class="first-block__img">
+                                <img loading="lazy" src="img/temp/stand-logo.jpg" alt="Стенд НАК Машинери">
+                            </div>
+                            <div class="first-block__wrapper">
+                                <h1 class="first-block__title">Компания НАК Машинери</h1>
+                                <ul class="crumbs">
+                                    <li class="crumbs__item">20 384 просмотра страницы</li>
+                                    <li class="crumbs__item">Продавец оффлайн</li>
+                                </ul>
+                                <ul class="crumbs">
+                                    <li class="crumbs__item crumbs__item--approve">
+                                        <span class="text--base fw-semibold">Официальный дилер</span>
+                                    </li>
+                                    <li class="crumbs__item">11 лет на площадке</li>
+                                </ul>
+                                <p>+7 (958) 295-92-73</p>
                             </div>
                         </section>
 
-                        <section class="results section">
-                            <div class="results__title">
-                                <p class="small-title">Найдено 1234 объявления</p>
-                                <div class="sorting sorting--mobile-inverse">
-                                    <button class="button button--small button--regular-alt button--dropdown">
-                                <span class="button__text">
-                                    Сначала актуальные
-                                </span>
-                                        <svg class="icon">
-                                            <use xlink:href="img/sprites/sprite-16.svg#sort"></use>
-                                        </svg>
-                                    </button>
+                        <section class="contact-sticky-block contact-sticky-block--sm">
+                            <div class="contact-sticky-block__wrapper">
+                                <nav class="contact-sticky-block__nav">
+                                    <a href="#" class="contact-sticky-block__link"><span>О компаниии</span></a>
+                                    <a href="#" class="contact-sticky-block__link"><span>Продажа</span></a>
+                                    <a href="#" class="contact-sticky-block__link"><span>Запчасти</span></a>
+                                    <a href="#" class="contact-sticky-block__link"><span>Контакты</span></a>
+                                    <a href="#" class="contact-sticky-block__link active"><span>Новости</span></a>
+                                    <a href="#" class="contact-sticky-block__link"><span>Файлы</span></a>
+                                    <a href="#" class="contact-sticky-block__link"><span>Фото</span></a>
+
                                     <div class="dropdown-backdrop">
                                         <ul class="dropdown-backdrop__list">
-                                            <li class="dropdown-backdrop__option">Сначала актуальные</li>
-                                            <li class="dropdown-backdrop__option">Сначала дешевые</li>
-                                            <li class="dropdown-backdrop__option">Сначала дорогие</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item-card-list">
-                                <!-- item-card -->
-                                <div class="item-card viewed top premium">
-                                    <div class="item-card__row">
-                                        <a href="#" class="item-card__img-block" aria-label="Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S">
-                                            <div class="item-card__labels"></div>
-                                            <img loading="lazy" src="img/temp/result-1.jpg" alt="Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S">
-                                        </a>
-                                        <div class="item-card__info-block">
-                                            <p class="item-card__cities">Александровск-Сахалинский и ещё <a href="#" class="item-card__tolltip">9 городов</a></p>
-                                            <a href="#" class="item-card__title">Аренда гусеничного экскаватора HYUNDAI ROBEX 220LC-9S</a>
-                                            <ul class="item-card__chips">
-                                                <li class="chip chip--small chip--regular">В наличии</li>
-                                                <li class="chip chip--small chip--regular">Бесплатная доставка</li>
-                                            </ul>
-                                            <p class="item-card__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
-                                            <div class="item-card-more">
-                                                <p>Другие объявления</p>
-                                                <div class="item-card-more__wrapper">
-                                                    <a href="#" class="item-card-more__item">
-                                                        <div class="item-card-more__img">
-                                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="Аренда гусеничного экскаватора John Deere E260 LC">
-                                                        </div>
-                                                        <div class="item-card-more__info">
-                                                            <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
-                                                            <ul class="crumbs">
-                                                                <li class="crumbs__item">60 000 ₽ смена</li>
-                                                                <li class="crumbs__item">3500 ₽ час</li>
-                                                            </ul>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#" class="item-card-more__item">
-                                                        <div class="item-card-more__img">
-                                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="Аренда гусеничного экскаватора John Deere E260 LC">
-                                                        </div>
-                                                        <div class="item-card-more__info">
-                                                            <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
-                                                            <ul class="crumbs">
-                                                                <li class="crumbs__item">60 000 ₽ смена</li>
-                                                                <li class="crumbs__item">3500 ₽ час</li>
-                                                            </ul>
-                                                        </div>
-                                                    </a>
-
-                                                    <a href="#" class="item-card-more__item">
-                                                        <div class="item-card-more__img">
-                                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="Аренда гусеничного экскаватора John Deere E260 LC">
-                                                        </div>
-                                                        <div class="item-card-more__info">
-                                                            <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
-                                                            <ul class="crumbs">
-                                                                <li class="crumbs__item">60 000 ₽ смена</li>
-                                                                <li class="crumbs__item">3500 ₽ час</li>
-                                                            </ul>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#" class="item-card-more__item">
-                                                        <div class="item-card-more__img">
-                                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="Аренда гусеничного экскаватора John Deere E260 LC">
-                                                        </div>
-                                                        <div class="item-card-more__info">
-                                                            <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
-                                                            <ul class="crumbs">
-                                                                <li class="crumbs__item">60 000 ₽ смена</li>
-                                                                <li class="crumbs__item">3500 ₽ час</li>
-                                                            </ul>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#" class="item-card-more__item">
-                                                        <div class="item-card-more__img">
-                                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="Аренда гусеничного экскаватора John Deere E260 LC">
-                                                        </div>
-                                                        <div class="item-card-more__info">
-                                                            <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
-                                                            <ul class="crumbs">
-                                                                <li class="crumbs__item">60 000 ₽ смена</li>
-                                                                <li class="crumbs__item">3500 ₽ час</li>
-                                                            </ul>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#" class="item-card-more__item">
-                                                        <div class="item-card-more__img">
-                                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="Аренда гусеничного экскаватора John Deere E260 LC">
-                                                        </div>
-                                                        <div class="item-card-more__info">
-                                                            <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
-                                                            <ul class="crumbs">
-                                                                <li class="crumbs__item">60 000 ₽ смена</li>
-                                                                <li class="crumbs__item">3500 ₽ час</li>
-                                                            </ul>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <a href="#" class="item-card-more__button">Показать еще 10 из 28</a>
-                                            </div>
-                                        </div>
-                                        <div class="item-card__action-block">
-                                            <div class="item-card__price price-block price-block--double">
-                                                <p>15 306 212 ₽ <small>час</small></p>
-                                                <p>15 306 212 ₽ <small>смена</small></p>
-                                            </div>
-                                            <div class="item-card__buttons">
-                                                <button class="button button--small button--primary-alt">Купить в лизинг</button>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
-                                                <button class="button button--small button--primary-alt">Написать</button>
-                                            </div>
-                                            <div class="item-card__user-actions">
-                                                <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
-                                                    </svg>
-                                                </button>
-                                                <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление" aria-label="Пожаловаться на объявление">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-card__row">
-                                        <p class="item-card__time">Обновлено сегодня</p>
-                                        <ul class="crumbs">
-                                            <li class="crumbs__item crumbs__item--approve">Росткомплект ДВ</li>
-                                            <li class="crumbs__item">11 лет на площадке</li>
-                                            <li class="crumbs__item">
-                                                Парк техники: <a href="#">138 единиц</a>
+                                            <li class="dropdown-backdrop__option-button">
+                                                <a href="#">О компаниии</a>
                                             </li>
-                                            <li class="crumbs__item">
-                                                Работаем 24/7
+                                            <li class="dropdown-backdrop__option-button">
+                                                <a href="#">Продажа</a>
+                                            </li>
+                                            <li class="dropdown-backdrop__option-button">
+                                                <a href="#">Запчасти</a>
+                                            </li>
+                                            <li class="dropdown-backdrop__option-button">
+                                                <a href="#">Контакты</a>
+                                            </li>
+                                            <li class="dropdown-backdrop__option-button">
+                                                <a href="#">Новости</a>
+                                            </li>
+                                            <li class="dropdown-backdrop__option-button">
+                                                <a href="#">Файлы</a>
+                                            </li>
+                                            <li class="dropdown-backdrop__option-button">
+                                                <a href="#">Фото</a>
                                             </li>
                                         </ul>
                                     </div>
-                                </div>
-                                <!-- item card -->
-                                <div class="item-card">
-                                    <div class="item-card__row">
-                                        <a href="#" class="item-card__img-block" aria-label="Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S">
-                                            <div class="item-card__labels"></div>
-                                            <img loading="lazy" src="img/temp/result-1.jpg" alt="Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S">
-                                        </a>
-                                        <div class="item-card__info-block">
-                                            <p class="item-card__cities">Александровск-Сахалинский и ещё <a href="#" class="item-card__tolltip">9 городов</a></p>
-                                            <a href="#" class="item-card__title">Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S</a>
-                                            <ul class="item-card__chips">
-                                                <li class="chip chip--small chip--regular">В наличии</li>
-                                                <li class="chip chip--small chip--regular">Бесплатная доставка</li>
-                                            </ul>
-                                            <p class="item-card__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
-                                            <div class="item-card-more">
-                                                <p>Другие объявления</p>
-                                                <div class="item-card-more__wrapper">
-                                                    <a href="#" class="item-card-more__item">
-                                                        <div class="item-card-more__img">
-                                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="Аренда гусеничного экскаватора John Deere E260 LC">
-                                                        </div>
-                                                        <div class="item-card-more__info">
-                                                            <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
-                                                            <ul class="crumbs">
-                                                                <li class="crumbs__item">60 000 ₽ смена</li>
-                                                                <li class="crumbs__item">3500 ₽ час</li>
-                                                            </ul>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#" class="item-card-more__item">
-                                                        <div class="item-card-more__img">
-                                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="Аренда гусеничного экскаватора John Deere E260 LC">
-                                                        </div>
-                                                        <div class="item-card-more__info">
-                                                            <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
-                                                            <ul class="crumbs">
-                                                                <li class="crumbs__item">60 000 ₽ смена</li>
-                                                                <li class="crumbs__item">3500 ₽ час</li>
-                                                            </ul>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <a href="#" class="item-card-more__button">Показать еще 10 из 28</a>
-                                            </div>
-                                        </div>
-                                        <div class="item-card__action-block">
-                                            <div class="item-card__price price-block">
-                                                <p>15 306 212 ₽ <small>час</small></p>
-                                                <p>15 306 212 ₽ <small>смена</small></p>
-                                            </div>
-                                            <div class="item-card__buttons">
-                                                <button class="button button--small button--primary-alt">Купить в лизинг</button>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
-                                                <button class="button button--small button--primary-alt">Написать</button>
-                                            </div>
-                                            <div class="item-card__user-actions">
-                                                <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
-                                                    </svg>
-                                                </button>
-                                                <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление" aria-label="Пожаловаться на объявление">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-card__row">
-                                        <p class="item-card__time">Обновлено сегодня</p>
-                                        <ul class="crumbs">
-                                            <li class="crumbs__item crumbs__item--approve">Росткомплект ДВ</li>
-                                            <li class="crumbs__item">11 лет на площадке</li>
-                                            <li class="crumbs__item">
-                                                Парк техники: <a href="#">138 единиц</a>
-                                            </li>
-                                            <li class="crumbs__item">
-                                                Работаем 24/7
-                                            </li>
-                                        </ul>
-                                    </div>
+                                </nav>
+                                <div class="contact-sticky-block__buttons">
+                                    <a href="#" target="_blank" class="contact-sticky-block__round-btn" data-tooltip-text="Открыть сайт" aria-label="Открыть сайт компании">
+                                        <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#website"></use></svg>
+                                    </a>
+                                    <button class="contact-sticky-block__round-btn js-open-popup" data-popup-id="popup-callback" data-tooltip-text="Заказать обратный звонок" aria-label="Заказать обратный звонок">
+                                        <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#phoneCallback"></use></svg>
+                                    </button>
+                                    <button class="contact-sticky-block__round-btn js-open-popup" data-popup-id="popup-question" data-tooltip-text="Задать вопрос" aria-label="Задать вопрос">
+                                        <svg class="icon"><use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use></svg>
+                                    </button>
                                 </div>
                             </div>
                         </section>
 
-
-
-                        <section class="special-offers section">
-                            <div class="special-offers__title">
-                                <h2>Спецпредложения</h2>
-                                <div class="special-offers__nav">
-                                    <button class="special-offers__prev" type="button" aria-label="Предыдущий слайд"></button>
-                                    <button class="special-offers__next" type="button" aria-label="Следующий слайд"></button>
-                                </div>
-                            </div>
-
-                            <div class="special-offers__slider swiper">
-                                <div class="special-offers__list swiper-wrapper">
-                                    <div class="special-item swiper-slide">
-                                        <a href="#" class="special-item__img">
-                                            <img loading="lazy" src="img/temp/item-1-raw.jpg" alt="Гусеничный экскаватор Lonking CDM6336">
-                                        </a>
-                                        <div class="special-item__description">
-                                            <a href="#" class="special-item__title">Гусеничный экскаватор Lonking CDM6336</a>
-                                            <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
-                                            <div class="special-item__action">
-                                                <span class="special-item__price">15 541 703 <i>₽</i></span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="special-item swiper-slide">
-                                        <a href="#" class="special-item__img">
-                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="Гусеничный экскаватор Sany SY225NLC">
-                                        </a>
-                                        <div class="special-item__description">
-                                            <a href="#" class="special-item__title">Гусеничный экскаватор Sany SY225NLC</a>
-                                            <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
-                                            <div class="special-item__action">
-                                                <span class="special-item__price">15 541 703 <i>₽</i></span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="special-item swiper-slide">
-                                        <a href="#" class="special-item__img">
-                                            <img loading="lazy" src="img/temp/item-3-raw.jpg" alt="Гусеничный экскаватор 923FN">
-                                        </a>
-                                        <div class="special-item__description">
-                                            <a href="#" class="special-item__title">Гусеничный экскаватор 923FN</a>
-                                            <p class="special-item__cities">Москва и еще 22 города</p>
-                                            <div class="special-item__action">
-                                                <span class="special-item__price">11 240 703 <i>₽</i></span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="special-item swiper-slide">
-                                        <a href="#" class="special-item__img">
-                                            <img loading="lazy" src="img/temp/item-3-raw.jpg" alt="Гусеничный экскаватор 923FN">
-                                        </a>
-                                        <div class="special-item__description">
-                                            <a href="#" class="special-item__title">Гусеничный экскаватор 923FN</a>
-                                            <p class="special-item__cities">Москва и еще 22 города</p>
-                                            <div class="special-item__action">
-                                                <span class="special-item__price">11 240 703 <i>₽</i></span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="results section">
-                            <div class="results-list">
-                                <!-- item card -->
-                                <div class="item-card">
-                                    <div class="item-card__row">
-                                        <a href="#" class="item-card__img-block">
-                                            <div class="item-card__labels"></div>
-                                            <img loading="lazy" src="img/temp/result-1.jpg" alt="Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S">
-                                        </a>
-                                        <div class="item-card__info-block">
-                                            <p class="item-card__cities">Александровск-Сахалинский и ещё <a href="#" class="item-card__tolltip">9 городов</a></p>
-                                            <a href="#" class="item-card__title">Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S</a>
-                                            <ul class="item-card__chips">
-                                                <li class="chip chip--small chip--regular">В наличии</li>
-                                                <li class="chip chip--small chip--regular">Бесплатная доставка</li>
-                                            </ul>
-                                            <p class="item-card__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
-                                            <div class="item-card-more">
-                                                <p>Другие объявления</p>
-                                                <div class="item-card-more__wrapper">
-                                                    <a href="#" class="item-card-more__item">
-                                                        <div class="item-card-more__img">
-                                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="">
-                                                        </div>
-                                                        <div class="item-card-more__info">
-                                                            <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
-                                                            <ul class="crumbs">
-                                                                <li class="crumbs__item">60 000 ₽ смена</li>
-                                                                <li class="crumbs__item">3500 ₽ час</li>
-                                                            </ul>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#" class="item-card-more__item">
-                                                        <div class="item-card-more__img">
-                                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="">
-                                                        </div>
-                                                        <div class="item-card-more__info">
-                                                            <p>Аренда гусеничного экскаватора John Deere E260 LC</p>
-                                                            <ul class="crumbs">
-                                                                <li class="crumbs__item">60 000 ₽ смена</li>
-                                                                <li class="crumbs__item">3500 ₽ час</li>
-                                                            </ul>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <a href="#" class="item-card-more__button">Показать еще 10 из 28</a>
-                                            </div>
-                                        </div>
-                                        <div class="item-card__action-block">
-                                            <div class="item-card__price price-block">
-                                                <p>15 306 212 ₽ <small>час</small></p>
-                                                <p>15 306 212 ₽ <small>смена</small></p>
-                                            </div>
-                                            <div class="item-card__buttons">
-                                                <button class="button button--small button--primary-alt">Купить в лизинг</button>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
-                                                <button class="button button--small button--primary-alt">Написать</button>
-                                            </div>
-                                            <div class="item-card__user-actions">
-                                                <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
-                                                    </svg>
-                                                </button>
-                                                <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление" aria-label="Пожаловаться на объявление">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-card__row">
-                                        <p class="item-card__time">Обновлено сегодня</p>
-                                        <ul class="crumbs">
-                                            <li class="crumbs__item crumbs__item--approve">Росткомплект ДВ</li>
-                                            <li class="crumbs__item">11 лет на площадке</li>
-                                            <li class="crumbs__item">
-                                                Парк техники: <a href="#">138 единиц</a>
-                                            </li>
-                                            <li class="crumbs__item">
-                                                Работаем 24/7
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
                         <section class="section">
-                            <nav class="pagination">
-                                <a href="#" class="button button--small button--regular-alt pagination__current">1</a>
-                                <a href="#" class="button button--small button--regular-alt">2</a>
-                                <a href="#" class="button button--small button--regular-alt">3</a>
-                                <a href="#" class="button button--small button--regular-alt">4</a>
-                                <a href="#" class="button button--small button--regular-alt pagination__prev">Предыдущая</a>
-                                <a href="#" class="button button--small button--regular-alt pagination__next">Следующая</a>
-                            </nav>
+                            <h2 class="section__title">Новости НАК Машинери</h2>
+                            <div class="column column--16">
+                                <a href="#" class="card card--row">
+                                    <div class="card__cover">
+                                        <img src="img/photos/photo-11.jpg" alt="Выгодные условия аренды сваебойной машины Orteco BTP 1000HD" class="card__image">
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__content">
+                                            <h3 class="card__title text text--l text--600">Выгодные условия аренды сваебойной машины Orteco BTP 1000HD</h3>
+                                            <p class="card__text text text--m">Выгодные условия аренды: машина сваебойная самоходная Orteco ВТР Heavyduty (сила удара - 1200 Дж) для забивания стоек дорожных ограждений всех типов с 3-х цилиндровым двигателем "HATZ" и гидронасосом мощностью 110 л/мин.</p>
+                                        </div>
+                                        <p class="text text--s text--secondary">23.02.2026</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="card card--row">
+                                    <div class="card__cover">
+                                        <img src="img/photos/photo-12.jpg" alt="Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе" class="card__image">
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__content">
+                                            <h3 class="card__title text text--l text--600">Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе</h3>
+                                            <p class="card__text text text--m">Мы очень ценим наших клиентов и уверены в качестве запасных частей, которые предлагаем, поэтому на все оригинальные запчасти Bobcat действует гарантия 12 месяцев. Подробную информацию о гарантии можно узнать у менеджеров компании. *Не является публичной офертой.</p>
+                                        </div>
+                                        <p class="text text--s text--secondary">23.02.2026</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="card card--row">
+                                    <div class="card__cover">
+                                        <img src="img/photos/photo-13.jpg" alt="Выгодные условия аренды сваебойной машины Orteco BTP 1000HD" class="card__image">
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__content">
+                                            <h3 class="card__title text text--l text--600">Выгодные условия аренды сваебойной машины Orteco BTP 1000HD</h3>
+                                            <p class="card__text text text--m">Выгодные условия аренды: машина сваебойная самоходная Orteco ВТР Heavyduty (сила удара - 1200 Дж) для забивания стоек дорожных ограждений всех типов с 3-х цилиндровым двигателем "HATZ" и гидронасосом мощностью 110 л/мин.</p>
+                                        </div>
+                                        <p class="text text--s text--secondary">23.02.2026</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="card card--row">
+                                    <div class="card__cover">
+                                        <img src="img/photos/photo-14.jpg" alt="Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе" class="card__image">
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__content">
+                                            <h3 class="card__title text text--l text--600">Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе</h3>
+                                            <p class="card__text text text--m">Мы очень ценим наших клиентов и уверены в качестве запасных частей, которые предлагаем, поэтому на все оригинальные запчасти Bobcat действует гарантия 12 месяцев. Подробную информацию о гарантии можно узнать у менеджеров компании. *Не является публичной офертой./мин.</p>
+                                        </div>
+                                        <p class="text text--s text--secondary">23.02.2026</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="card card--row">
+                                    <div class="card__cover">
+                                        <img src="img/photos/photo-11.jpg" alt="Выгодные условия аренды сваебойной машины Orteco BTP 1000HD" class="card__image">
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__content">
+                                            <h3 class="card__title text text--l text--600">Выгодные условия аренды сваебойной машины Orteco BTP 1000HD</h3>
+                                            <p class="card__text text text--m">Выгодные условия аренды: машина сваебойная самоходная Orteco ВТР Heavyduty (сила удара - 1200 Дж) для забивания стоек дорожных ограждений всех типов с 3-х цилиндровым двигателем "HATZ" и гидронасосом мощностью 110 л/мин.</p>
+                                        </div>
+                                        <p class="text text--s text--secondary">23.02.2026</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="card card--row">
+                                    <div class="card__cover">
+                                        <img src="img/photos/photo-12.jpg" alt="Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе" class="card__image">
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__content">
+                                            <h3 class="card__title text text--l text--600">Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе</h3>
+                                            <p class="card__text text text--m">Мы очень ценим наших клиентов и уверены в качестве запасных частей, которые предлагаем, поэтому на все оригинальные запчасти Bobcat действует гарантия 12 месяцев. Подробную информацию о гарантии можно узнать у менеджеров компании. *Не является публичной офертой.</p>
+                                        </div>
+                                        <p class="text text--s text--secondary">23.02.2026</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="card card--row">
+                                    <div class="card__cover">
+                                        <img src="img/photos/photo-13.jpg" alt="Выгодные условия аренды сваебойной машины Orteco BTP 1000HD" class="card__image">
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__content">
+                                            <h3 class="card__title text text--l text--600">Выгодные условия аренды сваебойной машины Orteco BTP 1000HD</h3>
+                                            <p class="card__text text text--m">Выгодные условия аренды: машина сваебойная самоходная Orteco ВТР Heavyduty (сила удара - 1200 Дж) для забивания стоек дорожных ограждений всех типов с 3-х цилиндровым двигателем "HATZ" и гидронасосом мощностью 110 л/мин.</p>
+                                        </div>
+                                        <p class="text text--s text--secondary">23.02.2026</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="card card--row">
+                                    <div class="card__cover">
+                                        <img src="img/photos/photo-14.jpg" alt="Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе" class="card__image">
+                                    </div>
+                                    <div class="card__body">
+                                        <div class="card__content">
+                                            <h3 class="card__title text text--l text--600">Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе</h3>
+                                            <p class="card__text text text--m">Мы очень ценим наших клиентов и уверены в качестве запасных частей, которые предлагаем, поэтому на все оригинальные запчасти Bobcat действует гарантия 12 месяцев. Подробную информацию о гарантии можно узнать у менеджеров компании. *Не является публичной офертой./мин.</p>
+                                        </div>
+                                        <p class="text text--s text--secondary">23.02.2026</p>
+                                    </div>
+                                </a>
+                                <button type="button" class="button button--large button--regular-alt button--full-width">Загрузить ещё</button>
+                            </div>
                         </section>
+
                         <section class="section">
                             <div class="cta-help-block">
                                 <div class="cta-help-block__wrapper-text">
-                                    <p class="cta-help-block__title">Помощь в поиске от Экскаватор Ру</p>
-                                    <p class="cta-help-block__text">Найдите любую технику — бесплатно и быстро: разместите заявку на технику, и продавцы сами свяжутся с вами!</p>
+                                    <p class="cta-help-block__title">Необходим ремонт или другие услуги спецтехники?</p>
+                                    <p class="cta-help-block__text">Разместите заявку на ремонт и менеджеры сами свяжутся с вами</p>
                                 </div>
-                                <button class="button button--large button--primary-alt">
+                                <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-service">
                                     Разместить заявку
                                 </button>
                             </div>
                         </section>
-                        <section class="section text-section">
-                            <p>Чтобы взять в аренду гусеничный экскаватор на самых выгодных условиях, воспользуйтесь нашей площадкой, где собрано максимальное число предложений.</p>
-                            <p>Как выбрать оптимальный вариант экскаватора на гусеницах для аренды? Одним из самых важных показателей является сила гидравлики. Именно эта характеристика определяет производительность работ. Особое внимание стоит уделить подбору ковша, в том числе его режущей кромки, зубьев и др. Тип и размер ковша зависит от плотности, связности и абразивности грунта. Вместимость рассчитывается по следующей формуле: грузоподъемность/ (коэффициент заполнения х плотность материала).</p>
-                            <p>Если вы хотите сами транспортировать технику, помните, что от веса машины зависит способ ее перевозки.</p>
-                        </section>
-
-
-
-                        <section class="linking section rounded-gray-block">
-                            <div class="linking__block ">
-                                <p class="small-title">Гусеничные экскаваторы в России</p>
-                                <ul class="crumbs">
-                                    <li class="crumbs__item">
-                                        <a href="#">Москва</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Санкт-Петербург</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Краснодар</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Екатеринбург</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Благовещенск</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Челябинск</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Казань</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Новосибирск</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Самара</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Красноярск</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="linking__block ">
-                                <p class="small-title">Популярные запросы в категории</p>
-                                <ul class="crumbs">
-                                    <li class="crumbs__item">
-                                        <a href="#">новые гусеничные экскаваторы</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">гусеничные экскаваторы б/у</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Китайские</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Российские</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">20 тонн</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">30 тонн</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">с длинной стрелой</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">китайские новые</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">одноковшовые</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">полноповоротные</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">габаритные</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-
                     </div>
                     <aside class="sidebar">
                         <a href="#" class="adv-banner" aria-label="Рекламный баннер">
@@ -2446,68 +2013,6 @@
                             </ul>
                             <a class="button button--small button--regular-alt" href="#">Все заявки</a>
                         </div>
-                        <div class="sidebar-block rounded-gray-block">
-                            <p class="sidebar-block__title">Новости компаний</p>
-                            <ul class="sidebar-block-list">
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>FIORI бетоносмеситель с самозагрузкой - новые преимущества</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.06.2023</li>
-                                                <li class="crumbs__item">SAMTECH</li>
-                                            </ul>
-                                        </div>
-                                        <div class="sidebar-block-list__right-img">
-                                            <img loading="lazy" src="img/temp/news-1.jpg" alt="FIORI бетоносмеситель с самозагрузкой - новые преимущества">
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>Fiori & SAMTECH отмечают 15 лет на рынке России!</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.06.2023</li>
-                                                <li class="crumbs__item">SAMTECH</li>
-                                            </ul>
-                                        </div>
-                                        <div class="sidebar-block-list__right-img">
-                                            <img loading="lazy" src="img/temp/news-1.jpg" alt="Fiori & SAMTECH отмечают 15 лет на рынке России!">
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>Доставлена очередная партия запчастей Fiori</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.06.2023</li>
-                                                <li class="crumbs__item">SAMTECH</li>
-                                            </ul>
-                                        </div>
-                                        <div class="sidebar-block-list__right-img">
-                                            <img loading="lazy" src="img/temp/news-1.jpg" alt="Доставлена очередная партия запчастей Fiori">
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>KOMPLET KROKODILE измельчитель ТБО в продаже - 180 тонн/час</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.06.2023</li>
-                                                <li class="crumbs__item">SAMTECH</li>
-                                            </ul>
-                                        </div>
-                                        <div class="sidebar-block-list__right-img">
-                                            <img loading="lazy" src="img/temp/news-1.jpg" alt="KOMPLET KROKODILE измельчитель ТБО в продаже - 180 тонн/час">
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <a class="button button--small button--regular-alt" href="#">Все новости</a>
-                        </div>
                     </aside>
                 </div>
             </div>
@@ -2558,8 +2063,195 @@
         </div>
     </div>
 
+    <form class="popup form-validation" id="popup-service">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Отправить заявку</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="text" placeholder="Как к вам обращаться? *" name="service-name" id="service-name" autocomplete="off" required>
+                        <label class="field-text__label" for="service-name">
+                            <span class="field-text__caption">Как к вам обращаться? *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="service-phone" id="service-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="service-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="service-email" id="service-email" autocomplete="off">
+                        <label class="field-text__label" for="service-email">
+                            <span class="field-text__caption">Ваш email</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-textarea">
+                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="service-message" id="service-message"></textarea>
+                        <label class="field-textarea__label" for="service-message">
+                            <span class="field-textarea__caption">Текст сообщения</span>
+                        </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="service-subscribe">
+                        <label class="field-checkbox__label" for="service-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="service-presonal-data">
+                        <label class="field-checkbox__label" for="service-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-question">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Задать вопрос</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="question-phone" id="question-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="question-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш телефон *" name="question-email" id="question-email" autocomplete="off">
+                        <label class="field-text__label" for="question-email">
+                            <span class="field-text__caption">Ваш email</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-textarea">
+                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="question-message" id="question-message"></textarea>
+                        <label class="field-textarea__label" for="question-message">
+                            <span class="field-textarea__caption">Текст сообщения</span>
+                        </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="question-subscribe">
+                        <label class="field-checkbox__label" for="question-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="question-presonal-data">
+                        <label class="field-checkbox__label" for="question-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-callback">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Заказать обратный звонок</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Оставьте номер вашего телефона, и продавец перезвонит вам.</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="callback-phone" id="callback-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="callback-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="callback-subscribe">
+                        <label class="field-checkbox__label" for="callback-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="callback-presonal-data">
+                        <label class="field-checkbox__label" for="callback-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Перезвоните мне</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
-    <script src="js/rent.js"></script>
 </body>
 </html>

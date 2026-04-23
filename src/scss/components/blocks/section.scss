@@ -41,6 +41,8 @@
     }
 
     .section__title {
-        margin-bottom: 32px;
+        &.section__title {
+            margin-bottom: 32px;
+        }
     }
 }

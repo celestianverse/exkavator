@@ -231,8 +231,12 @@ if (headerSearch) {
     showHeaderSearchButton.addEventListener('click', function (e) {
         e.stopPropagation();
         headerSearch.classList.toggle('is-show');
+        userControlsMobileButton.classList.remove('is-open');
         headerSearchInput.focus();
-    });    
+
+        const headerTooltip = document.querySelector('.tooltip');
+        headerTooltip.classList.remove('is-active');
+    });
 
     headerSearchInput.addEventListener('input', function(e) {
         headerSearchControls.classList.toggle('show', e.target.value.length > 0);
@@ -347,6 +351,7 @@ if (currentYear) {
 
 // клик аутсайд
 const clickOutsideTargets = [
+    { selector: '.user-controls__mobile-button', stateClass: 'is-open' },
     { selector: '.field-dropdown', stateClass: 'is-open' },
     { selector: '.sorting', stateClass: 'is-open' },
     { selector: '.detail-item-mobile-footer__more', stateClass: 'is-open' },
