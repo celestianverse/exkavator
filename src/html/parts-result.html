@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>Запчасти - Поисковая выдача</title>
   <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -1877,8 +1877,8 @@
                                                 <p>15 306 212 ₽</p>
                                             </div>
                                             <div class="item-card__buttons">
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
-                                                <button class="button button--small button--primary-alt">Написать</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
                                                 <button class="button button--small button--primary-alt">Обратный звонок</button>
                                             </div>
                                             <div class="item-card__user-actions">
@@ -1923,8 +1923,8 @@
                                                 <p>15 306 212 ₽</p>
                                             </div>
                                             <div class="item-card__buttons">
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
-                                                <button class="button button--small button--primary-alt">Написать</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
                                                 <button class="button button--small button--primary-alt">Обратный звонок</button>
                                             </div>
                                             <div class="item-card__user-actions">
@@ -1972,7 +1972,7 @@
                                             <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
                                             <div class="special-item__action">
                                                 <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1985,7 +1985,7 @@
                                             <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
                                             <div class="special-item__action">
                                                 <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1998,7 +1998,7 @@
                                             <p class="special-item__cities">Москва и еще 22 города</p>
                                             <div class="special-item__action">
                                                 <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                             </div>
                                         </div>
                                     </div>
@@ -2027,8 +2027,8 @@
                                                 <p>15 306 212 ₽</p>
                                             </div>
                                             <div class="item-card__buttons">
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
-                                                <button class="button button--small button--primary-alt">Написать</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
                                                 <button class="button button--small button--primary-alt">Обратный звонок</button>
                                             </div>
                                             <div class="item-card__user-actions">
@@ -2082,7 +2082,6 @@
                             <p>На сайте вы найдёте объявления от юридических и физических лиц; предложения оригинальных запчастей или их аналогов; новые или б/у (в том числе восстановленные) компоненты. Выбирайте оптимальный вариант в зависимости от доступного бюджета.</p>
                             <p>Обращаем ваше внимание, что вся информация, опубликованная на странице предложения (включая цены на запасные части для экскаваторов-погрузчиков), носит справочный характер. Свяжитесь с продавцом, чтобы обсудить все важные для вас моменты: так вы сможете уберечь себя от непредвиденных ситуаций.</p>
                         </section>
-
 
                         <section class="linking section rounded-gray-block">
                             <div class="linking__block ">
@@ -2304,7 +2303,7 @@
     </div>
 
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
-    <script src="js/parts.js"></script>
 </body>
 </html>

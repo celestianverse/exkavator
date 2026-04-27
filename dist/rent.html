@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>Аренда - Главная</title>
   <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -1819,7 +1819,7 @@
                                     </div>
 
                                     <div class="filter__range">
-                                        <div class="field-text">
+                                        <div class="field-text" data-tooltip-text="Цена за смену от, ₽">
                                             <input class="field-text__input" type="number" placeholder="Цена за смену от ₽" name="shiftPriceFrom" id="shiftPriceFrom" autocomplete="off"/>
                                             <label class="field-text__label" for="shiftPriceFrom">
                                                 <span class="field-text__caption">Цена за смену от, ₽</span>
@@ -1854,9 +1854,32 @@
                                     </div>
                                 </div>
                                 <div class="filter__buttons">
-                                    <!-- <button class="button button--primary-alt button--no-body button--medium">Сбросить</button> -->
-                                    <!-- <button class="button button--primary-alt button--no-body button--medium">Сохранить поиск</button> -->
-                                    <!-- <button class="button button--primary button--large">Показать 1234 объявления</button> -->
+                                    <button class="button button--primary-alt button--no-body button--medium filter__clear-button" data-filter-clear>
+                                        <svg class="icon">
+                                            <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>
+                                        </svg>
+                                        Сбросить
+                                    </button>
+                                    <button class="button button--primary-alt button--no-body button--medium filter__save-button js-open-popup" data-popup-id="popup-save-search">
+                                        <svg class="icon">
+                                            <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
+                                        </svg>
+                                        Сохранить поиск
+                                    </button>
+                                    <button class="button button--primary button--large button--find">Показать 1234 объявления</button>
+                                    <div class="filter__dropdown-button">
+                                        <button class="button button--large button--regular" aria-label="Настройки поиска">
+                                            <svg class="icon icon--24">
+                                                <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="dropdown-backdrop">
+                                            <ul class="dropdown-backdrop__list">
+                                                <li class="dropdown-backdrop__option-button" data-filter-clear>Сбросить</li>
+                                                <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-save-search" data-filter-close>Сохранить поиск</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <p class="filter__no-filters">Укажите параметры поиска</p>
                                 </div>
                             </div>
@@ -2053,40 +2076,53 @@
                                 <div class="special-offers__list swiper-wrapper">
                                     <div class="special-item swiper-slide">
                                         <a href="#" class="special-item__img">
-                                            <img loading="lazy" src="img/temp/item-1-raw.jpg" alt="Гусеничный экскаватор Lonking CDM6336">
+                                            <img src="img/temp/item-1-raw.jpg" loading="lazy" alt="Гусеничный экскаватор Lonking CDM6336">
                                         </a>
                                         <div class="special-item__description">
                                             <a href="#" class="special-item__title">Гусеничный экскаватор Lonking CDM6336</a>
                                             <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
                                             <div class="special-item__action">
                                                 <span class="special-item__price">15 541 703 <i>₽</i></span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="special-item swiper-slide">
                                         <a href="#" class="special-item__img">
-                                            <img loading="lazy" src="img/temp/item-2-raw.jpg" alt="Гусеничный экскаватор Sany SY225NLC">
+                                            <img src="img/temp/item-2-raw.jpg" loading="lazy" alt="Гусеничный экскаватор Sany SY225NLC">
                                         </a>
                                         <div class="special-item__description">
                                             <a href="#" class="special-item__title">Гусеничный экскаватор Sany SY225NLC</a>
                                             <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
                                             <div class="special-item__action">
                                                 <span class="special-item__price">15 541 703 <i>₽</i></span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="special-item swiper-slide">
                                         <a href="#" class="special-item__img">
-                                            <img loading="lazy" src="img/temp/item-3-raw.jpg" alt="Гусеничный экскаватор 923FN">
+                                            <img src="img/temp/item-3-raw.jpg" loading="lazy" alt="Гусеничный экскаватор 923FN">
                                         </a>
                                         <div class="special-item__description">
                                             <a href="#" class="special-item__title">Гусеничный экскаватор 923FN</a>
                                             <p class="special-item__cities">Москва и еще 22 города</p>
                                             <div class="special-item__action">
                                                 <span class="special-item__price">11 240 703 <i>₽</i></span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="special-item swiper-slide">
+                                        <a href="#" class="special-item__img">
+                                            <img src="img/temp/item-3-raw.jpg" loading="lazy" alt="Гусеничный экскаватор 923FN">
+                                        </a>
+                                        <div class="special-item__description">
+                                            <a href="#" class="special-item__title">Гусеничный экскаватор 923FN</a>
+                                            <p class="special-item__cities">Москва и еще 22 города</p>
+                                            <div class="special-item__action">
+                                                <span class="special-item__price">11 240 703 <i>₽</i></span>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                             </div>
                                         </div>
                                     </div>
@@ -2199,82 +2235,7 @@
                                 <a class="button button--small button--regular-alt" href="#">Все заявки</a>
                                 <a class="button button--small button--regular-alt" href="#">Разместить заявку</a>
                             </div>
-
                         </section>
-
-                        <section class="linking section rounded-gray-block">
-                            <div class="linking__block ">
-                                <p class="small-title">Спецтехника в России</p>
-                                <ul class="crumbs">
-                                    <li class="crumbs__item">
-                                        <a href="#">Москва</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Санкт-Петербург</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Краснодар</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Екатеринбург</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Благовещенск</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Челябинск</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Казань</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Новосибирск</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Самара</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Красноярск</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="linking__block ">
-                                <p class="small-title">Спецтехника мировых брендов</p>
-                                <ul class="crumbs">
-                                    <li class="crumbs__item">
-                                        <a href="#">Китайские тракторы</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Китайские фронтальные погрузчики</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Китайские гусеничные экскаваторы</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Китайские колесные экскаваторы</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Российские тракторы</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Японские мини тракторы</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Белорусские тракторы</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Российские колесные экскаваторы</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Российские гусеничные экскаваторы</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Российские фронтальные погрузчики</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-
                     </div>
                     <aside class="sidebar">
                         <a href="#" class="adv-banner" aria-label="Рекламный баннер">
@@ -2456,8 +2417,84 @@
         </div>
     </div>
 
+    <form class="popup form-validation" id="popup-call">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Альтех</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Работаем без выходных</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-dropdown selected">
+                        <input class="field-dropdown__input" type="text" placeholder="Город" name="city" id="city" autocomplete="off" readonly="" value="Москва" data-value="moscow">
+                        <label class="field-dropdown__label" for="city">
+                            <span class="field-dropdown__caption">Город</span>
+                        </label>
+                    </div>
+                    <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
+                    <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
+                    <button class="button button--large button--regular-alt button--full-width js-open-popup" data-popup-id="popup-callback">Заказать обратный звонок</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-save-search">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Сохранение поиска</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Хотите ежедневно получать на email подборку новых объявлений из этой выборки?</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="save-search-email" id="save-search-email" autocomplete="off" required>
+                        <label class="field-text__label" for="save-search-email">
+                            <span class="field-text__caption">Ваш email *</span>
+                        </label>
+                        <span class="field-text__error"></span>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="save-search-subscribe">
+                        <label class="field-checkbox__label" for="save-search-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="save-search-presonal-data">
+                        <label class="field-checkbox__label" for="save-search-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
-    <script src="js/rent.js"></script>
 </body>
 </html>

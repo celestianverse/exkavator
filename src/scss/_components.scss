@@ -1,13 +1,14 @@
-// @include handset-min {} // 480
-// @include tablet-min {} // 768
-// @include laptop-min {} // 1024
-// @include desktop-min {} // 1280
-
-
-
 @import 'components/header';
 @import 'components/global';
 @import 'components/blocks';
+@import 'components/sections/filter';
+@import 'components/sections/categories';
+@import 'components/sections/companies';
+@import 'components/sections/special-offer';
+@import 'components/sections/requests';
+@import 'components/sections/linking';
+@import 'components/sections/results';
+@import 'components/sections/detail-page';
 
 .scroll {
     overflow: auto;
@@ -62,8 +63,25 @@
 
 .adv-banner {
     display: block;
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
+
+    & + .sidebar-block {
+        @include tablet-max {
+            display: block;
+            width: 100%;
+        }
+
+        .sidebar-block-list {
+            @include tablet-max {
+                display: grid;
+                grid-template-columns: repeat(2, max(1fr));
+            }
+            @include mobile-only {
+                grid-template-columns: repeat(1, max(1fr));
+            }
+        }
+    }
 }
 
 .page {
@@ -71,6 +89,10 @@
     flex-direction: column;
     flex-grow: 1;
     min-height: 100%;
+
+    @include tablet-max {
+        padding-top: 56px;
+    }
 }
 .body {
     flex-grow: 1;
@@ -124,16 +146,16 @@
 }
 
 .sidebar {
-    display: none;
-
-    @include laptop-min {
-        display: flex;
-        flex-direction: column;
-        gap: 17px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
 
     // .sidebar-block
     &-block {
+        @include tablet-max {
+            display: none;
+        }
 
         .button {
             margin-top: 16px;
@@ -181,6 +203,10 @@
                 padding: 8px 4px;
             }
 
+            &__text {
+                width: 100%;
+            }
+
             &__big-img {
                 border-radius: 8px;
                 overflow: hidden;
@@ -219,6 +245,13 @@
         padding: 24px;
     }
 
+    &.linking {
+
+        @include laptop-min {
+            padding: 16px;
+        }
+    }
+
     &--grey-bg {
         border: 0;
         background-color: var(--neutral-50);
@@ -229,7 +262,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    min-height: 52px;
+    min-height: 54px;
     border-radius: 8px;
     cursor: pointer;
 
@@ -247,7 +280,7 @@
     }
 
     &--blue {
-        padding: 8px 12px 10px 12px;
+        padding: 8px 12px 8px 12px;
         background-color: var(--primary-50);
 
         &:hover {
@@ -256,7 +289,7 @@
 
         .rounded-link-card__title {
             color: var(--text-primary);
-            line-height: 24px;
+            line-height: 20px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -280,6 +313,7 @@
     }
 
     &--gray {
+        min-height: 88px;
         padding: 12px;
         background-color: var(--neutral-25);
 
@@ -305,7 +339,7 @@
     @include text-size('sm');
 
     p {
-        margin-bottom: 25px;
+        margin-bottom: 16px;
 
         &:last-child {
             margin-bottom: 0;
@@ -313,8 +347,8 @@
     }
 
     p + ul {
-        margin-top: -25px;
-        margin-bottom: 25px;
+        margin-top: -16px;
+        margin-bottom: 16px;
 
         li::before {
             background-color: var(--text-secondary);
@@ -722,15 +756,22 @@
     width: 100%;
 }
 
-
-@import 'components/sections/filter';
-@import 'components/sections/categories';
-@import 'components/sections/companies';
-@import 'components/sections/special-offer';
-@import 'components/sections/requests';
-@import 'components/sections/linking';
-@import 'components/sections/results';
-@import 'components/sections/detail-page';
-
-
-
+.mb {
+    &-0 {
+        margin-bottom: 0;
+    }
+    &-64 {
+        margin-bottom: 64px;
+    }
+}
+.py {
+    &-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+.pb {
+    &-8 {
+        padding-bottom: 8px;
+    }
+}

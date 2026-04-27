@@ -179,7 +179,10 @@
     width: 100%;
     height: 100%;
 
-    &__prev, &__next { @include slider-nav(1px); }
+    &__prev, &__next {
+        margin-top: 12px;
+        @include slider-nav(1px);
+    }
     &__next { @include slider-nav-next(1px); }
     &__prev { @include slider-nav-prev(1px); }
 }

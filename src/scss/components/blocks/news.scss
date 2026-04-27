@@ -142,7 +142,7 @@
 }
 
 .teasers {
-    padding-top: 24px;
+    padding-top: 32px;
     border-bottom: 1px solid var(--neutral-100);
 
     @include handset-max {
@@ -150,7 +150,7 @@
     }
 
     .main-events {
-        padding-bottom: 24px;
+        padding-bottom: 32px;
     }
 }
 .news-list-default {

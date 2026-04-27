@@ -1,5 +1,6 @@
 .pagination {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 4px;
 
@@ -23,7 +24,7 @@
         }
 
         @include tablet-min {
-            font-size: inherit;
+            font-size: 12px;
 
             &::before {
                 display: none;

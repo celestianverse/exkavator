@@ -31,7 +31,7 @@
         gap: 16px;
     }
     &__text {
-        height: 96px;
+        max-height: 96px;
         @include text-ellipsis-rows(4);
     }
     &__play {
@@ -109,6 +109,13 @@
                 height: 200px;
             }
         }
+        .card__body {
+            padding: 16px 24px;
+
+            @include mobile-only {
+                padding: 16px;
+            }
+        }
         .card__title {
             max-height: 48px;
             @include text-ellipsis-rows(2);
@@ -122,7 +129,7 @@
     &--xl {
         .card__image, .card__video {
             width: 100%;
-            height: 536px;
+            height: 540px;
             object-fit: cover;
 
             @include tablet-max {

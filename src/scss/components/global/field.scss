@@ -103,7 +103,8 @@
 
   &.selected {
     .field-dropdown__caption {
-      top: 12px;
+      transform: translateY(0);
+      top: 8px;
       font-size: 11px;
       line-height: 14px;
       color: var(--neutral-400);
@@ -189,7 +190,8 @@
     // смещение caption при фокусе и заполненном input
     &:focus + .field-text__label .field-text__caption,
     &:not(:placeholder-shown) + .field-text__label .field-text__caption {
-      top: 12px;
+      transform: translateY(0);
+      top: 8px;
       font-size: 11px;
       line-height: 14px;
       color: var(--neutral-400);
@@ -305,7 +307,7 @@
     // смещение caption при фокусе и заполненном input
     &:focus + .field-textarea__label .field-textarea__caption,
     &:not(:placeholder-shown) + .field-textarea__label .field-textarea__caption {
-      top: 6px;
+      top: 8px;
       font-size: 11px;
       line-height: 14px;
       color: var(--neutral-400);
@@ -348,13 +350,18 @@
     position: relative;
     display: flex;
     gap: 8px;
-    align-items: flex-start;
+    min-height: 20px;
+    padding-top: 2px;
+    padding-left: 28px;
     line-height: 16px;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
 
     &::before {
       content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       display: block;
       width: 20px;
       height: 20px;
@@ -362,10 +369,6 @@
       background-color: var(--neutral-60);
       flex-shrink: 0;
       @include transition;
-    }
-
-    & > span {
-      padding-top: 2px;
     }
   }
 

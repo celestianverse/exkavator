@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>Запчасти - Главная</title>
   <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -1819,9 +1819,32 @@
                                     </div>
                                 </div>
                                 <div class="filter__buttons">
-                                    <!-- <button class="button button--primary-alt button--no-body button--medium">Сбросить</button> -->
-                                    <!-- <button class="button button--primary-alt button--no-body button--medium">Сохранить поиск</button> -->
-                                    <!-- <button class="button button--primary button--large">Показать 1234 объявления</button> -->
+                                    <button class="button button--primary-alt button--no-body button--medium filter__clear-button" data-filter-clear>
+                                        <svg class="icon">
+                                            <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>
+                                        </svg>
+                                        Сбросить
+                                    </button>
+                                    <button class="button button--primary-alt button--no-body button--medium filter__save-button js-open-popup" data-popup-id="popup-save-search">
+                                        <svg class="icon">
+                                            <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
+                                        </svg>
+                                        Сохранить поиск
+                                    </button>
+                                    <button class="button button--primary button--large button--find">Показать 1234 объявления</button>
+                                    <div class="filter__dropdown-button">
+                                        <button class="button button--large button--regular" aria-label="Настройки поиска">
+                                            <svg class="icon icon--24">
+                                                <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="dropdown-backdrop">
+                                            <ul class="dropdown-backdrop__list">
+                                                <li class="dropdown-backdrop__option-button" data-filter-clear>Сбросить</li>
+                                                <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-save-search" data-filter-close>Сохранить поиск</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <p class="filter__no-filters">Укажите параметры поиска</p>
                                 </div>
                             </div>
@@ -1836,55 +1859,25 @@
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Экскаваторы-погрузчики</span>
+                                            <span class="rounded-link-card__title">Бульдозеры</span>
                                             <span class="rounded-link-card__description">1040 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Мини-краны</span>
+                                            <span class="rounded-link-card__title">Буровые установки</span>
                                             <span class="rounded-link-card__description">660 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Тракторы</span>
+                                            <span class="rounded-link-card__title">Вилочные погрузчики</span>
                                             <span class="rounded-link-card__description">384 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Седельные тягачи</span>
-                                            <span class="rounded-link-card__description">1492 объявлений</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Самосвалы</span>
-                                            <span class="rounded-link-card__description">1492 объявлений</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Экскаваторы гусеничные</span>
-                                            <span class="rounded-link-card__description">1492 объявлений</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Дизельные генераторы</span>
-                                            <span class="rounded-link-card__description">1492 объявлений</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Асфальтоукладчики</span>
-                                            <span class="rounded-link-card__description">1492 объявлений</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Вилочные автопогрузчики</span>
+                                            <span class="rounded-link-card__title">Грейдеры</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
@@ -1896,32 +1889,25 @@
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Бортовые полуприцепы</span>
+                                            <span class="rounded-link-card__title">Мини-экскаваторы</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Дорожные катки</span>
+                                            <span class="rounded-link-card__title">Фронтальные погрузчики</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Тентованные полуприцепы</span>
+                                            <span class="rounded-link-card__title">Экскаваторы</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
-
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <p class="rounded-link-card__title">Башенные краны</p>
-                                            <p class="rounded-link-card__description">1492 объявлений</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Рефрижераторы</span>
+                                            <span class="rounded-link-card__title">Экскаваторы-погрузчики</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
@@ -1931,73 +1917,97 @@
                                 <ul class="categories__list">
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Caterpillar</span>
+                                            <span class="rounded-link-card__title">Гидравлика, гидрооборудование</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Doosan</span>
+                                            <span class="rounded-link-card__title">Гидравлические масла</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Hitachi</span>
+                                            <span class="rounded-link-card__title">Двигатели, детали двигателей</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">JCB</span>
+                                            <span class="rounded-link-card__title">Детали кабин, кузовов</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">John Deere</span>
+                                            <span class="rounded-link-card__title">Топливная система</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Komatsu</span>
+                                            <span class="rounded-link-card__title">Тормозная система</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Liebherr</span>
+                                            <span class="rounded-link-card__title">Трансмиссия</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Metso</span>
+                                            <span class="rounded-link-card__title">Фильтры, фильтроэлементы</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Sany</span>
+                                            <span class="rounded-link-card__title">Ходовая часть</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Terex</span>
+                                            <span class="rounded-link-card__title">Шины для спецтехники</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Volvo</span>
+                                            <span class="rounded-link-card__title">Электрика</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">XCMG</span>
+                                            <span class="rounded-link-card__title">Запчасти для дробильно-сортировочного оборудования</span>
+                                            <span class="rounded-link-card__description">1492 объявлений</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Запчасти для складской техники</span>
+                                            <span class="rounded-link-card__description">1492 объявлений</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Запчасти ЭКГ</span>
+                                            <span class="rounded-link-card__description">1492 объявлений</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Элементы подъемного оборудования</span>
+                                            <span class="rounded-link-card__description">1492 объявлений</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Элементы рабочего оборудования спецтехники</span>
                                             <span class="rounded-link-card__description">1492 объявлений</span>
                                         </a>
                                     </li>
@@ -2080,7 +2090,7 @@
                                             <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
                                             <div class="special-item__action">
                                                 <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                             </div>
                                         </div>
                                     </div>
@@ -2093,7 +2103,7 @@
                                             <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
                                             <div class="special-item__action">
                                                 <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                             </div>
                                         </div>
                                     </div>
@@ -2106,7 +2116,20 @@
                                             <p class="special-item__cities">Москва и еще 22 города</p>
                                             <div class="special-item__action">
                                                 <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
-                                                <button class="button button--small button--primary-alt">Позвонить</button>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="special-item swiper-slide">
+                                        <a href="#" class="special-item__img">
+                                            <img loading="lazy" src="img/temp/parts-1-raw.jpg" alt="Двигатель ISUZU C240">
+                                        </a>
+                                        <div class="special-item__description">
+                                            <a href="#" class="special-item__title">Двигатель ISUZU C240</a>
+                                            <p class="special-item__cities">Москва и еще 22 города</p>
+                                            <div class="special-item__action">
+                                                <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
+                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
                                             </div>
                                         </div>
                                     </div>
@@ -2115,7 +2138,13 @@
                         </section>
 
                         <section class="companies section">
-                            <h2>Популярные компании</h2>
+                            <div class="companies__title">
+                                <h2>Популярные компании</h2>
+                                <div class="companies__nav">
+                                    <button class="companies__prev" type="button" aria-label="Предыдущий слайд"></button>
+                                    <button class="companies__next" type="button" aria-label="Следующий слайд"></button>
+                                </div>
+                            </div>
                             <div class="companies__slider swiper">
                                 <div class="companies__list swiper-wrapper">
                                     <div class="companies__item swiper-slide">
@@ -2263,7 +2292,6 @@
                                 </ul>
                             </div>
                         </section>
-
                     </div>
                     <aside class="sidebar">
                         <a href="#" class="adv-banner" aria-label="Рекламный баннер">
@@ -2445,8 +2473,84 @@
         </div>
     </div>
 
+    <form class="popup form-validation" id="popup-call">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Альтех</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Работаем без выходных</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-dropdown selected">
+                        <input class="field-dropdown__input" type="text" placeholder="Город" name="city" id="city" autocomplete="off" readonly="" value="Москва" data-value="moscow">
+                        <label class="field-dropdown__label" for="city">
+                            <span class="field-dropdown__caption">Город</span>
+                        </label>
+                    </div>
+                    <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
+                    <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
+                    <button class="button button--large button--regular-alt button--full-width js-open-popup" data-popup-id="popup-callback">Заказать обратный звонок</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-save-search">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Сохранение поиска</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Хотите ежедневно получать на email подборку новых объявлений из этой выборки?</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="save-search-email" id="save-search-email" autocomplete="off" required>
+                        <label class="field-text__label" for="save-search-email">
+                            <span class="field-text__caption">Ваш email *</span>
+                        </label>
+                        <span class="field-text__error"></span>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="save-search-subscribe">
+                        <label class="field-checkbox__label" for="save-search-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="save-search-presonal-data">
+                        <label class="field-checkbox__label" for="save-search-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
-    <script src="js/parts.js"></script>
 </body>
 </html>

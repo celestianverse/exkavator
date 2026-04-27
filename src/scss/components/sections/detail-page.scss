@@ -1,7 +1,7 @@
 .detail-page {
 
     h1 {
-        margin-bottom: 16px;
+        margin-bottom: 16px !important;
     }
 
     &__chips {
@@ -9,8 +9,6 @@
         display: flex;
         gap: 8px;
     }
-
-
 
     &__mobile-price-block {
 
@@ -22,6 +20,4 @@
             display: none;
         }
     }
-    
-    
 }

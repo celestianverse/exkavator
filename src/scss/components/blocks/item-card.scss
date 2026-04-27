@@ -1,609 +1,629 @@
 .item-card-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.item-card {
-  padding: 16px;
-  background-color: var(--neutral-20);
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  @include transition;
-
-  &:hover {
-    background-color: var(--neutral-25);
-    box-shadow: 0 2px 8px 0 #CCE2FF80;
-  }
-
-  &.top {
-    .item-card__row {
-      @media (min-width: $device-tablet-min) and (max-width: 1160px) {
-        flex-wrap: wrap;
-      }
-    }
-
-    .item-card__img-block {
-      @media (min-width: $device-tablet-min) and (max-width: 1160px) {
-        order: 1;
-        width: 400px;
-        height: 268px;
-      }
-      @media (min-width: 1161px) {
-        width: 330px;
-        height: 240px;
-      }
-    }
-
-    .item-card__info-block {
-      @media (min-width: $device-tablet-min) and (max-width: 1160px) {
-        order: 3;
-        width: 100%;
-      }
-    }
-
-    .item-card__action-block {
-      @media (min-width: $device-tablet-min) and (max-width: 1160px) {
-        order: 2;
-        flex-grow: 1;
-        gap: 16px;
-      }
-
-      .item-card__buttons {
-        @media (min-width: $device-tablet-min) and (max-width: 1160px) {
-          gap: 8px;
-        }
-      }
-
-      .item-card__user-actions {
-        @media (min-width: $device-tablet-min) and (max-width: 1160px) {
-          gap: 12px;
-        }
-      }
-
-      .item-card__price {
-        p {
-          @media (min-width: $device-tablet-min) and (max-width: 1160px) {
-            line-height: 32px;
-          }
-        }
-      }
-
-      .button {
-        @media (min-width: $device-tablet-min) and (max-width: 1160px) {
-          min-height: 40px;
-        }
-      }
-    }
-
-    .item-card__time {
-      @media (min-width: $device-tablet-min) and (max-width: 1160px) {
-        width: auto;
-      }
-      @media (min-width: 1161px) {
-        width: 330px;
-      }
-    }
-  }
-
-  &.premium {
-    .item-card__labels {
-      &::before {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-image: var(--icon-premium);
-        background-repeat: no-repeat;
-        z-index: 2;
-      }
-    }
-  }
-
-  &.viewed {
-    .item-card__labels {
-      &::after {
-        content: 'Просмотрено';
-        display: block;
-        padding: 1px 6px;
-        background-color: rgba(26, 26, 26, 0.85);
-        color: var(--text-white);
-        border-radius: 3px;
-        @include text-size('xs');
-        z-index: 2;
-      }
-    }
-  }
-
-  //hover
-  &:has(.results-list__title:hover) .results-list__img-block img {
-    transform: scale(1.1);
-  }
-
-  &__row {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
 
-    @include tablet-min {
-      flex-direction: row;
+h3 {
+    & + .item-card-list {
+        margin-top: 16px;
     }
+}
 
-    &:last-child {
-      flex-direction: column-reverse;
-      gap: 8px;
-
-      @include tablet-min {
-        flex-direction: row;
-        gap: 16px;
-      }
-    }
-  }
-
-  &__labels {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  // картинка
-  &__img-block {
-    height: 185px;
-
-    @include tablet-min {
-      width: 240px;
-      height: 160px;
-    }
-
-    position: relative;
-    display: block;
-    flex-shrink: 0;
-    border-radius: 8px;
-    overflow: hidden;
-
-    &:hover {
-      & + .item-card__info-block > .item-card__title {
-        color: var(--primary-600)
-      }
-    }
-
-    img {
-      border-radius: 8px;
-    }
-  }
-
-
-
-  .item-card-preview__more {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-  }
-
-  .item-card-preview {
-    &__images {
-      position: relative;
-      height: 100%;
-
-      @include handset-max {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
-
-        img {
-          position: static;
-          opacity: 1;
-          flex: 0 0 100%;
-          height: 100%;
-          object-fit: cover;
-          scroll-snap-align: start;
-        }
-      }
-
-      @include tablet-min {
-        img {
-          position: absolute;
-          inset: 0;
-          opacity: 0;
-          @include cover-img;
-
-          &:first-child {
-            opacity: 1;
-          }
-        }
-      }
-    }
-
-    &__hover-list {
-      display: none;
-
-      @include tablet-min {
-        display: flex;
-        position: absolute;
-        inset: 0;
-        gap: 2px;
-        z-index: 2;
-
-        li {
-          position: relative;
-          flex: 1;
-
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: 8px;
-            left: 2px;
-            right: 2px;
-            height: 2px;
-            border-radius: 1px;
-            background-color: rgba(255, 255, 255, 0.5);
-            transition: background-color 0.15s ease;
-          }
-
-          &:first-child::after {
-            left: 8px;
-          }
-
-          &:last-child::after {
-            right: 8px;
-          }
-
-          &:hover::after {
-            background-color: #fff;
-          }
-        }
-      }
-    }
-
-    &__hover-list:has(li:nth-child(1):hover) ~ .item-card-preview__images img:first-child,
-    &__hover-list:has(li:nth-child(2):hover) ~ .item-card-preview__images img:nth-child(2),
-    &__hover-list:has(li:nth-child(3):hover) ~ .item-card-preview__images img:nth-child(3),
-    &__hover-list:has(li:nth-child(4):hover) ~ .item-card-preview__images img:nth-child(4),
-    &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images img:nth-child(5) {
-      opacity: 1;
-    }
-    &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images img:nth-child(5) {
-      opacity: 1;
-    }
-    &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images .item-card-preview__more {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    &__hover-list:has(li:hover) ~ .item-card-preview__images img:first-child {
-      opacity: 0;
-    }
-
-    &__hover-list:has(li:nth-child(1):hover) ~ .item-card-preview__images img:first-child {
-      opacity: 1;
-    }
-
-    &__hover-list:has(li:nth-child(2):hover) ~ .item-card-preview__images img:nth-child(2),
-    &__hover-list:has(li:nth-child(3):hover) ~ .item-card-preview__images img:nth-child(3),
-    &__hover-list:has(li:nth-child(4):hover) ~ .item-card-preview__images img:nth-child(4),
-    &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images img:nth-child(5) {
-      & ~ .item-card-preview__video-icon {
-        opacity: 0 !important;
-      }
-    }
-
-    &__video-icon {
-      opacity: 1 !important;
-      position: absolute;
-      top: 50% !important;
-      left: 50% !important;
-      width: 50px !important;
-      height: 50px !important;
-      margin-top: -25px;
-      margin-left: -25px;
-    }
-  }
-
-  //центральный блок
-  &__info-block {
-    // width: 528px;
-  }
-
-  &__cities {
-    margin-bottom: 8px;
-    color: var(--text-secondary);
-    @include text-size('sm');
-
-    a {
-      color: inherit;
-
-      &:hover {
-        color: var(--red-400);
-      }
-    }
-  }
-
-  &__title {
-    display: block;
-    margin-bottom: 4px;
-    @include text-size('md');
-    @include text-weight('bold');
-
-    @include tablet-min {
-      @include text-size('lg');
-    }
-
-    &:hover {
-      color: var(--primary-600);
-    }
-  }
-
-  &__chips {
-    margin-bottom: 12px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-
-  &__description {
-    height: 32px;
-    @include text-size('sm');
-    @include text-ellipsis-rows(2);
-  }
-
-  // блок с ценой и кнопками
-  &__action-block {
+.item-card {
+    padding: 16px;
+    background-color: var(--neutral-20);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    flex-shrink: 0;
+    gap: 16px;
+    @include transition;
 
-    @include tablet-min {
-      width: 186px;
-      margin-left: auto;
-    }
-  }
-
-  &__price {
-    text-align: center;
-  }
-
-  &__buttons {
-    display: flex;
-    gap: 8px;
-
-
-    @include tablet-min {
-      flex-direction: column;
-      gap: 4px;
+    &:hover {
+        background-color: var(--neutral-25);
+        box-shadow: 0 2px 8px 0 #CCE2FF80;
     }
 
-    .button {
-      width: 100%;
-
-      &:first-child {
-        display: none;
-        @include tablet-min {
-          display: block;
+    &.top {
+        .item-card__row {
+            @media (min-width: $device-tablet-min) and (max-width: 1160px) {
+                flex-wrap: wrap;
+            }
         }
-      }
 
+        .item-card__img-block {
+            @media (min-width: $device-tablet-min) and (max-width: 1160px) {
+                order: 1;
+                width: 400px;
+                height: 268px;
+            }
+            @media (min-width: 1161px) {
+                width: 330px;
+                height: 240px;
+            }
+        }
+
+        .item-card__info-block {
+            @media (min-width: $device-tablet-min) and (max-width: 1160px) {
+                order: 3;
+                width: 100%;
+            }
+        }
+
+        .item-card__action-block {
+            @media (min-width: $device-tablet-min) and (max-width: 1160px) {
+                order: 2;
+                flex-grow: 1;
+                gap: 16px;
+            }
+
+            .item-card__buttons {
+                @media (min-width: $device-tablet-min) and (max-width: 1160px) {
+                    gap: 8px;
+                }
+            }
+
+            .item-card__user-actions {
+                @media (min-width: $device-tablet-min) and (max-width: 1160px) {
+                    gap: 12px;
+                }
+            }
+
+            .item-card__price {
+                p {
+                    @media (min-width: $device-tablet-min) and (max-width: 1160px) {
+                        line-height: 32px;
+                    }
+                }
+            }
+
+            .button {
+                @media (min-width: $device-tablet-min) and (max-width: 1160px) {
+                    min-height: 40px;
+                }
+            }
+        }
+
+        .item-card__time {
+            @media (min-width: $device-tablet-min) and (max-width: 1160px) {
+                width: auto;
+            }
+            @media (min-width: 1161px) {
+                width: 330px;
+            }
+        }
     }
 
-    .item-card__show-buttons-wrap {
-      position: relative;
-      flex-shrink: 0;
-      width: 40px;
-
-      @include tablet-min {
-        display: none;
-      }
-
-      .button {
-        display: block;
-        height: 100%;
-      }
-
-      &.is-open .dropdown-backdrop {
-        display: block;
-      }
-
-      .dropdown-backdrop {
-        bottom: 100%;
-        right: 0;
-        width: max-content;
-        transform: translateY(-2px);
-      }
+    &.premium {
+        .item-card__labels {
+            &::before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-image: var(--icon-premium);
+                background-repeat: no-repeat;
+                z-index: 2;
+            }
+        }
     }
 
-    .button--small {
-      font-size: 14px;
-      line-height: 24px;
-      padding: 8px 12px;
-
-      @include tablet-min {
-        padding: 8px;
-        font-size: 12px;
-        line-height: 16px;
-      }
-    }
-  }
-
-  &__time {
-    width: 240px;
-    @include text-size('xs');
-    color: var(--text-secondary);
-  }
-
-  .crumbs__item--approve {
-    color: var(--text-base);
-    @include text-weight('semibold');
-  }
-
-  &__user-actions {
-    display: none;
-
-    @include tablet-min {
-      display: flex;
-      gap: 4px;
+    &.viewed {
+        .item-card__labels {
+            &::after {
+                content: 'Просмотрено';
+                display: block;
+                padding: 1px 6px;
+                background-color: rgba(26, 26, 26, 0.85);
+                color: var(--text-white);
+                border-radius: 3px;
+                @include text-size('xs');
+                z-index: 2;
+            }
+        }
     }
 
-    .button {
-      width: 100%;
-    }
-  }
-
-  // Блок Показать больше объявялений
-  .item-card-more {
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    @include text-size('xs');
-    color: var(--text-secondary);
-
-    &__item {
-      display: flex;
-      gap: 12px;
-
-      &:nth-child(n+3) {
-        display: none;
-      }
+    //hover
+    &:has(.results-list__title:hover) .results-list__img-block img {
+        transform: scale(1.1);
     }
 
-    &.is-open .item-card-more__item:nth-child(n+3) {
-      display: flex;
-    }
-
-    &__wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    &__img {
-      width: 60px;
-      height: 40px;
-      border-radius: 6px;
-      overflow: hidden;
-
-      img {
-        @include cover-img;
-      }
-    }
-
-    &__info {
-      @include text-size('sm');
-    }
-
-    &__button {
-      width: fit-content;
-    }
-  }
-
-  &--company {
-    flex-direction: row;
-    gap: 24px;
-    width: 100%;
-    padding: 24px;
-
-    @include handset-max {
-      gap: 16px;
-      padding: 16px;
-    }
-
-    @include mobile-only {
-      flex-direction: column;
-    }
-
-    .item-card__company-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-self: stretch;
-      flex-shrink: 0;
-      width: 228px;
-      padding: 24px;
-      background: #fff;
-      border-radius: 16px;
-
-      @include handset-max {
-        width: 160px;
-        padding: 16px;
-      }
-
-      @media (max-width: 560px) {
-        width: 140px;
-      }
-
-      @include mobile-only {
-        width: 100%;
-        height: 88px;
-      }
-
-      img {
-        max-width: 100%;
-        max-height: 100%;
-      }
-    }
-
-    .item-card__company-body {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .item-card__company-intro {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 16px;
-
-      @include handset-max {
+    &__row {
+        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-      }
+        gap: 16px;
 
-      .chip {
-        align-self: flex-start;
-      }
+        @include tablet-min {
+            flex-direction: row;
+        }
+
+        &:last-child {
+            flex-direction: column-reverse;
+            gap: 8px;
+
+            @include tablet-min {
+                flex-direction: row;
+                gap: 16px;
+            }
+        }
     }
 
-    .item-card__company-title {
-      display: flex;
-      gap: 8px;
+    &__labels {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 
-      a {
-        color: var(--text-base);
+    // картинка
+    &__img-block {
+        height: 185px;
+
+        @include tablet-min {
+            width: 240px;
+            height: 160px;
+        }
+
+        position: relative;
+        display: block;
+        flex-shrink: 0;
+        border-radius: 8px;
+        overflow: hidden;
 
         &:hover {
-          color: var(--text-primary);
+            & + .item-card__info-block > .item-card__title {
+                color: var(--primary-600)
+            }
         }
-      }
+
+        img {
+            border-radius: 8px;
+        }
     }
 
-    .item-card__company-link {
-      font-weight: 600;
-
-      &:hover {
-        color: var(--red-400);
-      }
+    .item-card-preview__more {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
     }
-  }
+
+    .item-card-preview {
+        &__images {
+            position: relative;
+            height: 100%;
+
+            @include handset-max {
+                display: flex;
+                gap: 8px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                img {
+                    position: static;
+                    opacity: 1;
+                    height: 100%;
+                    object-fit: cover;
+                    scroll-snap-align: start;
+                }
+            }
+
+            @include tablet-min {
+                img {
+                    position: absolute;
+                    inset: 0;
+                    opacity: 0;
+                    @include cover-img;
+
+                    &:first-child {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &__hover-list {
+            display: none;
+
+            @include tablet-min {
+                display: flex;
+                position: absolute;
+                inset: 0;
+                gap: 2px;
+                z-index: 2;
+
+                li {
+                    position: relative;
+                    flex: 1;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 8px;
+                        left: 2px;
+                        right: 2px;
+                        height: 2px;
+                        border-radius: 1px;
+                        background-color: rgba(255, 255, 255, 0.5);
+                        transition: background-color 0.15s ease;
+                    }
+
+                    &:first-child::after {
+                        left: 8px;
+                    }
+
+                    &:last-child::after {
+                        right: 8px;
+                    }
+
+                    &:hover::after {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        &__hover-list:has(li:nth-child(1):hover) ~ .item-card-preview__images img:first-child,
+        &__hover-list:has(li:nth-child(2):hover) ~ .item-card-preview__images img:nth-child(2),
+        &__hover-list:has(li:nth-child(3):hover) ~ .item-card-preview__images img:nth-child(3),
+        &__hover-list:has(li:nth-child(4):hover) ~ .item-card-preview__images img:nth-child(4),
+        &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images img:nth-child(5) {
+            opacity: 1;
+        }
+        &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images img:nth-child(5) {
+            opacity: 1;
+        }
+        &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images .item-card-preview__more {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &__hover-list:has(li:hover) ~ .item-card-preview__images img:first-child {
+            opacity: 0;
+        }
+
+        &__hover-list:has(li:nth-child(1):hover) ~ .item-card-preview__images img:first-child {
+            opacity: 1;
+        }
+
+        &__hover-list:has(li:nth-child(2):hover) ~ .item-card-preview__images img:nth-child(2),
+        &__hover-list:has(li:nth-child(3):hover) ~ .item-card-preview__images img:nth-child(3),
+        &__hover-list:has(li:nth-child(4):hover) ~ .item-card-preview__images img:nth-child(4),
+        &__hover-list:has(li:nth-child(5):hover) ~ .item-card-preview__images img:nth-child(5) {
+            & ~ .item-card-preview__video-icon {
+                opacity: 0 !important;
+            }
+        }
+
+        &__video-icon {
+            opacity: 1 !important;
+            position: absolute;
+            top: 50% !important;
+            left: 50% !important;
+            width: 50px !important;
+            height: 50px !important;
+            margin-top: -25px;
+            margin-left: -25px;
+        }
+    }
+
+    //центральный блок
+    &__info-block {
+        // width: 528px;
+    }
+
+    &__cities {
+        margin-bottom: 8px;
+        color: var(--text-secondary);
+        @include text-size('sm');
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: var(--red-400);
+            }
+        }
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 4px;
+        @include text-size('md');
+        @include text-weight('bold');
+
+        @include tablet-min {
+            @include text-size('lg');
+        }
+
+        &:hover {
+            color: var(--primary-600);
+        }
+    }
+
+    &__chips {
+        margin-bottom: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    &__description {
+        height: 32px;
+        @include text-size('sm');
+        @include text-ellipsis-rows(2);
+    }
+
+    // блок с ценой и кнопками
+    &__action-block {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-shrink: 0;
+
+        @include tablet-min {
+            width: 186px;
+            margin-left: auto;
+        }
+    }
+
+    &__price {
+        text-align: center;
+
+        &.price-block {
+            p {
+                @include tablet-min {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 8px;
+
+
+        @include tablet-min {
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .button {
+            width: 100%;
+
+            &:first-child {
+                display: none;
+                @include tablet-min {
+                    display: block;
+                }
+            }
+
+        }
+
+        .item-card__show-buttons-wrap {
+            position: relative;
+            flex-shrink: 0;
+            width: 40px;
+
+            @include tablet-min {
+                display: none;
+            }
+
+            .button {
+                display: block;
+                height: 100%;
+            }
+
+            &.is-open .dropdown-backdrop {
+                display: block;
+            }
+
+            .dropdown-backdrop {
+                bottom: 100%;
+                right: 0;
+                width: max-content;
+                transform: translateY(-2px);
+            }
+        }
+
+        .button--small {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 8px 12px;
+
+            @include tablet-min {
+                padding: 8px;
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    &__time {
+        width: 240px;
+        @include text-size('xs');
+        color: var(--text-secondary);
+    }
+
+    .crumbs__item--approve {
+        color: var(--text-base);
+        @include text-weight('semibold');
+    }
+
+    &__user-actions {
+        display: none;
+
+        @include tablet-min {
+            display: flex;
+            gap: 4px;
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    // Блок Показать больше объявялений
+    .item-card-more {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        @include text-size('xs');
+        color: var(--text-secondary);
+
+        &__item {
+            display: flex;
+            gap: 12px;
+
+            &:nth-child(n+3) {
+                display: none;
+            }
+
+            &:hover {
+                color: var(--link-hover);
+            }
+        }
+
+        &.is-open .item-card-more__item:nth-child(n+3) {
+            display: flex;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &__img {
+            width: 60px;
+            height: 40px;
+            border-radius: 6px;
+            overflow: hidden;
+
+            img {
+                @include cover-img;
+            }
+        }
+
+        &__info {
+            @include text-size('sm');
+        }
+
+        &__button {
+            width: fit-content;
+
+            &:hover {
+                color: var(--link-hover);
+            }
+        }
+    }
+
+    &--company {
+        flex-direction: row;
+        gap: 24px;
+        width: 100%;
+        padding: 24px;
+
+        @include handset-max {
+            gap: 16px;
+            padding: 16px;
+        }
+
+        @include mobile-only {
+            flex-direction: column;
+        }
+
+        .item-card__company-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            flex-shrink: 0;
+            width: 228px;
+            padding: 24px;
+            background: #fff;
+            border-radius: 16px;
+
+            @include handset-max {
+                width: 160px;
+                padding: 16px;
+            }
+
+            @media (max-width: 560px) {
+                width: 140px;
+            }
+
+            @include mobile-only {
+                width: 100%;
+                height: 88px;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .item-card__company-body {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .item-card__company-intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+
+            @include handset-max {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            .chip {
+                align-self: flex-start;
+            }
+        }
+
+        .item-card__company-title {
+            display: flex;
+            gap: 8px;
+
+            a {
+                color: var(--text-base);
+
+                &:hover {
+                    color: var(--text-primary);
+                }
+            }
+        }
+
+        .item-card__company-link {
+            font-weight: 600;
+
+            &:hover {
+                color: var(--red-400);
+            }
+        }
+    }
 }

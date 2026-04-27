@@ -17,6 +17,14 @@
             grid-template-columns: repeat(3, max(1fr));
         }
 
+        & > * {
+            &:nth-child(n+6) {
+                @include mobile-only {
+                    display: none;
+                }
+            }
+        }
+
         &--extra {
             padding-top: 8px;
         }
@@ -61,6 +69,9 @@
                 }
             }
         }
+        @include mobile-only {
+            display: none;
+        }
     }
 
     &__buttons {
@@ -87,6 +98,7 @@
 
     &__no-filters {
         padding: 12px 16px;
+        font-weight: 600;
         color: var(--text-disabled);
         line-height: 24px;
     }
@@ -270,8 +282,24 @@
             box-shadow: 0 -2px 16px rgba(39, 51, 63, 0.12);
         }
 
+        .filter__inputs {
+            & > * {
+                &:nth-child(n+6) {
+                    @include mobile-only {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
         .filter__inputs--extra {
             display: grid !important;
+        }
+
+        .filter__checkboxes {
+            @include mobile-only {
+                display: flex;
+            }
         }
 
         .filter__checkboxes--extra {
