@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <title>Каталог компаний и услуг — Экскаватор Ру</title>
-  <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Каталог компаний и услуг — Экскаватор Ру</title>
+    <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="page">
@@ -1797,7 +1798,7 @@
                                         </svg>
                                         Сбросить
                                     </button>
-                                    <button class="button button--primary-alt button--no-body button--medium filter__save-button">
+                                    <button class="button button--primary-alt button--no-body button--medium filter__save-button js-open-popup" data-popup-id="popup-save-search">
                                         <svg class="icon">
                                             <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
                                         </svg>
@@ -1813,16 +1814,13 @@
                                         <div class="dropdown-backdrop">
                                             <ul class="dropdown-backdrop__list">
                                                 <li class="dropdown-backdrop__option-button" data-filter-clear>Сбросить</li>
-                                                <li class="dropdown-backdrop__option-button" data-filter-close>Сохранить поиск</li>
+                                                <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-save-search">Сохранить поиск</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <p class="filter__no-filters">Укажите параметры поиска</p>
                                 </div>
                             </div>
-                        </section>
-
-                        <section class="section">
                             <div class="categories">
                                 <p class="small-title">Популярные специализации</p>
                                 <ul class="categories__list">
@@ -2168,6 +2166,17 @@
                                         </div>
                                     </a>
                                 </li>
+                                <li class="sidebar-block-list__item">
+                                    <a href="#" class="sidebar-block-list__link">
+                                        <div class="sidebar-block-list__text">
+                                            <p>Куплю кран-манипулятор</p>
+                                            <ul class="crumbs">
+                                                <li class="crumbs__item">13.01.26</li>
+                                                <li class="crumbs__item">Москва</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
                             <a class="button button--small button--regular-alt" href="#">Все заявки</a>
                         </div>
@@ -2417,6 +2426,55 @@
                     <div class="field-checkbox">
                         <input type="checkbox" class="field-checkbox__input required-checkbox" id="service-presonal-data">
                         <label class="field-checkbox__label" for="service-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-save-search">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Сохранение поиска</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Хотите ежедневно получать на email подборку новых объявлений из этой выборки?</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="save-search-email" id="save-search-email" autocomplete="off" required>
+                        <label class="field-text__label" for="save-search-email">
+                            <span class="field-text__caption">Ваш email *</span>
+                        </label>
+                        <span class="field-text__error"></span>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="save-search-subscribe">
+                        <label class="field-checkbox__label" for="save-search-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="save-search-presonal-data">
+                        <label class="field-checkbox__label" for="save-search-presonal-data">
                             <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
                         </label>
                     </div>

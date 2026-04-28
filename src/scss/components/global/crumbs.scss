@@ -58,3 +58,9 @@
         }
     }
 }
+
+.column {
+    & > .crumbs {
+        margin-bottom: 0;
+    }
+}

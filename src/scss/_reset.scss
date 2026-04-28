@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -35,6 +36,7 @@ a {
   text-decoration: none;
   color: var(--text-primary);
   @include transition;
+  -webkit-touch-callout: none;
 }
 
 img {
@@ -51,6 +53,7 @@ button {
   font-family: var(--font-family);
   @include text-weight('base');
   @include transition;
+  -webkit-touch-callout: none;
 }
 
 input,

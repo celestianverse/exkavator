@@ -626,4 +626,32 @@ h3 {
             }
         }
     }
+
+    &--request {
+        .item-card__title {
+            margin-bottom: 12px;
+        }
+        .item-card__description {
+            height: auto;
+            max-height: 32px;
+        }
+        .item-card__action-block {
+            width: auto;
+            min-width: 136px;
+        }
+        .price-block--small {
+            max-width: 100%;
+        }
+        .item-card__price {
+            &.price-block {
+                p {
+                    padding: 4px 8px;
+                    border-radius: 16px;
+                }
+            }
+        }
+        .item-card__buttons .button:first-child {
+            display: flex;
+        }
+    }
 }

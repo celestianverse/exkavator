@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>Справочник спецтехники и оборудования — Экскаватор Ру</title>
     <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -1745,7 +1746,7 @@
         </div>
 
         <main class="body">
-            <div class="section teasers">
+            <div class="teasers">
                 <div class="container">
                     <div class="main-events">
                         <a href="#" class="card card--cell">
@@ -1820,7 +1821,7 @@
                                         </svg>
                                         Сбросить
                                     </button>
-                                    <button class="button button--primary-alt button--no-body button--medium filter__save-button">
+                                    <button class="button button--primary-alt button--no-body button--medium filter__save-button js-open-popup" data-popup-id="popup-save-search">
                                         <svg class="icon">
                                             <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
                                         </svg>
@@ -1836,32 +1837,29 @@
                                         <div class="dropdown-backdrop">
                                             <ul class="dropdown-backdrop__list">
                                                 <li class="dropdown-backdrop__option-button" data-filter-clear>Сбросить</li>
-                                                <li class="dropdown-backdrop__option-button" data-filter-close>Сохранить поиск</li>
+                                                <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-save-search">Сохранить поиск</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <p class="filter__no-filters">Укажите параметры поиска</p>
                                 </div>
                             </div>
-                        </section>
-
-                        <section class="section">
                             <div class="categories">
                                 <p class="small-title">Популярные марки</p>
                                 <ul class="categories__list">
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Beezone</span>
+                                            <span class="rounded-link-card__title">BEEZONE</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Builder</span>
+                                            <span class="rounded-link-card__title">BUILDER</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Bull</span>
+                                            <span class="rounded-link-card__title">BULL</span>
                                         </a>
                                     </li>
                                     <li>
@@ -1881,47 +1879,47 @@
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Liebherr</span>
+                                            <span class="rounded-link-card__title">LIEBHERR</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Lugong</span>
+                                            <span class="rounded-link-card__title">LUGONG</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">John Deere</span>
+                                            <span class="rounded-link-card__title">JOHN DEERE</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Komatsu</span>
+                                            <span class="rounded-link-card__title">KOMATSU</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Liebherr</span>
+                                            <span class="rounded-link-card__title">LIEBHERR</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Metso</span>
+                                            <span class="rounded-link-card__title">METSO</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Sany</span>
+                                            <span class="rounded-link-card__title">SANY</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Terex</span>
+                                            <span class="rounded-link-card__title">TEREX</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="rounded-link-card rounded-link-card--blue" href="#">
-                                            <span class="rounded-link-card__title">Volvo</span>
+                                            <span class="rounded-link-card__title">VOLVO</span>
                                         </a>
                                     </li>
                                     <li>
@@ -1931,9 +1929,6 @@
                                     </li>
                                 </ul>
                             </div>
-                        </section>
-
-                        <section class="section">
                             <div class="categories">
                                 <p class="small-title">Популярные типы техники</p>
                                 <ul class="categories__list">
@@ -2019,6 +2014,9 @@
                                     </li>
                                 </ul>
                             </div>
+                        </section>
+
+                        <section class="section">
                         </section>
 
                         <section class="section">
@@ -2525,6 +2523,55 @@
                     <div class="field-checkbox">
                         <input type="checkbox" class="field-checkbox__input required-checkbox" id="message-presonal-data">
                         <label class="field-checkbox__label" for="message-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-save-search">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Сохранение поиска</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Хотите ежедневно получать на email подборку новых объявлений из этой выборки?</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="save-search-email" id="save-search-email" autocomplete="off" required>
+                        <label class="field-text__label" for="save-search-email">
+                            <span class="field-text__caption">Ваш email *</span>
+                        </label>
+                        <span class="field-text__error"></span>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="save-search-subscribe">
+                        <label class="field-checkbox__label" for="save-search-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="save-search-presonal-data">
+                        <label class="field-checkbox__label" for="save-search-presonal-data">
                             <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
                         </label>
                     </div>

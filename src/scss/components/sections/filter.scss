@@ -184,11 +184,11 @@
         }
 
         .dropdown-backdrop {
-            bottom: 100%;
+            top: 100%;
             left: auto;
             right: 0;
             width: max-content;
-            transform: translateY(-2px);
+            transform: translateY(2px);
         }
     }
 
@@ -304,6 +304,18 @@
 
         .filter__checkboxes--extra {
             display: flex !important;
+        }
+
+        .dropdown-backdrop {
+            z-index: 110;
+        }
+
+        .filter__dropdown-button {
+            .dropdown-backdrop {
+                top: auto;
+                bottom: 100%;
+                transform: translateY(-2px);
+            }
         }
     }
 }

@@ -59,7 +59,7 @@
             display: block;
 
             @include laptop-min {
-                color: var(--text-secondary);
+                color: var(--text-base);
             }
         }
 

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>Продажа - Поисковая выдача</title>
     <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
     <div class="page">
         <div class="header">
@@ -2007,7 +2006,7 @@
                                         <div class="dropdown-backdrop">
                                             <ul class="dropdown-backdrop__list">
                                                 <li class="dropdown-backdrop__option-button" data-filter-clear>Сбросить</li>
-                                                <li class="dropdown-backdrop__option-button" data-filter-close>Сохранить поиск</li>
+                                                <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-save-search">Сохранить поиск</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -2144,14 +2143,14 @@
                                                     <div class="dropdown-backdrop">
                                                         <ul class="dropdown-backdrop__list">
                                                             <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
-                                                            <li class="dropdown-backdrop__option-button">Добавить в избранное</li>
+                                                            <li class="dropdown-backdrop__option-button" data-favorite="false" data-favorite-id="1">Добавить в избранное</li>
                                                             <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="item-card__user-actions">
-                                                <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
+                                                <button class="button button--small button--regular" data-favorite="false" data-favorite-id="1" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
                                                     <svg class="icon">
                                                         <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                                     </svg>
@@ -2207,14 +2206,14 @@
                                                     <div class="dropdown-backdrop">
                                                         <ul class="dropdown-backdrop__list">
                                                             <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
-                                                            <li class="dropdown-backdrop__option-button">Добавить в избранное</li>
+                                                            <li class="dropdown-backdrop__option-button" data-favorite="false" data-favorite-id="2">Добавить в избранное</li>
                                                             <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="item-card__user-actions">
-                                                <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
+                                                <button class="button button--small button--regular" data-favorite="false" data-favorite-id="2" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
                                                     <svg class="icon">
                                                         <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                                     </svg>
@@ -2342,14 +2341,14 @@
                                                     <div class="dropdown-backdrop">
                                                         <ul class="dropdown-backdrop__list">
                                                             <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
-                                                            <li class="dropdown-backdrop__option-button">Добавить в избранное</li>
+                                                            <li class="dropdown-backdrop__option-button" data-favorite="false" data-favorite-id="3">Добавить в избранное</li>
                                                             <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="item-card__user-actions">
-                                                <button class="button button--small button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
+                                                <button class="button button--small button--regular" data-favorite="false" data-favorite-id="3" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
                                                     <svg class="icon">
                                                         <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
                                                     </svg>
@@ -2567,6 +2566,17 @@
                                             <ul class="crumbs">
                                                 <li class="crumbs__item">13.01.26</li>
                                                 <li class="crumbs__item">Красноярск</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="sidebar-block-list__item">
+                                    <a href="#" class="sidebar-block-list__link">
+                                        <div class="sidebar-block-list__text">
+                                            <p>Куплю кран-манипулятор</p>
+                                            <ul class="crumbs">
+                                                <li class="crumbs__item">13.01.26</li>
+                                                <li class="crumbs__item">Москва</li>
                                             </ul>
                                         </div>
                                     </a>

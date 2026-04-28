@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 body {
     min-width: 340px;
@@ -12,7 +13,6 @@ body {
     &.scroll-lock {
         overflow: hidden;
     }
-    
 }
 
 .container {

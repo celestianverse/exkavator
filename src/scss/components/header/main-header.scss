@@ -124,6 +124,7 @@
 
 .user-controls {
     position: relative;
+    @include transition;
 
     &__group {
         display: none;        

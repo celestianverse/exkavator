@@ -247,6 +247,10 @@ const dropdownConfigs = [
 ];
 
 initPageDropdowns(dropdownConfigs);
+initDropdowns('.detail-item-mobile-footer__more');
+initDropdowns('.price-block--dropdown');
+initDropdowns('.item-card__show-buttons-wrap');
+initDropdowns('.filter__dropdown-button');
 
 // Header
 const userControlsMobileButton  = document.querySelector('.user-controls__mobile-button');
@@ -553,33 +557,51 @@ if (lightGalleryList) {
     });
 }
 
-document.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-favorite]');
-    if (!btn) return;
+document.addEventListener('pointerdown', (e) => {
+    const target = e.target.closest('[data-favorite-id]');
+    const targetTooltip = e.target.closest('[data-tooltip-text]');
+    if (!target) return;
 
-    const isFavorite = btn.dataset.favorite === 'true';
-    const iconUse = btn.querySelector('use');
-    const svg = btn.querySelector('.icon');
+    const id = target.dataset.favoriteId;
+    const allControls = document.querySelectorAll(`[data-favorite-id="${id}"]`);
 
-    if (!iconUse || !svg) return;
+    const isFavorite = target.dataset.favorite === 'true';
+    const newState = !isFavorite;
 
-    if (isFavorite) {
-        // Убираем из избранного
-        btn.dataset.favorite = 'false';
-        btn.dataset.tooltipText = 'Добавить в избранное';
+    allControls.forEach((el) => {
+        el.dataset.favorite = String(newState);
 
-        iconUse.setAttribute('xlink:href', 'img/sprites/sprite-20.svg#favorite');
-        svg.classList.remove('icon--red');
-    } else {
-        // Добавляем в избранное
-        btn.dataset.favorite = 'true';
-        btn.dataset.tooltipText = 'Удалить из избранного';
+        // КНОПКА
+        if (el.tagName === 'BUTTON') {
+            const iconUse = el.querySelector('use');
+            const svg = el.querySelector('.icon');
 
-        iconUse.setAttribute('xlink:href', 'img/sprites/sprite-20.svg#favoriteFilled');
-        svg.classList.add('icon--red');
-    }
+            if (iconUse && svg) {
+                if (newState) {
+                    iconUse.setAttribute('xlink:href', 'img/sprites/sprite-20.svg#favoriteFilled');
+                    svg.classList.add('icon--red');
+                    el.dataset.tooltipText = 'Удалить из избранного';
+                    el.setAttribute('aria-label', 'Удалить из избранного');
+                } else {
+                    iconUse.setAttribute('xlink:href', 'img/sprites/sprite-20.svg#favorite');
+                    svg.classList.remove('icon--red');
+                    el.dataset.tooltipText = 'Добавить в избранное';
+                    el.setAttribute('aria-label', 'Добавить в избранное');
+                }
 
-    btn.dispatchEvent(new Event('mouseenter'));
+                if (targetTooltip) {
+                    el.dispatchEvent(new Event('mouseenter'));
+                }
+            }
+        }
+
+        // DROPDOWN
+        if (el.classList.contains('dropdown-backdrop__option-button')) {
+            el.textContent = newState
+                ? 'Удалить из избранного'
+                : 'Добавить в избранное';
+        }
+    });
 });
 
 // Фильтры

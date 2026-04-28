@@ -1,2 +1,0 @@
-initDropdowns('.item-card__show-buttons-wrap');
-initDropdowns('.filter__dropdown-button');

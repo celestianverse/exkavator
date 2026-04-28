@@ -1,9 +1,9 @@
 .first-block {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 
     @include tablet-min {
         display: flex;
-        gap: 24px;
+        gap: 32px;
         align-items: flex-start;
     }
 
@@ -70,9 +70,7 @@
     }
 
     &__title {
-        &.first-block__title {
-            margin-bottom: 16px;
-        }
+        margin-bottom: 16px !important;
     }
 
     &--brand {

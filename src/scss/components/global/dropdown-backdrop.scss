@@ -28,6 +28,8 @@
     position: absolute;
     padding: 8px 0;
     min-width: 100%;
+    max-width: 200px;
+    width: max-content;
     display: none;
     z-index: 10;
     background-color: var(--neutral-0);

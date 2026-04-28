@@ -13,5 +13,9 @@
 
     &.is-active {
         opacity: 1;
+
+        @include handset-max {
+            display: none !important;
+        }
     }
 }

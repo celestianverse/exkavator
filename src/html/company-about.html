@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
   <title>Компания НАК Машинери — Экскаватор Ру</title>
   <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -1845,24 +1846,26 @@
                                 </div>
 
                                 <div class="detail-item__buttons detail-item-action-block">
-                                    <div class="detail-item-action-block__buttons">
-                                        <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-question">Задать вопрос</button>
-                                        <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-callback">Обратный звонок</button>
-                                        <button class="button button--large button--primary-alt">Все контакты компании</button>
-                                        <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-contacts">Показать адрес компании</button>
-                                    </div>
+                                    <div class="column column--8">
+                                        <div class="detail-item-action-block__buttons">
+                                            <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-question">Задать вопрос</button>
+                                            <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-callback">Обратный звонок</button>
+                                            <button class="button button--large button--primary-alt">Все контакты компании</button>
+                                            <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-contacts">Показать адрес компании</button>
+                                        </div>
 
-                                    <div class="detail-item-action-block__controls">
-                                        <button class="button button--large button--regular" data-favorite="false" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
-                                            <svg class="icon icon--20">
-                                                <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
-                                            </svg>
-                                        </button>
-                                        <button class="button button--large button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление" aria-label="Пожаловаться на объявление">
-                                            <svg class="icon icon--20">
-                                                <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
-                                            </svg>
-                                        </button>
+                                        <div class="detail-item-action-block__controls">
+                                            <button class="button button--large button--regular" data-favorite="false" data-favorite-id="1" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
+                                                <svg class="icon icon--20">
+                                                    <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="button button--large button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление" aria-label="Пожаловаться на объявление">
+                                                <svg class="icon icon--20">
+                                                    <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -1998,6 +2001,17 @@
                                         </div>
                                     </a>
                                 </li>
+                                <li class="sidebar-block-list__item">
+                                    <a href="#" class="sidebar-block-list__link">
+                                        <div class="sidebar-block-list__text">
+                                            <p>Куплю кран-манипулятор</p>
+                                            <ul class="crumbs">
+                                                <li class="crumbs__item">13.01.26</li>
+                                                <li class="crumbs__item">Москва</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
                             <a class="button button--small button--regular-alt" href="#">Все заявки</a>
                         </div>
@@ -2049,8 +2063,138 @@
                 </a>
             </nav>
         </div>
+        <div class="detail-item-mobile-footer">
+            <div class="detail-item-mobile-footer__row">
+                <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
+                <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
+            </div>
+            <div class="detail-item-mobile-footer__row">
+                <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-callback">Обратный звонок</button>
+                <div class="detail-item-mobile-footer__more">
+                    <button class="button button--large button--primary-alt" aria-label="Дополнительные действия">
+                        <svg class="icon icon--24">
+                            <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
+                        </svg>
+                    </button>
+                    <div class="dropdown-backdrop">
+                        <ul class="dropdown-backdrop__list">
+                            <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
+                            <li class="dropdown-backdrop__option-button" data-favorite="false" data-favorite-id="1">Добавить в избранное</li>
+                            <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <form class="popup form-validation" id="popup-call">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Альтех</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Работаем без выходных</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-dropdown selected">
+                        <input class="field-dropdown__input" type="text" placeholder="Город" name="city" id="city" autocomplete="off" readonly="" value="Москва" data-value="moscow">
+                        <label class="field-dropdown__label" for="city">
+                            <span class="field-dropdown__caption">Город</span>
+                        </label>
+                    </div>
+                    <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
+                    <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
+                    <button class="button button--large button--regular-alt button--full-width js-open-popup" data-popup-id="popup-callback">Заказать обратный звонок</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-lizing">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Оставьте заявку, и менеджеры свяжутся с вами для уточнения деталей</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="text" placeholder="Ваше имя *" name="lizing-name" id="lizing-name" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-name">
+                            <span class="field-text__caption">Ваше имя *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Email *" name="lizing-email" id="lizing-email" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-email">
+                            <span class="field-text__caption">Email *</span>
+                        </label>
+                        <span class="field-text__error"></span>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Номер телефона *" name="lizing-phone" id="lizing-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-phone">
+                            <span class="field-text__caption">Номер телефона *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="text" placeholder="ИНН *" name="lizing-inn" id="lizing-inn" autocomplete="off" required>
+                        <label class="field-text__label" for="lizing-inn">
+                            <span class="field-text__caption">ИНН *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="lizing-subscribe">
+                        <label class="field-checkbox__label" for="lizing-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="lizing-presonal-data">
+                        <label class="field-checkbox__label" for="lizing-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
     <form class="popup form-validation" id="popup-question">
         <div class="popup__dialog">
             <div class="popup__title">
@@ -2317,6 +2461,70 @@
             </div>
         </div>
     </form>
+    <form class="popup form-validation" id="popup-seller-message">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Отправить сообщение продавцу</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="seller-message-phone" id="seller-message-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="seller-message-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="seller-message-email" id="seller-message-email" autocomplete="off">
+                        <label class="field-text__label" for="seller-message-email">
+                            <span class="field-text__caption">Ваш email</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-textarea">
+                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="seller-message-message" id="seller-message-message"></textarea>
+                        <label class="field-textarea__label" for="seller-message-message">
+                            <span class="field-textarea__caption">Текст сообщения</span>
+                        </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="seller-message-subscribe">
+                        <label class="field-checkbox__label" for="seller-message-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="seller-message-presonal-data">
+                        <label class="field-checkbox__label" for="seller-message-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
     <form class="popup form-validation" id="popup-contacts">
         <div class="popup__dialog">
             <div class="popup__title">
@@ -2351,5 +2559,6 @@
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="js/detail.js"></script>
 </body>
 </html>

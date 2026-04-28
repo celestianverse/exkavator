@@ -96,6 +96,10 @@
 }
 .body {
     flex-grow: 1;
+
+    @include tablet-max {
+        padding-bottom: 24px;
+    }
 }
 .box {
     display: flex;
@@ -240,17 +244,6 @@
     padding: 16px;
     border-radius: 16px;
     border: 1px solid var(--neutral-100);
-
-    @include laptop-min {
-        padding: 24px;
-    }
-
-    &.linking {
-
-        @include laptop-min {
-            padding: 16px;
-        }
-    }
 
     &--grey-bg {
         border: 0;
@@ -667,6 +660,10 @@
         border: none;
     }
 
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     table {
         table-layout: fixed;
         border-collapse: collapse;
@@ -679,6 +676,10 @@
         padding-right: 24px;
         border-bottom: 1px solid var(--neutral-100);
         text-align: left;
+
+        &:last-child {
+            padding-right: 0;
+        }
     }
 
     td {
@@ -713,12 +714,15 @@
 }
 
 .top-list {
+    width: 100%;
     list-style-type: decimal;
+    line-height: 24px;
     font-size: 16px;
 
     li {
         display: flex;
         gap: 16px;
+        width: 100%;
         padding: 16px 0;
         border-bottom: 1px solid var(--neutral-100);
 
@@ -727,6 +731,7 @@
         }
 
         &:last-child {
+            padding-bottom: 0;
             border-bottom: none;
         }
     }
@@ -759,6 +764,12 @@
 .mb {
     &-0 {
         margin-bottom: 0;
+    }
+    &-12 {
+        margin-bottom: 12px;
+    }
+    &-40 {
+        margin-bottom: 40px;
     }
     &-64 {
         margin-bottom: 64px;

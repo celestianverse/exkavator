@@ -10,7 +10,7 @@
     }
     &__current {
         background-color: var(--neutral-60);
-        outline: 1px solid  var(--neutral-100);
+        border: 1px solid  var(--neutral-100);
     }
     &__next, &__prev {
         font-size: 0;

@@ -115,6 +115,10 @@
         @include desktop-min {
             max-width: 635px;
         }
+
+        &.text--text-block {
+            line-height: 1.43;
+        }
     }
 
     .detail-item-slider {
@@ -122,6 +126,13 @@
 
         @include tablet-min {
             margin: 0 0 16px 0;
+        }
+        @include handset-max {
+            width: auto !important;
+            margin-right: -24px;
+        }
+        @include mobile-only {
+            margin-right: -16px;
         }
 
         &__wrapper {
@@ -199,6 +210,7 @@
 
     .detail-item-description-block {
         align-self: stretch;
+        min-height: 160px;
         padding: 16px;
         background-color: var(--neutral-25);
         border-radius: 16px;
@@ -308,9 +320,22 @@
                 margin-top: -4px;
                 margin-bottom: 8px;
             }
+            .detail-item-company__list {
+                li {
+                    margin-bottom: 0;
+                }
+            }
         }
         
         &__list {
+            li {
+                margin-bottom: 8px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
             a {
                 &:hover {
                     color: var(--red-400);
@@ -324,7 +349,6 @@
         flex-direction: column;
         gap: 16px;
     }
-
 }
 // Прилипающий футер детальнйо страницы. Находиться вне разметки блока detail-item
 .detail-item-mobile-footer {

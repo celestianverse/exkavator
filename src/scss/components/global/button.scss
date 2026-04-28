@@ -18,6 +18,7 @@
         color: var(--text-disabled);
         pointer-events: none;
         outline: 0;
+        border: 0;
 
         &.button--dropdown::after {
             background-color: var(--text-disabled);
@@ -61,16 +62,25 @@
     &--regular-alt {
         background-color: var(--neutral-0);
         color: var(--text-base);
-        outline: 1px solid  var(--neutral-100);
+        border: 1px solid  var(--neutral-100);
 
         &:hover {
             box-shadow: 0 2px 8px 0 #E0E5EB80;
-            outline: 1px solid  var(--neutral-100);
+            border: 1px solid  var(--neutral-100);
             color: var(--text-base);
             background: var(--neutral-25);
         }
         &.button--dropdown::after {
             background-color: var(--text-base);
+        }
+        &.button--large {
+            padding: 11px 16px;
+        }
+        &.button--medium {
+            padding: 7px 12px;
+        }
+        &.button--small {
+            padding: 7px 8px;
         }
     }
     &--green {
@@ -99,16 +109,20 @@
     &--no-body {
         background-color: transparent;
         outline: 0;
+        border: 0;
     }
 
     &--large {
+        min-height: 48px;
         padding: 12px 16px;
         @include text-weight('semibold');
     }
     &--medium {
+        min-height: 40px;
         padding: 8px 12px;
     }
     &--small {
+        min-height: 32px;
         padding: 8px 8px;
         font-size: 12px;
         line-height: 16px;
