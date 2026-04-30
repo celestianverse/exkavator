@@ -698,6 +698,7 @@
         tr {
             &:last-child {
                 td {
+                    padding-bottom: 0;
                     border-bottom: none;
                 }
             }
@@ -711,6 +712,30 @@
     border-radius: 12px;
     text-align: center;
     color: var(--text-secondary);
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &__avatar {
+        width: 60px;
+        height: 60px;
+        margin: 0 !important;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    &__name {
+        margin: 0 !important;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    &__about {
+        margin: 0 !important;
+        font-size: 12px;
+        color: var(--text-secondary);
+    }
 }
 
 .top-list {
@@ -759,6 +784,48 @@
 
 .swiper {
     width: 100%;
+}
+
+.publication {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .text.text.text {
+        &--text-block {
+            li {
+                margin-bottom: 16px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .table {
+                font-size: 14px;
+            }
+        }
+    }
+    .text-photo {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.publication-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__buttons {
+        display: flex;
+        gap: 16px;
+    }
+}
+.publication-lead {
+    line-height: 32px;
+    font-size: 22px;
+    color: var(--text-secondary);
 }
 
 .mb {

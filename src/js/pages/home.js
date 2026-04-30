@@ -3,7 +3,7 @@ const videosGrid = document.querySelector(".main-videos__grid");
 const videos = [
     {
         image: "img/news/news-7.jpg",
-        video: "videos/video-1.mp4",
+        video: "https://vkvideo.ru/video_ext.php?oid=-19065351&id=456239230&hash=fbe3d6b440bc3484&hd=4&autoplay=1",
         title: "Запчасти на маркетплейсе: заказать и не прогадать. Спецпроект Grenar",
         date: "23.02.2026",
         tag: "# Подкасты Экскаватор Ру",
@@ -11,7 +11,7 @@ const videos = [
     },
     {
         image: "img/news/news-8.jpg",
-        video: "videos/video-2.mp4",
+        video: "https://vkvideo.ru/video_ext.php?oid=-19065351&id=456239061&hash=62f73a9fcc80e3f1&hd=3&autoplay=1",
         title: "Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе",
         date: "23.02.2026",
         tag: "# Новости Экскаватор Ру",
@@ -19,7 +19,7 @@ const videos = [
     },
     {
         image: "img/news/news-9.jpg",
-        video: "videos/video-1.mp4",
+        video: "https://vkvideo.ru/video_ext.php?oid=-19065351&id=456239230&hash=fbe3d6b440bc3484&hd=4&autoplay=1",
         title: "Увеличенные высота выгрузки и производительность: компания «Спецтехника» представила мини-погрузчики LONKING",
         date: "23.02.2026",
         tag: "# Обзор Экскаватор Ру",
@@ -27,7 +27,7 @@ const videos = [
     },
     {
         image: "img/news/news-10.jpg",
-        video: "videos/video-2.mp4",
+        video: "https://vkvideo.ru/video_ext.php?oid=-19065351&id=456239061&hash=62f73a9fcc80e3f1&hd=3&autoplay=1",
         title: "Запчасти на маркетплейсе: заказать и не прогадать. Спецпроект Grenar",
         date: "23.02.2026",
         tag: "# Подкасты Экскаватор Ру",
@@ -35,7 +35,7 @@ const videos = [
     },
     {
         image: "img/news/news-11.jpg",
-        video: "videos/video-1.mp4",
+        video: "https://vkvideo.ru/video_ext.php?oid=-19065351&id=456239230&hash=fbe3d6b440bc3484&hd=4&autoplay=1",
         title: "Спецтехника и запчасти UMG теперь доступны на Ozon, Wildberries и собственной цифровой платформе",
         date: "23.02.2026",
         tag: "# Новости Экскаватор Ру",
@@ -43,7 +43,7 @@ const videos = [
     },
     {
         image: "img/news/news-12.jpg",
-        video: "videos/video-2.mp4",
+        video: "https://vkvideo.ru/video_ext.php?oid=-19065351&id=456239061&hash=62f73a9fcc80e3f1&hd=3&autoplay=1",
         title: "Увеличенные высота выгрузки и производительность: компания «Спецтехника» представила мини-погрузчики LONKING",
         date: "23.02.2026",
         tag: "# Обзор Экскаватор Ру",
@@ -94,9 +94,7 @@ function render() {
     videosGrid.innerHTML = `
       <div class="main-videos__card card card--xl">
         <div class="card__cover">
-          <video class="card__video" controls muted autoplay loop>
-            <source src="${main.video}" type="video/mp4">
-          </video>
+          <iframe class="card__video" src="${main.video}" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="card__body">
           <a href="${main.link}" class="card__title title title--m">${main.title}</a>

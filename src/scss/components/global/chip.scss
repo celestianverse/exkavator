@@ -11,6 +11,10 @@
     @include text-size('xs');
   }
 
+  &--size-l {
+    padding: 8px;
+  }
+
   &--primary {
     color: var(--text-white);
     background-color: var(--primary-500);
@@ -51,6 +55,14 @@
   &--white {
     background-color: #fff;
     color: var(--text-base);
+  }
+  &--outline {
+    background: none;
+    border: 1px solid var(--neutral-100);
+
+    &.chip--size-l {
+      padding: 7px 8px;
+    }
   }
 }
 

@@ -37,6 +37,17 @@
             background-color: var(--neutral-0);
         }
     }
+    &--telegram {
+        background-color: var(--telegram-500);
+        color: var(--text-white);
+
+        &:hover {
+            box-shadow: 0 2px 8px 0 rgba(0, 108, 151, 0.52);
+        }
+        &.button--dropdown::after {
+            background-color: var(--neutral-0);
+        }
+    }
     &--primary-alt {
         background-color: var(--primary-50);
         color: var(--text-link);

@@ -98,6 +98,15 @@
                 width: 100%;
                 border-radius: 16px 16px 0 0;
             }
+
+            &:last-child {
+                border-radius: 0 16px 16px 0;
+
+                @include mobile-only {
+                    width: 100%;
+                    border-radius: 16px 16px 0 0;
+                }
+            }
         }
         .card__image {
             height: 180px;

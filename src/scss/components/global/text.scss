@@ -1,4 +1,4 @@
-.text {
+.text.text.text {
     font-size: inherit;
 
     &--xl {
@@ -39,11 +39,10 @@
     &--text-block {
         line-height: 1.7;
 
-        p, img {
+        h1, h2, h3, h4, h5, h6, p, ul, ol, img, blockquote {
             margin-bottom: 24px;
         }
-        ul, ol {
-            margin-bottom: 24px;
+        ul {
             li {
                 position: relative;
                 display: list-item;
@@ -65,10 +64,40 @@
                 }
             }
         }
+        ol {
+            margin-left: 32px;
+            list-style-type: decimal;
+
+            li {
+                margin-bottom: 8px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
         a {
             &:hover {
                 color: var(--red-400);
             }
+        }
+        blockquote {
+            padding: 24px;
+            border: 1px solid var(--neutral-100);
+            border-radius: 12px;
+
+            @include mobile-only {
+                padding: 16px;
+            }
+
+            & > * {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        small {
+            color: var(--text-secondary);
         }
 
         & > * {

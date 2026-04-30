@@ -1,0 +1,79 @@
+.hidden {
+    display: none !important;
+}
+
+.hidden-widescreen-min {
+    @include widescreen-min {
+        display: none !important;
+    }
+}
+
+.hidden-desktop-max {
+    @include desktop-max {
+        display: none !important;
+    }
+}
+.hidden-desktop-min {
+    @include desktop-min {
+        display: none !important;
+    }
+}
+.hidden-desktop-only {
+    @include desktop-only {
+        display: none !important;
+    }
+}
+
+.hidden-laptop-max {
+    @include laptop-max {
+        display: none !important;
+    }
+}
+.hidden-laptop-min {
+    @include laptop-min {
+        display: none !important;
+    }
+}
+.hidden-laptop-only {
+    @include laptop-only {
+        display: none !important;
+    }
+}
+
+.hidden-tablet-max {
+    @include tablet-max {
+        display: none !important;
+    }
+}
+.hidden-tablet-min {
+    @include tablet-min {
+        display: none !important;
+    }
+}
+.hidden-tablet-only {
+    @include tablet-only {
+        display: none !important;
+    }
+}
+
+.hidden-handset-max {
+    @include handset-max {
+        display: none !important;
+    }
+}
+.hidden-handset-min {
+    @include handset-min {
+        display: none !important;
+    }
+}
+.hidden-handset-only {
+    @include handset-only {
+        display: none !important;
+    }
+}
+
+.hidden-mobile-only {
+    @include mobile-only {
+        display: none !important;
+    }
+}
