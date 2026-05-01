@@ -820,3 +820,18 @@ if (typeInput && filter) {
         requestAnimationFrame(handleTypeChange);
     });
 }
+
+// Оценка
+document.querySelectorAll('.evaluate').forEach(row => {
+    const stars = row.querySelectorAll('.button--star');
+
+    stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+            stars.forEach(s => s.classList.remove('button--active'));
+
+            for (let i = 0; i <= index; i++) {
+                stars[i].classList.add('button--active');
+            }
+        });
+    });
+});

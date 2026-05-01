@@ -76,6 +76,55 @@
             @include text-ellipsis-rows(4);
         }
     }
+    &--big-row {
+        flex-direction: row;
+
+        @include handset-max {
+            flex-direction: column;
+        }
+
+        .card__cover {
+            flex-shrink: 0;
+            width: 640px;
+            border-radius: 16px 0 0 16px;
+
+            @include laptop-only {
+                width: 488px;
+            }
+            @include tablet-only {
+                width: 340px;
+            }
+            @include handset-max {
+                width: 100%;
+                border-radius: 16px 16px 0 0;
+            }
+        }
+        .card__image {
+            height: 360px;
+
+            @include laptop-max {
+                height: 274px;
+            }
+            @include handset-max {
+                height: 200px;
+            }
+        }
+        .card__body {
+            padding: 16px 24px;
+
+            @include mobile-only {
+                padding: 16px;
+            }
+        }
+        .card__title {
+            max-height: 96px;
+            @include text-ellipsis-rows(3);
+        }
+        .card__text {
+            max-height: 96px;
+            @include text-ellipsis-rows(4);
+        }
+    }
     &--row {
         flex-direction: row;
 
@@ -132,6 +181,12 @@
         .card__text {
             max-height: 40px;
             @include text-ellipsis-rows(2);
+        }
+
+        &.card--reverse {
+            @include mobile-only {
+                flex-direction: column-reverse;
+            }
         }
     }
 

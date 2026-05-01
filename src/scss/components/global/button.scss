@@ -116,6 +116,41 @@
             background-color: var(--green-500);
         }
     }
+    &--white {
+        background-color: #fff;
+        color: var(--text-base);
+
+        &:hover {
+            @include laptop-min {
+                background: var(--neutral-25);
+                box-shadow: 0 2px 8px 0 #E0E5EB80;
+                color: var(--text-base);
+            }
+        }
+        &.button--dropdown::after {
+            background-color: var(--text-base);
+        }
+    }
+    &--star {
+        color: var(--text-disabled);
+
+        &:hover {
+            @include laptop-min {
+                background-color: #fff;
+                color: var(--text-base);
+            }
+        }
+
+        &.button--active {
+            color: var(--yellow-400);
+
+            &:hover {
+                @include laptop-min {
+                    color: var(--yellow-500);
+                }
+            }
+        }
+    }
 
     &--no-body {
         background-color: transparent;
