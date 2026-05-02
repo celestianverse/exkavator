@@ -47,5 +47,9 @@
         &:hover {
             color: var(--link-hover);
         }
+
+        &.link--active {
+            color: var(--text-base);
+        }
     }
 }
