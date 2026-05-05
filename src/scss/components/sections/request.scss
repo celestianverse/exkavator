@@ -1,4 +1,4 @@
-.request {
+.request-form {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -7,5 +7,47 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+        margin-bottom: 24px;
+    }
+}
+.request {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @include mobile-only {
+        gap: 40px;
+    }
+
+    .detail-item {
+        margin-top: 0;
+
+        .detail-item-description-block {
+            padding: 24px;
+
+            @include mobile-only {
+                padding: 16px;
+            }
+
+            .detail-item-specifications {
+                row-gap: 36px;
+
+                @include mobile-only {
+                    row-gap: 24px;
+                }
+
+                & + .detail-item-specifications__item {
+                    margin-top: 36px;
+
+                    @include mobile-only {
+                        margin-top: 24px;
+                    }
+                }
+            }
+
+            .button {
+                margin-top: 24px;
+            }
+        }
     }
 }
