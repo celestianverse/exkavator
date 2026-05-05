@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
-  <title>Запчасти - Поисковая выдача</title>
-  <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/main.css">
+    <title>Разместите заявку — Экскаватор Ру</title>
+    <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="page">
@@ -1749,607 +1750,404 @@
             <div class="container">
                 <div class="layout">
                     <div class="content">
-                        <ul class="crumbs crumbs--bread">
-                            <li class="crumbs__item">
-                                <a href="#">Запчасти</a>
-                            </li>
-                            <li class="crumbs__item">
-                                <a href="#">Запчасти к экскаваторам-погрузчикам</a>
-                            </li>
-                        </ul>
-                        <h1>Запчасти для экскаваторов-погрузчиков в Краснодаре</h1>
-                        <section class="filter-block section">
-                            <div class="filter">
-                                <p class="small-title">Поиск по 7924 объявлениям</p>
-                                <div class="filter__inputs">
-                                    <div class="field-text">
-                                        <input class="field-text__input" type="text" placeholder="Номер (артикул) или название запчасти" name="article" id="article" autocomplete="off"/>
-                                        <label class="field-text__label" for="article">
-                                            <span class="field-text__caption">Номер (артикул) или название запчасти</span>
-                                        </label>
-                                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                                            <svg class="icon icon--16">
-                                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div class="field-text">
-                                        <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
-                                        <label class="field-text__label" for="place">
-                                            <span class="field-text__caption">Регион, город, населенный пункт</span>
-                                        </label>
-                                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                                            <svg class="icon icon--16">
-                                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div class="field-dropdown selected">
-                                        <input class="field-dropdown__input" type="text" placeholder="Рубрика" name="topic" id="topic" autocomplete="off" value="Рубрика 2" data-value="topic2"/>
-                                        <label class="field-dropdown__label" for="topic">
-                                            <span class="field-dropdown__caption">Рубрика</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Категория" name="category" id="category" autocomplete="off"/>
-                                        <label class="field-dropdown__label" for="category">
-                                            <span class="field-dropdown__caption">Категория</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Категория" name="manufacture" id="manufacture" autocomplete="off"/>
-                                        <label class="field-dropdown__label" for="manufacture">
-                                            <span class="field-dropdown__caption">Производитель</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
-                                        <label class="field-dropdown__label" for="type">
-                                            <span class="field-dropdown__caption">Тип техники</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Марка техники" name="brand" id="brand" autocomplete="off"/>
-                                        <label class="field-dropdown__label" for="brand">
-                                            <span class="field-dropdown__caption">Марка техники</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="filter__checkboxes">
-                                    <div class="field-checkbox">
-                                        <input type="checkbox" class="field-checkbox__input" id="ch-delivery">
-                                        <label class="field-checkbox__label" for="ch-delivery">Доставка по России</label>
-                                    </div>
-                                </div>
-                                <div class="filter__buttons">
-                                    <button class="button button--primary-alt button--no-body button--medium filter__clear-button" data-filter-clear>
-                                        <svg class="icon">
-                                            <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>
-                                        </svg>
-                                        Сбросить
-                                    </button>
-                                    <button class="button button--primary-alt button--no-body button--medium filter__save-button js-open-popup" data-popup-id="popup-save-search">
-                                        <svg class="icon">
-                                            <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
-                                        </svg>
-                                        Сохранить поиск
-                                    </button>
-                                    <button class="button button--primary button--large button--find" disabled>Найдено 1234 объявления</button>
-                                    <div class="filter__dropdown-button">
-                                        <button class="button button--large button--regular" aria-label="Настройки поиска">
-                                            <svg class="icon icon--24">
-                                                <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
-                                            </svg>
-                                        </button>
-                                        <div class="dropdown-backdrop">
-                                            <ul class="dropdown-backdrop__list">
-                                                <li class="dropdown-backdrop__option-button" data-filter-clear>Сбросить</li>
-                                                <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-save-search">Сохранить поиск</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <p class="filter__no-filters">Укажите параметры поиска</p>
+                        <form id="request-form" class="request form-validation">
+                            <div class="request__header">
+                                <h1 class="title title--xl">Разместите заявку</h1>
+                                <p class="text text--l">Как можно более подробно опишите свою заявку. Это позволит избежать вопросов и быстрее получить самые выгодные отклики.</p>
+                            </div>
+                            <div class="column column--16">
+                                <p class="text text--l text--600">Выберите тип заявки</p>
+                                <div class="radio-segments">
+                                    <label class="radio-segments__item">
+                                        <input type="radio" class="radio-segments__input" name="request-type" value="Покупка" checked>
+                                        <span class="radio-segments__title">Покупка</span>
+                                    </label>
+                                    <label class="radio-segments__item">
+                                        <input type="radio" class="radio-segments__input" name="request-type" value="Аренда">
+                                        <span class="radio-segments__title">Аренда</span>
+                                    </label>
+                                    <label class="radio-segments__item">
+                                        <input type="radio" class="radio-segments__input" name="request-type" value="Запчасти">
+                                        <span class="radio-segments__title">Запчасти</span>
+                                    </label>
                                 </div>
                             </div>
-                        </section>
-
-                        <section class="results section">
-                            <div class="results__title">
-                                <p class="small-title">Найдено 1234 объявления</p>
-                                <div class="sorting sorting--mobile-inverse">
-                                    <button class="button button--small button--regular-alt button--dropdown">
-                                <span class="button__text">
-                                    Сначала актуальные
-                                </span>
-                                        <svg class="icon">
-                                            <use xlink:href="img/sprites/sprite-16.svg#sort"></use>
-                                        </svg>
-                                    </button>
-                                    <div class="dropdown-backdrop">
-                                        <ul class="dropdown-backdrop__list">
-                                            <li class="dropdown-backdrop__option">Сначала актуальные</li>
-                                            <li class="dropdown-backdrop__option">Сначала дешевые</li>
-                                            <li class="dropdown-backdrop__option">Сначала дорогие</li>
-                                        </ul>
-                                    </div>
+                            <div class="column column--16">
+                                <p class="text text--l text--600">Какой тип техники вы хотите купить? <span class="asterisk">*</span></p>
+                                <div class="field-dropdown">
+                                    <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off" required />
+                                    <label class="field-dropdown__label" for="type">
+                                        <span class="field-dropdown__caption">Тип техники</span>
+                                    </label>
                                 </div>
-                            </div>
-                            <div class="item-card-list">
-                                <!-- item card -->
-                                <div class="item-card">
-                                    <div class="item-card__row">
-                                        <a href="#" class="item-card__img-block">
-                                            <div class="item-card__labels"></div>
-                                            <img loading="lazy" src="img/temp/parts-1-raw.jpg" alt="Треллеборг - супер усиленные гусеницы, премиум - не Китай!">
+                                <ul class="categories__list">
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Гусеничные экскаваторы</span>
                                         </a>
-                                        <div class="item-card__info-block">
-                                            <p class="item-card__cities">Александровск-Сахалинский и ещё <a href="#" class="item-card__tolltip">9 городов</a></p>
-                                            <a href="#" class="item-card__title">Треллеборг - супер усиленные гусеницы, премиум - не Китай!</a>
-                                            <ul class="item-card__chips">
-                                                <li class="chip chip--small chip--regular">ISUZU</li>
-                                            </ul>
-                                            <p class="item-card__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
-                                        </div>
-                                        <div class="item-card__action-block">
-                                            <div class="item-card__price price-block">
-                                                <p>15 306 212 ₽</p>
-                                            </div>
-                                            <div class="item-card__buttons">
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-callback">Обратный звонок</button>
-                                                <div class="item-card__show-buttons-wrap">
-                                                    <button class="button button--small button--primary-alt item-card__show-buttons" aria-label="Дополнительные действия">
-                                                        <svg class="icon">
-                                                            <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <div class="dropdown-backdrop">
-                                                        <ul class="dropdown-backdrop__list">
-                                                            <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
-                                                            <li class="dropdown-backdrop__option-button" data-favorite="false" data-favorite-id="1">Добавить в избранное</li>
-                                                            <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="item-card__user-actions">
-                                                <button class="button button--small button--regular" data-favorite="false" data-favorite-id="1" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
-                                                    </svg>
-                                                </button>
-                                                <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление" aria-label="Пожаловаться на объявление">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-card__row">
-                                        <p class="item-card__time">Обновлено сегодня</p>
-                                        <ul class="crumbs">
-                                            <li class="crumbs__item crumbs__item--approve">Росткомплект ДВ</li>
-                                            <li class="crumbs__item">11 лет на площадке</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- item card -->
-                                <div class="item-card">
-                                    <div class="item-card__row">
-                                        <a href="#" class="item-card__img-block">
-                                            <div class="item-card__labels"></div>
-                                            <img loading="lazy" src="img/temp/parts-1-raw.jpg" alt="Запчасти для спецтехники Caterpillar, Hyundai, Hitachi, Komatsu">
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Колесные экскаваторы</span>
                                         </a>
-                                        <div class="item-card__info-block">
-                                            <p class="item-card__cities">Александровск-Сахалинский и ещё <a href="#" class="item-card__tolltip">9 городов</a></p>
-                                            <a href="#" class="item-card__title">Запчасти для спецтехники Caterpillar, Hyundai, Hitachi, Komatsu</a>
-                                            <ul class="item-card__chips">
-                                                <li class="chip chip--small chip--regular">ISUZU</li>
-                                            </ul>
-                                            <p class="item-card__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
-                                        </div>
-                                        <div class="item-card__action-block">
-                                            <div class="item-card__price price-block">
-                                                <p>15 306 212 ₽</p>
-                                            </div>
-                                            <div class="item-card__buttons">
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-callback">Обратный звонок</button>
-                                                <div class="item-card__show-buttons-wrap">
-                                                    <button class="button button--small button--primary-alt item-card__show-buttons" aria-label="Дополнительные действия">
-                                                        <svg class="icon">
-                                                            <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <div class="dropdown-backdrop">
-                                                        <ul class="dropdown-backdrop__list">
-                                                            <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
-                                                            <li class="dropdown-backdrop__option-button" data-favorite="false" data-favorite-id="2">Добавить в избранное</li>
-                                                            <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item-card__user-actions">
-                                                <button class="button button--small button--regular" data-favorite="false" data-favorite-id="2" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
-                                                    </svg>
-                                                </button>
-                                                <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление" aria-label="Пожаловаться на объявление">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-card__row">
-                                        <p class="item-card__time">Обновлено сегодня</p>
-                                        <ul class="crumbs">
-                                            <li class="crumbs__item crumbs__item--approve">Росткомплект ДВ</li>
-                                            <li class="crumbs__item">11 лет на площадке</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="special-offers section">
-                            <div class="special-offers__title">
-                                <h2>Спецпредложения</h2>
-                                <div class="special-offers__nav">
-                                    <button class="special-offers__prev" type="button" aria-label="Предыдущий слайд"></button>
-                                    <button class="special-offers__next" type="button" aria-label="Следующий слайд"></button>
-                                </div>
-                            </div>
-
-                            <div class="special-offers__slider swiper">
-                                <div class="special-offers__list swiper-wrapper">
-                                    <div class="special-item swiper-slide">
-                                        <a href="#" class="special-item__img">
-                                            <img loading="lazy" src="img/temp/parts-1-raw.jpg" alt="Подшипник поворотной плиты H1P 045/053, H1T 45/53">
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Мини-погрузчики</span>
                                         </a>
-                                        <div class="special-item__description">
-                                            <a href="#" class="special-item__title">Подшипник поворотной плиты H1P 045/053, H1T 45/53</a>
-                                            <p class="special-item__cities">Нижний Тагил и еще 34 города</p>
-                                            <div class="special-item__action">
-                                                <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="special-item swiper-slide">
-                                        <a href="#" class="special-item__img">
-                                            <img loading="lazy" src="img/temp/parts-1-raw.jpg" alt="11004705 Подшипник поворотной плиты гидронасоса H1P147-165">
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Бульдозеры</span>
                                         </a>
-                                        <div class="special-item__description">
-                                            <a href="#" class="special-item__title">11004705 Подшипник поворотной плиты гидронасоса H1P147-165</a>
-                                            <p class="special-item__cities">Санкт Петербург и еще 12 городов</p>
-                                            <div class="special-item__action">
-                                                <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="special-item swiper-slide">
-                                        <a href="#" class="special-item__img">
-                                            <img loading="lazy" src="img/temp/parts-1-raw.jpg" alt="Двигатель ISUZU C240">
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Автокраны</span>
                                         </a>
-                                        <div class="special-item__description">
-                                            <a href="#" class="special-item__title">Двигатель ISUZU C240</a>
-                                            <p class="special-item__cities">Москва и еще 22 города</p>
-                                            <div class="special-item__action">
-                                                <span class="special-item__price special-item__price--no-price">Цена по запросу</span>
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="results section">
-                            <div class="results-list">
-                                <div class="item-card">
-                                    <div class="item-card__row">
-                                        <a href="#" class="item-card__img-block">
-                                            <div class="item-card__labels"></div>
-                                            <img loading="lazy" src="img/temp/parts-1-raw.jpg" alt="">
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Мини-экскаваторы</span>
                                         </a>
-                                        <div class="item-card__info-block">
-                                            <p class="item-card__cities">Александровск-Сахалинский и ещё <a href="#" class="item-card__tolltip">9 городов</a></p>
-                                            <a href="#" class="item-card__title">Треллеборг - супер усиленные гусеницы, премиум - не Китай!</a>
-                                            <ul class="item-card__chips">
-                                                <li class="chip chip--small chip--regular">ISUZU</li>
-                                            </ul>
-                                            <p class="item-card__description">Продаём гусеничный экскаватор HYUNDAI ROBEX 220LC-9S. Год выпуска - 2025. Местонахождение - г. Краснодар. В НАЛИЧИИ !</p>
-                                        </div>
-                                        <div class="item-card__action-block">
-                                            <div class="item-card__price price-block">
-                                                <p>15 306 212 ₽</p>
-                                            </div>
-                                            <div class="item-card__buttons">
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
-                                                <button class="button button--small button--primary-alt js-open-popup" data-popup-id="popup-callback">Обратный звонок</button>
-                                                <div class="item-card__show-buttons-wrap">
-                                                    <button class="button button--small button--primary-alt item-card__show-buttons" aria-label="Дополнительные действия">
-                                                        <svg class="icon">
-                                                            <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
-                                                        </svg>
-                                                    </button>
-                                                    <div class="dropdown-backdrop">
-                                                        <ul class="dropdown-backdrop__list">
-                                                            <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-lizing">Купить в лизинг</li>
-                                                            <li class="dropdown-backdrop__option-button" data-favorite="false" data-favorite-id="3">Добавить в избранное</li>
-                                                            <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="item-card__user-actions">
-                                                <button class="button button--small button--regular" data-favorite="false" data-favorite-id="3" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#favorite"></use>
-                                                    </svg>
-                                                </button>
-                                                <button class="button button--small button--regular js-open-popup" data-popup-id="popup-report" data-tooltip-text="Пожаловаться на объявление" aria-label="Пожаловаться на объявление">
-                                                    <svg class="icon">
-                                                        <use xlink:href="img/sprites/sprite-20.svg#reportSpam"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-card__row">
-                                        <p class="item-card__time">Обновлено сегодня</p>
-                                        <ul class="crumbs">
-                                            <li class="crumbs__item crumbs__item--approve">Росткомплект ДВ</li>
-                                            <li class="crumbs__item">11 лет на площадке</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="section">
-                            <nav class="pagination">
-                                <a href="#" class="button button--small button--regular-alt current">1</a>
-                                <a href="#" class="button button--small button--regular-alt">2</a>
-                                <a href="#" class="button button--small button--regular-alt">3</a>
-                                <a href="#" class="button button--small button--regular-alt">4</a>
-                                <a href="#" class="button button--small button--regular-alt">Предыдущая</a>
-                                <a href="#" class="button button--small button--regular-alt">Следующая</a>
-                            </nav>
-                        </section>
-
-                        <section class="section">
-                            <div class="cta-help-block">
-                                <div class="cta-help-block__wrapper-text">
-                                    <p class="cta-help-block__title">Помощь в поиске от Экскаватор Ру</p>
-                                    <p class="cta-help-block__text">Найдите любую технику — бесплатно и быстро: разместите заявку на технику, и продавцы сами свяжутся с вами!</p>
-                                </div>
-                                <button class="button button--large button--primary-alt">Разместить заявку</button>
-                            </div>
-                        </section>
-
-                        <section class="section text-section">
-                            <p>В данном разделе вы можете купить запчасти для экскаваторов-погрузчиков в Краснодаре</p>
-                            <p>Если вы знаете конкретный номер (артикул) запасной части, укажите его в специальной форме поиска. В ином случае (в том числе, когда поиск по артикулу не дал результата) вы можете осуществить подбор доступных вариантов по следующим критериям: название компонента или группы компонентов, рубрика и категория, марка машины, производитель узла/запчасти.</p>
-                            <p>На сайте вы найдёте объявления от юридических и физических лиц; предложения оригинальных запчастей или их аналогов; новые или б/у (в том числе восстановленные) компоненты. Выбирайте оптимальный вариант в зависимости от доступного бюджета.</p>
-                            <p>Обращаем ваше внимание, что вся информация, опубликованная на странице предложения (включая цены на запасные части для экскаваторов-погрузчиков), носит справочный характер. Свяжитесь с продавцом, чтобы обсудить все важные для вас моменты: так вы сможете уберечь себя от непредвиденных ситуаций.</p>
-                        </section>
-
-                        <section class="linking section rounded-gray-block">
-                            <div class="linking__block ">
-                                <p class="small-title">Запчасти для экскаваторов-погрузчиков в России</p>
-                                <ul class="crumbs">
-                                    <li class="crumbs__item">
-                                        <a href="#">Москва</a>
                                     </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Санкт-Петербург</a>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Экскаваторы-погрузчики</span>
+                                        </a>
                                     </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Краснодар</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Екатеринбург</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Благовещенск</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Челябинск</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Казань</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Новосибирск</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Самара</a>
-                                    </li>
-                                    <li class="crumbs__item">
-                                        <a href="#">Красноярск</a>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">Вилочные погрузчики</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                        </section>
-
+                            <div class="column column--16">
+                                <p class="text text--l text--600">Какой бренд вам нужен?</p>
+                                <div class="field-dropdown">
+                                    <input class="field-dropdown__input" type="text" placeholder="Марка" name="brand" id="brand" autocomplete="off"/>
+                                    <label class="field-dropdown__label" for="brand">
+                                        <span class="field-dropdown__caption">Бренд</span>
+                                    </label>
+                                </div>
+                                <ul class="categories__list">
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">JCB</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">LIEBHERR</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">TEREX</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">CATERPILLAR</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">DOOSAN</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">John DEERE</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">METSO</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">VOLVO</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">BOBCAT</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">HITACHI</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">KOMATSU</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="rounded-link-card rounded-link-card--blue" href="#">
+                                            <span class="rounded-link-card__title">SANY</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="column column--16">
+                                <p class="text text--l text--600">В каком регионе вы ищете технику? <span class="asterisk">*</span></p>
+                                <div class="field-dropdown">
+                                    <input class="field-dropdown__input" type="text" placeholder="Страна" name="country" id="country" autocomplete="off" required />
+                                    <label class="field-dropdown__label" for="country">
+                                        <span class="field-dropdown__caption">Страна</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column column--16">
+                                <p class="text text--l text--600">Какое состояние техники вас интересует?</p>
+                                <div class="radio-segments">
+                                    <label class="radio-segments__item">
+                                        <input type="radio" class="radio-segments__input" name="request-condition" value="Любая" checked>
+                                        <span class="radio-segments__title">Любая</span>
+                                    </label>
+                                    <label class="radio-segments__item">
+                                        <input type="radio" class="radio-segments__input" name="request-condition" value="Б/у">
+                                        <span class="radio-segments__title">Б/у</span>
+                                    </label>
+                                    <label class="radio-segments__item">
+                                        <input type="radio" class="radio-segments__input" name="request-condition" value="Новая">
+                                        <span class="radio-segments__title">Новая</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column column--16">
+                                <p class="text text--l text--600">Сумма сделки:</p>
+                                <div class="filter__range">
+                                    <div class="field-text">
+                                        <input class="field-text__input" type="number" placeholder="Цена от, ₽" name="minPrice" id="minPrice" autocomplete="off"/>
+                                        <label class="field-text__label" for="minPrice">
+                                            <span class="field-text__caption">Цена от, ₽</span>
+                                        </label>
+                                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                                            <svg class="icon icon--16">
+                                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="field-text">
+                                        <input class="field-text__input" type="number" placeholder="Цена до, ₽" name="maxPrice" id="maxPrice" autocomplete="off"/>
+                                        <label class="field-text__label" for="maxPrice">
+                                            <span class="field-text__caption">до, ₽</span>
+                                        </label>
+                                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                                            <svg class="icon icon--16">
+                                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column column--16">
+                                <p class="text text--l text--600">Рассматриваете приобретение в лизинг?</p>
+                                <div class="radio-segments">
+                                    <label class="radio-segments__item">
+                                        <input type="radio" class="radio-segments__input" name="request-leasing" value="Да" checked>
+                                        <span class="radio-segments__title">Да</span>
+                                    </label>
+                                    <label class="radio-segments__item">
+                                        <input type="radio" class="radio-segments__input" name="request-leasing" value="Нет">
+                                        <span class="radio-segments__title">Нет</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column column--16 symbols-count">
+                                <p class="text text--l text--600">Заголовок: <span class="asterisk">*</span></p>
+                                <div class="field-text">
+                                    <input class="field-text__input" type="text" maxlength="100" placeholder="Введите заголовок заявки" name="request-title" id="request-title" autocomplete="off" required />
+                                    <label class="field-text__label" for="request-title">
+                                        <span class="field-text__caption">Введите заголовок заявки</span>
+                                    </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="row row--justify-end">
+                                    <p class="text text--s text--secondary field-symbols">Осталось 100 символов</p>
+                                </div>
+                            </div>
+                            <div class="column column--16 symbols-count">
+                                <p class="text text--l text--600">Описание: <span class="asterisk">*</span></p>
+                                <div class="field-textarea">
+                                    <textarea class="field-textarea__input" maxlength="500" placeholder="Введите описание заявки" name="request-message" id="request-message" required></textarea>
+                                    <label class="field-textarea__label" for="request-message">
+                                        <span class="field-textarea__caption">Введите описание заявки</span>
+                                    </label>
+                                    <button class="field-textarea__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="row row--justify-end">
+                                    <p class="text text--s text--secondary field-symbols">Осталось 500 символов</p>
+                                </div>
+                            </div>
+                            <div class="column column--16">
+                                <p class="text text--l text--600">Как продавцам с вами связаться?</p>
+                                <div class="field-text">
+                                    <input class="field-text__input" type="text" placeholder="Ваше имя" name="request-name" id="request-name" autocomplete="off"/>
+                                    <label class="field-text__label" for="request-name">
+                                        <span class="field-text__caption">Ваше имя</span>
+                                    </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="field-text">
+                                    <input class="field-text__input" type="email" placeholder="Email для связи" name="request-email" id="request-email" autocomplete="off"/>
+                                    <label class="field-text__label" for="request-email">
+                                        <span class="field-text__caption">Email для связи</span>
+                                    </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="field-text">
+                                    <input class="field-text__input" type="tel" placeholder="Контактный телефон" name="request-phone" id="request-phone" autocomplete="off" required />
+                                    <label class="field-text__label" for="request-phone">
+                                        <span class="field-text__caption">Контактный телефон <span class="asterisk">*</span></span>
+                                    </label>
+                                    <button class="field-text__clear" aria-label="Очистить" type="button">
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                            <div class="column column--8">
+                                <div class="field-checkbox">
+                                    <input type="checkbox" class="field-checkbox__input" id="request-subscribe">
+                                    <label class="field-checkbox__label" for="request-subscribe">
+                                        <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                                    </label>
+                                </div>
+                                <div class="field-checkbox">
+                                    <input type="checkbox" class="field-checkbox__input required-checkbox" id="request-presonal-data">
+                                    <label class="field-checkbox__label" for="request-presonal-data">
+                                        <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="button button--large button--primary form-send" disabled>Разместить заявку</button>
+                        </form>
                     </div>
-                    <aside class="sidebar">
-                        <a href="#" class="adv-banner" aria-label="Рекламный баннер">
-                            <img src="img/temp/adv-banner.jpg" alt="Рекламный баннер">
-                        </a>
-                        <div class="sidebar-block rounded-gray-block">
-                            <p class="sidebar-block__title">Новости</p>
-                            <ul class="sidebar-block-list">
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <div class="sidebar-block-list__big-img">
-                                                <img loading="lazy" src="img/temp/news-sidebar-1.jpg" alt="Как мы прожили 2025-й? Топ самых читаемых материалов Экскаватор Ру">
-                                            </div>
-                                            <p>Как мы прожили 2025-й? Топ самых читаемых материалов Экскаватор Ру</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <div class="sidebar-block-list__big-img">
-                                                <img loading="lazy" src="img/temp/news-sidebar-2.jpg" alt="Доступен для госзакупок. Новая разработка UMG — 40-тонный перегружатель">
-                                            </div>
-                                            <p>Доступен для госзакупок. Новая разработка UMG — 40-тонный перегружатель</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="sidebar-block rounded-gray-block">
-                            <p class="sidebar-block__title">Свежие заявки</p>
-                            <ul class="sidebar-block-list">
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>Купим седельные тягачи</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.01.26</li>
-                                                <li class="crumbs__item">Москва</li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>Куплю эвакуатор</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.01.26</li>
-                                                <li class="crumbs__item">Москва</li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>Купим экскаватор-погрузчик Амкодор</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.01.26</li>
-                                                <li class="crumbs__item">Красноярск</li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>Куплю кран-манипулятор</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.01.26</li>
-                                                <li class="crumbs__item">Москва</li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <a class="button button--small button--regular-alt" href="#">Все заявки</a>
-                        </div>
-                        <div class="sidebar-block rounded-gray-block">
-                            <p class="sidebar-block__title">Новости компаний</p>
-                            <ul class="sidebar-block-list">
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>FIORI бетоносмеситель с самозагрузкой - новые преимущества</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.06.2023</li>
-                                                <li class="crumbs__item">SAMTECH</li>
-                                            </ul>
-                                        </div>
-                                        <div class="sidebar-block-list__right-img">
-                                            <img loading="lazy" src="img/temp/news-1.jpg" alt="FIORI бетоносмеситель с самозагрузкой - новые преимущества">
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>Fiori & SAMTECH отмечают 15 лет на рынке России!</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.06.2023</li>
-                                                <li class="crumbs__item">SAMTECH</li>
-                                            </ul>
-                                        </div>
-                                        <div class="sidebar-block-list__right-img">
-                                            <img loading="lazy" src="img/temp/news-1.jpg" alt="Fiori & SAMTECH отмечают 15 лет на рынке России!">
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>Доставлена очередная партия запчастей Fiori</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.06.2023</li>
-                                                <li class="crumbs__item">SAMTECH</li>
-                                            </ul>
-                                        </div>
-                                        <div class="sidebar-block-list__right-img">
-                                            <img loading="lazy" src="img/temp/news-1.jpg" alt="Доставлена очередная партия запчастей Fiori">
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="sidebar-block-list__item">
-                                    <a href="#" class="sidebar-block-list__link">
-                                        <div class="sidebar-block-list__text">
-                                            <p>KOMPLET KROKODILE измельчитель ТБО в продаже - 180 тонн/час</p>
-                                            <ul class="crumbs">
-                                                <li class="crumbs__item">13.06.2023</li>
-                                                <li class="crumbs__item">SAMTECH</li>
-                                            </ul>
-                                        </div>
-                                        <div class="sidebar-block-list__right-img">
-                                            <img loading="lazy" src="img/temp/news-1.jpg" alt="KOMPLET KROKODILE измельчитель ТБО в продаже - 180 тонн/час">
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <a class="button button--small button--regular-alt" href="#">Все новости</a>
-                        </div>
-                    </aside>
                 </div>
             </div>
         </main>
 
-        <footer class="main-footer">
+        <footer class="big-footer">
             <div class="container">
-                <ul class="crumbs">
-                    <li class="crumbs__item">© Экскаватор Ру 2003—<span class="main-footer__current-year">2026</span></li>
-                    <li class="crumbs__item">
-                        <a href="#">Пользовательское соглашение</a>
-                    </li>
-                    <li class="crumbs__item">
-                        <a href="#">Политика конфиденциальности</a>
-                    </li>
-                    <li class="crumbs__item">
-                        <a href="#">Реклама на Экскаватор Ру</a>
-                    </li>
-                </ul>
-                <span class="main-footer__text">Реклама и информация на Экскаватор.Ру предназначены исключительно для российских потребителей.</span>
+                <div class="big-footer__grid">
+                    <div class="big-footer__column column column--16">
+                        <div class="column column--8">
+                            <h6 class="text text--600">Обратная связь</h6>
+                            <button class="button button--medium button--regular-alt js-open-popup" data-popup-id="popup-message" type="button">Написать в Экскаватор Ру</button>
+                            <span class="tag">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use>
+                            </svg>
+                            <a href="mailto:trade@excavate.ru" class="link link--s link--primary">trade@excavate.ru</a>
+                        </span>
+                        </div>
+                        <div class="column column--8">
+                            <h6 class="text text--600">Напишите нам в мессенджеры</h6>
+                            <div class="row row--12">
+                                <a href="https://api.whatsapp.com/send?phone=375297530155" target="_blank" class="link link--base">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                                <a href="viber://chat?number=375297530155" target="_blank" class="link link--base">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#viber"></use>
+                                    </svg>
+                                </a>
+                                <a href="https://t.me/addlist/fmV43Qy669QwNmJi" target="_blank" class="link link--base">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text text--xs text--secondary">Интернет-журнал Строительная техника и оборудование — ведущее издание о строительной технике и оборудовании в России. Реклама и информация на Экскаватор.Ру предназначены исключительно для российских потребителей.</p>
+                    </div>
+                    <div class="big-footer__column column column--16">
+                        <div class="column column--8 column--align-start">
+                            <h6 class="text text--600">Журналы</h6>
+                            <a href="#" class="link link--s link--primary">Строительная техника и оборудование</a>
+                            <a href="#" class="link link--s link--primary">Мини-техника</a>
+                            <a href="#" class="link link--s link--primary">Карьерная и горная техника</a>
+                            <a href="#" class="link link--s link--primary">Строительство и ремонт дорог</a>
+                            <a href="#" class="link link--s link--primary">Подъемная техника</a>
+                            <a href="#" class="link link--s link--primary">Складская техника</a>
+                            <a href="#" class="link link--s link--primary">Коммерческий транспорт</a>
+                        </div>
+                        <div class="column column--8 column--align-start">
+                            <a href="#" class="link link--s link--primary">Аналитика</a>
+                            <a href="#" class="link link--s link--primary">Партнерские материалы</a>
+                        </div>
+                    </div>
+                    <div class="big-footer__column column column--16">
+                        <div class="column column--8 column--align-start">
+                            <h6 class="text text--600">Покупателям</h6>
+                            <a href="#" class="link link--s link--primary">Добавить заявку на покупку</a>
+                            <a href="#" class="link link--s link--primary">Добавить заявку на аренду</a>
+                            <a href="#" class="link link--s link--primary">Добавить заявку на кредит / лизинг</a>
+                            <a href="#" class="link link--s link--primary">Добавить заявку на запчасти</a>
+                        </div>
+                        <div class="column column--8 column--align-start">
+                            <h6 class="text text--600">Продавцам</h6>
+                            <a href="#" class="link link--s link--primary">Размещение объявлений</a>
+                            <a href="#" class="link link--s link--primary">Медийная реклама</a>
+                            <a href="#" class="link link--s link--primary">Нативная рекалма</a>
+                            <a href="#" class="link link--s link--primary">Отзывы и истории успеха</a>
+                            <a href="#" class="link link--s link--primary">Онлайн-конференции</a>
+                        </div>
+                    </div>
+                    <div class="big-footer__column column column--16">
+                        <div class="column column--8 column--align-start">
+                            <h6 class="text text--600">О нас</h6>
+                            <a href="#" class="link link--s link--primary">Реклама/О проекте</a>
+                            <a href="#" class="link link--s link--primary">Пользовательское соглашение</a>
+                        </div>
+
+                        <div class="row row--12">
+                            <a href="https://vk.com/club19065351" target="_blank" class="link link--base">
+                                <svg class="icon icon--16">
+                                    <use xlink:href="img/sprites/sprite-16.svg#vk"></use>
+                                </svg>
+                            </a>
+                            <a href="https://ok.ru/exkavatorru" target="_blank" class="link link--base">
+                                <svg class="icon icon--16">
+                                    <use xlink:href="img/sprites/sprite-16.svg#ok"></use>
+                                </svg>
+                            </a>
+                            <a href="https://tgclick.com/exkavatornews" target="_blank" class="link link--base">
+                                <svg class="icon icon--16">
+                                    <use xlink:href="img/sprites/sprite-16.svg#telegram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="text text--s">© Экскаватор Ру 2003—2026</p>
+                    </div>
+                </div>
             </div>
         </footer>
         <div class="mobile-footer">
@@ -2380,83 +2178,10 @@
         </div>
     </div>
 
-    <form class="popup form-validation" id="popup-call">
+    <form class="popup form-validation" id="popup-message">
         <div class="popup__dialog">
             <div class="popup__title">
-                <span>Альтех</span>
-                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
-                    <svg class="icon icon--24">
-                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
-                    </svg>
-                </button>
-            </div>
-            <p class="popup__description">Работаем без выходных</p>
-            <div class="popup__content">
-                <div class="popup__form">
-                    <div class="field-dropdown selected">
-                        <input class="field-dropdown__input" type="text" placeholder="Город" name="city" id="city" autocomplete="off" readonly="" value="Москва" data-value="moscow">
-                        <label class="field-dropdown__label" for="city">
-                            <span class="field-dropdown__caption">Город</span>
-                        </label>
-                    </div>
-                    <button class="button button--large button--primary button--full-width">Позвонить на +7 (933) 399-59-68</button>
-                    <p class="small-text">Пожалуйста, скажите, что звоните с Экскаватор Ру</p>
-                    <button class="button button--large button--regular-alt button--full-width js-open-popup" data-popup-id="popup-callback">Заказать обратный звонок</button>
-                </div>
-            </div>
-        </div>
-    </form>
-    <form class="popup form-validation" id="popup-callback">
-        <div class="popup__dialog">
-            <div class="popup__title">
-                <span>Заказать обратный звонок</span>
-                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
-                    <svg class="icon icon--24">
-                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
-                    </svg>
-                </button>
-            </div>
-            <p class="popup__description">Оставьте номер вашего телефона, и продавец перезвонит вам.</p>
-            <div class="popup__content">
-                <div class="popup__form">
-                    <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="callback-phone" id="callback-phone" autocomplete="off" required>
-                        <label class="field-text__label" for="callback-phone">
-                            <span class="field-text__caption">Ваш телефон *</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="callback-subscribe">
-                        <label class="field-checkbox__label" for="callback-subscribe">
-                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="callback-presonal-data">
-                        <label class="field-checkbox__label" for="callback-presonal-data">
-                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                </div>
-
-            </div>
-            <div class="popup__footer">
-                <div class="button-group">
-                    <button class="button button--large button--primary button--full-width form-send" disabled>Перезвоните мне</button>
-                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
-                </div>
-            </div>
-        </div>
-    </form>
-    <form class="popup form-validation" id="popup-seller-message">
-        <div class="popup__dialog">
-            <div class="popup__title">
-                <span>Отправить сообщение продавцу</span>
+                <span>Обратная связь</span>
                 <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
                     <svg class="icon icon--24">
                         <use xlink:href="img/sprites/sprite-24.svg#close"></use>
@@ -2466,8 +2191,8 @@
             <div class="popup__content">
                 <div class="popup__form">
                     <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="seller-message-phone" id="seller-message-phone" autocomplete="off" required>
-                        <label class="field-text__label" for="seller-message-phone">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="message-phone" id="message-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="message-phone">
                             <span class="field-text__caption">Ваш телефон *</span>
                         </label>
                         <button class="field-text__clear" aria-label="Очистить" type="button">
@@ -2477,8 +2202,8 @@
                         </button>
                     </div>
                     <div class="field-text">
-                        <input class="field-text__input" type="email" placeholder="Ваш email" name="seller-message-email" id="seller-message-email" autocomplete="off">
-                        <label class="field-text__label" for="seller-message-email">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="message-email" id="message-email" autocomplete="off">
+                        <label class="field-text__label" for="message-email">
                             <span class="field-text__caption">Ваш email</span>
                         </label>
                         <button class="field-text__clear" aria-label="Очистить" type="button">
@@ -2488,235 +2213,25 @@
                         </button>
                     </div>
                     <div class="field-textarea">
-                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="seller-message-message" id="seller-message-message"></textarea>
-                        <label class="field-textarea__label" for="seller-message-message">
+                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="message-message" id="message-message"></textarea>
+                        <label class="field-textarea__label" for="message-message">
                             <span class="field-textarea__caption">Текст сообщения</span>
                         </label>
                     </div>
 
                     <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="seller-message-subscribe">
-                        <label class="field-checkbox__label" for="seller-message-subscribe">
+                        <input type="checkbox" class="field-checkbox__input" id="message-subscribe">
+                        <label class="field-checkbox__label" for="message-subscribe">
                             <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
                         </label>
                     </div>
                     <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="seller-message-presonal-data">
-                        <label class="field-checkbox__label" for="seller-message-presonal-data">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="message-presonal-data">
+                        <label class="field-checkbox__label" for="message-presonal-data">
                             <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
                         </label>
                     </div>
                 </div>
-
-            </div>
-            <div class="popup__footer">
-                <div class="button-group">
-                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
-                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
-                </div>
-            </div>
-        </div>
-    </form>
-    <form class="popup form-validation" id="popup-lizing">
-        <div class="popup__dialog">
-            <div class="popup__title">
-                <span>Оставьте заявку, и менеджеры свяжутся с вами для уточнения деталей</span>
-                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
-                    <svg class="icon icon--24">
-                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="popup__content">
-                <div class="popup__form">
-                    <div class="field-text">
-                        <input class="field-text__input" type="text" placeholder="Ваше имя *" name="lizing-name" id="lizing-name" autocomplete="off" required>
-                        <label class="field-text__label" for="lizing-name">
-                            <span class="field-text__caption">Ваше имя *</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-text">
-                        <input class="field-text__input" type="email" placeholder="Email *" name="lizing-email" id="lizing-email" autocomplete="off" required>
-                        <label class="field-text__label" for="lizing-email">
-                            <span class="field-text__caption">Email *</span>
-                        </label>
-                        <span class="field-text__error"></span>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Номер телефона *" name="lizing-phone" id="lizing-phone" autocomplete="off" required>
-                        <label class="field-text__label" for="lizing-phone">
-                            <span class="field-text__caption">Номер телефона *</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-text">
-                        <input class="field-text__input" type="text" placeholder="ИНН *" name="lizing-inn" id="lizing-inn" autocomplete="off" required>
-                        <label class="field-text__label" for="lizing-inn">
-                            <span class="field-text__caption">ИНН *</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="lizing-subscribe">
-                        <label class="field-checkbox__label" for="lizing-subscribe">
-                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="lizing-presonal-data">
-                        <label class="field-checkbox__label" for="lizing-presonal-data">
-                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                </div>
-
-            </div>
-            <div class="popup__footer">
-                <div class="button-group">
-                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
-                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
-                </div>
-            </div>
-        </div>
-    </form>
-    <form class="popup form-validation" id="popup-report">
-        <div class="popup__dialog">
-            <div class="popup__title">
-                <span>Пожаловаться на объявление</span>
-                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
-                    <svg class="icon icon--24">
-                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="popup__content">
-                <div class="popup__form">
-                    <div class="field-text">
-                        <input class="field-text__input" type="text" placeholder="Суть жалобы *" name="report-topic" id="report-topic" autocomplete="off" required>
-                        <label class="field-text__label" for="report-topic">
-                            <span class="field-text__caption">Суть жалобы *</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-text">
-                        <input class="field-text__input" type="text" placeholder="Ваше имя *" name="report-name" id="report-name" autocomplete="off" required>
-                        <label class="field-text__label" for="report-name">
-                            <span class="field-text__caption">Ваше имя *</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-text">
-                        <input class="field-text__input" type="email" placeholder="Email *" name="report-email" id="report-email" autocomplete="off" required>
-                        <label class="field-text__label" for="report-email">
-                            <span class="field-text__caption">Email *</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                        <span class="field-text__error"></span>
-                    </div>
-                    <div class="field-text">
-                        <input class="field-text__input" type="tel" placeholder="Номер телефона *" name="report-phone" id="report-phone" autocomplete="off" required>
-                        <label class="field-text__label" for="report-phone">
-                            <span class="field-text__caption">Номер телефона *</span>
-                        </label>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="report-subscribe">
-                        <label class="field-checkbox__label" for="report-subscribe">
-                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="report-presonal-data">
-                        <label class="field-checkbox__label" for="report-presonal-data">
-                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                </div>
-
-            </div>
-            <div class="popup__footer">
-                <div class="button-group">
-                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
-                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
-                </div>
-            </div>
-        </div>
-    </form>
-    <form class="popup form-validation" id="popup-save-search">
-        <div class="popup__dialog">
-            <div class="popup__title">
-                <span>Сохранение поиска</span>
-                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
-                    <svg class="icon icon--24">
-                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
-                    </svg>
-                </button>
-            </div>
-            <p class="popup__description">Хотите ежедневно получать на email подборку новых объявлений из этой выборки?</p>
-            <div class="popup__content">
-                <div class="popup__form">
-                    <div class="field-text">
-                        <input class="field-text__input" type="email" placeholder="Ваш email" name="save-search-email" id="save-search-email" autocomplete="off" required>
-                        <label class="field-text__label" for="save-search-email">
-                            <span class="field-text__caption">Ваш email *</span>
-                        </label>
-                        <span class="field-text__error"></span>
-                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                            <svg class="icon icon--16">
-                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                            </svg>
-                        </button>
-                    </div>
-
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input" id="save-search-subscribe">
-                        <label class="field-checkbox__label" for="save-search-subscribe">
-                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                    <div class="field-checkbox">
-                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="save-search-presonal-data">
-                        <label class="field-checkbox__label" for="save-search-presonal-data">
-                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
-                        </label>
-                    </div>
-                </div>
-
             </div>
             <div class="popup__footer">
                 <div class="button-group">
@@ -2727,8 +2242,10 @@
         </div>
     </form>
 
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="js/trade.js"></script>
 </body>
 </html>

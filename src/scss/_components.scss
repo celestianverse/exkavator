@@ -9,6 +9,7 @@
 @import 'components/sections/linking';
 @import 'components/sections/results';
 @import 'components/sections/detail-page';
+@import 'components/sections/request';
 
 .scroll {
     overflow: auto;
@@ -938,6 +939,10 @@
     padding-bottom: 80px;
     text-align: center;
     color: var(--text-secondary);
+}
+
+.asterisk {
+    color: var(--red-400);
 }
 
 .mb {

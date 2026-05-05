@@ -284,6 +284,16 @@
     text-overflow: ellipsis;
   }
 
+  &__clear {
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    top: 24px;
+    right: 8px;
+    margin-top: -8px;
+    color: var(--text-base);
+  }
+
   &__input {
     position: absolute;
     left: 8px;
@@ -297,7 +307,6 @@
     outline: 0;
     resize: none;
     @include text-size('base');
-
 
     &::placeholder {
       color: transparent;
@@ -315,6 +324,11 @@
     // label при заполненном input
     &:not(:placeholder-shown) + .field-textarea__label {
       background-color: var(--primary-50);
+
+      & + .field-textarea__clear {
+        pointer-events: auto;
+        opacity: 1;
+      }
     }
 
     &:disabled + .field-textarea__label {

@@ -1,0 +1,42 @@
+.radio-segments {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background: var(--neutral-60);
+    border-radius: 8px;
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-grow: 1;
+        cursor: pointer;
+    }
+    &__input {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: -100px;
+        left: -99999px;
+
+        &:checked {
+            & + .radio-segments__title {
+                background: #fff;
+            }
+        }
+    }
+    &__title {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 12px;
+        @include transition;
+
+        &:hover {
+            background: var(--neutral-100);
+        }
+    }
+}

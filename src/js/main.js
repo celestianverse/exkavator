@@ -67,7 +67,7 @@ const dropdownConfigs = [
         id: 'type',
         hasSearch: true,
         options: [
-            { name: 'все типы', value: '' },
+            { name: 'Все типы', value: '' },
             { name: 'Раздел тип технки 1', isTitle: true },
             { name: 'Тягачи седельные', value: 'tyagachi' },
             { name: 'Прицепы-тяжеловозы', value: 'pritsepy' },
@@ -85,7 +85,7 @@ const dropdownConfigs = [
         id: 'brand',
         hasSearch: true,
         options: [
-            { name: 'все марки', value: '' },
+            { name: 'Все марки', value: '' },
             { name: 'Землеройная техника', isTitle: true },
             { name: 'Грейдеры', value: 'graders' },
             { name: 'Земснаряды', value: 'zemsnarjady' },
@@ -215,7 +215,7 @@ const dropdownConfigs = [
         id: 'topic',
         hasSearch: true,
         options: [
-            { name: 'все рубрики', value: '' },
+            { name: 'Все рубрики', value: '' },
             { name: 'Рубрика 1', value: 'topic1' },
             { name: 'Рубрика 2', value: 'topic2' },
             { name: 'Рубрика 3', value: 'topic3' },
@@ -226,7 +226,7 @@ const dropdownConfigs = [
         id: 'category',
         hasSearch: true,
         options: [
-            { name: 'все категории', value: '' },
+            { name: 'Все категории', value: '' },
             { name: 'Категория 1', value: 'category1' },
             { name: 'Категория 2', value: 'category2' },
             { name: 'Категория 3', value: 'category3' },
@@ -237,11 +237,26 @@ const dropdownConfigs = [
         id: 'manufacture',
         hasSearch: true,
         options: [
-            { name: 'все производители', value: '' },
+            { name: 'Все производители', value: '' },
             { name: 'Производитель 1', value: 'man1' },
             { name: 'Производитель 2', value: 'man2' },
             { name: 'Производитель 3', value: 'man3' },
             { name: 'Производитель 5', value: 'man4' },
+        ]
+    },
+    {
+        id: 'country',
+        hasSearch: true,
+        options: [
+            { name: 'Все страны', value: '' },
+            { name: 'Россия', value: 'RU' },
+            { name: 'Беларусь', value: 'BY' },
+            { name: 'Казахстан', value: 'KZ' },
+            { name: 'Армения', value: 'AM' },
+            { name: 'Азербайджан', value: 'AZ' },
+            { name: 'Киргизия', value: 'KG' },
+            { name: 'Таджикистан', value: 'TJ' },
+            { name: 'Узбекистан', value: 'UZ' },
         ]
     },
 ];
@@ -689,7 +704,12 @@ const clearHandler = (clearButton) => {
         input.value = '';
     });
 
-    // 2. Очищаем dropdown'ы
+    // 2. Очищаем обычные textarea
+    filter.querySelectorAll('.field-textarea__input').forEach(input => {
+        input.value = '';
+    });
+
+    // 3. Очищаем dropdown'ы
     filter.querySelectorAll('.field-dropdown').forEach(container => {
         const input = container.querySelector('.field-dropdown__input');
         if (!input) return;
@@ -709,12 +729,12 @@ const clearHandler = (clearButton) => {
         resetDropdownSearch(container);
     });
 
-    // 3. Чекбоксы
+    // 4. Чекбоксы
     filter.querySelectorAll('.field-checkbox__input').forEach(cb => {
         cb.checked = false;
     });
 
-    // 4. Специальная логика для model (зависимость от brand)
+    // 5. Специальная логика для model (зависимость от brand)
     const modelContainer = filter.querySelector('#model')?.closest('.field-dropdown');
     const modelInput = filter.querySelector('#model');
 
@@ -723,7 +743,7 @@ const clearHandler = (clearButton) => {
         modelInput.disabled = true;
     }
 
-    // 5. Триггерим обновление состояния filter--filled
+    // 6. Триггерим обновление состояния filter--filled
     filter.dispatchEvent(new Event('input', { bubbles: true }));
     filter.dispatchEvent(new Event('change', { bubbles: true }));
 };
@@ -834,4 +854,37 @@ document.querySelectorAll('.evaluate').forEach(row => {
             }
         });
     });
+});
+
+// Подсчёт количества символов
+
+const blocks = document.querySelectorAll('.symbols-count');
+
+blocks.forEach(block => {
+    const field = block.querySelector('input[maxlength], textarea[maxlength]');
+    const counter = block.querySelector('.field-symbols');
+
+    if (!field || !counter) return;
+
+    const maxLength = parseInt(field.getAttribute('maxlength'), 10);
+
+    function updateCounter() {
+        const currentLength = field.value.length;
+        const remaining = Math.max(0, maxLength - currentLength);
+
+        counter.textContent = `Осталось ${remaining} символов`;
+    }
+
+    field.addEventListener('input', updateCounter);
+
+    // если есть кнопка очистки — учитываем её
+    const clearBtn = block.querySelector('.field-text__clear');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            field.value = '';
+            updateCounter();
+        });
+    }
+
+    updateCounter();
 });
