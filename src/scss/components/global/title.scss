@@ -71,4 +71,11 @@
     &--500 {
         font-weight: 500;
     }
+
+    &--green {
+        color: var(--green-500);
+    }
+    &--disabled {
+        color: var(--text-disabled);
+    }
 }

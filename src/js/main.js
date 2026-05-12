@@ -11,10 +11,44 @@ function debounce(fn, delay) {
 
 const dropdownConfigs = [
     {
+        id: 'year',
+        hasSearch: false,
+        options: [
+            { name: 'Любой', value: 'all' },
+            { name: '2026', value: '2026' },
+            { name: '2025', value: '2025' },
+            { name: '2024', value: '2024' },
+            { name: '2023', value: '2023' },
+            { name: '2022', value: '2022' },
+            { name: '2021', value: '2021' },
+            { name: '2020', value: '2020' },
+            { name: '2019', value: '2019' },
+            { name: '2018', value: '2018' },
+            { name: '2017', value: '2017' },
+            { name: '2016', value: '2016' },
+            { name: '2015', value: '2015' },
+            { name: '2014', value: '2014' },
+            { name: '2013', value: '2013' },
+            { name: '2012', value: '2012' },
+            { name: '2011', value: '2011' },
+            { name: '2010', value: '2010' },
+            { name: '2009', value: '2009' },
+            { name: '2008', value: '2008' },
+            { name: '2007', value: '2007' },
+            { name: '2006', value: '2006' },
+            { name: '2005', value: '2005' },
+            { name: '2004', value: '2004' },
+            { name: '2003', value: '2003' },
+            { name: '2002', value: '2002' },
+            { name: '2001', value: '2001' },
+            { name: '2000', value: '2000' },
+        ]
+    },
+    {
         id: 'city',
         hasSearch: true,
         options: [
-            { name: 'Любой', value: '' },
+            { name: 'Любой', value: 'all' },
             { name: 'Астрахань', value: 'Astrakhan' },
             { name: 'Архангельск', value: 'Arkhangelsk' },
             { name: 'Барнаул', value: 'Barnaul' },
@@ -64,28 +98,38 @@ const dropdownConfigs = [
         ]
     },
     {
+        id: 'currency',
+        hasSearch: false,
+        options: [
+            { name: '₽', value: 'rub' },
+            { name: '$', value: 'usd' },
+            { name: '€', value: 'eur' },
+            { name: '¥', value: 'cny' },
+        ]
+    },
+    {
         id: 'type',
         hasSearch: true,
         options: [
             { name: 'Все типы', value: '' },
             { name: 'Раздел тип технки 1', isTitle: true },
-            { name: 'Тягачи седельные', value: 'tyagachi' },
-            { name: 'Прицепы-тяжеловозы', value: 'pritsepy' },
-            { name: 'Терминальные тягачи', value: 'terminal-tyagachi' },
-            { name: 'Экскаваторы гусеничные', value: 'excavator-gus' },
+            { name: 'Гусеничные экскаваторы', value: '1' },
+            { name: 'Колесные экскаваторы', value: '2' },
+            { name: 'Мини-погрузчики', value: '3' },
+            { name: 'Бульдозеры', value: '4' },
             { name: 'Раздел тип технки 2', isTitle: true },
-            { name: 'Натяжные машины', value: 'natyazhnye' },
-            { name: 'Тип техники 22', value: 'tt22' },
-            { name: 'Тип техники 23', value: 'tt23' },
-            { name: 'Тип техники 24', value: 'tt34' },
-            { name: 'Тип техники 25', value: 'tt222' },
+            { name: 'Автокраны', value: '5' },
+            { name: 'Мини-экскаваторы', value: '6' },
+            { name: 'Экскаваторы-погрузчики', value: '7' },
+            { name: 'Вилочные автопогрузчики', value: '8' },
+            { name: 'Вилочные погрузчики', value: '9' },
         ]
     },
     {
         id: 'brand',
         hasSearch: true,
         options: [
-            { name: 'Все марки', value: '' },
+            { name: 'Все производители', value: '' },
             { name: 'Землеройная техника', isTitle: true },
             { name: 'Грейдеры', value: 'graders' },
             { name: 'Земснаряды', value: 'zemsnarjady' },
@@ -100,20 +144,22 @@ const dropdownConfigs = [
         id: 'model',
         hasSearch: true,
         options: [
-            { name: 'все модели', value: '' },
-            { name: 'модель 2', value: 'model-2' },
-            { name: 'модель 3', value: 'model-3' },
-            { name: 'модель 4', value: 'model-4' },
-            { name: 'модель 6', value: 'model-5' },
-            { name: 'модель 7', value: 'model-6' },
-            { name: 'модель 8', value: 'model-7' },
+            { name: 'Все модели', value: '' },
+            { name: 'Модель 1', value: 'model-1' },
+            { name: 'Модель 2', value: 'model-2' },
+            { name: 'Модель 3', value: 'model-3' },
+            { name: 'Модель 4', value: 'model-4' },
+            { name: 'Модель 5', value: 'model-5' },
+            { name: 'Модель 6', value: 'model-6' },
+            { name: 'Модель 7', value: 'model-7' },
+            { name: 'Модель 8', value: 'model-8' },
         ]
     },
     {
         id: 'wear',
         hasSearch: false,
         options: [
-            { name: 'Любые', value: '' },
+            { name: 'Любые', value: 'all' },
             { name: 'Новые', value: 'new' },
             { name: 'Б/У', value: 'used' },
         ]
@@ -122,7 +168,7 @@ const dropdownConfigs = [
         id: 'availability',
         hasSearch: false,
         options: [
-            { name: 'Любые', value: '' },
+            { name: 'Любые', value: 'all' },
             { name: 'Доступные', value: 'available' },
             { name: 'Недоступные', value: 'not-available' },
         ]
@@ -131,7 +177,7 @@ const dropdownConfigs = [
         id: 'weight-from',
         hasSearch: false,
         options: [
-            { name: 'Любая', value: 'weight-from-all' },
+            { name: 'Любая', value: 'all' },
             { name: '0', value: 'weight-from-0' },
             { name: '1', value: 'weight-from-1' },
             { name: '2', value: 'weight-from-2' },
@@ -143,7 +189,7 @@ const dropdownConfigs = [
         id: 'weight-to',
         hasSearch: false,
         options: [
-            { name: 'Любая', value: 'weight-to-all' },
+            { name: 'Любая', value: 'all' },
             { name: '1', value: 'weight-to-1' },
             { name: '2', value: 'weight-to-2' },
             { name: '3', value: 'weight-to-3' },
@@ -155,7 +201,7 @@ const dropdownConfigs = [
         id: 'volume-from',
         hasSearch: false,
         options: [
-            { name: 'Любой', value: 'volume-from-all' },
+            { name: 'Любой', value: 'all' },
             { name: '0', value: 'volume-from-0' },
             { name: '1', value: 'volume-from-1' },
             { name: '2', value: 'volume-from-2' },
@@ -167,7 +213,7 @@ const dropdownConfigs = [
         id: 'volume-to',
         hasSearch: false,
         options: [
-            { name: 'Любой', value: 'volume-to-all' },
+            { name: 'Любой', value: 'all' },
             { name: '1', value: 'volume-to-1' },
             { name: '2', value: 'volume-to-2' },
             { name: '3', value: 'volume-to-3' },
@@ -179,7 +225,7 @@ const dropdownConfigs = [
         id: 'attachments',
         hasSearch: false,
         options: [
-            { name: 'Любое', value: 'attachments-all' },
+            { name: 'Любое', value: 'all' },
             { name: 'Ковш', value: 'bucket' },
             { name: 'Гидромолот', value: 'hydraulic-breaker' },
             { name: 'Грейфер', value: 'grapple' },
@@ -190,7 +236,7 @@ const dropdownConfigs = [
         id: 'company-specialization',
         hasSearch: false,
         options: [
-            { name: 'Поставщики спецтехники', value: 'company-all' },
+            { name: 'Поставщики спецтехники', value: 'all' },
             { name: 'Поставщики запчастей и комплектующих', value: 'company-equipment-suppliers' },
             { name: 'Арендные компании', value: 'company-rental' },
             { name: 'Земляные работы', value: 'company-earthworks' },
@@ -206,7 +252,7 @@ const dropdownConfigs = [
         id: 'landlord',
         hasSearch: false,
         options: [
-            { name: 'Все арендодатели', value: '' },
+            { name: 'Все арендодатели', value: 'all' },
             { name: 'Организации', value: 'organization' },
             { name: 'Частные лица', value: 'personal' },
         ]
@@ -215,7 +261,7 @@ const dropdownConfigs = [
         id: 'topic',
         hasSearch: true,
         options: [
-            { name: 'Все рубрики', value: '' },
+            { name: 'Все рубрики', value: 'all' },
             { name: 'Рубрика 1', value: 'topic1' },
             { name: 'Рубрика 2', value: 'topic2' },
             { name: 'Рубрика 3', value: 'topic3' },
@@ -226,7 +272,7 @@ const dropdownConfigs = [
         id: 'category',
         hasSearch: true,
         options: [
-            { name: 'Все категории', value: '' },
+            { name: 'Все категории', value: 'all' },
             { name: 'Категория 1', value: 'category1' },
             { name: 'Категория 2', value: 'category2' },
             { name: 'Категория 3', value: 'category3' },
@@ -237,7 +283,7 @@ const dropdownConfigs = [
         id: 'manufacture',
         hasSearch: true,
         options: [
-            { name: 'Все производители', value: '' },
+            { name: 'Все производители', value: 'all' },
             { name: 'Производитель 1', value: 'man1' },
             { name: 'Производитель 2', value: 'man2' },
             { name: 'Производитель 3', value: 'man3' },
@@ -248,7 +294,7 @@ const dropdownConfigs = [
         id: 'country',
         hasSearch: true,
         options: [
-            { name: 'Все страны', value: '' },
+            { name: 'Все страны', value: 'all' },
             { name: 'Россия', value: 'RU' },
             { name: 'Беларусь', value: 'BY' },
             { name: 'Казахстан', value: 'KZ' },
@@ -887,4 +933,237 @@ blocks.forEach(block => {
     }
 
     updateCounter();
+});
+
+
+
+// Размещение объявления
+
+const offerForm = document.querySelector('#offer-form');
+
+if (offerForm) {
+
+    function setActiveButton(buttons, activeValue) {
+        buttons.forEach((btn) => {
+            const isActive = btn.dataset.value === activeValue;
+
+            btn.classList.toggle('button--primary-alt', isActive);
+            btn.classList.toggle('button--regular', !isActive);
+        });
+    }
+
+    function updateOperatingHoursState() {
+        const operatingType = document.querySelector('#operating-type');
+        const operatingHours = document.querySelector('#operating-hours');
+
+        if (!operatingType || !operatingHours) return;
+
+        const shouldDisable =
+            operatingType.value === 'is_new' ||
+            operatingType.value === 'dont_know';
+
+        operatingHours.disabled = shouldDisable;
+
+        if (shouldDisable) {
+            operatingHours.value = '';
+
+            operatingHours.dispatchEvent(new Event('input', { bubbles: true }));
+            operatingHours.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+    }
+
+    function selectDropdownOption(input, value) {
+        const container = input.closest('.field-dropdown');
+        if (!container) return;
+
+        const option = container.querySelector(
+            '.dropdown-backdrop__option[data-value="' + value + '"]'
+        );
+
+        if (!option) return;
+
+        container
+            .querySelector('.dropdown-backdrop__option.selected')
+            ?.classList.remove('selected');
+
+        option.classList.add('selected');
+
+        input.value = option.textContent.trim();
+        input.dataset.value = value;
+
+        container.classList.add('selected');
+
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    document.querySelectorAll('.offer-form__item').forEach((item) => {
+
+        const input = item.querySelector('input');
+        const textarea = item.querySelector('.field-textarea__input');
+        const buttons = item.querySelectorAll('button[data-value]');
+        const descriptionButtons = item.querySelectorAll('button[data-description]');
+        const clearBtn = item.querySelector('.field-textarea__clear');
+
+        if (input && buttons.length) {
+            buttons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const value = button.dataset.value;
+
+                    if (input.classList.contains('field-text__input')) {
+                        input.value = value;
+                        updateOperatingHoursState();
+                        input.dispatchEvent(new Event('input', { bubbles: true }));
+                        input.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+
+                    if (input.classList.contains('field-dropdown__input')) {
+                        selectDropdownOption(input, value);
+                    }
+
+                    setActiveButton(buttons, value);
+                });
+            });
+
+            if (input.classList.contains('field-text__input')) {
+                input.addEventListener('input', () => {
+                    setActiveButton(buttons, input.value);
+                });
+            }
+
+            if (input.classList.contains('field-dropdown__input')) {
+                input.addEventListener('change', () => {
+                    setActiveButton(buttons, input.dataset.value);
+                });
+            }
+        }
+
+        if (textarea && descriptionButtons.length) {
+            descriptionButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+
+                    const text = button.dataset.description;
+                    const isActive = button.classList.contains('button--primary-alt');
+
+                    button.classList.toggle('button--primary-alt');
+                    button.classList.toggle('button--regular');
+
+                    if (!isActive) {
+                        if (!textarea.value.includes(text)) {
+                            textarea.value = (textarea.value + ' ' + text).trim();
+                        }
+                    } else {
+                        textarea.value = textarea.value
+                            .replace(text, '')
+                            .replace(/\s{2,}/g, ' ')
+                            .trim();
+                    }
+
+                    textarea.dispatchEvent(new Event('input', { bubbles: true }));
+                    textarea.dispatchEvent(new Event('change', { bubbles: true }));
+                });
+            });
+
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+
+                    descriptionButtons.forEach((btn) => {
+                        btn.classList.remove('button--primary-alt');
+                        btn.classList.add('button--regular');
+                    });
+
+                });
+            }
+        }
+    });
+}
+
+if (offerForm) {
+    const completionItems = document.querySelectorAll('.offer-completion__item');
+    const progressNumber = document.querySelector('.progress-circle__number');
+    const progressCircle = document.querySelector('.progress-circle__progress');
+
+    const circleLength = 226.195;
+
+    function isInputFilled(input) {
+        if (!input) return false;
+
+        if (input.tagName === 'TEXTAREA') {
+            return input.value.trim() !== '';
+        }
+
+        if (input.classList.contains('field-dropdown__input')) {
+            return !!input.dataset.value;
+        }
+
+        return input.value.trim() !== '';
+    }
+
+    function updateCompletion() {
+        let activeCount = 0;
+
+        completionItems.forEach((item) => {
+            const inputId = item.dataset.input;
+
+            if (!inputId) return;
+
+            const input = document.querySelector('#' + inputId);
+
+            const isFilled = isInputFilled(input);
+
+            item.classList.toggle('offer-completion__item--active', isFilled);
+
+            if (isFilled) {
+                activeCount++;
+            }
+        });
+
+        const total = completionItems.length;
+        const percent = Math.round((activeCount / total) * 100);
+
+        if (progressNumber) {
+            progressNumber.textContent = percent + '%';
+        }
+
+        if (progressCircle) {
+            const offset = circleLength - (circleLength * percent / 100);
+
+            progressCircle.style.strokeDashoffset = offset;
+        }
+    }
+
+    offerForm.querySelectorAll('input, textarea, select').forEach((field) => {
+        field.addEventListener('input', updateCompletion);
+        field.addEventListener('change', updateCompletion);
+    });
+
+    updateCompletion();
+}
+
+document.querySelectorAll('.field-text__input').forEach((input) => {
+    input.addEventListener('input', () => {
+        console.log(input.value);
+    });
+
+    input.addEventListener('change', () => {
+        console.log(input.value);
+    });
+});
+document.querySelectorAll('.field-dropdown__input').forEach((input) => {
+    input.addEventListener('input', () => {
+        console.log(input.value);
+    });
+
+    input.addEventListener('change', () => {
+        console.log(input.value);
+    });
+});
+document.querySelectorAll('.field-textarea__input').forEach((input) => {
+    input.addEventListener('input', () => {
+        console.log(input.value);
+    });
+
+    input.addEventListener('change', () => {
+        console.log(input.value);
+    });
 });

@@ -1,6 +1,12 @@
 .text.text.text {
     font-size: inherit;
 
+    a {
+        &:hover {
+            color: var(--red-400);
+        }
+    }
+
     &--xl {
         line-height: 24px;
         font-size: 18px;
@@ -74,11 +80,6 @@
                 &:last-child {
                     margin-bottom: 0;
                 }
-            }
-        }
-        a {
-            &:hover {
-                color: var(--red-400);
             }
         }
         blockquote {

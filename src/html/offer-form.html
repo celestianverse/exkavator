@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Размещение объявления — Экскаватор Ру</title>
+    <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="page">
+        <main class="body">
+            <form id="offer-form" class="offer-form form-validation">
+                <div class="offer-form__header">
+                    <div class="container">
+                        <h1 class="title title--xl">Размещение объявления</h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="layout">
+                        <div class="content">
+                            <div class="offer-form__content">
+                                <div class="offer-form__item">
+                                    <h3 class="title title--s">Что вы хотите продать или сдать в аренду?</h3>
+                                    <div class="row row--8">
+                                        <button class="button button--large button--primary-alt" type="button" data-value="trade">Продать спецтехнику</button>
+                                        <button class="button button--large button--regular" type="button" data-value="rent">Сдать спецтехнику в аренду</button>
+                                        <button class="button button--large button--regular" type="button" data-value="sell">Продать запчасти</button>
+                                    </div>
+                                    <input type="hidden" id="offer-type" value="trade" class="field-text__input">
+                                </div>
+                                <div class="offer-form__item">
+                                    <h3 class="title title--s">Какой тип техники вы хотите продать? <span class="asterisk">*</span></h3>
+                                    <div class="row row--8">
+                                        <button class="button button--large button--regular" type="button" data-value="1">Гусеничные экскаваторы</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2">Колесные экскаваторы</button>
+                                        <button class="button button--large button--regular" type="button" data-value="3">Мини-погрузчики</button>
+                                        <button class="button button--large button--regular" type="button" data-value="4">Бульдозеры</button>
+                                        <button class="button button--large button--regular" type="button" data-value="5">Автокраны</button>
+                                        <button class="button button--large button--regular" type="button" data-value="6">Мини-экскаваторы</button>
+                                        <button class="button button--large button--regular" type="button" data-value="7">Экскаваторы-погрузчики</button>
+                                        <button class="button button--large button--regular" type="button" data-value="8">Вилочные автопогрузчики</button>
+                                        <button class="button button--large button--regular" type="button" data-value="8">Вилочные погрузчики</button>
+                                    </div>
+                                    <div class="field-dropdown field--nocaption">
+                                        <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off" required/>
+                                        <label class="field-dropdown__label" for="type">
+                                            <span class="field-dropdown__caption">Тип техники</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="offer-form__item">
+                                    <h3 class="title title--s">Производитель</h3>
+                                    <div class="field-dropdown field--nocaption">
+                                        <input class="field-dropdown__input" type="text" placeholder="Производитель" name="brand" id="brand" autocomplete="off"/>
+                                        <label class="field-dropdown__label" for="brand">
+                                            <span class="field-dropdown__caption">Производитель</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="offer-form__item">
+                                    <h3 class="title title--s">Модель</h3>
+                                    <div class="field-dropdown field--nocaption">
+                                        <input class="field-dropdown__input" type="text" placeholder="Модель" name="model" id="model" autocomplete="off"/>
+                                        <label class="field-dropdown__label" for="model">
+                                            <span class="field-dropdown__caption">Модель</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="offer-form__item">
+                                    <h3 class="title title--s">Год выпуска</h3>
+                                    <div class="row row--8">
+                                        <button class="button button--large button--regular" type="button" data-value="2026">2026</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2025">2025</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2024">2024</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2023">2023</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2022">2022</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2021">2021</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2020">2020</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2019">2019</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2018">2018</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2017">2017</button>
+                                        <button class="button button--large button--regular" type="button" data-value="2016">2016</button>
+                                    </div>
+                                    <div  class="field-dropdown field--nocaption">
+                                        <input class="field-dropdown__input" type="text" placeholder="Выберите год" name="year" id="year" autocomplete="off"/>
+                                        <label class="field-dropdown__label" for="year">
+                                            <span class="field-dropdown__caption">Выберите год</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="offer-form__item">
+                                    <h3 class="title title--s">Сколько моточасов наработки двигателя? <span class="asterisk">*</span></h3>
+                                    <div class="row row--8">
+                                        <button class="button button--large button--regular" type="button" data-value="is_new">Новая техника (без наработки)</button>
+                                        <button class="button button--large button--regular" type="button" data-value="dont_know">Б/у техника (наработка неизвестна)</button>
+                                        <button class="button button--large button--regular" type="button" data-value="is_know">Б/у техника (наработка известна)</button>
+                                    </div>
+                                    <input type="hidden" id="operating-type" class="field-text__input" required>
+                                    <div  class="field-text field--nocaption">
+                                        <input class="field-text__input" type="number" placeholder="Введите количество часов наработки, например, 2500" name="operating-hours" id="operating-hours" autocomplete="off" />
+                                        <label class="field-text__label" for="operating-hours">
+                                            <span class="field-text__caption">Введите количество часов наработки, например, 2500</span>
+                                        </label>
+                                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                                            <svg class="icon icon--16">
+                                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="offer-form__item">
+                                    <h3 class="title title--s">В каком регионе находится техника? <span class="asterisk">*</span></h3>
+                                    <div class="row row--16">
+                                        <div  class="field-text field--nocaption">
+                                            <input class="field-text__input" type="text" value="Москва, Московская область, Россия" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off" required/>
+                                            <label class="field-text__label" for="place">
+                                                <span class="field-text__caption">Регион, город, населенный пункт</span>
+                                            </label>
+                                            <button class="field-text__clear" aria-label="Очистить" type="button">
+                                                <svg class="icon icon--16">
+                                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="text">Взято из <a href="#">регистрационных данных</a>.</p>
+                                    </div>
+                                    <button type="button" class="link link--primary">Добавить еще один город</button>
+                                    <div class="row row--16">
+                                        <button class="button button--large button--regular-alt" type="button">Сохранить города как шаблон</button>
+                                        <button class="button button--large button--regular-alt" type="button">Загрузить города из шаблона</button>
+                                    </div>
+                                </div>
+                                <div class="offer-form__item">
+                                    <div class="row row--16">
+                                        <h3 class="title title--s">Укажите стоимость</h3>
+                                        <span class="chip chip--medium chip--green" data-tooltip-text="Объявления с ценой набирают в 2 раза больше просмотров">×2 просмотров!</span>
+                                    </div>
+                                    <p class="text">Объявления, в которых указана стоимость, получают больше внимания посетителей нашего сайта. Если цена не указана, то в объявлении будет автоматически указана стоимость «По запросу».</p>
+                                    <div class="row row--8">
+                                        <div  class="field-text field--nocaption">
+                                            <input class="field-text__input" type="number" placeholder="Например, 10 000 000" name="offer-price" id="offer-price" autocomplete="off"/>
+                                            <label class="field-text__label" for="offer-price">
+                                                <span class="field-text__caption">Например, 10 000 000</span>
+                                            </label>
+                                            <button class="field-text__clear" aria-label="Очистить" type="button">
+                                                <svg class="icon icon--16">
+                                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="field-dropdown field--nocaption selected offer-form__currency">
+                                            <input class="field-dropdown__input" type="text" value="₽" data-value="rub" placeholder="Выберите валюту" name="currency" id="currency" autocomplete="off"/>
+                                            <label class="field-dropdown__label" for="currency">
+                                                <span class="field-dropdown__caption">Выберите валюту</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="offer-form__item">
+                                    <h3 class="title title--s">Расскажите подробнее о вашей технике</h3>
+                                    <div class="row row--8">
+                                        <button class="button button--large button--regular" type="button" data-description="В хорошем состоянии.">В хорошем состоянии</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Двигатель без нареканий.">Двигатель без нареканий</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Цена с НДС.">Цена с НДС</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Цена без НДС.">Цена без НДС</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Под заказ.">Под заказ</button>
+                                        <button class="button button--large button--regular" type="button" data-description="В наличии.">В наличии</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Помогу с доставкой.">Помогу с доставкой</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Бесплатная доставка.">Бесплатная доставка</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Не требует вложений.">Не требует вложений</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Обслуживалась у оф. дилера.">Обслуживалась у оф. дилера</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Готова к эксплуатации.">Готова к эксплуатации</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Возможна продажа в лизинг.">Возможна продажа в лизинг</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Рассрочка платежа.">Рассрочка платежа</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Гарантия 12 месяцев.">Гарантия 12 месяцев</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Заводская гарантия.">Заводская гарантия</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Склад запасных частей.">Склад запасных частей</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Сервисная горячая линия.">Сервисная горячая линия</button>
+                                        <button class="button button--large button--regular" type="button" data-description="Бесплатное обучение.">Бесплатное обучение</button>
+                                    </div>
+                                    <div class="row row--8">
+                                        <button class="button button--small button--regular-alt" type="button">
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-16.svg#formatBold"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="button button--small button--regular-alt" type="button">
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-16.svg#formatItalic"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="button button--small button--regular-alt" type="button">
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-16.svg#formatCrossing"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="button button--small button--regular-alt" type="button">
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-16.svg#formatUl"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="button button--small button--regular-alt" type="button">
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-16.svg#formatOl"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="column column--16 symbols-count">
+                                        <div class="field-textarea field--nocaption">
+                                            <textarea class="field-textarea__input" maxlength="6000" rows="10" placeholder="Введите описание заявки" name="request-message" id="request-message" required=""></textarea>
+                                            <label class="field-textarea__label" for="request-message">
+                                                <span class="field-textarea__caption">Введите описание объявления</span>
+                                            </label>
+                                            <button class="field-textarea__clear" aria-label="Очистить" type="button">
+                                                <svg class="icon icon--16">
+                                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="row row--justify-end">
+                                            <p class="text text--s text--secondary field-symbols">Осталось 6000 символов</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="offer-form__item">
+                                    <div class="row row--16">
+                                        <h3 class="title title--s">Загрузите фотографии</h3>
+                                        <span class="chip chip--medium chip--green" data-tooltip-text="Объявления с фотографиями набирают в 2 раза больше просмотров">×2 просмотров!</span>
+                                    </div>
+                                    <p class="text">Фотографии в форматах JPG, PNG или GIF размером не более 10 Мбайт каждая. Первое по порядку изображение — главное. (Суммарный объем всех фотоматериалов не должен превышать 50 мб)</p>
+                                    <p class="text">На фотографии должна быть изображена техника той марки и модели (либо тот вид запчастей),которая рекламируется в объявлении. Не допускается размещение вместо фотографии логотипа компании.</p>
+                                </div>
+                                <div class="button-group button-group--gap-16 button-group--mobile-column">
+                                    <a class="button button--large button--regular button--full-width" href="#">Отменить</a>
+                                    <button class="button button--large button--primary button--full-width form-send" type="button" disabled>Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="sidebar">
+                            <div class="offer-completion">
+                                <p class="text text--l text--600">Ваше объявление заполнено на</p>
+                                <div class="progress-circle offer-completion__progress">
+                                    <svg
+                                        width="80"
+                                        height="80"
+                                        viewBox="0 0 80 80"
+                                        class="progress-circle__track"
+                                    >
+                                        <circle
+                                            cx="40"
+                                            cy="40"
+                                            r="36"
+                                            stroke-width="8"
+                                            fill="none"
+                                            class="progress-circle__background"
+                                        />
+                                        <circle
+                                            cx="40"
+                                            cy="40"
+                                            r="36"
+                                            stroke-width="8"
+                                            fill="none"
+                                            stroke-dasharray="226.195"
+                                            stroke-dashoffset="226.195"
+                                            stroke-linecap="round"
+                                            transform="rotate(-90 40 40)"
+                                            class="progress-circle__progress"
+                                        />
+                                    </svg>
+                                    <p class="title title--s title--green progress-circle__number"></p>
+                                </div>
+                                <div class="column column--8">
+                                    <div class="offer-completion__item offer-completion__item--active" data-input="offer-type">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Тип объявления</p>
+                                    </div>
+                                    <div class="offer-completion__item" data-input="type">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Тип техники</p>
+                                    </div>
+                                    <div class="offer-completion__item" data-input="brand">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Производитель</p>
+                                    </div>
+                                    <div class="offer-completion__item" data-input="model">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Модель</p>
+                                    </div>
+                                    <div class="offer-completion__item" data-input="year">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Год выпуска</p>
+                                    </div>
+                                    <div class="offer-completion__item" data-input="operating-type">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Наработка</p>
+                                    </div>
+                                    <div class="offer-completion__item" data-input="place">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Местонахождение</p>
+                                    </div>
+                                    <div class="offer-completion__item" data-input="offer-price">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Стоимость</p>
+                                    </div>
+                                    <div class="offer-completion__item" data-input="request-message">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Описание</p>
+                                    </div>
+                                    <div class="offer-completion__item" data-input="offer-photos">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Фотографии</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <footer class="big-footer">
+            <div class="container">
+                <div class="big-footer__grid">
+                    <div class="big-footer__column column column--16">
+                        <div class="column column--8">
+                            <h6 class="text text--600">Обратная связь</h6>
+                            <button class="button button--medium button--regular-alt js-open-popup" data-popup-id="popup-message" type="button">Написать в Экскаватор Ру</button>
+                            <span class="tag">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use>
+                            </svg>
+                            <a href="mailto:trade@excavate.ru" class="link link--s link--primary">trade@excavate.ru</a>
+                        </span>
+                        </div>
+                        <div class="column column--8">
+                            <h6 class="text text--600">Напишите нам в мессенджеры</h6>
+                            <div class="row row--12">
+                                <a href="https://api.whatsapp.com/send?phone=375297530155" target="_blank" class="link link--base">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#whatsapp"></use>
+                                    </svg>
+                                </a>
+                                <a href="viber://chat?number=375297530155" target="_blank" class="link link--base">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#viber"></use>
+                                    </svg>
+                                </a>
+                                <a href="https://t.me/addlist/fmV43Qy669QwNmJi" target="_blank" class="link link--base">
+                                    <svg class="icon icon--16">
+                                        <use xlink:href="img/sprites/sprite-16.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text text--xs text--secondary">Интернет-журнал Строительная техника и оборудование — ведущее издание о строительной технике и оборудовании в России. Реклама и информация на Экскаватор.Ру предназначены исключительно для российских потребителей.</p>
+                    </div>
+                    <div class="big-footer__column column column--16">
+                        <div class="column column--8 column--align-start">
+                            <h6 class="text text--600">Журналы</h6>
+                            <a href="#" class="link link--s link--primary">Строительная техника и оборудование</a>
+                            <a href="#" class="link link--s link--primary">Мини-техника</a>
+                            <a href="#" class="link link--s link--primary">Карьерная и горная техника</a>
+                            <a href="#" class="link link--s link--primary">Строительство и ремонт дорог</a>
+                            <a href="#" class="link link--s link--primary">Подъемная техника</a>
+                            <a href="#" class="link link--s link--primary">Складская техника</a>
+                            <a href="#" class="link link--s link--primary">Коммерческий транспорт</a>
+                        </div>
+                        <div class="column column--8 column--align-start">
+                            <a href="#" class="link link--s link--primary">Аналитика</a>
+                            <a href="#" class="link link--s link--primary">Партнерские материалы</a>
+                        </div>
+                    </div>
+                    <div class="big-footer__column column column--16">
+                        <div class="column column--8 column--align-start">
+                            <h6 class="text text--600">Покупателям</h6>
+                            <a href="#" class="link link--s link--primary">Добавить заявку на покупку</a>
+                            <a href="#" class="link link--s link--primary">Добавить заявку на аренду</a>
+                            <a href="#" class="link link--s link--primary">Добавить заявку на кредит / лизинг</a>
+                            <a href="#" class="link link--s link--primary">Добавить заявку на запчасти</a>
+                        </div>
+                        <div class="column column--8 column--align-start">
+                            <h6 class="text text--600">Продавцам</h6>
+                            <a href="#" class="link link--s link--primary">Размещение объявлений</a>
+                            <a href="#" class="link link--s link--primary">Медийная реклама</a>
+                            <a href="#" class="link link--s link--primary">Нативная рекалма</a>
+                            <a href="#" class="link link--s link--primary">Отзывы и истории успеха</a>
+                            <a href="#" class="link link--s link--primary">Онлайн-конференции</a>
+                        </div>
+                    </div>
+                    <div class="big-footer__column column column--16">
+                        <div class="column column--8 column--align-start">
+                            <h6 class="text text--600">О нас</h6>
+                            <a href="#" class="link link--s link--primary">Реклама/О проекте</a>
+                            <a href="#" class="link link--s link--primary">Пользовательское соглашение</a>
+                        </div>
+
+                        <div class="row row--12">
+                            <a href="https://vk.com/club19065351" target="_blank" class="link link--base">
+                                <svg class="icon icon--16">
+                                    <use xlink:href="img/sprites/sprite-16.svg#vk"></use>
+                                </svg>
+                            </a>
+                            <a href="https://ok.ru/exkavatorru" target="_blank" class="link link--base">
+                                <svg class="icon icon--16">
+                                    <use xlink:href="img/sprites/sprite-16.svg#ok"></use>
+                                </svg>
+                            </a>
+                            <a href="https://tgclick.com/exkavatornews" target="_blank" class="link link--base">
+                                <svg class="icon icon--16">
+                                    <use xlink:href="img/sprites/sprite-16.svg#telegram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="text text--s">© Экскаватор Ру 2003—2026</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="mobile-footer">
+            <nav class="mobile-footer__menu">
+                <a class="mobile-footer__link" href="#">
+                    <img loading="lazy" src="img/svg/front_loader.svg" alt="Продажа">
+                    <span>Продажа</span>
+                </a>
+                <a class="mobile-footer__link" href="#">
+                    <img loading="lazy" src="img/svg/percent_discount.svg" alt="Скидки">
+                    <span>Скидки</span>
+                </a>
+                <button class="mobile-footer__link footerMobileMenu" href="#">
+                    <div class="mobile-footer__menu-btn">
+                        <img loading="lazy" src="img/svg/mobile-menu-btn.svg" alt="Иконка мобильного меню">
+                    </div>
+                    <span>Меню</span>
+                </button>
+                <a class="mobile-footer__link" href="#">
+                    <img loading="lazy" src="img/svg/newsmode.svg" alt="Новости">
+                    <span>Новости</span>
+                </a>
+                <a class="mobile-footer__link" href="#">
+                    <img loading="lazy" src="img/svg/adaptive_audio_mic.svg" alt="Конференция">
+                    <span>Конференция</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <form class="popup form-validation" id="popup-message">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Обратная связь</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div  class="field-text field--nocaption">
+                        <input class="field-text__input" type="tel" placeholder="Ваш телефон *" name="message-phone" id="message-phone" autocomplete="off" required>
+                        <label class="field-text__label" for="message-phone">
+                            <span class="field-text__caption">Ваш телефон *</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div  class="field-text field--nocaption">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="message-email" id="message-email" autocomplete="off">
+                        <label class="field-text__label" for="message-email">
+                            <span class="field-text__caption">Ваш email</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-textarea">
+                        <textarea class="field-textarea__input" placeholder="Текст сообщения" name="message-message" id="message-message"></textarea>
+                        <label class="field-textarea__label" for="message-message">
+                            <span class="field-textarea__caption">Текст сообщения</span>
+                        </label>
+                    </div>
+
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="message-subscribe">
+                        <label class="field-checkbox__label" for="message-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="message-presonal-data">
+                        <label class="field-checkbox__label" for="message-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+</html>

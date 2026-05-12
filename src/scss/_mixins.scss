@@ -129,6 +129,25 @@ $font-weights: (
     }
 }
 
+@mixin placeholder($opacity: 0.6, $opacity-focus: 0.6, $letter-spacing: inherit, $font-size: inherit, $text-transform: none, $color: inherit, $color-focus: inherit) {
+    &[placeholder] {
+        &::placeholder {
+            opacity: $opacity;
+            letter-spacing: $letter-spacing;
+            font-size: $font-size;
+            text-transform: $text-transform;
+            color: $color;
+        }
+
+        &:focus {
+            &::placeholder {
+                opacity: $opacity-focus;
+                color: $color-focus;
+            }
+        }
+    }
+}
+
 // Утилити-классы размеров
 @each $name, $values in $font-sizes {
   .text-#{$name} {

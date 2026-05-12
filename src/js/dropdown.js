@@ -211,7 +211,11 @@ function initPageDropdowns(dropdownConfigs) {
         };
 
         brandContainer.querySelectorAll('.dropdown-backdrop__option').forEach(option => {
-            option.addEventListener('click', () => setModelEnabled(true));
+            option.addEventListener('click', () => {
+                if (option.dataset.value !== '') {
+                    setModelEnabled(true);
+                }
+            });
         });
 
         setModelEnabled(!!document.querySelector('#brand').value);
@@ -225,4 +229,3 @@ function initPageDropdowns(dropdownConfigs) {
         }
     });
 }
-
