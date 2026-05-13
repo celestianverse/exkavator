@@ -2,6 +2,8 @@
     position: relative;
 
     @include tablet-max {
+        opacity: 0;
+        visibility: hidden;
         position: fixed;
         top: 56px;
         left: 0;
@@ -21,6 +23,11 @@
     
     &.is-open {
         transform: translateX(0);
+
+        @include tablet-max {
+            opacity: 1;
+            visibility: visible;
+        }
     }
     
     &__list {
