@@ -34,15 +34,15 @@
                                 <div class="offer-form__item">
                                     <h3 class="title title--s">Какой тип техники вы хотите продать? <span class="asterisk">*</span></h3>
                                     <div class="row row--8">
-                                        <button class="button button--large button--regular" type="button" data-value="1">Гусеничные экскаваторы</button>
-                                        <button class="button button--large button--regular" type="button" data-value="2">Колесные экскаваторы</button>
-                                        <button class="button button--large button--regular" type="button" data-value="3">Мини-погрузчики</button>
-                                        <button class="button button--large button--regular" type="button" data-value="4">Бульдозеры</button>
-                                        <button class="button button--large button--regular" type="button" data-value="5">Автокраны</button>
-                                        <button class="button button--large button--regular" type="button" data-value="6">Мини-экскаваторы</button>
-                                        <button class="button button--large button--regular" type="button" data-value="7">Экскаваторы-погрузчики</button>
-                                        <button class="button button--large button--regular" type="button" data-value="8">Вилочные автопогрузчики</button>
-                                        <button class="button button--large button--regular" type="button" data-value="8">Вилочные погрузчики</button>
+                                        <button class="button button--large button--regular" type="button" data-value="type-1">Гусеничные экскаваторы</button>
+                                        <button class="button button--large button--regular" type="button" data-value="type-2">Колесные экскаваторы</button>
+                                        <button class="button button--large button--regular" type="button" data-value="type-3">Мини-погрузчики</button>
+                                        <button class="button button--large button--regular" type="button" data-value="type-4">Бульдозеры</button>
+                                        <button class="button button--large button--regular" type="button" data-value="type-5">Автокраны</button>
+                                        <button class="button button--large button--regular" type="button" data-value="type-6">Мини-экскаваторы</button>
+                                        <button class="button button--large button--regular" type="button" data-value="type-7">Экскаваторы-погрузчики</button>
+                                        <button class="button button--large button--regular" type="button" data-value="type-8">Вилочные автопогрузчики</button>
+                                        <button class="button button--large button--regular" type="button" data-value="type-9">Вилочные погрузчики</button>
                                     </div>
                                     <div class="field-dropdown field--nocaption">
                                         <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off" required/>
@@ -53,6 +53,16 @@
                                 </div>
                                 <div class="offer-form__item">
                                     <h3 class="title title--s">Производитель</h3>
+                                    <div class="row row--8">
+                                        <button class="button button--large button--regular" type="button" data-value="brand-1">JCB</button>
+                                        <button class="button button--large button--regular" type="button" data-value="brand-2">Liebherr</button>
+                                        <button class="button button--large button--regular" type="button" data-value="brand-3">Terex</button>
+                                        <button class="button button--large button--regular" type="button" data-value="brand-4">Caterpillar</button>
+                                        <button class="button button--large button--regular" type="button" data-value="brand-5">Doosan</button>
+                                        <button class="button button--large button--regular" type="button" data-value="brand-6">John Deere</button>
+                                        <button class="button button--large button--regular" type="button" data-value="brand-7">Metso</button>
+                                        <button class="button button--large button--regular" type="button" data-value="brand-8">Volvo</button>
+                                    </div>
                                     <div class="field-dropdown field--nocaption">
                                         <input class="field-dropdown__input" type="text" placeholder="Производитель" name="brand" id="brand" autocomplete="off"/>
                                         <label class="field-dropdown__label" for="brand">
@@ -127,7 +137,7 @@
                                         </div>
                                         <p class="text">Взято из <a href="#">регистрационных данных</a>.</p>
                                     </div>
-                                    <button type="button" class="link link--primary">Добавить еще один город</button>
+                                    <button type="button" class="link link--primary" data-add-city>Добавить еще один город</button>
                                     <div class="row row--16">
                                         <button class="button button--large button--regular-alt" type="button">Сохранить города как шаблон</button>
                                         <button class="button button--large button--regular-alt" type="button">Загрузить города из шаблона</button>
@@ -535,6 +545,7 @@
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="vendors/imask/imask.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="js/offer-form.js"></script>
 
 </body>
 </html>

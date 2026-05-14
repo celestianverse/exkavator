@@ -82,4 +82,13 @@
             }
         }
     }
+
+    &--company {
+        .first-block__img {
+            img {
+                max-height: 128px;
+                margin: auto;
+            }
+        }
+    }
 }

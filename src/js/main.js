@@ -113,16 +113,16 @@ const dropdownConfigs = [
         options: [
             { name: 'Все типы', value: '' },
             { name: 'Раздел тип технки 1', isTitle: true },
-            { name: 'Гусеничные экскаваторы', value: '1' },
-            { name: 'Колесные экскаваторы', value: '2' },
-            { name: 'Мини-погрузчики', value: '3' },
-            { name: 'Бульдозеры', value: '4' },
+            { name: 'Гусеничные экскаваторы', value: 'type-1' },
+            { name: 'Колесные экскаваторы', value: 'type-2' },
+            { name: 'Мини-погрузчики', value: 'type-3' },
+            { name: 'Бульдозеры', value: 'type-4' },
             { name: 'Раздел тип технки 2', isTitle: true },
-            { name: 'Автокраны', value: '5' },
-            { name: 'Мини-экскаваторы', value: '6' },
-            { name: 'Экскаваторы-погрузчики', value: '7' },
-            { name: 'Вилочные автопогрузчики', value: '8' },
-            { name: 'Вилочные погрузчики', value: '9' },
+            { name: 'Автокраны', value: 'type-5' },
+            { name: 'Мини-экскаваторы', value: 'type-6' },
+            { name: 'Экскаваторы-погрузчики', value: 'type-7' },
+            { name: 'Вилочные автопогрузчики', value: 'type-8' },
+            { name: 'Вилочные погрузчики', value: 'type-9' },
         ]
     },
     {
@@ -130,14 +130,14 @@ const dropdownConfigs = [
         hasSearch: true,
         options: [
             { name: 'Все производители', value: '' },
-            { name: 'Землеройная техника', isTitle: true },
-            { name: 'Грейдеры', value: 'graders' },
-            { name: 'Земснаряды', value: 'zemsnarjady' },
-            { name: 'Экскаваторы колесные', value: 'excavator-kol' },
-            { name: 'Строительное оборудование', isTitle: true },
-            { name: 'оборудование 1', value: 'oborud-1' },
-            { name: 'оборудование 2', value: 'oborud-2' },
-            { name: 'оборудование 3', value: 'oborud-3' },
+            { name: 'JCB', value: 'brand-1' },
+            { name: 'Liebherr', value: 'brand-2' },
+            { name: 'Terex', value: 'brand-3' },
+            { name: 'Caterpillar', value: 'brand-4' },
+            { name: 'Doosan', value: 'brand-5' },
+            { name: 'John Deere', value: 'brand-6' },
+            { name: 'Metso', value: 'brand-7' },
+            { name: 'Volvo', value: 'brand-8' },
         ]
     },
     {
@@ -934,211 +934,6 @@ blocks.forEach(block => {
 
     updateCounter();
 });
-
-
-
-// Размещение объявления
-
-const offerForm = document.querySelector('#offer-form');
-
-if (offerForm) {
-
-    function setActiveButton(buttons, activeValue) {
-        buttons.forEach((btn) => {
-            const isActive = btn.dataset.value === activeValue;
-
-            btn.classList.toggle('button--primary-alt', isActive);
-            btn.classList.toggle('button--regular', !isActive);
-        });
-    }
-
-    function updateOperatingHoursState() {
-        const operatingType = document.querySelector('#operating-type');
-        const operatingHours = document.querySelector('#operating-hours');
-
-        if (!operatingType || !operatingHours) return;
-
-        const shouldDisable =
-            operatingType.value === 'is_new' ||
-            operatingType.value === 'dont_know';
-
-        operatingHours.disabled = shouldDisable;
-
-        if (shouldDisable) {
-            operatingHours.value = '';
-
-            operatingHours.dispatchEvent(new Event('input', { bubbles: true }));
-            operatingHours.dispatchEvent(new Event('change', { bubbles: true }));
-        }
-    }
-
-    function selectDropdownOption(input, value) {
-        const container = input.closest('.field-dropdown');
-        if (!container) return;
-
-        const option = container.querySelector(
-            '.dropdown-backdrop__option[data-value="' + value + '"]'
-        );
-
-        if (!option) return;
-
-        container
-            .querySelector('.dropdown-backdrop__option.selected')
-            ?.classList.remove('selected');
-
-        option.classList.add('selected');
-
-        input.value = option.textContent.trim();
-        input.dataset.value = value;
-
-        container.classList.add('selected');
-
-        input.dispatchEvent(new Event('input', { bubbles: true }));
-        input.dispatchEvent(new Event('change', { bubbles: true }));
-    }
-
-    document.querySelectorAll('.offer-form__item').forEach((item) => {
-
-        const input = item.querySelector('input');
-        const textarea = item.querySelector('.field-textarea__input');
-        const buttons = item.querySelectorAll('button[data-value]');
-        const descriptionButtons = item.querySelectorAll('button[data-description]');
-        const clearBtn = item.querySelector('.field-textarea__clear');
-
-        if (input && buttons.length) {
-            buttons.forEach((button) => {
-                button.addEventListener('click', () => {
-                    const value = button.dataset.value;
-
-                    if (input.classList.contains('field-text__input')) {
-                        input.value = value;
-                        updateOperatingHoursState();
-                        input.dispatchEvent(new Event('input', { bubbles: true }));
-                        input.dispatchEvent(new Event('change', { bubbles: true }));
-                    }
-
-                    if (input.classList.contains('field-dropdown__input')) {
-                        selectDropdownOption(input, value);
-                    }
-
-                    setActiveButton(buttons, value);
-                });
-            });
-
-            if (input.classList.contains('field-text__input')) {
-                input.addEventListener('input', () => {
-                    setActiveButton(buttons, input.value);
-                });
-            }
-
-            if (input.classList.contains('field-dropdown__input')) {
-                input.addEventListener('change', () => {
-                    setActiveButton(buttons, input.dataset.value);
-                });
-            }
-        }
-
-        if (textarea && descriptionButtons.length) {
-            descriptionButtons.forEach((button) => {
-                button.addEventListener('click', () => {
-
-                    const text = button.dataset.description;
-                    const isActive = button.classList.contains('button--primary-alt');
-
-                    button.classList.toggle('button--primary-alt');
-                    button.classList.toggle('button--regular');
-
-                    if (!isActive) {
-                        if (!textarea.value.includes(text)) {
-                            textarea.value = (textarea.value + ' ' + text).trim();
-                        }
-                    } else {
-                        textarea.value = textarea.value
-                            .replace(text, '')
-                            .replace(/\s{2,}/g, ' ')
-                            .trim();
-                    }
-
-                    textarea.dispatchEvent(new Event('input', { bubbles: true }));
-                    textarea.dispatchEvent(new Event('change', { bubbles: true }));
-                });
-            });
-
-            if (clearBtn) {
-                clearBtn.addEventListener('click', () => {
-
-                    descriptionButtons.forEach((btn) => {
-                        btn.classList.remove('button--primary-alt');
-                        btn.classList.add('button--regular');
-                    });
-
-                });
-            }
-        }
-    });
-}
-
-if (offerForm) {
-    const completionItems = document.querySelectorAll('.offer-completion__item');
-    const progressNumber = document.querySelector('.progress-circle__number');
-    const progressCircle = document.querySelector('.progress-circle__progress');
-
-    const circleLength = 226.195;
-
-    function isInputFilled(input) {
-        if (!input) return false;
-
-        if (input.tagName === 'TEXTAREA') {
-            return input.value.trim() !== '';
-        }
-
-        if (input.classList.contains('field-dropdown__input')) {
-            return !!input.dataset.value;
-        }
-
-        return input.value.trim() !== '';
-    }
-
-    function updateCompletion() {
-        let activeCount = 0;
-
-        completionItems.forEach((item) => {
-            const inputId = item.dataset.input;
-
-            if (!inputId) return;
-
-            const input = document.querySelector('#' + inputId);
-
-            const isFilled = isInputFilled(input);
-
-            item.classList.toggle('offer-completion__item--active', isFilled);
-
-            if (isFilled) {
-                activeCount++;
-            }
-        });
-
-        const total = completionItems.length;
-        const percent = Math.round((activeCount / total) * 100);
-
-        if (progressNumber) {
-            progressNumber.textContent = percent + '%';
-        }
-
-        if (progressCircle) {
-            const offset = circleLength - (circleLength * percent / 100);
-
-            progressCircle.style.strokeDashoffset = offset;
-        }
-    }
-
-    offerForm.querySelectorAll('input, textarea, select').forEach((field) => {
-        field.addEventListener('input', updateCompletion);
-        field.addEventListener('change', updateCompletion);
-    });
-
-    updateCompletion();
-}
 
 document.querySelectorAll('.field-text__input').forEach((input) => {
     input.addEventListener('input', () => {

@@ -33,6 +33,13 @@ function initSliders() {
         breakpoints: {
             768: { slidesPerView: 1 },
         },
+        on: {
+            slideChange: () => {
+                document.querySelectorAll('.swiper iframe').forEach((iframe) => {
+                    iframe.src = iframe.src;
+                });
+            }
+        },
         ...(detailItemSliderThumb ? { thumbs: { swiper: detailItemSliderThumb } } : {}),
     });
 }

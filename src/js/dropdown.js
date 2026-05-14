@@ -215,6 +215,29 @@ function initPageDropdowns(dropdownConfigs) {
                 if (option.dataset.value !== '') {
                     setModelEnabled(true);
                 }
+                else {
+                    setModelEnabled(false);
+                }
+            });
+        });
+
+        document.querySelectorAll('#brand').forEach((input) => {
+            input.addEventListener('input', () => {
+                if (input.dataset.value !== '') {
+                    setModelEnabled(true);
+                }
+                else {
+                    setModelEnabled(false);
+                }
+            });
+
+            input.addEventListener('change', () => {
+                if (input.dataset.value !== '') {
+                    setModelEnabled(true);
+                }
+                else {
+                    setModelEnabled(false);
+                }
             });
         });
 

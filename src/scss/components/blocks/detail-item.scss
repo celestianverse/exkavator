@@ -172,6 +172,17 @@
                 &:hover {
                     background-color: var(--text-primary);
                 }
+
+                &__video-icon {
+                    opacity: 1 !important;
+                    position: absolute;
+                    top: 50% !important;
+                    left: 50% !important;
+                    width: 40px !important;
+                    height: 40px !important;
+                    margin-top: -20px;
+                    margin-left: -20px;
+                }
             }
 
             .swiper-slide-thumb-active {
@@ -188,6 +199,12 @@
             overflow: hidden;
             img {
                 @include cover-img;
+            }
+            iframe {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
             }
         }
 

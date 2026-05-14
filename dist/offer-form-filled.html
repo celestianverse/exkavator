@@ -40,12 +40,12 @@
                                         <button class="button button--large button--regular" type="button" data-value="type-4">Бульдозеры</button>
                                         <button class="button button--large button--regular" type="button" data-value="type-5">Автокраны</button>
                                         <button class="button button--large button--regular" type="button" data-value="type-6">Мини-экскаваторы</button>
-                                        <button class="button button--large button--regular" type="button" data-value="type-7">Экскаваторы-погрузчики</button>
+                                        <button class="button button--large button--primary-alt" type="button" data-value="type-7">Экскаваторы-погрузчики</button>
                                         <button class="button button--large button--regular" type="button" data-value="type-8">Вилочные автопогрузчики</button>
                                         <button class="button button--large button--regular" type="button" data-value="type-9">Вилочные погрузчики</button>
                                     </div>
-                                    <div class="field-dropdown field--nocaption">
-                                        <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off" required/>
+                                    <div class="field-dropdown field--nocaption selected">
+                                        <input class="field-dropdown__input" type="text" value="Экскаваторы-погрузчики" data-value="type-7" placeholder="Тип техники" name="type" id="type" autocomplete="off" required/>
                                         <label class="field-dropdown__label" for="type">
                                             <span class="field-dropdown__caption">Тип техники</span>
                                         </label>
@@ -55,7 +55,7 @@
                                     <h3 class="title title--s">Производитель</h3>
                                     <div class="row row--8">
                                         <button class="button button--large button--regular" type="button" data-value="brand-1">JCB</button>
-                                        <button class="button button--large button--regular" type="button" data-value="brand-2">Liebherr</button>
+                                        <button class="button button--large button--primary-alt" type="button" data-value="brand-2">Liebherr</button>
                                         <button class="button button--large button--regular" type="button" data-value="brand-3">Terex</button>
                                         <button class="button button--large button--regular" type="button" data-value="brand-4">Caterpillar</button>
                                         <button class="button button--large button--regular" type="button" data-value="brand-5">Doosan</button>
@@ -63,8 +63,8 @@
                                         <button class="button button--large button--regular" type="button" data-value="brand-7">Metso</button>
                                         <button class="button button--large button--regular" type="button" data-value="brand-8">Volvo</button>
                                     </div>
-                                    <div class="field-dropdown field--nocaption">
-                                        <input class="field-dropdown__input" type="text" placeholder="Производитель" name="brand" id="brand" autocomplete="off"/>
+                                    <div class="field-dropdown field--nocaption selected">
+                                        <input class="field-dropdown__input" type="text" value="Liebherr" data-value="brand-2" placeholder="Производитель" name="brand" id="brand" autocomplete="off"/>
                                         <label class="field-dropdown__label" for="brand">
                                             <span class="field-dropdown__caption">Производитель</span>
                                         </label>
@@ -72,8 +72,16 @@
                                 </div>
                                 <div class="offer-form__item">
                                     <h3 class="title title--s">Модель</h3>
-                                    <div class="field-dropdown field--nocaption">
-                                        <input class="field-dropdown__input" type="text" placeholder="Модель" name="model" id="model" autocomplete="off"/>
+                                    <div class="row row--8">
+                                        <button class="button button--large button--regular" type="button" data-value="model-1">Hitachi ZX200</button>
+                                        <button class="button button--large button--regular" type="button" data-value="model-2">Hitachi ZX300</button>
+                                        <button class="button button--large button--regular" type="button" data-value="model-3">Hitachi ZX330</button>
+                                        <button class="button button--large button--regular" type="button" data-value="model-4">Hitachi ZX350</button>
+                                        <button class="button button--large button--regular" type="button" data-value="model-5">Hitachi ZX400</button>
+                                        <button class="button button--large button--primary-alt" type="button" data-value="model-6">Hitachi ZX500</button>
+                                    </div>
+                                    <div class="field-dropdown field--nocaption selected">
+                                        <input class="field-dropdown__input" type="text" value="Hitachi ZX500" data-value="model-6" placeholder="Модель" name="model" id="model" autocomplete="off"/>
                                         <label class="field-dropdown__label" for="model">
                                             <span class="field-dropdown__caption">Модель</span>
                                         </label>
@@ -94,8 +102,8 @@
                                         <button class="button button--large button--regular" type="button" data-value="2017">2017</button>
                                         <button class="button button--large button--regular" type="button" data-value="2016">2016</button>
                                     </div>
-                                    <div  class="field-dropdown field--nocaption">
-                                        <input class="field-dropdown__input" type="text" placeholder="Выберите год" name="year" id="year" autocomplete="off"/>
+                                    <div  class="field-dropdown field--nocaption selected">
+                                        <input class="field-dropdown__input" type="text" value="2012" data-value="2012" placeholder="Выберите год" name="year" id="year" autocomplete="off"/>
                                         <label class="field-dropdown__label" for="year">
                                             <span class="field-dropdown__caption">Выберите год</span>
                                         </label>
@@ -106,11 +114,11 @@
                                     <div class="row row--8">
                                         <button class="button button--large button--regular" type="button" data-value="is_new">Новая техника (без наработки)</button>
                                         <button class="button button--large button--regular" type="button" data-value="dont_know">Б/у техника (наработка неизвестна)</button>
-                                        <button class="button button--large button--regular" type="button" data-value="is_know">Б/у техника (наработка известна)</button>
+                                        <button class="button button--large button--primary-alt" type="button" data-value="is_know">Б/у техника (наработка известна)</button>
                                     </div>
-                                    <input type="hidden" id="operating-type" class="field-text__input" required>
+                                    <input type="hidden" id="operating-type" value="is_know" class="field-text__input" required>
                                     <div  class="field-text field--nocaption">
-                                        <input class="field-text__input" type="number" placeholder="Введите количество часов наработки, например, 2500" name="operating-hours" id="operating-hours" autocomplete="off" />
+                                        <input class="field-text__input" type="number" value="23000" placeholder="Введите количество часов наработки, например, 2500" name="operating-hours" id="operating-hours" autocomplete="off" />
                                         <label class="field-text__label" for="operating-hours">
                                             <span class="field-text__caption">Введите количество часов наработки, например, 2500</span>
                                         </label>
@@ -137,6 +145,26 @@
                                         </div>
                                         <p class="text">Взято из <a href="#">регистрационных данных</a>.</p>
                                     </div>
+                                    <div class="row row--4 row--nowrap">
+                                        <div class="field-text field--nocaption">
+                                            <input class="field-text__input" type="text" value="Краснодар, Краснодарский край, Россия" placeholder="Регион, город, населенный пункт" name="place-2" id="place-2" autocomplete="off" required="">
+                                            <label class="field-text__label" for="place-2">
+                                                <span class="field-text__caption">
+                                                  Регион, город, населенный пункт
+                                                </span>
+                                            </label>
+                                            <button class="field-text__clear" aria-label="Очистить" type="button">
+                                                <svg class="icon icon--16">
+                                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <button class="button button--primary-alt button--no-body button--large" type="button" data-remove-city>
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
                                     <button type="button" class="link link--primary" data-add-city>Добавить еще один город</button>
                                     <div class="row row--16">
                                         <button class="button button--large button--regular-alt" type="button">Сохранить города как шаблон</button>
@@ -151,7 +179,7 @@
                                     <p class="text">Объявления, в которых указана стоимость, получают больше внимания посетителей нашего сайта. Если цена не указана, то в объявлении будет автоматически указана стоимость «По запросу».</p>
                                     <div class="row row--8">
                                         <div  class="field-text field--nocaption">
-                                            <input class="field-text__input" type="number" placeholder="Например, 10 000 000" name="offer-price" id="offer-price" autocomplete="off"/>
+                                            <input class="field-text__input" type="number" value="7000000" placeholder="Например, 10 000 000" name="offer-price" id="offer-price" autocomplete="off"/>
                                             <label class="field-text__label" for="offer-price">
                                                 <span class="field-text__caption">Например, 10 000 000</span>
                                             </label>
@@ -173,14 +201,14 @@
                                     <h3 class="title title--s">Расскажите подробнее о вашей технике</h3>
                                     <div class="row row--8">
                                         <button class="button button--large button--regular" type="button" data-description="В хорошем состоянии.">В хорошем состоянии</button>
-                                        <button class="button button--large button--regular" type="button" data-description="Двигатель без нареканий.">Двигатель без нареканий</button>
+                                        <button class="button button--large button--primary-alt" type="button" data-description="Двигатель без нареканий.">Двигатель без нареканий</button>
                                         <button class="button button--large button--regular" type="button" data-description="Цена с НДС.">Цена с НДС</button>
                                         <button class="button button--large button--regular" type="button" data-description="Цена без НДС.">Цена без НДС</button>
                                         <button class="button button--large button--regular" type="button" data-description="Под заказ.">Под заказ</button>
                                         <button class="button button--large button--regular" type="button" data-description="В наличии.">В наличии</button>
                                         <button class="button button--large button--regular" type="button" data-description="Помогу с доставкой.">Помогу с доставкой</button>
-                                        <button class="button button--large button--regular" type="button" data-description="Бесплатная доставка.">Бесплатная доставка</button>
-                                        <button class="button button--large button--regular" type="button" data-description="Не требует вложений.">Не требует вложений</button>
+                                        <button class="button button--large button--primary-alt" type="button" data-description="Бесплатная доставка.">Бесплатная доставка</button>
+                                        <button class="button button--large button--primary-alt" type="button" data-description="Не требует вложений.">Не требует вложений</button>
                                         <button class="button button--large button--regular" type="button" data-description="Обслуживалась у оф. дилера.">Обслуживалась у оф. дилера</button>
                                         <button class="button button--large button--regular" type="button" data-description="Готова к эксплуатации.">Готова к эксплуатации</button>
                                         <button class="button button--large button--regular" type="button" data-description="Возможна продажа в лизинг.">Возможна продажа в лизинг</button>
@@ -220,7 +248,7 @@
                                     </div>
                                     <div class="column column--16 symbols-count">
                                         <div class="field-textarea field--nocaption">
-                                            <textarea class="field-textarea__input" maxlength="6000" rows="10" placeholder="Введите описание заявки" name="request-message" id="request-message" required=""></textarea>
+                                            <textarea class="field-textarea__input" maxlength="6000" rows="10" placeholder="Введите описание заявки" name="request-message" id="request-message">Двигатель без нареканий. Бесплатная доставка. Не требует вложений.</textarea>
                                             <label class="field-textarea__label" for="request-message">
                                                 <span class="field-textarea__caption">Введите описание объявления</span>
                                             </label>
