@@ -280,3 +280,69 @@ if (offerForm) {
         removeButton.closest('.row--4').remove();
     });
 }
+
+const mediaUploader = document.querySelector('#offer-media');
+
+FilePond.registerPlugin(
+    FilePondPluginImagePreview,
+    FilePondPluginFilePoster,
+    FilePondPluginFileRename
+);
+
+const pond = FilePond.create(mediaUploader, {
+    credits: [],
+    allowFilePoster: true,
+    allowFileRename: true,
+    labelIdle: 'Перетащите фото сюда, <span class="filepond--label-action">выберите фото</span>',
+    labelInvalidField: 'Поле содержит недопустимые файлы',
+    labelFileWaitingForSize: 'Ожидание размера',
+    labelFileSizeNotAvailable: 'Размер не поддерживается',
+    labelFileLoading: 'Загрузка',
+    labelFileLoadError: 'Ошибка при загрузке',
+    labelFileProcessing: 'Загрузка на сервер',
+    labelFileProcessingComplete: 'Загрузка завершена',
+    labelFileProcessingAborted: 'Загрузка отменена',
+    labelFileProcessingError: 'Ошибка при загрузке',
+    labelFileProcessingRevertError: 'Ошибка при откате',
+    labelFileRemoveError: 'Ошибка при удалении',
+    labelTapToCancel: 'нажмите для отмены',
+    labelTapToRetry: 'нажмите для повтора',
+    labelTapToUndo: 'нажмите для возврата',
+    labelButtonRemoveItem: 'Удалить',
+    labelButtonAbortItemLoad: 'Прервать',
+    labelButtonRetryItemLoad: 'Повторить',
+    labelButtonAbortItemProcessing: 'Отмена',
+    labelButtonUndoItemProcessing: 'Откат',
+    labelButtonRetryItemProcessing: 'Повторить',
+    labelButtonProcessItem: 'Загрузить'
+});
+
+document.getElementById('offer-add-video').addEventListener('click', async () => {
+
+    const url = document.getElementById('offer-video-link').value;
+
+    if (!url) return;
+
+    // сохраняем ссылку
+    document.getElementById('offer-video').value = url;
+
+    // создаём пустой mock file
+    const mockFile = new File(
+        [''],
+        url,
+        {
+            type: 'video/mp4'
+        }
+    );
+
+    pond.addFile(mockFile, {
+        metadata: {
+            isVideoLink: true,
+            videoUrl: url,
+
+            // дефолтный постер
+            poster: '/exkavator/dist/img/temp/video-placeholder.png'
+        }
+    });
+
+});

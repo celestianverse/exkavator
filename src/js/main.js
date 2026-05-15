@@ -305,6 +305,17 @@ const dropdownConfigs = [
             { name: 'Узбекистан', value: 'UZ' },
         ]
     },
+    {
+        id: 'engine',
+        hasSearch: false,
+        options: [
+            { name: 'Любой', value: 'all' },
+            { name: 'Бензиновый', value: 'engine-1' },
+            { name: 'Дизельный', value: 'engine-2' },
+            { name: 'Газобензиновый', value: 'engine-3' },
+            { name: 'Газовый', value: 'engine-4' },
+        ]
+    },
 ];
 
 initPageDropdowns(dropdownConfigs);
@@ -497,6 +508,10 @@ document.querySelectorAll('[data-tooltip-text]').forEach(el => {
         tooltip.textContent = el.dataset.tooltipText;
         tooltip.classList.add('is-active');
 
+        if (el.hasAttribute('data-tooltip-mobile')) {
+            tooltip.classList.add('is-mobile');
+        }
+
         const rect = el.getBoundingClientRect();
         const tooltipRect = tooltip.getBoundingClientRect();
         let top = rect.top - tooltipRect.height - TOOLTIP_GAP;
@@ -514,6 +529,7 @@ document.querySelectorAll('[data-tooltip-text]').forEach(el => {
 
     el.addEventListener('mouseleave', () => {
         tooltip.classList.remove('is-active');
+        tooltip.classList.remove('is-mobile');
     });
 });
 

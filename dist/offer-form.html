@@ -6,6 +6,9 @@
     <meta name="format-detection" content="telephone=no">
     <title>Размещение объявления — Экскаватор Ру</title>
     <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="vendors/filepond/filepond.css">
+    <link rel="stylesheet" href="vendors/filepond/filepond-plugin-image-preview.css">
+    <link rel="stylesheet" href="vendors/filepond/filepond-plugin-file-poster.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -135,7 +138,7 @@
                                                 </svg>
                                             </button>
                                         </div>
-                                        <p class="text">Взято из <a href="#">регистрационных данных</a>.</p>
+                                        <p class="text text--m">Взято из <a href="#">регистрационных данных</a>.</p>
                                     </div>
                                     <button type="button" class="link link--primary" data-add-city>Добавить еще один город</button>
                                     <div class="row row--16">
@@ -148,7 +151,7 @@
                                         <h3 class="title title--s">Укажите стоимость</h3>
                                         <span class="chip chip--medium chip--green" data-tooltip-text="Объявления с ценой набирают в 2 раза больше просмотров">×2 просмотров!</span>
                                     </div>
-                                    <p class="text">Объявления, в которых указана стоимость, получают больше внимания посетителей нашего сайта. Если цена не указана, то в объявлении будет автоматически указана стоимость «По запросу».</p>
+                                    <p class="text text--m">Объявления, в которых указана стоимость, получают больше внимания посетителей нашего сайта. Если цена не указана, то в объявлении будет автоматически указана стоимость «По запросу».</p>
                                     <div class="row row--8">
                                         <div  class="field-text field--nocaption">
                                             <input class="field-text__input" type="number" placeholder="Например, 10 000 000" name="offer-price" id="offer-price" autocomplete="off"/>
@@ -240,8 +243,15 @@
                                         <h3 class="title title--s">Загрузите фотографии</h3>
                                         <span class="chip chip--medium chip--green" data-tooltip-text="Объявления с фотографиями набирают в 2 раза больше просмотров">×2 просмотров!</span>
                                     </div>
-                                    <p class="text">Фотографии в форматах JPG, PNG или GIF размером не более 10 Мбайт каждая. Первое по порядку изображение — главное. (Суммарный объем всех фотоматериалов не должен превышать 50 мб)</p>
-                                    <p class="text">На фотографии должна быть изображена техника той марки и модели (либо тот вид запчастей),которая рекламируется в объявлении. Не допускается размещение вместо фотографии логотипа компании.</p>
+                                    <p class="text text--m">Фотографии в форматах JPG, PNG или GIF размером не более 10 Мбайт каждая. Первое по порядку изображение — главное. (Суммарный объем всех фотоматериалов не должен превышать 50 мб)</p>
+                                    <input id="offer-media"  type="file"
+                                           class="filepond"
+                                           name="filepond"
+                                           multiple
+                                           data-allow-reorder="true"
+                                           data-max-file-size="10MB"
+                                           data-max-files="20">
+                                    <p class="text text--m">На фотографии должна быть изображена техника той марки и модели (либо тот вид запчастей),которая рекламируется в объявлении. Не допускается размещение вместо фотографии логотипа компании.</p>
                                 </div>
                                 <div class="button-group button-group--gap-16 button-group--mobile-column">
                                     <a class="button button--large button--regular button--full-width" href="#">Отменить</a>
@@ -331,13 +341,19 @@
                                         </svg>
                                         <p class="text text--m">Стоимость</p>
                                     </div>
+                                    <div class="offer-completion__item" data-input="lifting-capacity">
+                                        <svg class="icon icon--20">
+                                            <use xlink:href="img/sprites/sprite-16.svg#check"></use>
+                                        </svg>
+                                        <p class="text text--m">Характеристики</p>
+                                    </div>
                                     <div class="offer-completion__item" data-input="request-message">
                                         <svg class="icon icon--20">
                                             <use xlink:href="img/sprites/sprite-16.svg#check"></use>
                                         </svg>
                                         <p class="text text--m">Описание</p>
                                     </div>
-                                    <div class="offer-completion__item" data-input="offer-photos">
+                                    <div class="offer-completion__item" data-input="filepond">
                                         <svg class="icon icon--20">
                                             <use xlink:href="img/sprites/sprite-16.svg#check"></use>
                                         </svg>
@@ -544,6 +560,10 @@
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="vendors/swiper/swiper-bundle.min.js"></script>
     <script src="vendors/imask/imask.js"></script>
+    <script src="vendors/filepond/filepond.js"></script>
+    <script src="vendors/filepond/filepond-plugin-image-preview.js"></script>
+    <script src="vendors/filepond/filepond-plugin-file-poster.js"></script>
+    <script src="vendors/filepond/filepond-plugin-file-rename.js"></script>
     <script src="js/main.min.js"></script>
     <script src="js/offer-form.js"></script>
 

@@ -21,6 +21,10 @@
     "sass": "1.54.9"
   },
   "dependencies": {
+    "filepond": "^4.32.12",
+    "filepond-plugin-file-poster": "^2.5.2",
+    "filepond-plugin-file-rename": "^1.1.8",
+    "filepond-plugin-image-preview": "^4.6.12",
     "lightgallery": "^2.9.0"
   }
 }

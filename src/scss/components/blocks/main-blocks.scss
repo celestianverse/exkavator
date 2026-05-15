@@ -87,6 +87,16 @@
         grid-template-rows: 1fr 1fr;
         gap: 24px;
 
+        @include laptop-max {
+            gap: 16px;
+        }
+        @include tablet-max {
+            grid-template-columns: repeat(2, max(1fr));
+        }
+        @include mobile-only {
+            grid-template-columns: repeat(1, max(1fr));
+        }
+
         .card {
             &:first-child {
                 grid-row: 1 / 4;
@@ -115,6 +125,18 @@
             }
             &:nth-child(n+4) {
                 display: none !important;
+            }
+
+            &--xl {
+                @include tablet-max {
+                    grid-column: span 2;
+                }
+                @include mobile-only {
+                    grid-column: span 1;
+                }
+            }
+
+            &--s {
             }
         }
     }
