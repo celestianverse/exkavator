@@ -71,17 +71,6 @@
     }
 
     &__grid {
-        //display: grid;
-        //grid-template-columns: repeat(4, max(1fr));
-        //gap: 24px;
-        //
-        //@include laptop-max {
-        //    gap: 16px;
-        //}
-        //@include tablet-max {
-        //    grid-template-columns: repeat(1, max(1fr));
-        //}
-
         display: grid;
         grid-template-columns: 3fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -160,6 +149,33 @@
 
         @include tablet-max {
             grid-column: span 1;
+        }
+    }
+
+    &--s {
+        .main-videos__grid {
+            gap: 16px;
+        }
+        .card {
+            &--xl {
+                .card__video {
+                    @include laptop-min {
+                        height: 400px;
+                    }
+                }
+                .card__title {
+                    max-height: 72px !important;
+                    font-size: 18px !important;
+                    line-height: 24px !important;
+                }
+            }
+            &--s {
+                .card__image {
+                    @include laptop-min {
+                        height: 140px;
+                    }
+                }
+            }
         }
     }
 }

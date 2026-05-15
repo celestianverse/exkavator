@@ -1804,11 +1804,11 @@
                                                     </svg>
                                                     Читать в Телеграме
                                                 </a>
-                                                <button class="button button--large button--primary-alt" type="button">
+                                                <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-mailing-subscribe" type="button">
                                                     <svg class="icon icon--20">
                                                         <use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use>
                                                     </svg>
-                                                    Показать объявления
+                                                    Подписаться на рассылку
                                                 </button>
                                             </div>
                                         </div>
@@ -2252,11 +2252,11 @@
                                                     </svg>
                                                     Читать в Телеграме
                                                 </a>
-                                                <button class="button button--large button--primary-alt" type="button">
+                                                <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-mailing-subscribe" type="button">
                                                     <svg class="icon icon--20">
                                                         <use xlink:href="img/sprites/sprite-16.svg#sendMessage"></use>
                                                     </svg>
-                                                    Показать объявления
+                                                    Подписаться на рассылку
                                                 </button>
                                             </div>
                                         </div>
@@ -2759,6 +2759,53 @@
                     </div>
                 </div>
 
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width form-send" disabled>Отправить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form class="popup form-validation" id="popup-mailing-subscribe">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Подписаться на рассылку</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description">Подпишитесь и получайте уведомления о новостях. Никакого спама.</p>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div class="field-text">
+                        <input class="field-text__input" type="email" placeholder="Ваш email" name="mailing-subscribe-email" id="mailing-subscribe-email" autocomplete="off" required>
+                        <label class="field-text__label" for="mailing-subscribe-email">
+                            <span class="field-text__caption">Ваш email</span>
+                        </label>
+                        <span class="field-text__error"></span>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input" id="mailing-subscribe-subscribe">
+                        <label class="field-checkbox__label" for="mailing-subscribe-subscribe">
+                            <span>Соглашаюсь получать информационные материалы. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                    <div class="field-checkbox">
+                        <input type="checkbox" class="field-checkbox__input required-checkbox" id="mailing-subscribe-presonal-data">
+                        <label class="field-checkbox__label" for="mailing-subscribe-presonal-data">
+                            <span>Соглашаюсь на обработку персональных данных. <a href="#" target="_blank">Соглашение</a></span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="popup__footer">
                 <div class="button-group">
