@@ -1,20 +1,15 @@
 .main-header {
     position: fixed;
     top: 0;
-    z-index: 20;
+    z-index: 30;
     width: 100%;
-    padding: 12px 0;
     background-color: var(--primary-600);
-
-    @include laptop-min {
-        position: relative;
-        padding: 4px 0;
-    }
 
     &__wrapper {
         display: flex;
         align-items: center;
         gap: 16px;
+        height: 64px;
 
         @include laptop-min {
             gap: 32px;
@@ -23,33 +18,40 @@
 
     &__relative {
         position: relative;
-        width: 100%;
-        height: 32px;
+        display: flex;
+        align-items: center;
+        height: 64px;
 
-        @include laptop-min {
-            height: auto;
-        }
         @include handset-max {
             position: static;
         }
     }
 
     &__logo  {
-        width: 120px;
-        flex-shrink: 0;  
-        
-        @include laptop-min {
-            width: 180px;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        gap: 10px;
+        width: auto;
+        height: 40px;
+    }
+
+    &__title {
+        display: none;
+        color: #fff;
+
+        @include tablet-max {
+            display: none !important;
         }
     }
 
     &__controls {
-        // width: 100%;
         margin-left: auto;
     }
 
     .main-header-search {
-        display: none;        
+        display: none;
+        height: 40px;
 
         &__icon, &__reset, &__submit {
             color: inherit;
@@ -65,49 +67,52 @@
         }
 
         &__controls {
-            display: none;
+            display: flex;
+            flex-direction: row-reverse;
             align-items: center;
             gap: 8px;
 
+            .main-header-search__submit {
+                display: none;
+            }
+
             &.show {
-                display: flex;
+                .main-header-search__submit {
+                    display: flex;
+                }
             }
         }
         
 
         &__input {
             width: 100%;
-
+            height: 40px;
             background-color: var(--primary-700);
             color: inherit;
             border: 0;
+            @include placeholder($color: var(--neutral-300), $color-focus: var(--neutral-300));
 
             &:focus {
                 outline: none;
             }
         }
 
-        
-
         &.is-show {
-            display: block;
-            width: 100%;
             position: absolute;
-            top: 0;
-            left: -1px;
-
-            padding: 0 16px;
-            height: 100%;
+            z-index: 2;
+            top: 12px;
+            left: -2px;
+            right: -60px;
             display: flex;
-            gap: 8px;
             align-items: center;
+            gap: 8px;
+            padding: 0 16px;
             background-color: var(--primary-700);
             border-radius: 6px;
             color: var(--neutral-0);
-            z-index: 2;
 
-            @include laptop-min {
-                width: 107%;
+            @include tablet-max {
+                right: -48px;
             }
             @include handset-max {
                 top: 8px;
@@ -120,6 +125,41 @@
         }
     }
 
+    .main-header__offer-button {
+        display: none;
+        flex-shrink: 0;
+    }
+
+    .main-menu {
+        height: 64px;
+        & > .main-menu__list {
+            height: 64px;
+            & > .main-menu__item {
+                height: 64px;
+                & > .main-menu__link {
+                    height: 64px;
+                }
+            }
+        }
+    }
+
+    &:not(.main-header--scroll) {
+        .main-header__title {
+            display: flex !important;
+        }
+    }
+
+    &--scroll {
+        .main-header__title {
+            display: none !important;
+        }
+        .main-header__offer-button {
+            display: flex;
+        }
+        .main-menu {
+            display: flex !important;
+        }
+    }
 }
 
 .user-controls {
@@ -150,13 +190,20 @@
     }
 
     &__button {
+        display: flex;
+        align-items: center;
+        font-size: 0;
         color: var(--neutral-0);
         cursor: pointer;
-        font-size: 0;
-        display: flex;
 
         &:hover {
             color: var(--neutral-100);
+        }
+
+        .icon {
+            & + .icon {
+                margin-left: 2px;
+            }
         }
     }
 
@@ -275,6 +322,3 @@
         }
     }
 }
-
-
-

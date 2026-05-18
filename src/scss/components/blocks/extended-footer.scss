@@ -1,0 +1,44 @@
+.extended-footer {
+    padding: 24px 0;
+    background: var(--neutral-50);
+
+    @include desktop-min {
+        margin-top: 24px;
+    }
+    @include handset-max {
+        padding-bottom: 112px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, max(1fr));
+        gap: 32px;
+
+        @include laptop-max {
+            gap: 24px;
+        }
+        @include tablet-max {
+            gap: 16px;
+        }
+        @include handset-max {
+            grid-template-columns: repeat(1, max(1fr));
+        }
+    }
+
+    &__column {
+        display: grid;
+        grid-template-columns: repeat(2, max(1fr));
+        align-self: flex-start;
+        gap: 32px;
+
+        @include laptop-max {
+            gap: 24px;
+        }
+        @include tablet-max {
+            gap: 16px;
+        }
+        @include tablet-max {
+            grid-template-columns: repeat(1, max(1fr));
+        }
+    }
+}

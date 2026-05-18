@@ -1,5 +1,15 @@
 const body = document.querySelector('body');
 
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.main-header');
+
+    if (window.scrollY > 30) {
+        header.classList.add('main-header--scroll');
+    } else {
+        header.classList.remove('main-header--scroll');
+    }
+});
+
 // debounce
 function debounce(fn, delay) {
     let timer;
@@ -351,8 +361,14 @@ if (headerSearch) {
     showHeaderSearchButton.addEventListener('click', function (e) {
         e.stopPropagation();
         headerSearch.classList.toggle('is-show');
-        userControlsMobileButton.classList.remove('is-open');
+        if (userControlsMobileButton) {
+            userControlsMobileButton.classList.remove('is-open');
+        }
         headerSearchInput.focus();
+
+        setTimeout(() => {
+            headerSearchInput.focus();
+        }, 300);
 
         const headerTooltip = document.querySelector('.tooltip');
         headerTooltip.classList.remove('is-active');
@@ -365,6 +381,7 @@ if (headerSearch) {
     headerSearchReset.addEventListener('click', function() {
         headerSearchInput.value = '';
         headerSearchControls.classList.remove('show');
+        headerSearch.classList.toggle('is-show');
     });
 
     headerSearchSubmit.addEventListener('click', function() {

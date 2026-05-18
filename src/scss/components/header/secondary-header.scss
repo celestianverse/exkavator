@@ -1,15 +1,47 @@
 .secondary-header {
     display: none;
-    background-color: var(--neutral-50);
+    background-color: #fff;
+    border-bottom: 1px solid var(--neutral-100);
 
     @include laptop-min {
         display: block;
+    }
+
+    .main-menu {
+        display: flex;
+        width: auto;
+        height: 56px;
+        color: var(--text-primary);
+
+        &__link {
+            color: var(--text-primary);
+
+            &:after {
+                background-color: var(--text-primary) !important;
+            }
+
+            &:hover {
+                &:after {
+                    background-color: var(--link-hover) !important;
+                }
+            }
+        }
+
+        & > .main-menu__list {
+            height: 56px;
+            & > .main-menu__item {
+                height: 56px;
+                & > .main-menu__link {
+                    height: 56px;
+                }
+            }
+        }
     }
 
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 56px;
     }
-
 }

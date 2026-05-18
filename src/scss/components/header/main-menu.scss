@@ -1,5 +1,6 @@
 .main-menu {
     position: relative;
+    display: none;
 
     @include tablet-max {
         opacity: 0;
@@ -7,7 +8,6 @@
         position: fixed;
         top: 56px;
         left: 0;
-        width: 100%;
         height: 100%;
         background-color: var(--neutral-0);
         overflow-y: auto;
@@ -16,10 +16,6 @@
         transform: translateX(-100%);
         transition: transform 0.3s ease;
     }
-
-    @include laptop-min {
-        width: 100%;
-    }
     
     &.is-open {
         transform: translateX(0);
@@ -27,6 +23,7 @@
         @include tablet-max {
             opacity: 1;
             visibility: visible;
+            display: flex;
         }
     }
     
@@ -89,7 +86,7 @@
         display: flex;
         align-items: center;        
         @include text-size('md');
-        color: var(--text-base);
+        color: var(--text-primary);
 
         @include laptop-min {
             padding: 0;
@@ -132,7 +129,7 @@
             width: 320px;
             padding: 8px 0;
             border: 1px solid var(--neutral-100);
-            box-shadow: rgba(39, 51, 63, 0.12) 0 2px 16px;
+            box-shadow: rgba(39, 51, 63, 0.25) 0 2px 24px;
             border-radius: 8px;
 
             .main-menu__item {
@@ -157,11 +154,19 @@
                 padding: 8px 16px;
                 border-bottom: 1px solid var(--neutral-50);
                 font-size: 12px;
-                font-weight: 500;
+                font-weight: 600;
                 color: var(--text-base);
+
+                &:after {
+                    background-color: var(--text-base) !important;
+                }
 
                 &:hover {
                     background: var(--neutral-50);
+
+                    &:after {
+                        background-color: var(--text-base) !important;
+                    }
                 }
             }
             .main-menu__submenu {

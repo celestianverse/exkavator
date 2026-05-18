@@ -129,7 +129,7 @@ $font-weights: (
     }
 }
 
-@mixin placeholder($opacity: 0.6, $opacity-focus: 0.6, $letter-spacing: inherit, $font-size: inherit, $text-transform: none, $color: inherit, $color-focus: inherit) {
+@mixin placeholder($opacity: 1, $opacity-focus: 1, $letter-spacing: inherit, $font-size: inherit, $text-transform: none, $color: inherit, $color-focus: inherit) {
     &[placeholder] {
         &::placeholder {
             opacity: $opacity;

@@ -34,6 +34,10 @@
     &--600 {
         font-weight: 600;
     }
+    
+    &--uppercase {
+        text-transform: uppercase;
+    }
 
     &--base {
         color: var(--text-base);

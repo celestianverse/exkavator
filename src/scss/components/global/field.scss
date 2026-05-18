@@ -469,7 +469,7 @@
     }
     .field-text__input, .field-dropdown__input, .field-textarea__input {
         margin-top: 0 !important;
-        @include placeholder($opacity: 1, $opacity-focus: 1, $color: var(--neutral-500));
+        @include placeholder($color: var(--neutral-500));
     }
     .field-text__caption, .field-dropdown__caption, .field-textarea__caption {
         display: none !important;
