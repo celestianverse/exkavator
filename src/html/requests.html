@@ -1886,100 +1886,106 @@
             <div class="container">
                 <div class="layout">
                     <div class="content">
-                        <h1>Заявки</h1>
+                        <div class="title-bar mb-40">
+                            <h1>Заявки</h1>
+                            <a href="#" class="button button--large button--primary">Разместить заявку</a>
+                        </div>
                         <section class="filter-block section">
-                            <div class="filter">
-                                <p class="small-title">Поиск по 7924 объявлениям</p>
-                                <div class="filter__inputs">
-
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Категория заявок" name="category" id="category" autocomplete="off"/>
-                                        <label class="field-dropdown__label" for="category">
-                                            <span class="field-dropdown__caption">Категория заявок</span>
-                                        </label>
-                                        <div class="dropdown-backdrop">
-
-                                            <ul class="dropdown-backdrop__list">
-                                                <li class="dropdown-backdrop__option">Категория заявок 1</li>
-                                                <li class="dropdown-backdrop__option">Категория заявок 2</li>
-                                                <li class="dropdown-backdrop__option">Категория заявок 3</li>
-                                                <li class="dropdown-backdrop__option">Категория заявок 4</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Категория" name="type" id="type" autocomplete="off"/>
-                                        <label class="field-dropdown__label" for="type">
-                                            <span class="field-dropdown__caption">Тип техники</span>
-                                        </label>
-                                        <div class="dropdown-backdrop">
-
-                                            <ul class="dropdown-backdrop__list">
-                                                <li class="dropdown-backdrop__option">Тип техники 1</li>
-                                                <li class="dropdown-backdrop__option">Тип техники 2</li>
-                                                <li class="dropdown-backdrop__option">Тип техники 3</li>
-                                                <li class="dropdown-backdrop__option">Тип техники 4</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="field-text">
-                                        <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
-                                        <label class="field-text__label" for="place">
-                                            <span class="field-text__caption">Регион, город, населенный пункт</span>
-                                        </label>
-                                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                                            <svg class="icon icon--16">
-                                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Период" name="period" id="period" autocomplete="off"/>
-                                        <label class="field-dropdown__label" for="period">
-                                            <span class="field-dropdown__caption">Период</span>
-                                        </label>
-                                        <div class="dropdown-backdrop">
-
-                                            <ul class="dropdown-backdrop__list">
-                                                <li class="dropdown-backdrop__option">Период 1</li>
-                                                <li class="dropdown-backdrop__option">Период 2</li>
-                                                <li class="dropdown-backdrop__option">Период 3</li>
-                                                <li class="dropdown-backdrop__option">Период 4</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <div class="column column--24">
+                                <div class="main-links">
+                                    <a href="#" class="link link--primary">
+                                        <span class="text text--l text--600 text--base">Продажа</span>
+                                        <span class="text text--s text--secondary">24 304</span>
+                                    </a>
+                                    <a href="#" class="link link--primary">
+                                        <span class="text text--l text--600">Запчасти</span>
+                                        <span class="text text--s text--secondary">7498</span>
+                                    </a>
+                                    <a href="#" class="link link--primary">
+                                        <span class="text text--l text--600">Кредит/Лизинг</span>
+                                        <span class="text text--s text--secondary">223 804</span>
+                                    </a>
+                                    <a href="#" class="link link--primary">
+                                        <span class="text text--l text--600">Аренда/Услуги</span>
+                                        <span class="text text--s text--secondary">1 709</span>
+                                    </a>
                                 </div>
-                                <div class="filter__buttons">
-                                    <button class="button button--primary-alt button--no-body button--medium filter__clear-button" data-filter-clear>
-                                        <svg class="icon">
-                                            <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>
-                                        </svg>
-                                        Сбросить
-                                    </button>
-                                    <button class="button button--primary-alt button--no-body button--medium filter__save-button js-open-popup" data-popup-id="popup-save-search">
-                                        <svg class="icon">
-                                            <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
-                                        </svg>
-                                        Сохранить поиск
-                                    </button>
-                                    <button class="button button--primary button--large button--find">Показать 1234 объявления</button>
-                                    <div class="filter__dropdown-button">
-                                        <button class="button button--large button--regular" aria-label="Настройки поиска">
-                                            <svg class="icon icon--24">
-                                                <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
-                                            </svg>
-                                        </button>
-                                        <div class="dropdown-backdrop">
-                                            <ul class="dropdown-backdrop__list">
-                                                <li class="dropdown-backdrop__option-button" data-filter-clear>Сбросить</li>
-                                                <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-save-search">Сохранить поиск</li>
-                                            </ul>
+
+                                <div class="filter">
+                                    <div class="filter__inputs">
+                                        <div class="field-dropdown">
+                                            <input class="field-dropdown__input" type="text" placeholder="Категория" name="type" id="type" autocomplete="off"/>
+                                            <label class="field-dropdown__label" for="type">
+                                                <span class="field-dropdown__caption">Тип техники</span>
+                                            </label>
+                                            <div class="dropdown-backdrop">
+
+                                                <ul class="dropdown-backdrop__list">
+                                                    <li class="dropdown-backdrop__option">Тип техники 1</li>
+                                                    <li class="dropdown-backdrop__option">Тип техники 2</li>
+                                                    <li class="dropdown-backdrop__option">Тип техники 3</li>
+                                                    <li class="dropdown-backdrop__option">Тип техники 4</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="field-text">
+                                            <input class="field-text__input" type="text" placeholder="Регион, город, населенный пункт" name="place" id="place" autocomplete="off"/>
+                                            <label class="field-text__label" for="place">
+                                                <span class="field-text__caption">Регион, город, населенный пункт</span>
+                                            </label>
+                                            <button class="field-text__clear" aria-label="Очистить" type="button">
+                                                <svg class="icon icon--16">
+                                                    <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <div class="field-dropdown">
+                                            <input class="field-dropdown__input" type="text" placeholder="Период" name="period" id="period" autocomplete="off"/>
+                                            <label class="field-dropdown__label" for="period">
+                                                <span class="field-dropdown__caption">Период</span>
+                                            </label>
+                                            <div class="dropdown-backdrop">
+
+                                                <ul class="dropdown-backdrop__list">
+                                                    <li class="dropdown-backdrop__option">Период 1</li>
+                                                    <li class="dropdown-backdrop__option">Период 2</li>
+                                                    <li class="dropdown-backdrop__option">Период 3</li>
+                                                    <li class="dropdown-backdrop__option">Период 4</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                    <p class="filter__no-filters">Укажите параметры поиска</p>
+                                    <div class="filter__buttons">
+                                        <button class="button button--primary-alt button--no-body button--medium filter__clear-button" data-filter-clear>
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>
+                                            </svg>
+                                            Сбросить
+                                        </button>
+                                        <button class="button button--primary-alt button--no-body button--medium filter__save-button js-open-popup" data-popup-id="popup-save-search">
+                                            <svg class="icon">
+                                                <use xlink:href="img/sprites/sprite-16.svg#saveSearch"></use>
+                                            </svg>
+                                            Сохранить поиск
+                                        </button>
+                                        <button class="button button--primary button--large button--find">Показать 1234 объявления</button>
+                                        <div class="filter__dropdown-button">
+                                            <button class="button button--large button--regular" aria-label="Настройки поиска">
+                                                <svg class="icon icon--24">
+                                                    <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
+                                                </svg>
+                                            </button>
+                                            <div class="dropdown-backdrop">
+                                                <ul class="dropdown-backdrop__list">
+                                                    <li class="dropdown-backdrop__option-button" data-filter-clear>Сбросить</li>
+                                                    <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-save-search">Сохранить поиск</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="filter__no-filters">Укажите параметры поиска</p>
+                                    </div>
                                 </div>
                             </div>
                         </section>
