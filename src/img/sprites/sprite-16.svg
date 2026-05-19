@@ -141,5 +141,8 @@
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="check">
     <path xmlns="http://www.w3.org/2000/svg" d="M8.00029 15.0957L3.67529 10.7707L5.54154 8.90442L8.00029 11.3632L14.459 4.90442L16.3253 6.77067L8.00029 15.0957Z" fill="currentColor"/>
-  </symbol>
+  </symbol>`
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="plus">
+    <path xmlns="http://www.w3.org/2000/svg" d="M7.40039 13.5999V8.5999H2.40039V7.3999H7.40039V2.3999H8.60039V7.3999H13.6004V8.5999H8.60039V13.5999H7.40039Z" fill="currentColor"/>
+  </symbol>`
 </svg>

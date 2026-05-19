@@ -31,8 +31,28 @@
             height: 56px;
             & > .main-menu__item {
                 height: 56px;
+
+                &:nth-child(7) {
+                    @media (max-width: 1060px) {
+                        display: none !important;
+                    }
+                }
+
                 & > .main-menu__link {
                     height: 56px;
+                }
+            }
+        }
+        &__item {
+            &--more {
+                .main-menu__item {
+                    &:nth-child(1) {
+                        display: none;
+
+                        @media (max-width: 1060px) {
+                            display: flex;
+                        }
+                    }
                 }
             }
         }

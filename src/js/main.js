@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 
-window.addEventListener('scroll', () => {
+function getHeaderScroll() {
     const header = document.querySelector('.main-header');
 
     if (window.scrollY > 30) {
@@ -8,6 +8,12 @@ window.addEventListener('scroll', () => {
     } else {
         header.classList.remove('main-header--scroll');
     }
+}
+
+getHeaderScroll();
+
+window.addEventListener('scroll', () => {
+    getHeaderScroll();
 });
 
 // debounce

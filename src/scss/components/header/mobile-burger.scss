@@ -6,8 +6,11 @@
     cursor: pointer;
     flex-shrink: 0;
 
-    @include laptop-min {
+    @include tablet-min {
         display: none;
+    }
+    @include handset-max {
+        margin-right: 16px;
     }
 
     span,
@@ -29,23 +32,31 @@
 
     &.is-active {
         &::before {
-            top: 11px;
-            transform: translateX(-50%) rotate(45deg);
+            @include handset-max {
+                top: 11px;
+                transform: translateX(-50%) rotate(45deg);
+            }
         }
 
         span {
-            opacity: 0;
+            @include handset-max {
+                opacity: 0;
+            }
         }
 
         &::after {
-            top: 11px;
-            transform: translateX(-50%) rotate(-45deg);
+            @include handset-max {
+                top: 11px;
+                transform: translateX(-50%) rotate(-45deg);
+            }
         }
 
         & ~ .user-controls {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
+            @include handset-max {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
         }
     }
 }

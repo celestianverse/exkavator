@@ -1,41 +1,15 @@
 .main-menu {
     position: relative;
     display: none;
-
-    @include tablet-max {
-        opacity: 0;
-        visibility: hidden;
-        position: fixed;
-        top: 56px;
-        left: 0;
-        height: 100%;
-        background-color: var(--neutral-0);
-        overflow-y: auto;
-        overflow-x: hidden;
-        z-index: 100;        
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-    }
-    
-    &.is-open {
-        transform: translateX(0);
-
-        @include tablet-max {
-            opacity: 1;
-            visibility: visible;
-            display: flex;
-        }
-    }
     
     &__list {
         display: flex;
 
-        @include tablet-max {
+        @include handset-max {
             flex-direction: column;
-            padding-bottom: 56px;
-        }        
+        }
 
-        @include laptop-min {
+        @include tablet-min {
             gap: 16px;
         }
     }
@@ -43,7 +17,7 @@
     &__item {
         border-bottom: 1px solid var(--neutral-100);
 
-        @include laptop-min {
+        @include tablet-min {
             position: relative;
             border-bottom: 0;
             height: 40px;
@@ -69,7 +43,7 @@
         transform: rotate(-90deg);
         @include transition;
 
-        @include laptop-min {
+        @include tablet-min {
             background-color: var(--text-white);
             transform: rotate(0);
         }
@@ -88,7 +62,7 @@
         @include text-size('md');
         color: var(--text-primary);
 
-        @include laptop-min {
+        @include tablet-min {
             padding: 0;
             height: 100%;
             gap: 2px;
@@ -110,7 +84,7 @@
         list-style: none;
         transition: transform 0.3s ease;
 
-        @include tablet-max {
+        @include handset-max {
             top: 0;
             padding: 0;
             margin: 0;
@@ -123,7 +97,7 @@
                 transform: translateX(0);
             }
         }
-        @include laptop-min {
+        @include tablet-min {
             display: none;
             top: 100%;
             width: 320px;
@@ -196,7 +170,7 @@
     &__back-item {
         border-bottom: 1px solid var(--neutral-100);
 
-        @include laptop-min {
+        @include tablet-min {
             display: none;
         }
     }
