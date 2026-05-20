@@ -476,6 +476,22 @@
     }
 }
 
+.field-price {
+    display: flex;
+    gap: 8px;
+
+    .field-text {
+        flex-grow: 1;
+        width: auto;
+    }
+    .field-dropdown {
+        &:last-child {
+            flex-shrink: 0;
+            width: 60px;
+        }
+    }
+}
+
 input {
     &[disabled] {
         opacity: 0.5;

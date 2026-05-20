@@ -1960,7 +1960,7 @@
                                         <p class="detail-item-specifications__item-title">Описание</p>
                                         <p class="detail-item-specifications__item-text">Хочу приобрести асфальтобетонный завод, который по характеристикам похож на УфаДорМаш УДМ-120. Рассмотрю любые варианты, для предложений - звонить по номеру телефона.</p>
                                     </div>
-                                    <button class="button button--large button--primary" type="button">Показать контакты покупателя</button>
+                                    <button class="button button--large button--primary js-open-popup" data-popup-id="popup-get-access" type="button">Показать контакты покупателя</button>
                                 </div>
                                 <div class="cta-help-block">
                                     <div class="cta-help-block__wrapper-text">
@@ -2410,6 +2410,43 @@
                     <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
                 </div>
             </div>
+        </div>
+    </form>
+    <form class="popup popup--l form-validation" id="popup-get-access">
+        <div class="popup__dialog">
+            <div class="popup__title popup__title--center">
+                <span>Доступ к заявкам</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <p class="popup__description popup__description--center">Просматривайте любые заявки по продаже, аренде или запчастям!</p>
+            <div class="access-variants">
+                <div class="access-variants__item">
+                    <button class="button button--large button--full-width button--primary" type="button">
+                        <p class="text text--s text--500">Доступ к этой заявке</p>
+                        за 380 рублей
+                    </button>
+                </div>
+                <div class="access-variants__item">
+                    <button class="button button--large button--full-width button--primary" type="button">
+                        <span class="chip chip&#45;&#45;medium chip&#45;&#45;red">Популярное</span>
+                        <p class="text text--s text--500">Доступ к 5 любым заявкам</p>
+                        за 1080 рублей
+                    </button>
+                </div>
+                <div class="access-variants__item">
+                    <button class="button button--large button--full-width button--primary" type="button">
+                        <p class="text text--s text--500">Доступ к 10 любым заявкам</p>
+                        за 1480 рублей
+                    </button>
+                </div>
+            </div>
+            <p class="text text--m text--secondary popup__description popup__description--center">
+                Если вы хотите получить доступ на большее количество заявок - <a href="#" target="_blank" class="link link--primary">свяжитесь с нами</a>
+            </p>
         </div>
     </form>
 

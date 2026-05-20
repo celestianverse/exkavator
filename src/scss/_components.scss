@@ -945,6 +945,39 @@
     color: var(--red-400);
 }
 
+.access-variants {
+    display: grid;
+    grid-template-columns: repeat(3, max(1fr));
+    gap: 24px;
+    padding-top: 12px;
+
+    @include handset-max {
+        grid-template-columns: repeat(1, max(1fr));
+    }
+
+    .button {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .chip {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
 .mb {
     &-0 {
         margin-bottom: 0;

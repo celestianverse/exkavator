@@ -12,14 +12,33 @@ function initSliders() {
     if (thumbMediaQuery.matches) {
         detailItemSliderThumb = new Swiper('.detail-item-slider__thumb', {
             spaceBetween: 8,
-            // slidesPerView: 5,
-            slidesPerView: 'auto',
-            freeMode: true,
+            slidesPerView: 5,
             watchSlidesProgress: true,
             scrollbar: {
                 el: '.swiper-scrollbar',
                 draggable: true,
             },
+            // Добавляем обработчик клика
+            on: {
+                click: function (swiper) {
+                    // swiper.clickedIndex — это глобальный индекс слайда, по которому кликнули
+                    // swiper.activeIndex — индекс первого видимого слайда слева
+                    const clickedIndex = swiper.clickedIndex;
+                    const activeIndex = swiper.activeIndex;
+                    const slidesPerView = swiper.params.slidesPerView; // в вашем случае это 5
+
+                    // Если кликнули по слайду, индекс которого равен первому видимому
+                    if (clickedIndex === activeIndex) {
+                        swiper.slidePrev();
+                    }
+
+                    // Если кликнули по последнему видимому слайду
+                    // (например, первый видимый 0, а кликнули по 0 + 5 - 1 = 4)
+                    if (clickedIndex === activeIndex + slidesPerView - 1) {
+                        swiper.slideNext();
+                    }
+                }
+            }
         });
     }
 
@@ -38,6 +57,23 @@ function initSliders() {
                 document.querySelectorAll('.swiper iframe').forEach((iframe) => {
                     iframe.src = iframe.src;
                 });
+
+                // ДОПОЛНИТЕЛЬНО: Если основной слайдер перелистывают стрелками
+                // или свайпом, превьюшки тоже должны центрироваться/докручиваться
+                if (detailItemSliderThumb && detailItemSliderThumb.initialized) {
+                    const activeIdx = detailItemSlider.activeIndex;
+                    const thumbActiveIdx = detailItemSliderThumb.activeIndex;
+                    const thumbSlidesPerView = detailItemSliderThumb.params.slidesPerView;
+
+                    // Если основной слайд ушел дальше, чем видно в превью
+                    if (activeIdx >= thumbActiveIdx + thumbSlidesPerView) {
+                        detailItemSliderThumb.slideNext();
+                    }
+                    // Если основной слайд вернулся назад, за пределы видимости превью
+                    if (activeIdx < thumbActiveIdx) {
+                        detailItemSliderThumb.slidePrev();
+                    }
+                }
             }
         },
         ...(detailItemSliderThumb ? { thumbs: { swiper: detailItemSliderThumb } } : {}),
