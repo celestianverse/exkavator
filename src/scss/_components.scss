@@ -861,6 +861,16 @@
         flex-direction: column;
         gap: 8px;
     }
+    &__iframe {
+        pointer-events: none;
+        overflow:hidden;
+        display: block;
+        width: 100%;
+        height: 1000px;
+        margin-bottom: 80px;
+        scrollbar-width: none;
+        scroll-snap-type: none;
+    }
 
     & + .publication {
         padding-top: 24px;

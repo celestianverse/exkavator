@@ -1054,30 +1054,27 @@ document.addEventListener('DOMContentLoaded', () => {
 // Переход на страницу компании из партнёрской новости
 
 document.addEventListener('DOMContentLoaded', () => {
-    const suggestionBlock = document.querySelector('.scroll-suggestion');
+    const iframe = document.querySelector('.publication__iframe');
 
-    if (!suggestionBlock) return;
+    if (!iframe) return;
 
-    let redirected = false;
+    let opened = false;
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // Когда блок появился в зоне видимости
-            if (entry.isIntersecting && !redirected) {
-                redirected = true;
+    window.addEventListener('scroll', () => {
+        if (opened) return;
 
-                const link = suggestionBlock.dataset.link;
+        const rect = iframe.getBoundingClientRect();
 
-                if (link) {
-                    window.location.href = link;
-                }
+        if (rect.bottom <= window.innerHeight) {
+            opened = true;
+
+            const link = iframe.src;
+
+            if (link) {
+                window.location.href = link;
             }
-        });
-    }, {
-        threshold: 1 // блок должен полностью попасть в экран
+        }
     });
-
-    observer.observe(suggestionBlock);
 });
 
 document.querySelectorAll('.field-text__input').forEach((input) => {

@@ -420,4 +420,9 @@
             transform: translateY(-2px);
         }
     }
+
+    .link {
+        display: flex;
+        gap: 8px;
+    }
 }
