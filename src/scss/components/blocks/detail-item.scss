@@ -369,6 +369,7 @@
 
     &--model {
         .detail-item-description-block {
+            min-height: 152px;
             padding: 24px;
 
             @include mobile-only {
