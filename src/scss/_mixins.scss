@@ -104,6 +104,12 @@ $font-weights: (
   font-weight: map-get($font-weights, $name);
 }
 
+@mixin text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 @mixin text-ellipsis-rows($rows) {
   overflow: hidden;
   display: -webkit-box;

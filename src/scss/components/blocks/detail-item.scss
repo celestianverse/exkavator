@@ -366,6 +366,52 @@
         flex-direction: column;
         gap: 16px;
     }
+
+    &--model {
+        .detail-item-description-block {
+            padding: 24px;
+
+            @include mobile-only {
+                padding: 16px;
+            }
+
+            .text {
+                & + .detail-item-specifications {
+                    margin-top: 24px;
+                }
+            }
+
+            .detail-item-specifications {
+                row-gap: 36px;
+
+                @include mobile-only {
+                    row-gap: 24px;
+                }
+
+                & + .detail-item-specifications__item {
+                    margin-top: 36px;
+
+                    @include mobile-only {
+                        margin-top: 24px;
+                    }
+                }
+            }
+
+            .button {
+                margin-top: 24px;
+            }
+
+            .detail-item-specifications__item {
+                flex-shrink: 0;
+            }
+
+            .detail-item-specifications__item-title {
+                width: 100%;
+                max-height: 16px;
+                @include text-ellipsis-rows(1);
+            }
+        }
+    }
 }
 // Прилипающий футер детальнйо страницы. Находиться вне разметки блока detail-item
 .detail-item-mobile-footer {
