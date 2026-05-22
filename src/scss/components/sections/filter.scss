@@ -79,6 +79,7 @@
         align-items: center;
         justify-content: flex-end;
         gap: 16px;
+        padding-top: 8px;
 
         @include mobile-only {
             justify-content: center;

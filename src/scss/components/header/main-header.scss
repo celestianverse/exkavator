@@ -290,6 +290,24 @@
                 }
             }
         }
+
+        &.is-deep {
+            & > .main-menu__list {
+                & > .main-menu__item {
+                    & > .main-menu__link {
+                        display: none !important;
+                    }
+
+                    & > .main-menu__submenu {
+                        & > .main-menu__item {
+                            & > .main-menu__link {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &--scroll {
