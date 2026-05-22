@@ -3521,11 +3521,16 @@
                         </ul>
                         <h1>Аренда гусеничных экскаваторов в Краснодаре</h1>
                         <section class="filter-block section">
-                            <div class="filter">
+                            <div class="filter filter--hidden-extra">
                                 <p class="small-title">Поиск по 7924 объявлениям</p>
+                                <div class="filter__header">
+                                    <button type="button" class="filter__header-link text--secondary" data-filter-clear>Сбросить</button>
+                                    <p class="fw-semibold">Параметры</p>
+                                    <button type="button" class="filter__header-link text--secondary" data-filter-close>Сохранить</button>
+                                </div>
                                 <div class="filter__inputs">
-                                    <div class="field-dropdown">
-                                        <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
+                                    <div class="field-dropdown selected">
+                                        <input class="field-dropdown__input" type="text" value="Экскаваторы гусеничные" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
                                         <label class="field-dropdown__label" for="type">
                                             <span class="field-dropdown__caption">Тип техники</span>
                                         </label>
@@ -3624,7 +3629,72 @@
                                         <label class="field-checkbox__label" for="ch-price">Только с ценой</label>
                                     </div>
                                 </div>
+                                <div class="filter__inputs filter__inputs--extra">
+                                    <div class="filter__range">
+                                        <div class="field-dropdown">
+                                            <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="weight-from" id="weight-from" autocomplete="off"/>
+                                            <label class="field-dropdown__label" for="type">
+                                                <span class="field-dropdown__caption">Масса от, т</span>
+                                            </label>
+                                        </div>
+                                        <div class="field-dropdown">
+                                            <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="weight-to" id="weight-to" autocomplete="off"/>
+                                            <label class="field-dropdown__label" for="type">
+                                                <span class="field-dropdown__caption">до, т</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="filter__range">
+                                        <div class="field-dropdown">
+                                            <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="volume-from" id="volume-from" autocomplete="off"/>
+                                            <label class="field-dropdown__label" for="type">
+                                                <span class="field-dropdown__caption">Объем ковша от, т</span>
+                                            </label>
+                                        </div>
+                                        <div class="field-dropdown">
+                                            <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="volume-to" id="volume-to" autocomplete="off"/>
+                                            <label class="field-dropdown__label" for="type">
+                                                <span class="field-dropdown__caption">до, т</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="field-dropdown">
+                                        <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="attachments" id="attachments" autocomplete="off"/>
+                                        <label class="field-dropdown__label" for="type">
+                                            <span class="field-dropdown__caption">Навесное оборудование</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter__checkboxes filter__checkboxes--extra">
+                                    <div class="field-checkbox">
+                                        <input type="checkbox" class="field-checkbox__input" id="ch-long-arrow">
+                                        <label class="field-checkbox__label" for="ch-long-arrow">С длинной стрелой</label>
+                                    </div>
+                                    <div class="field-checkbox">
+                                        <input type="checkbox" class="field-checkbox__input" id="ch-overall-dimensions">
+                                        <label class="field-checkbox__label" for="ch-overall-dimensions">Габаритные</label>
+                                    </div>
+                                    <div class="field-checkbox">
+                                        <input type="checkbox" class="field-checkbox__input" id="ch-full-turn">
+                                        <label class="field-checkbox__label" for="ch-full-turn">Полноповоротные</label>
+                                    </div>
+                                    <div class="field-checkbox">
+                                        <input type="checkbox" class="field-checkbox__input" id="ch-single-bucket">
+                                        <label class="field-checkbox__label" for="ch-single-bucket">Одноковшовые</label>
+                                    </div>
+                                </div>
+                                <div class="filter__more">
+                                    <button class="button button--small button--primary-alt button--no-body filter__more-button" type="button">Больше параметров</button>
+                                </div>
                                 <div class="filter__buttons">
+                                    <button class="button button--primary-alt button--no-body button--medium filter__extra-button">
+                                        <svg class="icon">
+                                            <use xlink:href="img/sprites/sprite-16.svg#parameters"></use>
+                                        </svg>
+                                        <span>
+                                            Дополнительные параметры
+                                        </span>
+                                    </button>
                                     <button class="button button--primary-alt button--no-body button--medium filter__clear-button" data-filter-clear>
                                         <svg class="icon">
                                             <use xlink:href="img/sprites/sprite-16.svg#deleteAlt"></use>

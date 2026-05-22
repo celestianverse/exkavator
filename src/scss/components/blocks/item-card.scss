@@ -411,7 +411,6 @@ h3 {
         display: flex;
         gap: 8px;
 
-
         @include tablet-min {
             flex-direction: column;
             gap: 4px;
@@ -452,18 +451,6 @@ h3 {
                 right: 0;
                 width: max-content;
                 transform: translateY(-2px);
-            }
-        }
-
-        .button--small {
-            font-size: 14px;
-            line-height: 24px;
-            padding: 8px 12px;
-
-            @include tablet-min {
-                padding: 8px;
-                font-size: 12px;
-                line-height: 16px;
             }
         }
     }
@@ -575,7 +562,7 @@ h3 {
             align-self: stretch;
             flex-shrink: 0;
             width: 228px;
-            height: 126px;
+            height: 118px;
             padding: 24px;
             background: #fff;
             border-radius: 16px;

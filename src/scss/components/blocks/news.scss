@@ -1,11 +1,10 @@
 .news-expo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 
-    &__main {
-        margin-bottom: 24px;
-
-        @include handset-min {
-            margin-bottom: 32px;
-        }
+    @include handset-min {
+        gap: 32px;
     }
 
     &__row {
