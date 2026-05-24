@@ -56,6 +56,7 @@
             margin-bottom: 24px;
         }
         ul {
+            list-style-type: none !important;
             li {
                 position: relative;
                 display: list-item;
@@ -107,6 +108,13 @@
         small {
             color: var(--text-secondary);
         }
+        hr {
+            display: block;
+            height: 1px;
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid var(--neutral-100);
+        }
 
         & > * {
             &:last-child {
@@ -116,6 +124,16 @@
 
         &.text--l {
             line-height: 24px;
+
+            ul {
+                li {
+                    &::before {
+                        top: 10px;
+                        width: 4px;
+                        height: 4px;
+                    }
+                }
+            }
         }
     }
 }

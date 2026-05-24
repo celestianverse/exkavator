@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
-  <title>Экскаватор Ру - техника и комтранс в России</title>
-  <link rel="stylesheet" href="css/main.css">
+    <title>Экскаватор Ру - техника и комтранс в России</title>
+    <link rel="stylesheet" href="css/main.css">
 
-  <style>
-    body {
+    <style>
+      body {
         padding-bottom: 120px;
-    }
-    fieldset {
-        padding: 25px;
-        margin-bottom: 15px;
-    }
-    .ds-row {
+      }
+      fieldset {
+        padding: 24px;
+        margin-bottom: 32px;
+      }
+      legend {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .container {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+      }
+      .ds-row {
         display: flex;
         gap: 16px;
         flex-direction: column;
 
         @media(min-width: 1180px) {
-            flex-direction: row;
+          flex-direction: row;
         }
-        
-    }
-    .ds-element-wrapper {
+
+      }
+      .ds-element-wrapper {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -33,8 +41,14 @@
         border: 1px dashed #ccc;
         border-radius: 8px;
         flex: 1;
-    }
-  </style>
+      }
+      .demonstration-box {
+        width: 64px;
+        height: 32px;
+        background: #eff2f5;
+        border-radius: 4px;
+      }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -46,14 +60,14 @@
                     <button class="button button--large button--primary" type="button" >Показать объявления</button>
                     <button class="button button--medium button--primary" type="button">Показать объявления</button>
                     <button class="button button--small button--primary" type="button">Показать объявления</button>
-                    <button class="button button--small button--primary" type="button" disabled>Показать объявления</button>                  
+                    <button class="button button--small button--primary" type="button" disabled>Показать объявления</button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>primaryAlt <small>(large-medium-small-disable)</small></p>
                     <button class="button button--large button--primary-alt" type="button">Показать объявления</button>
                     <button class="button button--medium button--primary-alt" type="button">Показать объявления</button>
                     <button class="button button--small button--primary-alt" type="button">Показать объявления</button>
-                    <button class="button button--small button--primary-alt" type="button" disabled>Показать объявления</button>  
+                    <button class="button button--small button--primary-alt" type="button" disabled>Показать объявления</button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>regular <small>(large-medium-small-disable)</small></p>
@@ -69,7 +83,7 @@
                     <button class="button button--small button--regular-alt" type="button">Показать объявления</button>
                     <button class="button button--small button--regular-alt" type="button" disabled>Показать объявления</button>
                 </div>
-                
+
             </div>
         </fieldset>
         <fieldset>
@@ -85,13 +99,13 @@
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
                         Показать объявления
                     </button>
-                    <button class="button button--medium button--primary button--dropdown" type="button">                        
+                    <button class="button button--medium button--primary button--dropdown" type="button">
                         Показать объявления
                     </button>
                     <button class="button button--medium button--primary button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
                         Показать объявления
-                    </button>                  
+                    </button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>primaryAlt <small>(full-icon-dropdown-disable)</small></p>
@@ -106,7 +120,7 @@
                     <button class="button button--medium button--primary-alt button--dropdown" type="button">Показать объявления</button>
                     <button class="button button--medium button--primary-alt button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
-                        Показать объявления</button>  
+                        Показать объявления</button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>regular <small>(full-icon-dropdown-disable)</small></p>
@@ -121,7 +135,7 @@
                     <button class="button button--medium button--regular button--dropdown" type="button">Показать объявления</button>
                     <button class="button button--medium button--regular button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
-                        Показать объявления</button>  
+                        Показать объявления</button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>regularAlt <small>(full-icon-dropdown-disable)</small></p>
@@ -136,7 +150,7 @@
                     <button class="button button--medium button--regular-alt button--dropdown" type="button">Показать объявления</button>
                     <button class="button button--medium button--regular-alt button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
-                        Показать объявления</button>  
+                        Показать объявления</button>
                 </div>
             </div>
         </fieldset>
@@ -153,13 +167,13 @@
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
                         Показать объявления
                     </button>
-                    <button class="button button--medium button--green button--dropdown" type="button">                        
+                    <button class="button button--medium button--green button--dropdown" type="button">
                         Показать объявления
                     </button>
                     <button class="button button--medium button--green button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
                         Показать объявления
-                    </button>                  
+                    </button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>greenAlt</p>
@@ -174,7 +188,7 @@
                     <button class="button button--medium button--green-alt button--dropdown" type="button">Показать объявления</button>
                     <button class="button button--medium button--green-alt button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
-                        Показать объявления</button>  
+                        Показать объявления</button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>primaryAltNoBody</p>
@@ -189,7 +203,7 @@
                     <button class="button button--medium button--primary-alt button--no-body button--dropdown" type="button">Показать объявления</button>
                     <button class="button button--medium button--primary-alt button--no-body button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
-                        Показать объявления</button>  
+                        Показать объявления</button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>regularAltNoBody</p>
@@ -204,7 +218,7 @@
                     <button class="button button--medium button--regular-alt button--no-body button--dropdown" type="button">Показать объявления</button>
                     <button class="button button--medium button--regular-alt button--no-body button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
-                        Показать объявления</button>  
+                        Показать объявления</button>
                 </div>
             </div>
         </fieldset>
@@ -221,13 +235,13 @@
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
                         Показать объявления
                     </button>
-                    <button class="button button--small button--green button--dropdown" type="button">                        
+                    <button class="button button--small button--green button--dropdown" type="button">
                         Показать объявления
                     </button>
                     <button class="button button--small button--green button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
                         Показать объявления
-                    </button>                  
+                    </button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>greenAlt</p>
@@ -242,7 +256,7 @@
                     <button class="button button--small button--green-alt button--dropdown" type="button">Показать объявления</button>
                     <button class="button button--small button--green-alt button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
-                        Показать объявления</button>  
+                        Показать объявления</button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>primaryAltNoBody</p>
@@ -257,7 +271,7 @@
                     <button class="button button--small button--primary-alt button--no-body button--dropdown" type="button">Показать объявления</button>
                     <button class="button button--small button--primary-alt button--no-body button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
-                        Показать объявления</button>  
+                        Показать объявления</button>
                 </div>
                 <div class="ds-element-wrapper">
                     <p>regularAltNoBody</p>
@@ -272,29 +286,29 @@
                     <button class="button button--small button--regular-alt button--no-body button--dropdown" type="button">Показать объявления</button>
                     <button class="button button--small button--regular-alt button--no-body button--dropdown" type="button" disabled>
                         <svg class="icon"><use xlink:href="img/sprite.svg#parameters"></use></svg>
-                        Показать объявления</button>  
+                        Показать объявления</button>
                 </div>
             </div>
         </fieldset>
         <fieldset>
             <legend>Typography</legend>
-                <div class="column column--8">
-                    <h1 class="title title--xxl">Супер-заголовок (48px)</h1>
-                    <h1 class="title title--xl">Супер-заголовок (44px)</h1>
-                    <h1 class="title title--l">Заголовок 1-го уровня (36px)</h1>
-                    <h2 class="title title--m">Заголовок 2-го уровня (24px)</h2>
-                    <h3 class="title title--s">Заголовок 3-го уровня (18px)</h3>
-                    <p class="text text--xl">Крупный текст (18px)</p>
-                    <p class="text text--l text--700">Основной текст увеличенный жирный (16px)</p>
-                    <p class="text text--l">Основной текст увеличенный (16px)</p>
-                    <p class="text text--m text--700">Основной текст жирный (14px)</p>
-                    <p class="text text--m text--600">Основной текст полужирный (14px)</p>
-                    <p class="text text--m">Основной текст (14px)</p>
-                    <p class="text text--s text--700">Мелкий текст жирный (12px)</p>
-                    <p class="text text--s text--600">Мелкий текст полужирный (12px)</p>
-                    <p class="text text--s">Мелкий текст (12px)</p>
-                    <p class="text text--xs">Сверх мелкий текст (11px)</p>
-                </div>
+            <div class="column column--8">
+                <h1 class="title title--xxl">Супер-заголовок (48px)</h1>
+                <h1 class="title title--xl">Супер-заголовок (44px)</h1>
+                <h1 class="title title--l">Заголовок 1-го уровня (36px)</h1>
+                <h2 class="title title--m">Заголовок 2-го уровня (24px)</h2>
+                <h3 class="title title--s">Заголовок 3-го уровня (18px)</h3>
+                <p class="text text--xl">Крупный текст (18px)</p>
+                <p class="text text--l text--700">Основной текст увеличенный жирный (16px)</p>
+                <p class="text text--l">Основной текст увеличенный (16px)</p>
+                <p class="text text--m text--700">Основной текст жирный (14px)</p>
+                <p class="text text--m text--600">Основной текст полужирный (14px)</p>
+                <p class="text text--m">Основной текст (14px)</p>
+                <p class="text text--s text--700">Мелкий текст жирный (12px)</p>
+                <p class="text text--s text--600">Мелкий текст полужирный (12px)</p>
+                <p class="text text--s">Мелкий текст (12px)</p>
+                <p class="text text--xs">Сверх мелкий текст (11px)</p>
+            </div>
         </fieldset>
         <fieldset>
             <legend>Inputs</legend>
@@ -306,15 +320,6 @@
                         <label class="field-dropdown__label" for="type">
                             <span class="field-dropdown__caption">Тип техники</span>
                         </label>
-                        <div class="dropdown-backdrop">
-                            <ul class="dropdown-backdrop__list">
-                                <li class="dropdown-backdrop__option">Тягачи седельные</li>
-                                <li class="dropdown-backdrop__option">Прицепы-тяжеловозы</li>
-                                <li class="dropdown-backdrop__option">Терминальные тягачи</li>
-                                <li class="dropdown-backdrop__option">Электротягачи</li>
-                                <li class="dropdown-backdrop__option">Натяжные машины</li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="field-dropdown">
                         <input class="field-dropdown__input" type="text" placeholder="Марка" name="test2" id="test2" autocomplete="off"/>
@@ -335,7 +340,7 @@
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <ul class="dropdown-backdrop__list">
                                 <li class="dropdown-backdrop__option">все типы</li>
                                 <li class="dropdown-backdrop__option-title">Землеройная техника</li>
@@ -372,33 +377,33 @@
                         <label class="field-text__label" for="city">
                             <span class="field-text__caption">Город, населенный пункт</span>
                         </label>
-                                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                        <svg class="icon icon--16">
-                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                        </svg>
-                    </button>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
                     </div>
                     <div class="field-text field-text--small">
                         <input class="field-text__input" type="text" placeholder="Город, населенный пункт" name="city3" id="city3" autocomplete="off"/>
                         <label class="field-text__label" for="city3">
                             <span class="field-text__caption">Город, населенный пункт</span>
                         </label>
-                                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                        <svg class="icon icon--16">
-                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                        </svg>
-                    </button>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
                     </div>
                     <div class="field-text disabled">
                         <input class="field-text__input" type="text" placeholder="Город, населенный пункт" name="city2" id="city2" autocomplete="off" disabled/>
                         <label class="field-text__label" for="city2">
                             <span class="field-text__caption">Город, населенный пункт</span>
                         </label>
-                                        <button class="field-text__clear" aria-label="Очистить" type="button">
-                        <svg class="icon icon--16">
-                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                        </svg>
-                    </button>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <div class="ds-element-wrapper">
@@ -417,18 +422,204 @@
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
-            
+        </fieldset>
+        <fieldset>
+            <legend>Column</legend>
+            <div class="column column--24">
+                <p class="text text--m">Выстраивает вложенные элементы в колонку и задаёт между ними отступ</p>
+                <div class="row row--32 row--align-start">
+                    <div class="column column--8">
+                        <p class="text text--m">4px</p>
+                        <div class="column column--4">
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                        </div>
+                    </div>
+                    <div class="column column--8">
+                        <p class="text text--m">8px</p>
+                        <div class="column column--8">
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                        </div>
+                    </div>
+                    <div class="column column--8">
+                        <p class="text text--m">12px</p>
+                        <div class="column column--12">
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                        </div>
+                    </div>
+                    <div class="column column--8">
+                        <p class="text text--m">16px</p>
+                        <div class="column column--16">
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                        </div>
+                    </div>
+                    <div class="column column--8">
+                        <p class="text text--m">20px</p>
+                        <div class="column column--20">
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                        </div>
+                    </div>
+                    <div class="column column--8">
+                        <p class="text text--m">24px</p>
+                        <div class="column column--24">
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                        </div>
+                    </div>
+                    <div class="column column--8">
+                        <p class="text text--m">32px</p>
+                        <div class="column column--32">
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                            <div class="demonstration-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Row</legend>
+            <div class="column column--24">
+                <p class="text text--m">Выстраивает вложенные элементы в ряд и задаёт между ними отступ</p>
+                <div class="column column--8">
+                    <p class="text text--m">4px</p>
+                    <div class="row row--4">
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                    </div>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">8px</p>
+                    <div class="row row--8">
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                    </div>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">12px</p>
+                    <div class="row row--12">
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                    </div>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">16px</p>
+                    <div class="row row--16">
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                    </div>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">20px</p>
+                    <div class="row row--20">
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                    </div>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">24px</p>
+                    <div class="row row--24">
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                    </div>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">32px</p>
+                    <div class="row row--32">
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                        <div class="demonstration-box"></div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Hidden</legend>
+            <div class="column column--24">
+                <p class="text text--m">Скрывает элемент в указанном разрешении экрана</p>
+                <div class="column column--8">
+                    <p class="text text--m">.hidden — скрывает везде</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.hidden-mobile-only — до 480px</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.hidden-handset-only — от 480px до 768px</p>
+                    <p class="text text--m">.hidden-handset-min — от 480px</p>
+                    <p class="text text--m">.hidden-handset-max — до 768px</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.hidden-tablet-only — от 768px до 1024px</p>
+                    <p class="text text--m">.hidden-tablet-min — от 768px</p>
+                    <p class="text text--m">.hidden-tablet-max — до 1024px</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.hidden-laptop-only — от 1024px до 1280px</p>
+                    <p class="text text--m">.hidden-laptop-min — от 1024px</p>
+                    <p class="text text--m">.hidden-laptop-max — до 1280px</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.hidden-desktop-only — от 1280px до 1440px</p>
+                    <p class="text text--m">.hidden-desktop-min — от 1280px</p>
+                    <p class="text text--m">.hidden-desktop-max — до 1440px</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.hidden-widescreen-min — от 1440px</p>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Visible</legend>
+            <div class="column column--24">
+                <p class="text text--m">Отображает элемент только в указанном разрешении экрана (в остальных скрывает)</p>
+                <div class="column column--8">
+                    <p class="text text--m">.visible-mobile-only — до 480px</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.visible-handset-only — от 480px до 768px</p>
+                    <p class="text text--m">.visible-handset-min — от 480px</p>
+                    <p class="text text--m">.visible-handset-max — до 768px</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.visible-tablet-only — от 768px до 1024px</p>
+                    <p class="text text--m">.visible-tablet-min — от 768px</p>
+                    <p class="text text--m">.visible-tablet-max — до 1024px</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.visible-laptop-only — от 1024px до 1280px</p>
+                    <p class="text text--m">.visible-laptop-min — от 1024px</p>
+                    <p class="text text--m">.visible-laptop-max — до 1280px</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.visible-desktop-only — от 1280px до 1440px</p>
+                    <p class="text text--m">.visible-desktop-min — от 1280px</p>
+                    <p class="text text--m">.visible-desktop-max — до 1440px</p>
+                </div>
+                <div class="column column--8">
+                    <p class="text text--m">.visible-widescreen-min — от 1440px</p>
+                </div>
+            </div>
         </fieldset>
     </div>
-    
 
-    
-            
-
-  <script src="js/main.min.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/imask/imask.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>

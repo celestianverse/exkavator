@@ -1,20 +1,23 @@
 const body = document.querySelector('body');
 
-function getHeaderScroll() {
-    const header = document.querySelector('.main-header');
+const mainHeader = document.querySelector('.main-header');
 
-    if (window.scrollY > 30) {
-        header.classList.add('main-header--scroll');
-    } else {
-        header.classList.remove('main-header--scroll');
+if (mainHeader) {
+    function getHeaderScroll() {
+
+        if (window.scrollY > 30) {
+            mainHeader.classList.add('main-header--scroll');
+        } else {
+            mainHeader.classList.remove('main-header--scroll');
+        }
     }
-}
 
-getHeaderScroll();
-
-window.addEventListener('scroll', () => {
     getHeaderScroll();
-});
+
+    window.addEventListener('scroll', () => {
+        getHeaderScroll();
+    });
+}
 
 // debounce
 function debounce(fn, delay) {
