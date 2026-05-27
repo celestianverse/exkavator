@@ -314,64 +314,30 @@
             <legend>Inputs</legend>
             <div class="ds-row">
                 <div class="ds-element-wrapper">
-                    <p>field-dropdown <small>(basic, search, disabled)</small></p>
+                    <p class="text text--m">С лейблом</p>
                     <div class="field-dropdown">
                         <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type" id="type" autocomplete="off"/>
                         <label class="field-dropdown__label" for="type">
                             <span class="field-dropdown__caption">Тип техники</span>
                         </label>
                     </div>
-                    <div class="field-dropdown">
-                        <input class="field-dropdown__input" type="text" placeholder="Марка" name="test2" id="test2" autocomplete="off"/>
-                        <label class="field-dropdown__label" for="test2">
-                            <span class="field-dropdown__caption">Марка</span>
+                    <p class="text text--m">Без лейбла</p>
+                    <div  class="field-dropdown field--nocaption">
+                        <input class="field-dropdown__input" type="text" placeholder="Выберите год" name="year" id="year" autocomplete="off"/>
+                        <label class="field-dropdown__label" for="year">
+                            <span class="field-dropdown__caption">Выберите год</span>
                         </label>
-                        <div class="dropdown-backdrop">
-                            <div class="dropdown-backdrop__search">
-                                <div class="field-text field-text--small">
-                                    <input type="text" class="field-text__input" id="test2-search" placeholder="Поиск">
-                                    <label for="test2-search" class="field-text__label">
-                                        <span class="field-text__caption">Поиск</span>
-                                    </label>
-                                    <button class="field-text__clear" aria-label="Очистить" type="button">
-                                        <svg class="icon icon--16">
-                                            <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <ul class="dropdown-backdrop__list">
-                                <li class="dropdown-backdrop__option">все типы</li>
-                                <li class="dropdown-backdrop__option-title">Землеройная техника</li>
-                                <li class="dropdown-backdrop__option">Грейдеры</li>
-                                <li class="dropdown-backdrop__option">Земснаряды</li>
-                                <li class="dropdown-backdrop__option">Экскаваторы колесные</li>
-                                <li class="dropdown-backdrop__option-title">Строительное оборудование</li>
-                                <li class="dropdown-backdrop__option">оборудование 1</li>
-                                <li class="dropdown-backdrop__option">оборудование 2</li>
-                                <li class="dropdown-backdrop__option">оборудование 3</li>
-                            </ul>
-                        </div>
                     </div>
+                    <p class="text text--m">Неактивный</p>
                     <div class="field-dropdown disabled">
                         <input class="field-dropdown__input" type="text" placeholder="Тип техники" name="type1" id="type1" autocomplete="off" disabled/>
                         <label class="field-dropdown__label" for="type1">
                             <span class="field-dropdown__caption">Тип техники</span>
                         </label>
-                        <div class="dropdown-backdrop">
-                            <ul class="dropdown-backdrop__list">
-                                <li class="dropdown-backdrop__option">Тягачи седельные</li>
-                                <li class="dropdown-backdrop__option">Прицепы-тяжеловозы</li>
-                                <li class="dropdown-backdrop__option">Терминальные тягачи</li>
-                                <li class="dropdown-backdrop__option">Электротягачи</li>
-                                <li class="dropdown-backdrop__option">Натяжные машины</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 <div class="ds-element-wrapper">
-                    <p>field-text <small>(basic, small, disabled)</small></p>
+                    <p class="text text--m">С лейблом</p>
                     <div class="field-text">
                         <input class="field-text__input" type="text" placeholder="Город, населенный пункт" name="city" id="city" autocomplete="off"/>
                         <label class="field-text__label" for="city">
@@ -383,9 +349,10 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="field-text field-text--small">
-                        <input class="field-text__input" type="text" placeholder="Город, населенный пункт" name="city3" id="city3" autocomplete="off"/>
-                        <label class="field-text__label" for="city3">
+                    <p class="text text--m">Без лейбла</p>
+                    <div class="field-text field--nocaption">
+                        <input class="field-text__input" type="text" placeholder="Город, населенный пункт" name="city" id="city" autocomplete="off"/>
+                        <label class="field-text__label" for="city">
                             <span class="field-text__caption">Город, населенный пункт</span>
                         </label>
                         <button class="field-text__clear" aria-label="Очистить" type="button">
@@ -394,6 +361,7 @@
                             </svg>
                         </button>
                     </div>
+                    <p class="text text--m">Неактивный</p>
                     <div class="field-text disabled">
                         <input class="field-text__input" type="text" placeholder="Город, населенный пункт" name="city2" id="city2" autocomplete="off" disabled/>
                         <label class="field-text__label" for="city2">
@@ -407,7 +375,7 @@
                     </div>
                 </div>
                 <div class="ds-element-wrapper">
-                    <p>field-checkbox <small>(basic, checked, disabled)</small></p>
+                    <p>Чекбоксы</p>
                     <div class="field-checkbox">
                         <input type="checkbox" class="field-checkbox__input" id="ch-price">
                         <label class="field-checkbox__label" for="ch-price">Только с ценой</label>
@@ -419,6 +387,19 @@
                     <div class="field-checkbox">
                         <input type="checkbox" class="field-checkbox__input" id="ch-price11" disabled>
                         <label class="field-checkbox__label" for="ch-price11">Только с ценой</label>
+                    </div>
+                </div>
+                <div class="ds-element-wrapper">
+                    <p>Сегменты</p>
+                    <div class="radio-segments">
+                        <label class="radio-segments__item">
+                            <input type="radio" class="radio-segments__input" name="request-type" value="Покупка" checked="">
+                            <span class="radio-segments__title">Покупка</span>
+                        </label>
+                        <label class="radio-segments__item">
+                            <input type="radio" class="radio-segments__input" name="request-type" value="Аренда">
+                            <span class="radio-segments__title">Аренда</span>
+                        </label>
                     </div>
                 </div>
             </div>

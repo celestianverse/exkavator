@@ -1080,6 +1080,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Плавный переход по якорным ссылкам
+
+document.addEventListener('click', function (e) {
+    const link = e.target.closest('a[href^="#"]');
+
+    if (!link) return;
+
+    const id = link.getAttribute('href');
+
+    // исключаем пустые #
+    if (id === '#') return;
+
+    const target = document.querySelector(id);
+
+    if (!target) return;
+
+    e.preventDefault();
+
+    const offset = 90;
+
+    const targetPosition =
+        target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+    });
+});
+
 document.querySelectorAll('.field-text__input').forEach((input) => {
     input.addEventListener('input', () => {
         console.log(input.value);

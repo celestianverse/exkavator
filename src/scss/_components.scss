@@ -828,6 +828,8 @@
     }
 
     &__logo {
+        overflow: hidden;
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -838,13 +840,11 @@
         }
 
         img {
-            max-width: 260px;
-            max-height: 160px;
-
-            @include mobile-only {
-                max-width: 200px;
-                max-height: 120px;
-            }
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: none;
         }
     }
     &__cover {
