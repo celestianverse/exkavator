@@ -380,14 +380,20 @@
                                         <span class="chip chip--medium chip--green" data-tooltip-text="Объявления с фотографиями набирают в 2 раза больше просмотров">×2 просмотров!</span>
                                     </div>
                                     <p class="text text--m">Фотографии в форматах JPG, PNG или GIF размером не более 10 Мбайт каждая. Первое по порядку изображение — главное. (Суммарный объем всех фотоматериалов не должен превышать 50 мб)</p>
-                                    <input id="offer-media"  type="file"
-                                           class="filepond"
-                                           name="filepond"
-                                           multiple
-                                           data-allow-reorder="true"
-                                           data-max-file-size="10MB"
-                                           data-max-files="20">
-                                    <p class="text text--m">На фотографии должна быть изображена техника той марки и модели (либо тот вид запчастей),которая рекламируется в объявлении. Не допускается размещение вместо фотографии логотипа компании.</p>
+                                    <div class="column column--align-center">
+                                        <input id="offer-media"  type="file"
+                                               class="filepond"
+                                               name="filepond"
+                                               multiple
+                                               data-allow-reorder="true"
+                                               data-max-file-size="10MB"
+                                               data-max-files="20"
+                                        >
+                                        <input type="hidden" id="offer-video">
+                                        <!--                                        <button type="button" class="link link&#45;&#45;m link&#45;&#45;primary js-open-popup" data-popup-id="popup-video">Добавить видео</button>-->
+                                        <button class="button button--medium button--regular-alt js-open-popup" type="button" data-popup-id="popup-video">Добавить видео</button>
+                                    </div>
+                                    <p class="text text--m">На фотографии должна быть изображена техника той марки и модели (либо тот вид запчастей), которая рекламируется в объявлении. Не допускается размещение вместо фотографии логотипа компании.</p>
                                 </div>
                                 <div class="button-group button-group--gap-16 button-group--mobile-column">
                                     <a class="button button--large button--regular button--full-width" href="#">Отменить</a>
@@ -682,6 +688,39 @@
             </div>
         </div>
     </form>
+    <div class="popup form-validation" id="popup-video">
+        <div class="popup__dialog">
+            <div class="popup__title">
+                <span>Добавить видео</span>
+                <button class="popup__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg class="icon icon--24">
+                        <use xlink:href="img/sprites/sprite-24.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="popup__content">
+                <div class="popup__form">
+                    <div  class="field-text">
+                        <input class="field-text__input" type="text" placeholder="Ссылка на видео" name="offer-video-link" id="offer-video-link" autocomplete="off" required>
+                        <label class="field-text__label" for="offer-video-link">
+                            <span class="field-text__caption">Ссылка на видео</span>
+                        </label>
+                        <button class="field-text__clear" aria-label="Очистить" type="button">
+                            <svg class="icon icon--16">
+                                <use xlink:href="img/sprites/sprite-16.svg#clearAlt"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup__footer">
+                <div class="button-group">
+                    <button class="button button--large button--primary button--full-width js-close-popup form-send" id="offer-add-video" type="button" data-clear="offer-video-link" disabled>Добавить</button>
+                    <button class="button button--large button--regular-alt button--full-width js-close-popup">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="vendors/swiper/swiper-bundle.min.js"></script>

@@ -22,3 +22,16 @@ document.querySelectorAll('.field-textarea').forEach((field) => {
     input.focus();
   });
 });
+document.addEventListener('click', (e) => {
+  const button = e.target.closest('[data-clear]');
+  if (!button) return;
+
+  const inputId = button.dataset.clear;
+  const input = document.getElementById(inputId);
+
+  if (input) {
+    input.value = '';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    input.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+});

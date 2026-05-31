@@ -27,23 +27,18 @@ function closePopup(popup) {
 
 document.querySelectorAll('.popup').forEach(function (popup) {
     popup.addEventListener('click', function (e) {
-        if (e.target === popup) closePopup(popup);
-    });
-
-    const closeBtn = popup.querySelector('.popup__close');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', function () {
+        // Закрытие по клику на фон
+        if (e.target === popup) {
             closePopup(popup);
-        });
-    }
+            return;
+        }
 
-    const cancelBtn = popup.querySelector('.js-close-popup');
-    if (cancelBtn) {
-        cancelBtn.addEventListener('click', function (e) {
+        // Закрытие по кнопке крестика или любой .js-close-popup
+        if (e.target.closest('.popup__close, .js-close-popup')) {
             e.preventDefault();
             closePopup(popup);
-        });
-    }
+        }
+    });
 });
 
 // // Попап Заказать обратный звонок

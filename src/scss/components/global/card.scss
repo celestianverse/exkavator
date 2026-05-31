@@ -250,11 +250,9 @@
         }
         .card__title {
             max-height: 96px;
-            @include text-ellipsis-rows(3);
-
-            @include tablet-max {
-                max-height: 90px;
-            }
+            line-height: 24px !important;
+            font-size: 18px !important;
+            @include text-ellipsis-rows(4);
         }
         .card__play-icon {
             margin-top: -50px;
@@ -337,8 +335,8 @@
             }
         }
         .card__title {
-            max-height: 72px;
-            @include text-ellipsis-rows(3);
+            max-height: 96px;
+            @include text-ellipsis-rows(4);
         }
         .card__play-icon {
             margin-top: -30px;

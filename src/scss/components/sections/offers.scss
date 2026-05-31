@@ -74,9 +74,15 @@
             grid-template-columns: max(1fr);
         }
     }
+    &__video {
+
+    }
 }
 
 .filepond {
+    &--root {
+        width: 100%;
+    }
     &--drip {
         display: none !important;
         background: var(--neutral-60) !important;
