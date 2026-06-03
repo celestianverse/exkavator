@@ -850,6 +850,8 @@
     &__cover {
         display: block;
         width: 100%;
+        max-height: 550px;
+        object-fit: cover;
         margin-bottom: 80px;
 
         @include laptop-max {
@@ -930,6 +932,8 @@
     color: var(--text-secondary);
 }
 .publication-navigation {
+    position: sticky;
+    top: 84px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -937,6 +941,10 @@
     padding: 24px;
     border: 1px solid var(--neutral-100);
     border-radius: 16px;
+
+    @include tablet-max {
+        display: none !important;
+    }
 }
 
 .scroll-suggestion {

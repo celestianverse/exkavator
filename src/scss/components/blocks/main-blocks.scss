@@ -259,4 +259,9 @@
     }
     &__next { @include slider-nav-next(1px); }
     &__prev { @include slider-nav-prev(1px); }
+
+    .swiper-slide {
+        display: flex !important;
+        height: auto !important;
+    }
 }

@@ -500,6 +500,57 @@ const companiesSlider = new Swiper('.companies__slider', {
     }
 });
 
+const teasers = document.querySelector('.teasers .main-events');
+
+if (teasers) {
+    const teasersSliderWrapper = teasers.querySelector('.swiper-wrapper');
+
+    if (teasersSliderWrapper) {
+        const teasersSliderItems = Array.from(
+            teasersSliderWrapper.querySelectorAll('.swiper-slide')
+        );
+
+        for (let i = teasersSliderItems.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [teasersSliderItems[i], teasersSliderItems[j]] = [
+                teasersSliderItems[j],
+                teasersSliderItems[i]
+            ];
+        }
+
+        teasersSliderWrapper.innerHTML = '';
+        teasersSliderItems.forEach(slide => {
+            teasersSliderWrapper.appendChild(slide);
+        });
+    }
+
+    new Swiper('.teasers .main-events', {
+        slidesPerView: 1.1,
+        spaceBetween: 0,
+        breakpoints: {
+            400: {
+                slidesPerView: 1.2
+            },
+            620: {
+                slidesPerView: 1.4
+            },
+            768: {
+                slidesPerView: 1.8
+            },
+            900: {
+                slidesPerView: 2.2
+            },
+            1024: {
+                slidesPerView: 2.2
+            },
+            1279: {
+                slidesPerView: 3,
+                spaceBetween: 24
+            }
+        }
+    });
+}
+
 // item-card-more: показать/свернуть
 document.querySelectorAll('.item-card-more').forEach(block => {
     const button = block.querySelector('.item-card-more__button');

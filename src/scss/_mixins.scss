@@ -154,6 +154,35 @@ $font-weights: (
     }
 }
 
+@mixin scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--neutral-300) transparent;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--neutral-300);
+        border-radius: 8px;
+        border: 2px solid transparent;
+    }
+
+    @media (forced-colors: active) {
+        scrollbar-color: ButtonText Canvas;
+
+        &::-webkit-scrollbar-thumb {
+            background-color: CanvasText;
+            border-color: Canvas;
+        }
+    }
+}
+
 // Утилити-классы размеров
 @each $name, $values in $font-sizes {
   .text-#{$name} {

@@ -92,6 +92,14 @@ a, button {
     }
   }
 
+  &__list {
+    .swiper-slide {
+      &:last-child {
+        margin-right: 100px !important;
+      }
+    }
+  }
+
   &__nav {
     position: absolute;
     top: -1px;
