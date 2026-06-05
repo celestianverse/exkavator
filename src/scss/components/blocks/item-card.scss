@@ -359,6 +359,7 @@ h3 {
         @include text-size('md');
         @include text-weight('bold');
         @include text-ellipsis-rows(2);
+        word-break: break-word;
 
         @include tablet-min {
             @include text-size('lg');
@@ -380,6 +381,7 @@ h3 {
         height: 32px;
         @include text-size('sm');
         @include text-ellipsis-rows(2);
+        word-break: break-word;
     }
 
     // блок с ценой и кнопками
