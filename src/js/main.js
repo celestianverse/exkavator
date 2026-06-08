@@ -1106,30 +1106,70 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Переход на страницу компании из партнёрской новости
+// const partnerSite = document.querySelector('.publication__partner-site');
+// if (partnerSite) {
+//     $(window).scroll(function() {
+//         var $element = $('.scroll-suggestion');
+//         var scroll = $(window).scrollTop() + $(window).height();
+//         var offset = $element.offset().top + $element.height() - 50;
+//
+//         if (
+//             $element.length &&
+//             $element.height() &&
+//             !$element.attr('counter') &&
+//             scroll >= offset
+//         ) {
+//             try {
+//                 yaCounter5217079.reachGoal('slicer_145247');
+//
+//                 var partnerLink = document.querySelector('.publication__partner-site');
+//
+//                 if (partnerLink) {
+//                     let goalParams = {
+//                         clickSource: window.location.href,
+//                         clickTarget: partnerLink.href,
+//                         clickText: 'slicerclick'
+//                     };
+//
+//                     if (typeof yaCounter5217079 !== 'undefined') {
+//                         yaCounter5217079.reachGoal('extTopClick', goalParams);
+//                     }
+//
+//                     $element.attr('counter', '1');
+//
+//                     // имитация клика по ссылке
+//                     partnerLink.click();
+//                 }
+//             } catch (e) {
+//                 console.log('counter error');
+//             }
+//         }
+//     });
+// }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const iframe = document.querySelector('.publication__iframe');
-
-    if (!iframe) return;
-
-    let opened = false;
-
-    window.addEventListener('scroll', () => {
-        if (opened) return;
-
-        const rect = iframe.getBoundingClientRect();
-
-        if (rect.bottom <= window.innerHeight) {
-            opened = true;
-
-            const link = iframe.src;
-
-            if (link) {
-                window.location.href = link;
-            }
-        }
-    });
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     const iframe = document.querySelector('.publication__iframe');
+//
+//     if (!iframe) return;
+//
+//     let opened = false;
+//
+//     window.addEventListener('scroll', () => {
+//         if (opened) return;
+//
+//         const rect = iframe.getBoundingClientRect();
+//
+//         if (rect.bottom <= window.innerHeight) {
+//             opened = true;
+//
+//             const link = iframe.src;
+//
+//             if (link) {
+//                 window.location.href = link;
+//             }
+//         }
+//     });
+// });
 
 // Плавный переход по якорным ссылкам
 

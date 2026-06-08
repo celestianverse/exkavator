@@ -28,8 +28,11 @@
         @include tablet-max {
             font-size: 36px;
         }
-        @include mobile-only {
+        @include handset-only {
             font-size: 32px;
+        }
+        @include mobile-only {
+            font-size: 28px;
         }
     }
     &--l {
