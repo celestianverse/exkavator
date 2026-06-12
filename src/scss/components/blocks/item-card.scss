@@ -634,6 +634,10 @@ h3 {
                 color: var(--red-400);
             }
         }
+
+        .chip {
+            flex-shrink: 0;
+        }
     }
 
     &--request {

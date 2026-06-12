@@ -15,7 +15,6 @@
         margin-bottom: 16px;
     }
 
-
     &__img {
         width: 308px;
         margin-bottom: 24px;
@@ -89,6 +88,16 @@
             img {
                 max-height: 128px;
                 margin: auto;
+            }
+        }
+
+        & + .contact-sticky-block {
+            & + .section {
+                .section__text {
+                    img {
+                        border-radius: 16px;
+                    }
+                }
             }
         }
     }

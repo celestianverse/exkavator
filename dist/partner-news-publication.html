@@ -3686,16 +3686,6 @@
                         const clickTarget = 'https://umg-sdm.com';
                         let armed = true;
 
-                        function triggerScrollToTop() {
-                            setTimeout(() => {
-                                requestAnimationFrame(() => {
-                                    window.scrollTo(0, 0);
-                                    document.documentElement.scrollTop = 0;
-                                    document.body.scrollTop = 0;
-                                });
-                            }, 0);
-                        }
-
                         function checkScroll() {
                             const rect = partnerSite.getBoundingClientRect();
                             const windowHeight = window.innerHeight;
@@ -3712,12 +3702,11 @@
                                 return;
                             }
 
-                            if (armed && visible >= 0.95) {
+                            if (armed && visible >= 0.9) {
                                 armed = false;
 
-                                window.open(clickTarget, '_blank', 'noopener,noreferrer');
-
-                                triggerScrollToTop();
+                                // Переход в текущей вкладке
+                                window.location.href = clickTarget;
                             }
                         }
 
