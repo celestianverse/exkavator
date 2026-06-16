@@ -636,6 +636,13 @@
 
     &__cover {
         position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+            margin: 0 !important;
+            border-radius: 16px;
+        }
     }
     &__image {
         display: block;
@@ -647,6 +654,10 @@
         position: absolute;
         right: 16px;
         bottom: 16px;
+    }
+
+    .text {
+        margin-bottom: 0 !important;
     }
 }
 
