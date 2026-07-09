@@ -41,6 +41,9 @@
     &--uppercase {
         text-transform: uppercase;
     }
+    &--line-through {
+        text-decoration: line-through;
+    }
 
     &--base {
         color: var(--text-base);
@@ -143,6 +146,9 @@
                     }
                 }
             }
+        }
+        &.text--s {
+            line-height: 1.4;
         }
     }
 }

@@ -254,10 +254,166 @@
                                                data-max-files="20"
                                         >
                                         <input type="hidden" id="offer-video">
-<!--                                        <button type="button" class="link link&#45;&#45;m link&#45;&#45;primary js-open-popup" data-popup-id="popup-video">Добавить видео</button>-->
+                                        <!--                                        <button type="button" class="link link&#45;&#45;m link&#45;&#45;primary js-open-popup" data-popup-id="popup-video">Добавить видео</button>-->
                                         <button class="button button--medium button--regular-alt js-open-popup" type="button" data-popup-id="popup-video">Добавить видео</button>
                                     </div>
                                     <p class="text text--m">На фотографии должна быть изображена техника той марки и модели (либо тот вид запчастей), которая рекламируется в объявлении. Не допускается размещение вместо фотографии логотипа компании.</p>
+                                </div>
+                                <div class="offer-form__item">
+                                    <div class="row row--16">
+                                        <h3 class="title title--s">Усильте объявление перед публикацией</h3>
+                                    </div>
+                                    <p class="text text--m">Выберите дополнительные возможности для продвижения объявления. Можно опубликовать бесплатно или подключить продвижение на 30 дней.</p>
+                                    <div class="offer-form__grid-4">
+                                        <label class="radio-card">
+                                            <input type="radio" class="radio-card__input" name="offer-promotion" data-price="0 ₽" value="Разместить без продвижения" checked>
+                                            <div class="radio-card__body">
+                                                <div class="radio-card__header">
+                                                    <div class="radio-card__icons">
+                                                        <span class="box-icon box-icon--gray">
+                                                            <svg class="icon icon--24">
+                                                                <use xlink:href="img/sprites/sprite-24.svg#checkThin"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="text text--m text--700 radio-card__title">Разместить без продвижения</p>
+                                                </div>
+                                                <div class="radio-card__content">
+                                                    <p class="text text--s text--secondary">Разместить объявление без дополнительных возможностей</p>
+                                                </div>
+                                                <div class="radio-card__result">
+                                                    <p class="text text--l text--700">0 ₽</p>
+                                                    <div class="radio-card__dot"></div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <label class="radio-card">
+                                            <input type="radio" class="radio-card__input" name="offer-promotion" data-price="2000 ₽" value="Поднятия">
+                                            <div class="radio-card__body">
+                                                <div class="radio-card__header">
+                                                    <div class="radio-card__icons">
+                                                        <span class="box-icon box-icon--blue">
+                                                            <svg class="icon icon--24">
+                                                                <use xlink:href="img/sprites/sprite-24.svg#levelingUp"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="text text--m text--700 radio-card__title">Поднятия</p>
+                                                </div>
+                                                <div class="radio-card__content">
+                                                    <p class="text text--s text--secondary">Поднимает объявление над конкурентами</p>
+                                                    <div class="text text--s text--text-block">
+                                                        <ul>
+                                                            <li>Занимайте верхние строки чаще</li>
+                                                            <li>Обгоняйте конкурентов</li>
+                                                            <li>Действует 30 дней</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="radio-card__result">
+                                                    <p class="text text--l text--700">2000 ₽</p>
+                                                    <div class="radio-card__dot"></div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <label class="radio-card">
+                                            <input type="radio" class="radio-card__input" name="offer-promotion" data-price="2500 ₽" value="Поднятия">
+                                            <div class="radio-card__body">
+                                                <div class="radio-card__header">
+                                                    <div class="radio-card__icons">
+                                                        <span class="box-icon box-icon--yellow">
+                                                            <svg class="icon icon--24">
+                                                                <use xlink:href="img/sprites/sprite-16.svg#premium"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="text text--m text--700 radio-card__title">PREMIUM</p>
+                                                </div>
+                                                <div class="radio-card__content">
+                                                    <p class="text text--s text--secondary">Помогает объявлению быть заметнее</p>
+                                                    <div class="text text--s text--text-block">
+                                                        <ul>
+                                                            <li>Выше объявлений без PREMIUM</li>
+                                                            <li>Заметнее для покупателей</li>
+                                                            <li>Действует 30 дней</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="radio-card__result">
+                                                    <p class="text text--l text--700">2500 ₽</p>
+                                                    <div class="radio-card__dot"></div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <label class="radio-card">
+                                            <input type="radio" class="radio-card__input" name="offer-promotion" data-price="2990 ₽" value="Поднятия">
+                                            <div class="radio-card__body">
+                                                <span class="chip chip--small chip--green radio-card__chip">Популярное</span>
+                                                <div class="radio-card__header">
+                                                    <div class="radio-card__icons">
+                                                        <span class="box-icon box-icon--yellow">
+                                                            <svg class="icon icon--24">
+                                                                <use xlink:href="img/sprites/sprite-16.svg#premium"></use>
+                                                            </svg>
+                                                        </span>
+                                                            <span class="box-icon box-icon--blue">
+                                                            <svg class="icon icon--24">
+                                                                <use xlink:href="img/sprites/sprite-24.svg#levelingUp"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <p class="text text--m text--700 radio-card__title">PREMIUM + Поднятия</p>
+                                                </div>
+                                                <div class="radio-card__content">
+                                                    <p class="text text--s text--secondary">Готовый набор для продвижения</p>
+                                                    <div class="text text--s text--text-block">
+                                                        <ul>
+                                                            <li>Выгоднее, чем по отдельности</li>
+                                                            <li>Действует 30 дней</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="radio-card__result">
+                                                    <div class="column">
+                                                        <p class="text text--s text--secondary text--line-through">4 500 ₽</p>
+                                                        <p class="text text--l text--700">2990 ₽</p>
+                                                    </div>
+                                                    <div class="radio-card__dot"></div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="offer-form__item">
+                                    <div class="row row--16">
+                                        <h3 class="title title--s">Ваше объявление</h3>
+                                    </div>
+                                    <p class="text text--m">Проверьте состав и итоговую стоимость перед публикацией. Выбранный тариф влияет на стоимость размещения.</p>
+                                    <div class="table">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width: 75%;">
+                                                <col style="width: 25%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">Гусеничный экскаватор HYUNDAI ROBEX 220LC-9S</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Размещение на 30 дней</td>
+                                                    <td data-price>0 ₽</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Итого</th>
+                                                    <th data-price>0 ₽</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
                                 </div>
                                 <div class="button-group button-group--gap-16 button-group--mobile-column">
                                     <a class="button button--large button--regular button--full-width" href="#">Отменить</a>

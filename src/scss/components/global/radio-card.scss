@@ -1,0 +1,117 @@
+.radio-card {
+    display: flex;
+    flex-grow: 1;
+    cursor: pointer;
+
+    &__input {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: -100px;
+        left: -99999px;
+
+        &:checked {
+            & + .radio-card__body {
+                border-color: var(--text-primary);
+
+                .radio-card__content {
+                    @include mobile-only {
+                        display: flex;
+                    }
+                }
+                .radio-card__dot {
+                    background: var(--primary-100);
+
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &__body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 8px;
+        padding: 16px;
+        border: 1px solid var(--neutral-100);
+        border-radius: 16px;
+        @include transition;
+
+        @include mobile-only {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    &__icons {
+        display: flex;
+        gap: 8px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 8px;
+
+        @include mobile-only {
+            display: none;
+            order: 3;
+            width: 100%;
+        }
+    }
+    &__title {
+        @include mobile-only {
+            max-width: 152px;
+        }
+    }
+    &__result {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 12px;
+        padding-top: 4px;
+
+        @include mobile-only {
+            align-items: center;
+            padding-top: 0;
+        }
+    }
+    &__dot {
+        position: relative;
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        background: var(--neutral-60);
+        border-radius: 50%;
+        @include transition;
+
+        &::after {
+            opacity: 0;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 10px;
+            height: 10px;
+            background: var(--text-primary);
+            border-radius: 50%;
+            @include transition;
+        }
+    }
+    &__chip {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 16px 0 8px;
+    }
+}

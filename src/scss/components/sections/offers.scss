@@ -60,6 +60,31 @@
         .link {
             align-self: flex-start;
         }
+        .table {
+            thead {
+                font-size: 16px;
+
+                th {
+                    padding-bottom: 16px;
+                }
+            }
+            tfoot {
+                font-size: 16px;
+
+                th {
+                    padding-top: 16px;
+                }
+            }
+            td {
+                padding-top: 16px;
+                padding-bottom: 16px;
+            }
+            td, th {
+                &:last-child:not(:first-child) {
+                    text-align: right;
+                }
+            }
+        }
 
         & > .row {
             width: 100%;
@@ -74,8 +99,17 @@
             grid-template-columns: max(1fr);
         }
     }
-    &__video {
+    &__grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, max(1fr));
+        gap: 16px;
 
+        @include laptop-max {
+            grid-template-columns: repeat(2, max(1fr));
+        }
+        @include mobile-only {
+            grid-template-columns: repeat(1, max(1fr));
+        }
     }
 }
 

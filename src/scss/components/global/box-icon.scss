@@ -1,0 +1,22 @@
+.box-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+
+    &--gray {
+        background: var(--neutral-60);
+        color: var(--text-base);
+    }
+    &--blue {
+        background: var(--primary-50);
+        color: var(--text-primary);
+    }
+    &--yellow {
+        background: var(--yellow-100);
+        color: var(--yellow-500);
+    }
+}

@@ -346,3 +346,15 @@ document.getElementById('offer-add-video').addEventListener('click', async () =>
     });
 
 });
+
+document.querySelectorAll('.radio-card__input').forEach(radio => {
+    radio.addEventListener('change', function () {
+        if (!this.checked) return;
+
+        const price = this.dataset.price;
+
+        document.querySelectorAll('[data-price]:not(input)').forEach(element => {
+            element.textContent = price;
+        });
+    });
+});
