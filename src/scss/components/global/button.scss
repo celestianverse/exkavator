@@ -25,6 +25,11 @@
         }
     }
 
+    &__caption {
+        display: flex;
+        justify-content: center;
+    }
+
     &--primary {
         background-color: var(--primary-500);
         color: var(--text-white);
@@ -98,6 +103,7 @@
         color: var(--text-white);
 
         &:hover {
+            background-color: var(--green-550);
             box-shadow: 0 2px 8px 0 #E0E5EB80;
         }
         &.button--dropdown::after {
@@ -174,12 +180,15 @@
         padding: 8px 8px;
         font-size: 12px;
         line-height: 16px;
+
+        .button__caption {
+            font-size: 10px;
+        }
     }
 
     &--full-width {
         width: 100%;
     }
-
 
     &--dropdown {
         &::after {
@@ -201,7 +210,6 @@
             }
         }
     }
-
 }
 
 .button-group {
