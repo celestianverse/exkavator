@@ -89,10 +89,16 @@
     &__option-button {
         padding: 6px 12px;
         @include text-size('sm');
-        cursor: default;
+        cursor: pointer;
 
         &:hover {
             background-color: var(--neutral-60);
+        }
+
+        .link {
+            &:hover {
+                color: inherit;
+            }
         }
     }
 

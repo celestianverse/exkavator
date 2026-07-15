@@ -3636,18 +3636,24 @@
                                         </div>
                                     </div>
                                     <div class="detail-item-action-block__buttons">
-                                        <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
-                                        <a href="#" target="_blank" class="button button--large button--primary-alt">
+                                        <button class="button button--large button--green detail-item__button-phone js-open-popup" data-popup-id="popup-call">
+                                            <span class="button__text">
+                                                + 7 (395) <span class="animation-transfusion animation-transfusion--white">••• •• ••</span>
+                                            </span>
+                                            <span class="button__caption">Показать телефон</span>
+                                        </button>
+                                        <a href="#" target="_blank" class="button button--large button--green">
                                             Чат в Whatsapp
                                             <svg class="icon icon--20">
                                                 <use xlink:href="img/sprites/sprite-16.svg#whatsapp"></use>
                                             </svg>
                                         </a>
-                                        <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-callback">Обратный звонок</button>
-                                        <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
-                                        <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-leasing">Купить в лизинг</button>
+                                        <button class="button button--large button--green js-open-popup" data-popup-id="popup-seller-message">Написать продавцу</button>
+                                        <button class="button button--large button--green js-open-popup" data-popup-id="popup-callback">Обратный звонок</button>
                                     </div>
-
+                                    <div class="detail-item-action-block__buttons">
+                                        <button class="button button--large button--regular js-open-popup" data-popup-id="popup-leasing">Купить в лизинг</button>
+                                    </div>
                                     <div class="detail-item-action-block__controls">
                                         <button class="button button--large button--regular" data-favorite="false" data-favorite-id="1" data-tooltip-text="Добавить в избранное" aria-label="Добавить в избранное">
                                             <svg class="icon icon--20">
@@ -4311,33 +4317,56 @@
                 <span class="main-footer__text">Реклама и информация на Экскаватор.Ру предназначены исключительно для российских потребителей.</span>
             </div>
         </footer>
-        <div class="detail-item-mobile-footer">
-            <div class="detail-item-mobile-footer__row">
-                <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-call">Позвонить</button>
-                <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-seller-message">Написать</button>
-            </div>
-            <div class="detail-item-mobile-footer__row">
-                <button class="button button--large button--primary-alt js-open-popup" data-popup-id="popup-callback">Обратный звонок</button>
-                <div class="detail-item-mobile-footer__more">
-                    <button class="button button--large button--primary-alt" aria-label="Дополнительные действия">
-                        <svg class="icon icon--24">
-                            <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
-                        </svg>
+        <div class="detail-item-mobile-footer detail-item-mobile-footer--trade">
+            <div class="container">
+                <div class="detail-item-mobile-footer__content">
+                    <h3 class="title title--s detail-item-mobile-footer__title">Гусеничный экскаватор Komatsu PC200 новый 2025 г. в.</h3>
+                    <div class="row row--8">
+                        <div class="chip chip--medium chip--regular">В наличии</div>
+                        <div class="chip chip--medium chip--regular">Бесплатная доставка</div>
+                    </div>
+                </div>
+                <div class="detail-item-mobile-footer__row">
+                    <div class="price-block price-block--dropdown">
+                        <p class="price-dropdown">15 306 212 ₽</p>
+                        <div class="dropdown-backdrop">
+                            <ul class="dropdown-backdrop__list">
+                                <li class="dropdown-backdrop__option-text">213 527 $</li>
+                                <li class="dropdown-backdrop__option-text">180 730 €</li>
+                                <li class="dropdown-backdrop__option-text">1 468 050 ¥</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="button button--large button--green detail-item-mobile-footer__button-phone js-open-popup" data-popup-id="popup-call">
+                    <span class="button__text">
+                        + 7 (395) <span class="animation-transfusion animation-transfusion--white">••• •• ••</span>
+                    </span>
+                        <span class="button__caption">Показать телефон</span>
                     </button>
-                    <div class="dropdown-backdrop">
-                        <ul class="dropdown-backdrop__list">
-                            <li class="dropdown-backdrop__option-button">
-                                <a href="#" target="_blank" class="link link--base">
-                                    Чат в Whatsapp
-                                    <svg class="icon icon--16">
-                                        <use xlink:href="img/sprites/sprite-16.svg#whatsapp"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-leasing">Купить в лизинг</li>
-                            <li class="dropdown-backdrop__option-button" data-favorite="false" data-favorite-id="1">Добавить в избранное</li>
-                            <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
-                        </ul>
+                </div>
+                <div class="detail-item-mobile-footer__row">
+                    <button class="button button--large button--green detail-item-mobile-footer__message js-open-popup" data-popup-id="popup-seller-message">Написать продавцу</button>
+                    <div class="detail-item-mobile-footer__more">
+                        <button class="button button--large button--regular" aria-label="Дополнительные действия">
+                            <svg class="icon icon--24">
+                                <use xlink:href="img/sprites/sprite-24.svg#showMore"></use>
+                            </svg>
+                        </button>
+                        <div class="dropdown-backdrop">
+                            <ul class="dropdown-backdrop__list">
+                                <li class="dropdown-backdrop__option-button">
+                                    <a href="#" target="_blank" class="link link--base">
+                                        Чат в Whatsapp
+                                        <svg class="icon icon--16">
+                                            <use xlink:href="img/sprites/sprite-16.svg#whatsapp"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-leasing">Купить в лизинг</li>
+                                <li class="dropdown-backdrop__option-button" data-favorite="false" data-favorite-id="1">Добавить в избранное</li>
+                                <li class="dropdown-backdrop__option-button js-open-popup" data-popup-id="popup-report">Пожаловаться</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -19,6 +19,25 @@ if (mainHeader) {
     });
 }
 
+const detailItemMobileFooter = document.querySelector('.detail-item-mobile-footer--trade');
+
+if (detailItemMobileFooter) {
+    function getDetailItemMobileFooterScroll() {
+
+        if (window.scrollY > 240) {
+            detailItemMobileFooter.classList.add('detail-item-mobile-footer--scroll');
+        } else {
+            detailItemMobileFooter.classList.remove('detail-item-mobile-footer--scroll');
+        }
+    }
+
+    getDetailItemMobileFooterScroll();
+
+    window.addEventListener('scroll', () => {
+        getDetailItemMobileFooterScroll();
+    });
+}
+
 // debounce
 function debounce(fn, delay) {
     let timer;
