@@ -74,13 +74,14 @@
         display: grid;
         grid-template-columns: 3fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 24px;
+        gap: 0 24px;
 
         @include laptop-max {
-            gap: 16px;
+            gap: 0 16px;
         }
         @include tablet-max {
             grid-template-columns: repeat(2, max(1fr));
+            gap: 16px;
         }
         @include mobile-only {
             grid-template-columns: repeat(1, max(1fr));
@@ -126,6 +127,26 @@
             }
 
             &--s {
+                &:nth-child(2) {
+                    margin-bottom: 12px;
+
+                    @include laptop-max {
+                        margin-bottom: 8px;
+                    }
+                    @include tablet-max {
+                        margin-bottom: 0;
+                    }
+                }
+                &:nth-child(3) {
+                    margin-top: 12px;
+
+                    @include laptop-max {
+                        margin-top: 8px;
+                    }
+                    @include tablet-max {
+                        margin-top: 0;
+                    }
+                }
             }
         }
     }
@@ -154,10 +175,25 @@
 
     &--s {
         .main-videos__grid {
-            gap: 16px;
+            gap: 0 16px;
+
+            @include laptop-max {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            @include mobile-only {
+                grid-template-columns: repeat(1, max(1fr));
+            }
         }
         .card {
             &--xl {
+                @include laptop-max {
+                    grid-column: span 2;
+                }
+                @include mobile-only {
+                    grid-column: span 1;
+                }
+
                 .card__video {
                     @include laptop-min {
                         height: 400px;
@@ -170,6 +206,21 @@
                 }
             }
             &--s {
+                &:nth-child(2) {
+                    margin-bottom: 8px;
+
+                    @include laptop-max {
+                        margin-bottom: 0;
+                    }
+                }
+                &:nth-child(3) {
+                    margin-top: 8px;
+
+                    @include laptop-max {
+                        margin-top: 0;
+                    }
+                }
+
                 .card__image {
                     @include laptop-min {
                         height: 140px;
