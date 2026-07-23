@@ -39,6 +39,10 @@
         margin-bottom: 8px;
         @include text-size('lg');
         @include text-weight('bold');
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__wrapper-text {
